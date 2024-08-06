@@ -1,3 +1,5 @@
+'use client';
+
 import { clsx } from "clsx";
 import { Description, FieldError, Label, SharedFieldProps } from "primitives";
 import React from "react";

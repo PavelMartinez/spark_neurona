@@ -1,6 +1,10 @@
+'use client';
+
+import { LogoInstagram, LogoLinkedIn, LogoX, LogoYoutube } from "@/components/svg";
 import { useMediaQuery } from "hooks";
 import { IconInstagram, IconLinkedin, IconTwitter, IconYoutube } from "icons";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
+import Link from "next/link";
 import {
   ButtonGroup,
   IconButton,
@@ -26,33 +30,8 @@ export function Footer({ className, ...props }: FooterProps) {
     >
       <Flex wrap type="quarter" gap="600" container>
         <FlexItem size="minor">
-          <Flex direction="column" gap="600" alignSecondary="start">
-            <FlexItem>
-              <Logo />
-            </FlexItem>
-            <TextLinkList density={listDensity}>
-              <TextListItem>
-                <TextLink href="https://www.figma.com">figma.com</TextLink>
-              </TextListItem>
-              <TextListItem>
-                <TextLink href="https://www.x.com/figma">X</TextLink>
-              </TextListItem>
-              <TextListItem>
-                <TextLink href="https://instagram.com/figma">
-                  Instagram
-                </TextLink>
-              </TextListItem>
-              <TextListItem>
-                <TextLink href="https://www.youtube.com/@Figma">
-                  YouTube
-                </TextLink>
-              </TextListItem>
-              <TextListItem>
-                <TextLink href="https://www.linkedin.com/company/figma/">
-                  LinkedIn
-                </TextLink>
-              </TextListItem>
-            </TextLinkList>
+          <Flex direction="row" gap="600" alignSecondary="start" alignPrimary="center">
+			{SocialButtons()}
           </Flex>
         </FlexItem>
         <TextLinkList
@@ -60,77 +39,45 @@ export function Footer({ className, ...props }: FooterProps) {
           title={<TextStrong>Use cases</TextStrong>}
         >
           <TextListItem>
-            <TextLink href="#">UI design</TextLink>
+            <TextLink href="#">Photo generating</TextLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">UX design</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Wireframing</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Diagramming</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Brainstorming</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Online whiteboard</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Team collaboration</TextLink>
+            <TextLink href="#">Video generating</TextLink>
           </TextListItem>
         </TextLinkList>
+        <Link href="#">
+			<TextStrong>Privacy policy</TextStrong>
+		</Link>
         <TextLinkList
           density={listDensity}
-          title={<TextStrong>Explore</TextStrong>}
-        >
-          <TextListItem>
-            <TextLink href="#">Design</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Prototyping</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Development features</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Design systems</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Collaboration features</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Design process</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">FigJam</TextLink>
-          </TextListItem>
-        </TextLinkList>
-        <TextLinkList
-          density={listDensity}
-          title={<TextStrong>Resources</TextStrong>}
+          title={<TextStrong>About us</TextStrong>}
         >
           <TextListItem>
             <TextLink href="#">Blog</TextLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Best practices</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Colors</TextLink>
-          </TextListItem>
-          <TextListItem>
-            <TextLink href="#">Color wheel</TextLink>
+            <TextLink href="#">User guide</TextLink>
           </TextListItem>
           <TextListItem>
             <TextLink href="#">Support</TextLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Developers</TextLink>
+            <TextLink href="#">Business Contacts</TextLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Resource library</TextLink>
+            <TextLink href="#">Careers</TextLink>
+          </TextListItem>
+          <TextListItem>
+            <TextLink href="#">News</TextLink>
+          </TextListItem>
+          <TextListItem>
+            <TextLink href="#">Terms</TextLink>
+          </TextListItem>
+		  <TextListItem>
+            <TextLink href="#">Privacy</TextLink>
+          </TextListItem>
+		  <TextListItem>
+            <TextLink href="#">Community</TextLink>
           </TextListItem>
         </TextLinkList>
       </Flex>
@@ -143,31 +90,31 @@ export function SocialButtons() {
     <ButtonGroup>
       <IconButton
         variant="subtle"
-        aria-label="Twitter"
-        href="https://www.twitter.com"
+        aria-label="X"
+        href="https://www.x.com"
       >
-        <IconTwitter />
+        <LogoX />
       </IconButton>
       <IconButton
         variant="subtle"
         aria-label="Instagram"
         href="https://www.instagram.com"
       >
-        <IconInstagram />
+        <LogoInstagram />
       </IconButton>
       <IconButton
         variant="subtle"
         aria-label="YouTube"
         href="https://www.youtube.com"
       >
-        <IconYoutube />
+        <LogoYoutube />
       </IconButton>
       <IconButton
         variant="subtle"
         aria-label="LinkedIn"
         href="https://www.linkedin.com"
       >
-        <IconLinkedin />
+        <LogoLinkedIn />
       </IconButton>
     </ButtonGroup>
   );

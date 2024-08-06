@@ -1,7 +1,9 @@
+'use client';
+
 import { clsx } from "clsx";
 import { useMediaQuery } from "hooks";
 import { Flex } from "layout";
-import { Link } from "primitives";
+import Link from "next/link";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Text as RACText,

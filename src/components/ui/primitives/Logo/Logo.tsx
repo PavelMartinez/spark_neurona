@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from "clsx";
 import { AnchorOrButton, type AnchorOrButtonProps } from "utils";
 import "./logo.css";

@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from "clsx";
 import { Text, TextStrong } from "primitives";
 import React from "react";

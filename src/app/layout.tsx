@@ -3,6 +3,7 @@ import "../styles/sds/index.scss";
 import { Inter } from "next/font/google";
 import localFont from 'next/font/local'
 import "../styles/index.scss";
+import { Footer, Header } from "@/components/ui/compositions";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -40,7 +41,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${GothamPro.variable} ${Muller.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -12,7 +12,6 @@ import { IconChat, IconCrop, IconMagic, IconPhotos } from "@/components/svg";
 export default function Home() {
   return (
     <main>
-		<Header />
 		<Hero variant="image" className="section section-main main-hero" style={{ flexDirection: "column" }}>
 			<TextContentTitle
 				align="center"
@@ -44,15 +43,16 @@ export default function Home() {
 				/>
 			</Panel>
 		</Section>
-		<Section padding="1200">
+		<Section padding="1200" className="functions">
 			<Flex
 				container
 				gap="1600"
 				direction="row"
 				alignSecondary="stretch"
 				alignPrimary="space-between"
+				wrap
 			>
-				<FlexItem>
+				<FlexItem size="minor">
 					<Flex style={{ padding: "45px 0px" }} gap="1200">
 						<TextContentHeading
 							heading="Functions"
@@ -62,7 +62,7 @@ export default function Home() {
 					<Flex
 						gap="400"
 						direction="column"
-						style={{ width: 556, flexDirection: "column", flex: "0 1 auto", marginBottom: 51 }}
+						className="functions__list"
 					>
 						<FlexItem>
 							<Card heading="AI Chat" asset={<IconChat />} direction="horizontal">
@@ -90,8 +90,8 @@ export default function Home() {
 					</Flex>
 				</FlexItem>
 				<FlexItem size="major">
-					<Flex direction="column" style={{ flex: "1 0 auto", flexDirection: "column" }} className="functions__images-box">
-						<FlexItem size="fill">
+					<Flex direction="column" className="functions__images-box">
+						<FlexItem className="functions__images-item">
 							<Image
 								src={placeholder}
 								alt="Always use image alt"
@@ -99,7 +99,7 @@ export default function Home() {
 								className="functions__image"
 							/>
 						</FlexItem>
-						<FlexItem size="fill">
+						<FlexItem className="functions__images-item">
 							<Image
 								src={placeholder}
 								alt="Always use image alt"
@@ -107,7 +107,7 @@ export default function Home() {
 								className="functions__image"
 							/>
 						</FlexItem>
-						<FlexItem size="fill">
+						<FlexItem className="functions__images-item">
 							<Image
 								src={placeholder}
 								alt="Always use image alt"
@@ -115,7 +115,7 @@ export default function Home() {
 								className="functions__image"
 							/>
 						</FlexItem>
-						<FlexItem size="fill">
+						<FlexItem className="functions__images-item">
 							<Image
 								src={placeholder}
 								alt="Always use image alt"
@@ -139,12 +139,13 @@ export default function Home() {
 				direction="row"
 				alignSecondary="stretch"
 				alignPrimary="space-between"
+				wrap
 			>
 				<FlexItem>
 					<Flex
 						gap="400"
 						direction="column"
-						style={{ width: 556, flexDirection: "column", flex: "0 1 auto", marginBottom: 51 }}
+						className="advantages__frame-list"
 					>
 						<FlexItem>
 							<div className="advantages__frame advantages__frame--first">
@@ -194,22 +195,35 @@ export default function Home() {
 				<FlexItem size="major">
 					<Flex direction="column" style={{ flex: "1 0 auto", flexDirection: "column" }} className="advantages__rectangles-box">
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" width="474" height="107" viewBox="0 0 474 107" fill="none">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
 								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
 							</svg>
 						</FlexItem>
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" width="474" height="107" viewBox="0 0 474 107" fill="none">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
 								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
 							</svg>
 						</FlexItem>
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" width="474" height="107" viewBox="0 0 474 107" fill="none">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
 								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
 							</svg>
 						</FlexItem>
 					</Flex>
 				</FlexItem>
+			</Flex>
+		</Section>
+		<Section className="blocks" padding="1200">
+			<Flex
+			wrap
+			container
+			className="blocks__wrapper"
+			alignPrimary="center"
+			alignSecondary="center">
+				<div className="blocks__item">AI chat</div>
+				<div className="blocks__item">AI photo editor</div>
+				<div className="blocks__item">Style gallery</div>
+				<div className="blocks__item">Image generation</div>
 			</Flex>
 		</Section>
     </main>

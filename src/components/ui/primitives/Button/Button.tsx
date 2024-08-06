@@ -1,3 +1,5 @@
+'use client';
+
 import { clsx } from "clsx";
 import React, { ComponentPropsWithoutRef } from "react";
 import { AnchorOrButton, type AnchorOrButtonProps } from "utils";

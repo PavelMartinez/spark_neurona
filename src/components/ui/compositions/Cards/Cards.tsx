@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
 import { IconStar } from "icons";
