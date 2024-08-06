@@ -30,6 +30,7 @@ function RawAccordion<T extends object>({
 
   return (
     <div ref={domRef} className={className} {...accordionProps}>
+      {/* @ts-ignore */}
       {[...state.collection].map((item) => (
         <RawAccordionItem<T> key={item.key} item={item} state={state} />
       ))}

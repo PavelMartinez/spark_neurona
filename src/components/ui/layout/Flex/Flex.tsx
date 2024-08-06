@@ -36,6 +36,7 @@ export function Flex({
   return (
     <div
       style={{
+        // @ts-ignore
         "--flex-align-primary": alignPrimary,
         "--flex-align-secondary": alignSecondary,
         "--flex-direction": direction,
