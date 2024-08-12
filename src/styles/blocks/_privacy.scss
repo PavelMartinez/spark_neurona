@@ -1,0 +1,37 @@
+.privacy {
+    color: #070707;
+    &__inner {
+        border-radius: 20px;
+        background: #fff;
+        padding: 67px 81.13px;
+        height: 3276px;
+        --flex-gap: 75px !important;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+    }
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    &__button {
+        margin-top: 234px;
+        &-item {
+            --button-background-color: var(--button-1) !important;
+            --button-padding-x: 60px !important;
+            --button-padding-y: 24px !important;
+            --border-radius: 20px !important;
+        }
+    }
+}

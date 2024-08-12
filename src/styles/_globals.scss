@@ -1,0 +1,21 @@
+.breadcrump {
+    --breadcrumb-color: #fff;
+    &--grey {
+        --breadcrumb-color: #B6B8BD;
+    }
+    color: var(--breadcrumb-color) !important;
+
+    margin-bottom: 74px;
+
+    .ant-breadcrumb a {
+        color: var(--breadcrumb-color) !important;
+    }
+
+    .ant-breadcrumb-separator {
+        color: var(--breadcrumb-color) !important;
+    }
+
+    .ant-breadcrumb li:last-child {
+        color: var(--breadcrumb-color) !important;
+    }
+}

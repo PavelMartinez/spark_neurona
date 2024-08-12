@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import localFont from 'next/font/local'
 import "../styles/index.scss";
 import { Footer, Header } from "@/components/ui/compositions";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -42,9 +43,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${GothamPro.variable} ${Muller.variable}`}>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AntdRegistry>
+          <Header />
+          {children}
+          <Footer />
+        </AntdRegistry>
       </body>
     </html>
   );

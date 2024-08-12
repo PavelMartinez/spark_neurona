@@ -1,0 +1,68 @@
+.notfound {
+    margin-top: 153px;
+    margin-bottom: 135px;
+
+    &__inner {
+        padding: 67px 80px;
+        gap: 50px !important;
+        overflow: hidden;
+        position: relative;
+
+        background-image: url('../../../public/bg1.png'), url('../../../public/bg2.png');
+        background-position: top 0 right 0, bottom 0 left 0;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 44px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+
+        opacity: 0.5;
+    }
+
+    &__buttons {
+        margin-bottom: calc(217px - 67px);
+        &-item {
+            --button-background-color: var(--button-1) !important;
+            --button-padding-x: 60px !important;
+            --button-padding-y: 24px !important;
+            --border-radius: 20px !important;
+        }
+    }
+
+    &__bigtext {
+        color: #363636;
+        font-size: 430px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 516px */
+        text-transform: uppercase;
+
+        position: absolute;
+        right: 0;
+        bottom: -15%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__background {
+        color: transparent;
+        position: absolute;
+
+        &-svg {
+            color: transparent;
+        }
+    }
+}

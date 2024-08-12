@@ -3,7 +3,12 @@
     'media',
     'mixins',
     'normalize',
-    'utils';
+    'utils',
+    'globals';
 
 @import 'blocks/header',
-        'blocks/footer';
+        'blocks/footer',
+        'blocks/404',
+        'blocks/privacy',
+        'blocks/instruments',
+        'blocks/styles';

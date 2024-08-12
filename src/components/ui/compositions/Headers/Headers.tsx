@@ -27,6 +27,7 @@ import { useContext, useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function HeaderAuth() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
@@ -62,12 +63,14 @@ export function HeaderAuth() {
   );
 
   const { isTabletDown } = useMediaQuery();
+  const pathname = usePathname()
+
 
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
       <NavigationPill><Link href="/">Image generation</Link></NavigationPill>
-      <NavigationPill><Link href="/">AI insturments</Link></NavigationPill>
-      <NavigationPill><Link href="/">Style gallery</Link></NavigationPill>
+      <NavigationPill isSelected={pathname === "/instruments"}><Link href="/instruments">AI insturments</Link></NavigationPill>
+      <NavigationPill isSelected={pathname === "/styles"}><Link href="/styles">Style gallery</Link></NavigationPill>
       <NavigationPill><Link href="/">Premium</Link></NavigationPill>
       <NavigationPill><Link href="/">Ai Chat</Link></NavigationPill>
       <NavigationPill><Link href="/">Contact</Link></NavigationPill>
@@ -84,7 +87,7 @@ export function HeaderAuth() {
     >
       <FlexItem size="fill">
         {isTabletDown ? (
-          <Flex alignPrimary="center">
+          <Flex alignPrimary="end">
             <IconButton
               variant="subtle"
               aria-label="Toggle navigation menu"
@@ -193,7 +196,9 @@ export function Header({ className, ...props }: HeaderProps) {
     >
       <Flex container alignPrimary="space-between" alignSecondary="center">
         <FlexItem size="fill">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </FlexItem>
         <FlexItem size="fill">
           <Flex alignPrimary="space-between" alignSecondary="center">

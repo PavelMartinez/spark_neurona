@@ -78,3 +78,17 @@ h6,
 p {
   margin: 0;
 }
+
+h1, .h1 {
+  font-size: var(--sds-typography-title-hero-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 72px */
+}
+
+h6, .h6 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
