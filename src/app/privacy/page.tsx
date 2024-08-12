@@ -24,7 +24,7 @@ const PrivacyPage = () => {
                             <p>
                                 This personal data processing policy has been drawn up in accordance with the requirements of the Federal Law of July 27, 2006. No. 152-FZ “On Personal Data” and determines the procedure for processing personal data and measures to ensure the security of personal data of Laboratory Test Drive LLC (hereinafter referred to as the Operator). <br/><br/>
                                 The operator . sets as its most important goal and condition for carrying out its activities the observance of the rights and freedoms of man and citizen when processing his personal data, including the protection of the rights to privacy, personal and family secrets.<br/><br/>
-                                This Operator's policy regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can receive about visitors to the website <Link href="https://lab-td.ru/">https://lab-td.ru/</Link>
+                                This Operator&apos;s policy regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can receive about visitors to the website <Link href="https://lab-td.ru/">https://lab-td.ru/</Link>
                             </p>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ const PrivacyPage = () => {
                             <p>
                                 Email address;<br/><br/>
                                 Phone numbers;<br/><br/>
-                                The site also collects and processes anonymized data about visitors (including .h. "cookie" files) using Internet statistics services (Yandex Metrica and Google Analytics and others).
+                                The site also collects and processes anonymized data about visitors (including .h. &quot;cookie&quot; files) using Internet statistics services (Yandex Metrica and Google Analytics and others).
                                 The above data below in the text of the Policy are united by the general concept of Personal data.
                             </p>
                         </div>
@@ -95,8 +95,8 @@ const PrivacyPage = () => {
                             <p>
                                 The security of personal data processed by the Operator is ensured by implementing legal, organizational and technical measures necessary to fully comply with the requirements of current legislation in the field of personal data protection.<br/><br/>
                                 The Operator ensures the safety of personal data and accepts all . possible measures to prevent access to personal data of unauthorized persons.<br/><br/>
-                                The User's personal data will never, under any circumstances, be transferred to third parties, except in cases related to the implementation of current legislation.<br/>If inaccuracies in personal data are identified, the User can update them independently by sending a notification to the Operator to the Operator's email address am@pereoborudovanie-ts.ru marked “Updating personal data”. . <br/><br/>
-                                The period for processing personal data is unlimited. The User may at any time withdraw his consent to the processing of personal data by sending a notification to the Operator via email to the Operator's email address am@pereoborudovanie-ts.ru marked “Withdrawal of consent to the processing of personal data”.
+                                The User&apos;s personal data will never, under any circumstances, be transferred to third parties, except in cases related to the implementation of current legislation.<br/>If inaccuracies in personal data are identified, the User can update them independently by sending a notification to the Operator to the Operator&apos;s email address am@pereoborudovanie-ts.ru marked “Updating personal data”. . <br/><br/>
+                                The period for processing personal data is unlimited. The User may at any time withdraw his consent to the processing of personal data by sending a notification to the Operator via email to the Operator&apos;s email address am@pereoborudovanie-ts.ru marked “Withdrawal of consent to the processing of personal data”.
                             </p>
                         </div>
                     </div>
