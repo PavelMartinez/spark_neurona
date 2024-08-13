@@ -78,7 +78,7 @@ const ChatBox = () => {
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
-                        Write a children's story
+                        Write a children&apos;s story
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
