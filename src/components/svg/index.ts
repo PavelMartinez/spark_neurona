@@ -10,6 +10,16 @@ export { default as LogoX } from './X_Logo.svg'
 
 export { default as BackgroundNotfound } from './404background.svg'
 
+// Chat
+export { default as IconAI } from './ai.svg'
+export { default as SendIcon } from './send.svg'
+export { default as CopyIcon } from './copy.svg'
+export { default as DislikeIcon } from './dislike.svg'
+export { default as ExchangeIcon } from './exchange.svg'
+export { default as SparklesIcon } from './sparkles.svg'
+export { default as VolumeUpIcon } from './volume-up.svg'
+export { default as DiagonalArrowIcon } from './diagonal-arrow.svg'
+
 // Instruments page
 export { default as RemoveBackgroundIcon } from './remove_background.svg'
 export { default as InstantBackgroundsIcon } from './instant_backgrounds.svg'

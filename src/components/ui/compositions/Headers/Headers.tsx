@@ -72,7 +72,7 @@ export function HeaderAuth() {
       <NavigationPill isSelected={pathname === "/instruments"}><Link href="/instruments">AI insturments</Link></NavigationPill>
       <NavigationPill isSelected={pathname === "/styles"}><Link href="/styles">Style gallery</Link></NavigationPill>
       <NavigationPill><Link href="/">Premium</Link></NavigationPill>
-      <NavigationPill><Link href="/">Ai Chat</Link></NavigationPill>
+      <NavigationPill isSelected={pathname === "/chat"}><Link href="/chat">Ai Chat</Link></NavigationPill>
       <NavigationPill><Link href="/">Contact</Link></NavigationPill>
     </Navigation>
   );

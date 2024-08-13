@@ -1,0 +1,227 @@
+.chat-box {
+    padding: 0 45px 30px 45px;
+    background: #212121;
+    border-radius: 20px;
+    // height: 1224px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+
+    @include mobile {
+        padding: 0 10px 30px 10px;
+    }
+
+    &__scroll-button {
+        @include reset-button;
+        position: absolute;
+        bottom: 153px;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+        width: fit-content;
+        opacity: 0.4;
+    }
+
+    &__logo {
+        align-self: center;
+        margin-top: 30px;
+    }
+
+    &__prompts {
+        padding: 30px;
+        align-self: center;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 80px;
+        width: min-content;
+
+        @include tablet {
+            gap: 40px;
+        }
+
+        @include mobile {
+            gap: 10px;
+            grid-template-columns: 1fr;
+        }
+        &-item {
+            @include reset-button;
+            width: 291px;
+            height: 245px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: rgb(217, 217, 217);
+            border-radius: 20px;
+            font-size: var(--sds-typography-body-size-medium);
+            font-style: normal;
+            font-weight: var(--sds-typography-body-font-weight-regular);
+            line-height: 100%; /* 16px */
+
+            color: #212121;
+            text-align: center;
+
+            @include tablet {
+                width: 191px;
+                height: 145px;
+            }
+
+            @include mobile {
+                height: 80px;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__input {
+        --input-background-color: #fff !important;
+        --input-placeholder-color: #2E2E2E !important;
+        --input-text-color: #212121 !important;
+        --input-border-color: #fff !important;
+        height: 66px;
+        &-wrapper {
+            width: 100%;
+            padding-inline: 50px 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            border: 1.443px solid var(--sds-color-border-default-default);
+            
+            display: inline-flex;
+        }
+        &-button {
+            @include reset-button;
+            color: #212121;
+            @include flex-center;
+
+            height: 66px;
+            width: 66px;
+
+            @include hover {
+                color: #2E2E2E;
+            }
+        }
+    }
+}
+
+.chat {
+    &__heading {
+        padding: 26px 0;
+    }
+
+    &__description {
+        font-size: var(--sds-typography-body-size-medium);
+        font-style: normal;
+        font-weight: var(--sds-typography-body-font-weight-regular);
+        line-height: 130%; /* 20.8px */
+
+        text-align: center;
+        margin-bottom: 64px;
+    }
+}
+
+.messages {
+    height: calc(100vh - 500px);
+    overflow-y: scroll;
+    position: relative;
+
+    &__history-button {
+        @include reset-button;
+        padding: 5px 20px;
+        border-radius: 20px;
+        background: #494949;
+        position: absolute;
+        top: 20px;
+        left: 0;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-bottom: 76.5px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.messages-item {
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+
+    &:first-child {
+        margin-top: 30px;
+    }
+
+    &--ai {
+        align-self: flex-start;
+        --text-padding: 20px;
+        --text-border-radius: 0px 20px 20px 20px;
+        --text-background: #383838;
+    }
+
+    &--user {
+        align-self: flex-end;
+        margin-left: auto;
+        --text-padding: 20px 30px;
+        --text-border-radius: 20px;
+        --text-background: #FFF;
+        color: #000;
+    }
+
+    &__logo {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 26.5px;
+        align-items: center;
+    }
+
+    &__icons {
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 373px;
+
+        white-space: pre-wrap;
+
+        padding: var(--text-padding);
+        border-radius: var(--text-border-radius);
+        background: var(--text-background);
+
+        p {
+            font-size: var(--sds-typography-body-size-medium);
+            font-style: normal;
+            font-weight: var(--sds-typography-body-font-weight-regular);
+            line-height: 120%;
+        }
+
+        h5 {
+            font-size: var(--sds-typography-body-size-medium);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 16px */
+
+        }
+    }
+}
