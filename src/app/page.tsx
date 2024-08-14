@@ -2,22 +2,37 @@
 
 import { Card, Header, Hero, Panel } from "@/components/ui/compositions"
 import { Button, ButtonGroup, TextContentHeading, TextContentTitle, TextHeading } from "@/components/ui/primitives"
-import { Image } from "@/components/ui/primitives"
 import './page.scss'
 import { Flex, FlexItem, Section } from "@/components/ui/layout";
 import { placeholder } from "@/components/ui/images";
 import { IconChat, IconCrop, IconMagic, IconPhotos } from "@/components/svg";
 import BackgroundVideo from "next-video/background-video";
+import Image from 'next/image'
 
 import MainVideo from '/videos/main-video.mp4'
 import Video1 from '/videos/video-1.mp4'
 import Video2 from '/videos/video-2.mp4'
 
+import ImageFunctions1 from '../../public/functions1.png'
+import ImageFunctions2 from '../../public/functions2.png'
+import ImageFunctions3 from '../../public/functions3.png'
+import ImageFunctions4 from '../../public/functions4.png'
+
+import ImageAdvantages1 from '../../public/advantages1.png'
+import ImageAdvantages2 from '../../public/advantages2.png'
+import ImageAdvantages3 from '../../public/advantages3.png'
+
+import ImageBlocks1 from '../../public/blocks1.png'
+import ImageBlocks2 from '../../public/blocks2.png'
+import ImageBlocks3 from '../../public/blocks3.png'
+import ImageBlocks4 from '../../public/blocks4.png'
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <main>
-		<Section padding="1200" className="section section-main main-hero">
+		<Section padding="600" className="section section-main main-hero">
 			<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556}>
 				<div className="main-hero__content">
 					<TextContentTitle
@@ -29,6 +44,8 @@ export default function Home() {
 						<Button
 							onPress={() => {}}
 							variant="primary"
+							size="medium"
+							className="main-hero__button"
 						>
 							Generate now
 						</Button>
@@ -37,12 +54,28 @@ export default function Home() {
 			</BackgroundVideo>
 		</Section>
 		<Section padding="1600">
-			<Panel gap="1200" type="half">
+			<Panel gap="1200" type="half" className="main-panel">
 				<BackgroundVideo src={Video1} height={350}>
-					asd
+					<div className="main-panel__button-wrapper">
+						<Button
+							onPress={() => {}}
+							variant="primary"
+							size="medium"
+						>
+							Edit Photo
+						</Button>
+					</div>
 				</BackgroundVideo>
 				<BackgroundVideo src={Video2} height={350}>
-					asd
+				<div className="main-panel__button-wrapper">
+					<Button
+						onPress={() => {}}
+						variant="primary"
+						size="medium"
+					>
+						Create Image
+					</Button>
+				</div>
 				</BackgroundVideo>
 			</Panel>
 		</Section>
@@ -60,6 +93,7 @@ export default function Home() {
 						<TextContentHeading
 							heading="Functions"
 							subheading="try it right now"
+							className="functions__heading"
 						/>
 					</Flex>
 					<Flex
@@ -96,34 +130,45 @@ export default function Home() {
 					<Flex direction="column" className="functions__images-box">
 						<FlexItem className="functions__images-item">
 							<Image
-								src={placeholder}
-								alt="Always use image alt"
-								aspectRatio="fill"
+								src={ImageFunctions1}
+								alt=""
+								width={0}
+								height={0}
 								className="functions__image"
+								placeholder="blur"
 							/>
 						</FlexItem>
 						<FlexItem className="functions__images-item">
 							<Image
-								src={placeholder}
-								alt="Always use image alt"
-								aspectRatio="fill"
+								src={ImageFunctions2}
+								alt=""
+								width={0}
+								height={0}
+								sizes="100vw"
 								className="functions__image"
+								placeholder="blur"
 							/>
 						</FlexItem>
 						<FlexItem className="functions__images-item">
 							<Image
-								src={placeholder}
-								alt="Always use image alt"
-								aspectRatio="fill"
+								src={ImageFunctions3}
+								alt=""
+								width={0}
+								height={0}
+								sizes="100vw"
 								className="functions__image"
+								placeholder="blur"
 							/>
 						</FlexItem>
 						<FlexItem className="functions__images-item">
 							<Image
-								src={placeholder}
-								alt="Always use image alt"
-								aspectRatio="fill"
+								src={ImageFunctions4}
+								alt=""
+								width={0}
+								height={0}
+								sizes="100vw"
 								className="functions__image"
+								placeholder="blur"
 							/>
 						</FlexItem>
 					</Flex>
@@ -134,6 +179,7 @@ export default function Home() {
 			<Flex style={{ padding: "45px 0px" }} gap="1200" container>
 				<TextContentHeading
 					heading="Our advantages"
+					className="advantages__heading"
 				/>
 			</Flex>
 			<Flex
@@ -153,7 +199,7 @@ export default function Home() {
 						<FlexItem>
 							<div className="advantages__frame advantages__frame--first">
 								<div className="advantages__frame-number advantages__frame-number--muller">
-									1
+									 1 
 								</div>
 								<div className="advantages__frame-content">
 									<TextHeading>Speed and quality</TextHeading>
@@ -166,7 +212,7 @@ export default function Home() {
 						<FlexItem>
 							<div className="advantages__frame">
 								<div className="advantages__frame-number advantages__frame-number--gotham">
-									2
+									 2 
 								</div>
 								<div className="advantages__frame-content">
 									<TextHeading>
@@ -198,19 +244,13 @@ export default function Home() {
 				<FlexItem size="major">
 					<Flex direction="column" style={{ flex: "1 0 auto", flexDirection: "column" }} className="advantages__rectangles-box">
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
-								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
-							</svg>
+							<Image className="advantages__rectangles-item" src={ImageAdvantages1} width={0} height={0} alt="" placeholder="blur"/>
 						</FlexItem>
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
-								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
-							</svg>
+							<Image className="advantages__rectangles-item" src={ImageAdvantages2} width={0} height={0} alt="" placeholder="blur"/>
 						</FlexItem>
 						<FlexItem size="fill">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474 107" fill="none" className="advantages__rectangles-item">
-								<path d="M0 0H474L434 107H0L40 0H0Z" fill="#D9D9D9"/>
-							</svg>
+							<Image className="advantages__rectangles-item" src={ImageAdvantages3} width={0} height={0} alt="" placeholder="blur"/>
 						</FlexItem>
 					</Flex>
 				</FlexItem>
@@ -223,10 +263,18 @@ export default function Home() {
 			className="blocks__wrapper"
 			alignPrimary="center"
 			alignSecondary="center">
-				<div className="blocks__item">AI chat</div>
-				<div className="blocks__item">AI photo editor</div>
-				<div className="blocks__item">Style gallery</div>
-				<div className="blocks__item">Image generation</div>
+				<Link className="blocks__item" href="/chat">
+					<Image src={ImageBlocks1} alt="AI CHAT" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+				</Link>
+				<Link className="blocks__item" href="/">
+					<Image src={ImageBlocks2} alt="AI PHOTO EDITOR" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+				</Link>
+				<Link className="blocks__item" href="/styles">
+					<Image src={ImageBlocks3} alt="STYLE GALLERY" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+				</Link>
+				<Link className="blocks__item" href="/">
+					<Image src={ImageBlocks4} alt="IMAGE GENERATION" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+				</Link>
 			</Flex>
 		</Section>
     </main>

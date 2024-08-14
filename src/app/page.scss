@@ -3,18 +3,71 @@
 .main-hero {
     padding: var(--sds-size-space-4000) var(--sds-size-space-600);
 
+    border-radius: 20px;
+
     &__content {
         display: flex;
         flex-direction: column;
         gap: 52px;
+        background: rgba(0, 0, 0, 0.40);
+        backdrop-filter: blur(77.0999984741211px);
+        padding: 64px 150px;
+        border-radius: 20px;
     }
 
     &__inner {
         height: 556px;
+        border-radius: 20px;
+    }
+
+    &__button {
+        padding: 20px;
+    }
+
+    .next-video-bg-video, .next-video-bg {
+        border-radius: 20px;
+    }
+}
+
+.main-panel {
+
+    &__button {
+        &-wrapper {
+            padding: 15px;
+            background: rgba(39, 36, 36, 0.20);
+            backdrop-filter: blur(10px);
+
+            border-radius: 20px;
+        }
+    }
+
+    .next-video-bg-video, .next-video-bg {
+        border-radius: 20px;
     }
 }
 
 .functions {
+    &__heading {
+        .text-heading {
+            background: var(--text-2, linear-gradient(102deg, #FFC3F6 -128.07%, #FFC2F6 -26.89%, #E102C0 131.31%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font-size: 32px;
+            font-style: normal;
+            font-weight: var(--sds-typography-heading-font-weight);
+            line-height: 120%; /* 38.4px */
+            letter-spacing: 0.64px;
+        }
+
+        .text-subheading {
+            font-size: var(--sds-typography-subheading-size-medium);
+            font-style: normal;
+            font-weight: var(--sds-typography-subheading-font-weight);
+            line-height: 120%; /* 24px */
+        }
+    }
     &__list {
         width: 556px;
         flex-direction: column;
@@ -23,6 +76,15 @@
 
         @include tablet {
             width: 100%;
+        }
+
+        .card-asset {
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg *[fill] {
+            fill: revert-layer !important;
         }
     }
 
@@ -40,28 +102,52 @@
     &__image {
         width: 100%;
         height: 151px;
-        border: var(--sds-size-stroke-border) solid rgba(255, 255, 255, 0.2);
-        background: #333;
         margin-bottom: -29px;
     
-        &:not(:last-child) {
-            @include hover {
-                margin-bottom: 0;
-                border-bottom: 0;
-            }
+        @include hover {
+            margin-bottom: 0;
+            border-bottom: 0;
         }
     }
 }
 
 
 .advantages {
+    &__heading {
+        .text-heading {
+            background: var(--text-2, linear-gradient(102deg, #FFC3F6 -128.07%, #FFC2F6 -26.89%, #E102C0 131.31%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            font-size: 32px;
+            font-style: normal;
+            font-weight: var(--sds-typography-heading-font-weight);
+            line-height: 120%; /* 38.4px */
+            letter-spacing: 0.64px;
+        }
+
+        .text-subheading {
+            font-size: var(--sds-typography-subheading-size-medium);
+            font-style: normal;
+            font-weight: var(--sds-typography-subheading-font-weight);
+            line-height: 120%; /* 24px */
+        }
+    }
+    
     &__rectangles-box {
         gap: 57px;
+
     }
     &__rectangles-item {
+        filter: drop-shadow(0px 0px 40px rgba(240, 144, 255, 0.30));
+        object-position: 50% 50%;
+        object-fit: cover;
         width: 474px;
         height: 107px;
 
+        transform: skew(-20deg);
+        
         @include mobile {
             width: 100%;
         }
@@ -112,10 +198,15 @@
             font-style: italic;
             font-weight: 700;
             line-height: 100%; /* 150px */
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #FFF;
+            -webkit-text-stroke: 2px transparent;
+
+            background: var(--button-1);
+            -webkit-background-clip: text;
+            background-clip: text;
 
             color: black;
+            min-width: 115px;
+            @include flex-center;
 
             &--muller {
                 font-family: var(--font-muller);
@@ -134,8 +225,8 @@
     }
 
     &__item {
-        width: 600px;
-        height: 600px;
+        width: 450px;
+        height: 450px;
         color: #000;
 
         font-family: var(--sds-typography-body-font-family);
@@ -149,8 +240,6 @@
         align-items: center;
 
         border-radius: 20px;
-
-        background: #FFF;
 
         @include mobile {
             width: 100%;

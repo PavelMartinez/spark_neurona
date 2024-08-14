@@ -70,12 +70,24 @@ export function HeaderAuth() {
 
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
-      <NavigationPill><Link href="/">Image generation</Link></NavigationPill>
-      <NavigationPill isSelected={pathname === "/instruments"}><Link href="/instruments">AI insturments</Link></NavigationPill>
-      <NavigationPill isSelected={pathname === "/styles"}><Link href="/styles">Style gallery</Link></NavigationPill>
-      <NavigationPill><Link href="/">Premium</Link></NavigationPill>
-      <NavigationPill isSelected={pathname === "/chat"}><Link href="/chat">Ai Chat</Link></NavigationPill>
-      <NavigationPill><Link href="/">Contact</Link></NavigationPill>
+      <NavigationPill>
+        <Link href="/">Image generation</Link>
+      </NavigationPill>
+      <NavigationPill isSelected={pathname === "/instruments"}>
+        <Link href="/instruments">AI insturments</Link>
+      </NavigationPill>
+      <NavigationPill isSelected={pathname === "/styles"}>
+        <Link href="/styles">Style gallery</Link>
+      </NavigationPill>
+      <NavigationPill isSelected={pathname === "/chat"}>
+        <Link href="/chat">AI Chat</Link>
+      </NavigationPill>
+      <NavigationPill>
+        <Link href="/">Contact</Link>
+      </NavigationPill>
+      <NavigationPill className="navigation-pill--border">
+        <Link href="/">Premium</Link>
+      </NavigationPill>
     </Navigation>
   );
 

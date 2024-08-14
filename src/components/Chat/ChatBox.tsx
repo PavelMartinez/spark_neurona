@@ -6,6 +6,7 @@ import { Form, Input } from '../ui/primitives';
 import MessagesItemProps from '@/typescript/interfaces/Chat/MessagesItemProps';
 import { Sender } from '@/typescript/enums/Chat/Sender';
 import MessagesItem from './MessagesItem';
+import Image from 'next/image'
 
 const ChatBox = () => {
     const [history, setHistory] = useState<MessagesItemProps[]>([]);
@@ -69,8 +70,11 @@ const ChatBox = () => {
         <div className='chat-box'>
             {history.length === 0 ? 
             <>
-                <div className="chat-box__logo">
-                    <IconAI className="chat-box__logo-svg"/>
+                <button className='messages__history-button'>
+                    History
+                </button>
+                <div className="chat-box__logo-wrapper">
+                    <Image alt="Logo" src="/Logo.png" className='chat-box__logo' width={57} height={57}/>
                 </div>
                 <div className="chat-box__prompts">
                     <button className="chat-box__prompts-item" onClick={handlePromptsClick}>

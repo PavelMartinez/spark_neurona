@@ -12,4 +12,6 @@ const nextConfig = {
 	}
 };
 
-module.exports = withNextVideo(nextConfig);
+module.exports = withNextVideo(nextConfig, {
+	provider: "vercel-blob"
+});

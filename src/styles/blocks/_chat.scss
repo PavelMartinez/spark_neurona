@@ -1,6 +1,6 @@
 .chat-box {
     padding: 0 45px 30px 45px;
-    background: #212121;
+    background: rgba(0, 0, 0, 0.20);
     border-radius: 20px;
     // height: 1224px;
     width: 100%;
@@ -25,13 +25,13 @@
         opacity: 0.4;
     }
 
-    &__logo {
+    &__logo-wrapper {
         align-self: center;
         margin-top: 30px;
     }
 
     &__prompts {
-        padding: 30px;
+        padding: 224px 0;
         align-self: center;
         margin: auto;
         display: grid;
@@ -56,15 +56,21 @@
             justify-content: center;
             align-items: center;
 
-            background: rgb(217, 217, 217);
             border-radius: 20px;
             font-size: var(--sds-typography-body-size-medium);
             font-style: normal;
             font-weight: var(--sds-typography-body-font-weight-regular);
             line-height: 100%; /* 16px */
 
-            color: #212121;
+            color: #FFF;
             text-align: center;
+
+            border: 1px solid #FFF;
+
+            background: #060606;
+
+            /* stroke */
+            box-shadow: 0px 0px 40px 0px rgba(240, 144, 255, 0.30);
 
             @include tablet {
                 width: 191px;
@@ -98,7 +104,6 @@
         }
         &-button {
             @include reset-button;
-            color: #212121;
             @include flex-center;
 
             height: 66px;
@@ -106,6 +111,10 @@
 
             @include hover {
                 color: #2E2E2E;
+            }
+
+            svg *[fill] {
+                fill: revert-layer !important;
             }
         }
     }
@@ -136,10 +145,12 @@
         @include reset-button;
         padding: 5px 20px;
         border-radius: 20px;
-        background: #494949;
         position: absolute;
         top: 20px;
         left: 0;
+        border: 1px solid rgba(255, 255, 255, 0.50);
+        background: rgba(17, 7, 28, 0.10);
+        backdrop-filter: blur(20px);
 
         @include mobile {
             display: none;
@@ -171,7 +182,7 @@
         align-self: flex-start;
         --text-padding: 20px;
         --text-border-radius: 0px 20px 20px 20px;
-        --text-background: #383838;
+        --text-background: #271D34;
     }
 
     &--user {
@@ -179,8 +190,8 @@
         margin-left: auto;
         --text-padding: 20px 30px;
         --text-border-radius: 20px;
-        --text-background: #FFF;
-        color: #000;
+        --text-background: var(--button-1);
+        color: #FCFCFC;
     }
 
     &__logo {
