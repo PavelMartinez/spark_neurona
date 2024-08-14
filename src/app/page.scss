@@ -1,8 +1,17 @@
 @import '../styles/index.scss';
 
 .main-hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), rgba(255, 255, 255, 0.80);
     padding: var(--sds-size-space-4000) var(--sds-size-space-600);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+    }
+
+    &__inner {
+        height: 556px;
+    }
 }
 
 .functions {

@@ -8,5 +8,9 @@
         height: 57px;
     }
 
+    .navigation-pill {
+        padding: var(--sds-size-space-100) var(--sds-size-space-200) !important;
+    }
+
     border-bottom: 0 !important;
 }

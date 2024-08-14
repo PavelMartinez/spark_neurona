@@ -7,40 +7,43 @@ import './page.scss'
 import { Flex, FlexItem, Section } from "@/components/ui/layout";
 import { placeholder } from "@/components/ui/images";
 import { IconChat, IconCrop, IconMagic, IconPhotos } from "@/components/svg";
+import BackgroundVideo from "next-video/background-video";
+
+import MainVideo from '/videos/main-video.mp4'
+import Video1 from '/videos/video-1.mp4'
+import Video2 from '/videos/video-2.mp4'
 
 
 export default function Home() {
   return (
     <main>
-		<Hero variant="image" className="section section-main main-hero" style={{ flexDirection: "column" }}>
-			<TextContentTitle
-				align="center"
-				title="Neurona"
-				subtitle="the best service for creating AI images"
-			/>
-			<ButtonGroup align="center">
-				<Button
-					onPress={() => {}}
-					variant="primary"
-				>
-					Generate now
-				</Button>
-			</ButtonGroup>
-		</Hero>
+		<Section padding="1200" className="section section-main main-hero">
+			<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556}>
+				<div className="main-hero__content">
+					<TextContentTitle
+						align="center"
+						title="Neurona"
+						subtitle="the best service for creating AI images"
+					/>
+					<ButtonGroup align="center">
+						<Button
+							onPress={() => {}}
+							variant="primary"
+						>
+							Generate now
+						</Button>
+					</ButtonGroup>
+				</div>
+			</BackgroundVideo>
+		</Section>
 		<Section padding="1600">
 			<Panel gap="1200" type="half">
-				<Image
-					src={placeholder}
-					alt="Always use image alt"
-					aspectRatio="4-3"
-					size="medium"
-				/>
-				<Image
-					src={placeholder}
-					alt="Always use image alt"
-					aspectRatio="4-3"
-					size="medium"
-				/>
+				<BackgroundVideo src={Video1} height={350}>
+					asd
+				</BackgroundVideo>
+				<BackgroundVideo src={Video2} height={350}>
+					asd
+				</BackgroundVideo>
 			</Panel>
 		</Section>
 		<Section padding="1200" className="functions">

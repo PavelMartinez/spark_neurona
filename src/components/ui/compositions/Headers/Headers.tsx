@@ -37,6 +37,7 @@ export function HeaderAuth() {
     <>
       <Button
         variant="neutral"
+        size="small"
         onPress={() =>
           login({
             avatar: placeholder,
@@ -49,6 +50,7 @@ export function HeaderAuth() {
       </Button>
       <Button
         variant="primary"
+        size="small"
         onPress={() =>
           login({
             avatar: placeholder,
