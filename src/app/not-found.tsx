@@ -20,11 +20,13 @@ const NotFoundPage = () => {
             </div>
             <div className="notfound__buttons">
                 <ButtonGroup className="notfound__buttons-group">
-                    <Button className="notfound__buttons-item" variant='subtle'>
+                    <Button className="notfound__buttons-item" variant='primary'>
                         LOAD
-                        <IconUpload />
+                        <div className="notfound__buttons-icon">
+                            <IconUpload size='24'/>
+                        </div>
                     </Button>
-                    <Button className="notfound__buttons-item" variant='subtle' >ON MAIN</Button>
+                    <Button className="notfound__buttons-item notfound__buttons-item--border" variant='neutral' >ON MAIN</Button>
                 </ButtonGroup>
             </div>
             <div className="notfound__bigtext">

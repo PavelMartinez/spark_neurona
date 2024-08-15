@@ -71,7 +71,7 @@ export function Card({
     className,
     "card",
     `card-align-${align}`,
-    `card-direction-${isMobile ? "vertical" : direction}`,
+    `card-direction-${direction}`,
     `card-variant-${variant}`,
   );
   return (

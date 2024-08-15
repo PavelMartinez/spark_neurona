@@ -4,6 +4,7 @@
 
     &__inner {
         padding: 67px 80px;
+        border-radius: 20px;
         gap: 50px !important;
         overflow: hidden;
         position: relative;
@@ -32,11 +33,53 @@
 
     &__buttons {
         margin-bottom: calc(217px - 67px);
+        &-icon {
+            width: var(--sds-size-icon-small);
+            height: var(--sds-size-icon-small);
+        }
         &-item {
-            --button-background-color: var(--button-1) !important;
             --button-padding-x: 60px !important;
             --button-padding-y: 24px !important;
             --border-radius: 20px !important;
+
+            font-size: 16px !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+            line-height: 24px !important; /* 24px */
+            text-transform: uppercase;
+
+            &:last-child {
+                background: var(--button-1) !important;
+                -webkit-background-clip: text !important;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &--border {
+                --b: 1px;  /* border width*/
+              
+                display: inline-block;
+                position: relative;
+                z-index:0;
+            }
+        
+            &--border::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                padding: var(--b);
+                border-radius: 20px;
+                background: var(--button-1); 
+                -webkit-mask: 
+                   linear-gradient(#fff 0 0) content-box, 
+                   linear-gradient(#fff 0 0);
+                        mask: 
+                   linear-gradient(#fff 0 0) content-box, 
+                   linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+            }
         }
     }
 

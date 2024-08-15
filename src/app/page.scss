@@ -1,7 +1,7 @@
 @import '../styles/index.scss';
 
 .main-hero {
-    padding: var(--sds-size-space-4000) var(--sds-size-space-600);
+    padding: 100px;
 
     border-radius: 20px;
 
@@ -13,6 +13,10 @@
         backdrop-filter: blur(77.0999984741211px);
         padding: 64px 150px;
         border-radius: 20px;
+
+        @include mobile {
+            padding: 30px;
+        }
     }
 
     &__inner {
@@ -22,10 +26,16 @@
 
     &__button {
         padding: 20px;
+        box-shadow: 0px 0px 17.4px 4.329px rgba(144, 55, 255, 0.80);
+        border: var(--sds-size-stroke-border) #FFC3F6;
     }
 
     .next-video-bg-video, .next-video-bg {
         border-radius: 20px;
+    }
+
+    @include mobile {
+        padding: 20px;
     }
 }
 
@@ -43,6 +53,7 @@
 
     .next-video-bg-video, .next-video-bg {
         border-radius: 20px;
+        border: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
     }
 }
 
@@ -76,6 +87,9 @@
 
         @include tablet {
             width: 100%;
+            .card {
+                background: transparent;
+            }
         }
 
         .card-asset {
@@ -97,6 +111,10 @@
     &__images-item {
         width: 474px;
         flex: 0 1 auto;
+
+        @include mobile {
+            width: 100%;
+        }
     }
         
     &__image {
@@ -108,6 +126,13 @@
             margin-bottom: 0;
             border-bottom: 0;
         }
+    }
+
+    .card-content {
+        font-size: var(--sds-typography-body-size-medium);
+        font-style: normal;
+        font-weight: 250;
+        line-height: 140%; /* 22.4px */
     }
 }
 
@@ -130,7 +155,7 @@
         .text-subheading {
             font-size: var(--sds-typography-subheading-size-medium);
             font-style: normal;
-            font-weight: var(--sds-typography-subheading-font-weight);
+            font-weight: var(--sds-typography-subheading-font-weight-regular);
             line-height: 120%; /* 24px */
         }
     }
@@ -138,19 +163,32 @@
     &__rectangles-box {
         gap: 57px;
 
+        @include mobile {
+            padding-inline: 30px;
+            width: 100% !important;
+        }
     }
+    
+
     &__rectangles-item {
-        filter: drop-shadow(0px 0px 40px rgba(240, 144, 255, 0.30));
+        filter: drop-shadow(0px 0px 20px rgba(240, 144, 255, 0.30));
         object-position: 50% 50%;
         object-fit: cover;
         width: 474px;
         height: 107px;
 
-        transform: skew(-20deg);
+        margin-left: auto;
+
+        transform: skew(-15deg);
+
+        border: 0.5px solid black;
+        border-image: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(225, 2, 192, 1), rgba(255, 255, 255, 1));
+        border-image-slice: 1;
         
         @include mobile {
             width: 100%;
         }
+
     }
     &__frame {
         display: flex;
@@ -171,7 +209,8 @@
         align-items: center;
 
         &--first {
-            margin-left: 35px;
+            margin-left: 19px;
+            gap: 50px;
         }
 
         &-content {
@@ -222,6 +261,10 @@
 .blocks {
     &__wrapper {
         gap: 100px;
+
+        @include mobile {
+            gap: 20px;
+        }
     }
 
     &__item {

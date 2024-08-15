@@ -241,17 +241,11 @@ export default function Home() {
 						</FlexItem>
 					</Flex>
 				</FlexItem>
-				<FlexItem size="major">
-					<Flex direction="column" style={{ flex: "1 0 auto", flexDirection: "column" }} className="advantages__rectangles-box">
-						<FlexItem size="fill">
-							<Image className="advantages__rectangles-item" src={ImageAdvantages1} width={0} height={0} alt="" placeholder="blur"/>
-						</FlexItem>
-						<FlexItem size="fill">
-							<Image className="advantages__rectangles-item" src={ImageAdvantages2} width={0} height={0} alt="" placeholder="blur"/>
-						</FlexItem>
-						<FlexItem size="fill">
-							<Image className="advantages__rectangles-item" src={ImageAdvantages3} width={0} height={0} alt="" placeholder="blur"/>
-						</FlexItem>
+				<FlexItem size="fill">
+					<Flex direction="column" style={{ flexDirection: "column" }} className="advantages__rectangles-box" alignSecondary="end">
+						<Image className="advantages__rectangles-item" src={ImageAdvantages1} width={0} height={0} alt="" placeholder="blur"/>
+						<Image className="advantages__rectangles-item" src={ImageAdvantages2} width={0} height={0} alt="" placeholder="blur"/>
+						<Image className="advantages__rectangles-item" src={ImageAdvantages3} width={0} height={0} alt="" placeholder="blur"/>
 					</Flex>
 				</FlexItem>
 			</Flex>

@@ -28,10 +28,13 @@ import { AnchorOrButton } from "utils";
 import "./headers.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Screens } from "@/typescript/enums/Auth/Screens";
+import AuthModal from "@/components/Auth/AuthModal";
 
 export function HeaderAuth() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
   const [open, setOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState<boolean>(false)
 
   const userButtons = (
     <>
@@ -39,11 +42,7 @@ export function HeaderAuth() {
         variant="neutral"
         size="small"
         onPress={() =>
-          login({
-            avatar: placeholder,
-            name: "Charlie Brown",
-            username: "snooptroupe",
-          })
+          setAuthOpen(true)
         }
       >
         Login
@@ -52,14 +51,10 @@ export function HeaderAuth() {
         variant="primary"
         size="small"
         onPress={() =>
-          login({
-            avatar: placeholder,
-            name: "Charlie Brown",
-            username: "snooptroupe",
-          })
+          setAuthOpen(true)
         }
       >
-        Register
+        Sign Up
       </Button>
     </>
   );
@@ -92,6 +87,8 @@ export function HeaderAuth() {
   );
 
   return (
+    <>
+    <AuthModal isOpen={authOpen} screen={Screens.LOGIN} openControl={setAuthOpen} />
     <Flex
 		direction="column"
 		gap="300"
@@ -195,6 +192,7 @@ export function HeaderAuth() {
         )}
       </FlexItem>
     </Flex>
+    </>
   );
 }
 
@@ -205,10 +203,9 @@ export function Header({ className, ...props }: HeaderProps) {
       className="header"
       elementType="header"
       variant="stroke"
-      padding="800"
       {...props}
     >
-      <Flex container alignPrimary="space-between" alignSecondary="center">
+      <Flex container alignPrimary="space-between" alignSecondary="center" className="header__inner">
         <FlexItem size="fill">
           <Link href="/">
             <Logo />

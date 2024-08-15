@@ -45,9 +45,21 @@ export function Footer({ className, ...props }: FooterProps) {
             <TextLink href="#">Video generating</TextLink>
           </TextListItem>
         </TextLinkList>
-        <Link href="/privacy" className="footer__link">
-          <TextStrong>Privacy policy</TextStrong>
-        </Link>
+        <TextLinkList
+          density={listDensity}
+          title={
+            <Link href="/privacy" className="footer__link">
+              <TextStrong>Privacy policy</TextStrong>
+            </Link>
+          }
+        >
+          <TextListItem>
+            <TextLink href="#">Contact us</TextLink>
+          </TextListItem>
+          <TextListItem>
+            <TextLink href="#">Report a problem</TextLink>
+          </TextListItem>
+        </TextLinkList>
         <TextLinkList
           density={listDensity}
           title={<TextStrong>About us</TextStrong>}
