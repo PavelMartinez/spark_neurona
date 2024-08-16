@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
-import { IconChevronDown, IconMenu, IconX } from "icons";
+import { IconChevronDown, IconDollarSign, IconMenu, IconX } from "icons";
 import { placeholder } from "images";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
 import {
@@ -23,18 +23,29 @@ import {
   NavigationPill,
 } from "primitives";
 import { AuthenticationContext } from "providers";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Screens } from "@/typescript/enums/Auth/Screens";
 import AuthModal from "@/components/Auth/AuthModal";
+import { useClerk, useUser } from "@clerk/nextjs";
+import { Spin } from "antd";
+import { DialogIcon, DollarIcon, ExitIcon, GroupIcon, SettingIcon } from "@/components/svg";
+import { useRouter } from "next/navigation";
 
 export function HeaderAuth() {
   const { currentUser, login, logout } = useContext(AuthenticationContext);
+  const { isSignedIn, user, isLoaded } = useUser()
+  const { signOut } = useClerk()
   const [open, setOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState<boolean>(false)
+  const [authScreen, setAuthScreen] = useState<Screens>(Screens.LOGIN)
+
+  useEffect(() => {
+    console.log(user)
+  }, [isLoaded])
 
   const userButtons = (
     <>
@@ -42,7 +53,10 @@ export function HeaderAuth() {
         variant="neutral"
         size="small"
         onPress={() =>
-          setAuthOpen(true)
+          {
+            setAuthScreen(Screens.LOGIN);
+            setAuthOpen(true);
+          }
         }
       >
         Login
@@ -51,7 +65,10 @@ export function HeaderAuth() {
         variant="primary"
         size="small"
         onPress={() =>
-          setAuthOpen(true)
+          {
+            setAuthScreen(Screens.SIGNUP);
+            setAuthOpen(true);
+          }
         }
       >
         Sign Up
@@ -61,6 +78,23 @@ export function HeaderAuth() {
 
   const { isTabletDown } = useMediaQuery();
   const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const router = useRouter();
+
+  useEffect(() => {
+    if(searchParams.has("sign-in"))
+    {
+      setAuthScreen(Screens.LOGIN);
+      setAuthOpen(true);
+      window.history.replaceState(null, '', '/')
+    }
+    else if(searchParams.has("sign-up"))
+    {
+      setAuthScreen(Screens.SIGNUP);
+      setAuthOpen(true);
+      window.history.replaceState(null, '', '/')
+    }
+  }, [searchParams])
 
 
   const navigation = (
@@ -88,7 +122,7 @@ export function HeaderAuth() {
 
   return (
     <>
-    <AuthModal isOpen={authOpen} screen={Screens.LOGIN} openControl={setAuthOpen} />
+    <AuthModal isOpen={authOpen} screen={authScreen} openControl={setAuthOpen} />
     <Flex
 		direction="column"
 		gap="300"
@@ -122,19 +156,19 @@ export function HeaderAuth() {
                   alignSecondary="center"
                 >
                   {navigation}
-                  {currentUser ? (
-                    <Flex alignSecondary="center" gap="200" direction="column">
+                  {isSignedIn && isLoaded ? (
+                    <Flex alignSecondary="center" gap="200" direction="column" style={{ marginTop: 50 }}>
                       <FlexItem>
                         <Flex alignPrimary="center">
                           <Avatar
-                            src={currentUser.avatar}
-                            initials={currentUser.name.charAt(0)}
+                            src={user?.imageUrl}
+                            initials={user?.firstName ? user?.firstName.charAt(0) : "U"}
                           />
                         </Flex>
                       </FlexItem>
                       <FlexItem>
                         <Flex alignPrimary="center">
-                          <Label>{currentUser.name}</Label>
+                          <Label>{user.firstName}</Label>
                         </Flex>
                       </FlexItem>
                       <FlexItem>
@@ -142,16 +176,18 @@ export function HeaderAuth() {
                           <Button
                             variant="subtle"
                             size="small"
-                            onPress={logout}
+                            onPress={() => {
+                              signOut({redirectUrl: "/"})
+                            }}
                           >
                             Log out
                           </Button>
                         </Flex>
                       </FlexItem>
                     </Flex>
-                  ) : (
+                  ) : (!isLoaded ? <Spin /> : (
                     <ButtonGroup align="center">{userButtons}</ButtonGroup>
-                  )}
+                  ))}
                 </Flex>
               </Dialog>
             </DialogModal>
@@ -159,35 +195,74 @@ export function HeaderAuth() {
         ) : (
           <Flex alignSecondary="center" direction="row" alignPrimary="space-between" style={{ justifyContent: "space-between" }}>
             {navigation}
-            {currentUser ? (
+            {isSignedIn && isLoaded ? (
               <MenuTrigger>
                 <AnchorOrButton className={clsx("header-auth-avatar-button")}>
                   <Avatar
-                    src={currentUser.avatar}
-                    initials={currentUser.name.charAt(0)}
+                    src={user?.imageUrl}
+                    initials={user?.firstName ? user?.firstName.charAt(0) : "U"}
                   />
+                  <Label style={{ fontWeight: 700 }}>{user.firstName}</Label>
                   <IconChevronDown />
                 </AnchorOrButton>
-                <MenuPopover placement="bottom right">
-                  <Menu>
-                    <MenuItem>
-                      <AvatarBlock
-                        title={currentUser.name}
-                        description="View profile"
-                      >
-                        <Avatar
-                          src={currentUser.avatar}
-                          initials={currentUser.name.charAt(0)}
-                        />
-                      </AvatarBlock>
+                <MenuPopover placement="bottom right" className={"header__popover"}>
+                  <Menu className="header__popover-menu">
+                    <MenuItem className="header__popover-item" onAction={() => {
+                      router.push("/account/buy")
+                    }}>
+                      <div className="header__popover-item__icon">
+                        <DollarIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        Buy coins
+                      </div>
                     </MenuItem>
-                    <MenuItem onAction={logout}>Log out</MenuItem>
+                    <MenuItem className="header__popover-item" onAction={() => {
+                      router.push("/account/referal")
+                    }}>
+                      <div className="header__popover-item__icon">
+                        <GroupIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        Referal Program
+                      </div>
+                    </MenuItem>
+                    <MenuItem className="header__popover-item" onAction={() => {
+                      router.push("/account/settings")
+                    }}>
+                      <div className="header__popover-item__icon">
+                        <SettingIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        Profile settings
+                      </div>
+                    </MenuItem>
+                    <MenuItem className="header__popover-item" onAction={() => {
+                      router.push("/account/support")
+                    }}>
+                      <div className="header__popover-item__icon">
+                        <DialogIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        Customer Support
+                      </div>
+                    </MenuItem>
+                    <MenuItem className="header__popover-item" onAction={() => {
+                      signOut({redirectUrl: "/"})
+                    }} style={{ cursor: "pointer" }}>
+                      <div className="header__popover-item__icon">
+                        <ExitIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        Log out
+                      </div>
+                    </MenuItem>
                   </Menu>
                 </MenuPopover>
               </MenuTrigger>
-            ) : (
+            ) : (!isLoaded ? <Spin /> : (
               <ButtonGroup>{userButtons}</ButtonGroup>
-            )}
+            )) }
           </Flex>
         )}
       </FlexItem>

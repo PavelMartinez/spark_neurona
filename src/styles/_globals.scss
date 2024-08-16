@@ -40,3 +40,12 @@ body {
     top 2730px right -506px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
+
+.dialog-backdrop {
+    @include flex-center;
+    width: 100vw;
+}
+
+.dialog-container {
+    min-width: 495px;
+}

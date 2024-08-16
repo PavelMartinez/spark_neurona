@@ -2,9 +2,7 @@
 
 import { Card, Header, Hero, Panel } from "@/components/ui/compositions"
 import { Button, ButtonGroup, TextContentHeading, TextContentTitle, TextHeading } from "@/components/ui/primitives"
-import './page.scss'
 import { Flex, FlexItem, Section } from "@/components/ui/layout";
-import { placeholder } from "@/components/ui/images";
 import { IconChat, IconCrop, IconMagic, IconPhotos } from "@/components/svg";
 import BackgroundVideo from "next-video/background-video";
 import Image from 'next/image'
@@ -126,9 +124,9 @@ export default function Home() {
 						</FlexItem>
 					</Flex>
 				</FlexItem>
-				<FlexItem size="major">
+				<FlexItem size="fill">
 					<Flex direction="column" className="functions__images-box">
-						<FlexItem className="functions__images-item">
+						<div className="functions__images-item">
 							<Image
 								src={ImageFunctions1}
 								alt=""
@@ -137,8 +135,8 @@ export default function Home() {
 								className="functions__image"
 								placeholder="blur"
 							/>
-						</FlexItem>
-						<FlexItem className="functions__images-item">
+						</div>
+						<div className="functions__images-item">
 							<Image
 								src={ImageFunctions2}
 								alt=""
@@ -148,8 +146,8 @@ export default function Home() {
 								className="functions__image"
 								placeholder="blur"
 							/>
-						</FlexItem>
-						<FlexItem className="functions__images-item">
+						</div>
+						<div className="functions__images-item">
 							<Image
 								src={ImageFunctions3}
 								alt=""
@@ -159,8 +157,8 @@ export default function Home() {
 								className="functions__image"
 								placeholder="blur"
 							/>
-						</FlexItem>
-						<FlexItem className="functions__images-item">
+						</div>
+						<div className="functions__images-item">
 							<Image
 								src={ImageFunctions4}
 								alt=""
@@ -170,7 +168,7 @@ export default function Home() {
 								className="functions__image"
 								placeholder="blur"
 							/>
-						</FlexItem>
+						</div>
 					</Flex>
 				</FlexItem>
 			</Flex>

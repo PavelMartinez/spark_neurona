@@ -40,3 +40,14 @@ export { default as AdjustIcon } from './adjust.svg'
 export { default as BobbleHeadIcon } from './bobble_head.svg'
 export { default as RoundIcon } from './round_16179374.svg'
 export { default as RgbIcon } from './rgb_7213068.svg'
+
+export { default as GoogleLogo } from './google.svg'
+export { default as FacebookLogo } from './facebook.svg'
+export { default as AppleLogo } from './apple.svg'
+
+// Popover Header
+export { default as DollarIcon } from './Dollar.svg'
+export { default as GroupIcon } from './Group.svg'
+export { default as SettingIcon } from './Settings.svg'
+export { default as DialogIcon } from './Dialog.svg'
+export { default as ExitIcon } from './Exit.svg'

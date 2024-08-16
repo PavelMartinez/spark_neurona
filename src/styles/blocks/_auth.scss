@@ -1,0 +1,88 @@
+.auth {
+    padding: 44.22px;
+    border-radius: 22px;
+    border: none;
+
+    &__inner {
+        padding: 18px 36px;
+    }
+
+    &__heading {
+        margin-bottom: 34px;
+
+        color: #FCFCFC;
+        text-align: center;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    &__text {
+        color: #93949A;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 250;
+        line-height: 24px; /* 150% */
+
+        &-link {
+            margin-inline: 10px;
+            color: #5C4FF9;
+            font-weight: 400;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 17.69px;
+        margin-bottom: 54px;
+
+        &-item {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            width: 336px;
+            height: 56px;
+            padding-inline: 14.37px;
+
+            border-radius: 11.055px;
+            border: 1.106px solid var(--grey, #93949A);
+
+            &--white {
+                background: #FCFCFC;
+                border: 1.106px solid #000;
+                color: #131313;
+            }
+
+            &--grey {
+                background: #232323;
+                border: none;
+            }
+
+            &--service {
+                border: none;
+                font-weight: 400;
+            }
+        }
+
+        &-text {
+            text-align: center;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 21px;
+            justify-self: center;
+            margin: auto;
+        }
+
+        &-icon {
+            svg *[fill] {
+                fill: revert-layer !important;
+            }
+            @include flex-center;
+        }
+    }
+}

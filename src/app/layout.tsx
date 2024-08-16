@@ -5,6 +5,7 @@ import localFont from 'next/font/local'
 import "../styles/index.scss";
 import { Footer, Header } from "@/components/ui/compositions";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -41,14 +42,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${GothamPro.variable} ${Muller.variable}`}>
-      <body>
-        <AntdRegistry>
-          <Header />
-          {children}
-          <Footer />
-        </AntdRegistry>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={`${inter.variable} ${GothamPro.variable} ${Muller.variable}`}>
+        <body>
+          <AntdRegistry>
+            <Header />
+            {children}
+            <Footer />
+          </AntdRegistry>
+        </body>
+      </html>
+    </ClerkProvider>
+
   );
 }
