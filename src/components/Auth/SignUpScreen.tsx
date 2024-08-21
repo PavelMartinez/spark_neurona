@@ -5,8 +5,10 @@ import { AppleLogo, FacebookLogo, GoogleLogo } from '../svg'
 import Link from 'next/link'
 import { OAuthStrategy } from '@clerk/types'
 import { useSignIn, useSignUp } from '@clerk/nextjs'
+import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
+import { Screens } from '@/typescript/enums/Auth/Screens'
 
-const SignUpScreen = () => {
+const SignUpScreen = ({ screenControl }: ScreenProps) => {
     const { signUp } = useSignUp()
     const [extended, setExtended] = useState<boolean>(false);
 
@@ -15,8 +17,8 @@ const SignUpScreen = () => {
     const signUpWith = (strategy: OAuthStrategy) => {
       return signUp.authenticateWithRedirect({
         strategy,
-        redirectUrl: '/sign-up/sso-callback',
-        redirectUrlComplete: '/',
+        redirectUrl: '/pending',
+        redirectUrlComplete: '/account',
       })
     }
     return (
@@ -37,7 +39,7 @@ const SignUpScreen = () => {
                                 Continue with Google
                             </div>
                         </button>
-                        <button className="auth__buttons-item auth__buttons-item--grey">
+                        <button className="auth__buttons-item auth__buttons-item--grey" onClick={() => screenControl(Screens.SIGNUP_EMAIL)}>
                             <div className="auth__buttons-text">
                                 Continue with Email
                             </div>
@@ -79,7 +81,7 @@ const SignUpScreen = () => {
                                 Continue with Apple
                             </div>
                         </button>
-                        <button className="auth__buttons-item auth__buttons-item--grey">
+                        <button className="auth__buttons-item auth__buttons-item--grey" onClick={() => screenControl(Screens.SIGNUP_EMAIL)}>
                             <div className="auth__buttons-text">
                                 Continue with Email
                             </div>
@@ -91,11 +93,11 @@ const SignUpScreen = () => {
                 <p>
                     By signing up, you agree to our
                     <Link className="auth__text-link" href={"/privacy"}>
-                     Terms of Service 
+                        Terms of Service 
                     </Link>
                     and 
                     <Link className="auth__text-link" href={"/privacy"}>
-                     Privacy Policy
+                        Privacy Policy
                     </Link>
                 </p>
             </FlexItem>

@@ -5,8 +5,10 @@ import { AppleLogo, FacebookLogo, GoogleLogo } from '../svg'
 import Link from 'next/link'
 import { OAuthStrategy } from '@clerk/types'
 import { useSignIn } from '@clerk/nextjs'
+import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
+import { Screens } from '@/typescript/enums/Auth/Screens'
 
-const LoginScreen = () => {
+const LoginScreen = ({ screenControl }: ScreenProps) => {
     const { signIn } = useSignIn()
 
     if (!signIn) return null
@@ -14,8 +16,8 @@ const LoginScreen = () => {
     const signInWith = (strategy: OAuthStrategy) => {
       return signIn.authenticateWithRedirect({
         strategy,
-        redirectUrl: '/sign-up/sso-callback',
-        redirectUrlComplete: '/',
+        redirectUrl: '/pending',
+        redirectUrlComplete: '/account',
       })
     }
     return (
@@ -54,7 +56,7 @@ const LoginScreen = () => {
                         Continue with Apple
                     </div>
                 </button>
-                <button className="auth__buttons-item auth__buttons-item--grey">
+                <button className="auth__buttons-item auth__buttons-item--grey" onClick={() => screenControl(Screens.LOGIN_EMAIL)}>
                     <div className="auth__buttons-text">
                         Continue with Email
                     </div>

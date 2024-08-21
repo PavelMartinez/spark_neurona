@@ -47,5 +47,9 @@ body {
 }
 
 .dialog-container {
-    min-width: 495px;
+    margin-inline: 5px;
+    
+    @include desktop {
+        min-width: 495px;
+    }
 }

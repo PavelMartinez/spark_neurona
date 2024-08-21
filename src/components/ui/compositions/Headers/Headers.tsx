@@ -86,13 +86,16 @@ export function HeaderAuth() {
     {
       setAuthScreen(Screens.LOGIN);
       setAuthOpen(true);
-      window.history.replaceState(null, '', '/')
     }
     else if(searchParams.has("sign-up"))
     {
       setAuthScreen(Screens.SIGNUP);
       setAuthOpen(true);
-      window.history.replaceState(null, '', '/')
+    }
+    else if(searchParams.has("pending"))
+    {
+      setAuthScreen(Screens.PENDING);
+      setAuthOpen(true);
     }
   }, [searchParams])
 
@@ -122,7 +125,7 @@ export function HeaderAuth() {
 
   return (
     <>
-    <AuthModal isOpen={authOpen} screen={authScreen} openControl={setAuthOpen} />
+    <AuthModal isOpen={authOpen} screen={authScreen} openControl={setAuthOpen} screenControl={setAuthScreen} />
     <Flex
 		direction="column"
 		gap="300"

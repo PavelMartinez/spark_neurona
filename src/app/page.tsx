@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main>
 		<Section padding="600" className="section section-main main-hero">
-			<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556}>
+			<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556} disablePictureInPicture={true}>
 				<div className="main-hero__content">
 					<TextContentTitle
 						align="center"
@@ -256,16 +256,28 @@ export default function Home() {
 			alignPrimary="center"
 			alignSecondary="center">
 				<Link className="blocks__item" href="/chat">
-					<Image src={ImageBlocks1} alt="AI CHAT" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+					<span className="blocks__item-text">
+						AI CHAT
+					</span>
+					<Image src={ImageBlocks1} alt="AI CHAT" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 				</Link>
 				<Link className="blocks__item" href="/">
-					<Image src={ImageBlocks2} alt="AI PHOTO EDITOR" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+					<span className="blocks__item-text">
+						AI PHOTO EDITOR
+					</span>
+					<Image src={ImageBlocks2} alt="AI PHOTO EDITOR" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 				</Link>
 				<Link className="blocks__item" href="/styles">
-					<Image src={ImageBlocks3} alt="STYLE GALLERY" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+					<span className="blocks__item-text">
+						STYLE GALLERY
+					</span>
+					<Image src={ImageBlocks3} alt="STYLE GALLERY" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 				</Link>
 				<Link className="blocks__item" href="/">
-					<Image src={ImageBlocks4} alt="IMAGE GENERATION" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
+					<span className="blocks__item-text">
+						IMAGE GENERATION
+					</span>
+					<Image src={ImageBlocks4} alt="IMAGE GENERATION" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 				</Link>
 			</Flex>
 		</Section>

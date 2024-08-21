@@ -44,12 +44,82 @@
         margin-bottom: 50px;
     }
 
-    &__grid {
-        display: grid; 
-        grid-template-columns: repeat(auto-fit,minmax(215px,1fr));
-        gap: 27px 66px;
+    &__selector {
+        height: 86.134px;
+        display: flex;
+        flex-direction: row;
+        background: #131313;
+        margin-bottom: 111px;
+        border-radius: 20px;
+
+        &-button {
+            @include reset-button;
+
+            background: #131313;
+            padding: 24.574px 49.147px;
+            border-radius: 20px;
+            width: 278.5px;
+
+            @include mobile {
+                width: unset;
+                font-size: 22.669px;
+            }
+
+            @include flex-center;
+
+            color: #FCFCFC;
+            font-size: 28.669px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 37.27px */
+
+            &--selected {
+                background: var(--button-1);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 69px;
         width: 100%;
-        margin-bottom: 189px;
+        margin-bottom: 169px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        &-heading {
+            color: #FCFCFC;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 43.2px */
+        }
+
+        &-grid {
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr);
+            gap: 27px 66px;
+            width: 100%;
+
+            @media (max-width: 1456px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            @include tablet {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 27px 26px;
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 27px 20px;
+            }
+        }
     }
 
     &__link {

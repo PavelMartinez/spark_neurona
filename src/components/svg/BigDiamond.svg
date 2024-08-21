@@ -1,0 +1,32 @@
+<svg width="297" height="230" viewBox="0 0 297 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="63" y="30" width="169" height="169" rx="84.5" stroke="url(#paint0_linear_270_29809)" stroke-width="2"/>
+<g filter="url(#filter0_d_270_29809)">
+<path d="M148.324 181.615L84.1406 104.755L105.68 93.8398L116.651 104.755L143.418 125.943L148.324 181.615Z" fill="#CC00FF"/>
+<path d="M212.507 104.756L148.324 181.615L156.502 127.329L179.997 104.756L193.522 94.8672L212.507 104.756Z" fill="#9100FF"/>
+<path d="M116.651 60.2031L126.575 77.5351L116.651 104.755L84.1406 104.755L116.651 60.2031Z" fill="#FF66F5"/>
+<path d="M212.507 104.755L179.996 104.755L170.922 77.9616L179.996 60.2031L212.507 104.755Z" fill="#FF2AD8"/>
+<path d="M116.647 104.755L135.668 117.405L148.32 104.755L160.044 91.6778L148.32 60.2031L125.292 75.4742L116.647 104.755Z" fill="#FF66F5"/>
+<path d="M148.32 60.2031L148.32 104.755L160.044 115.273L179.993 104.755L173.903 77.8904L148.32 60.2031Z" fill="#FF2AD8"/>
+<path d="M179.997 60.2031L179.997 104.755L148.324 60.2031L179.997 60.2031Z" fill="#CC00FF"/>
+<path d="M148.32 60.2031L116.647 104.755L116.647 60.2031L148.32 60.2031Z" fill="#FF2AD8"/>
+<path d="M116.651 104.756L148.324 181.615L161.257 130.617L148.324 104.756L116.651 104.756Z" fill="#FF2AD8"/>
+<path d="M148.324 104.756L148.324 181.615L179.997 104.756L148.324 104.756Z" fill="#CC00FF"/>
+</g>
+<defs>
+<filter id="filter0_d_270_29809" x="-50.9" y="-38.2398" width="353.961" height="353.96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="41.95"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.85 0 0 0 0 0.4 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_270_29809"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_270_29809" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_270_29809" x1="76.3778" y1="29" x2="167.487" y2="204.466" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="0.532147" stop-color="#9000FF"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
