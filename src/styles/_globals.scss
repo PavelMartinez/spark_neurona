@@ -48,8 +48,10 @@ body {
 
 .dialog-container {
     margin-inline: 5px;
+
+    min-width: 495px;
     
-    @include desktop {
-        min-width: 495px;
+    @include mobile {
+        min-width: 100%;
     }
 }
