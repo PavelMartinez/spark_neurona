@@ -1,5 +1,5 @@
 import { CheckSquareIcon, ClockCircleIcon, CloseSquareIcon, DiamondGoldIcon, EmojiFire, EmojiRocket, EmojiThumb, IncognitoIcon, PromoArrow, SaleIcon, ShieldStarIcon } from '@/components/svg'
-import { Flex, FlexItem } from '@/components/ui/layout'
+import { Flex, FlexItem, Section } from '@/components/ui/layout'
 import { Breadcrumb } from 'antd'
 import Image from 'next/image'
 import React from 'react'
@@ -88,7 +88,7 @@ const CardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopular =
 
 const BuyPage = () => {
     return (
-        <div className='buy'>
+        <Section className='buy'>
             <Flex
             container
             direction='column'
@@ -312,7 +312,7 @@ const BuyPage = () => {
                     />
                 </Flex>
             </Flex>
-        </div>
+        </Section>
     )
 }
 
