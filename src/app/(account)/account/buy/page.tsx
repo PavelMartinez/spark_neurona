@@ -187,7 +187,7 @@ const BuyPage = () => {
                                     </h3>
                                     <div className="buy-conditions__list-item__description">
                                         <p>
-                                        Pay securely with confidence using credit card or crypto. Your bank statement will show 'JOYAI'.
+                                        Pay securely with confidence using credit card or crypto. Your bank statement will show &apos;JOYAI&apos;.
                                         </p>
                                     </div>
                                 </div>
@@ -217,7 +217,7 @@ const BuyPage = () => {
                                     </h3>
                                     <div className="buy-conditions__list-item__description">
                                         <p>
-                                            To ensure you only pay for our product when you're actually using it, we will not charge you automatically.
+                                            To ensure you only pay for our product when you&apos;re actually using it, we will not charge you automatically.
                                         </p>
                                     </div>
                                 </div>
