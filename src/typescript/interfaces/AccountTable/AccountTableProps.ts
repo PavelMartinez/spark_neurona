@@ -1,6 +1,7 @@
 import IPayment from "./IPayment";
+import IReferal from "./IReferal";
 
 export default interface AccountTableProps {
-    data: IPayment[],
-    type: "payment"
+    data: IPayment[] | IReferal[],
+    type: "payment" | "referal"
 }

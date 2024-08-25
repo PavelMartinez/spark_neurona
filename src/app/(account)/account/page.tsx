@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/primitives'
 import Link from 'next/link'
 import React from 'react'
 
-import PaymentData from '@/data/AccountTable/data'
+import PaymentData from '@/data/AccountTable/paymentsData'
 import AccountConvert from '@/components/AccountConvert/AccountConvert';
 import Image from 'next/image';
 
