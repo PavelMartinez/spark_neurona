@@ -9,6 +9,8 @@ import EmojiSurpriseImage from '../../../../../public/EmojiSurprise.png'
 import EmojiStarsEyesImage from '../../../../../public/EmojiStarsEyes.png'
 import EmojiStarsImage from '../../../../../public/EmojiStars.png'
 import BigStarsImage from '../../../../../public/BigStars.png'
+import Link from 'next/link'
+import { IconArrowUpRight } from '@/components/ui/icons'
 
 
 interface CardsItemProps {
@@ -88,6 +90,7 @@ const CardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopular =
 
 const BuyPage = () => {
     return (
+        <>
         <Section className='buy'>
             <Flex
             container
@@ -98,7 +101,12 @@ const BuyPage = () => {
                         <Breadcrumb items={[{ title: 'Dashboard', href: "/account" }, { title: 'Buy coins'}]} className='breadcrump__component'/>
                     </div>
                     <div className="buy__heading">
-                        <h3 className='buy__heading-h3'>buy coins</h3>
+                        <h3 className='buy__heading-h3'>
+                            buy coins
+                            <Link className="account__back" href="/account">
+                                <IconArrowUpRight size='20'/>
+                            </Link>
+                            </h3>
                         <div className="buy__heading-description">
                             Select your packet
                         </div>
@@ -313,6 +321,7 @@ const BuyPage = () => {
                 </Flex>
             </Flex>
         </Section>
+        </>
     )
 }
 

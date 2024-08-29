@@ -8,15 +8,16 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <ConfigProvider
             theme={{
                     token: {
-                        fontFamily: "var(--font-inter)"
+                        fontFamily: "var(--font-inter)",
+                        colorBgContainer: "#131313"
                     },
                     components: {
                         Table: {
-                            headerBg: "white",
-                            headerSplitColor: "white",
+                            headerBg: "#131313",
+                            headerSplitColor: "#131313",
                             cellPaddingInline: 24,
                             cellPaddingBlock: 0,
-                            headerColor: "#6F644D"
+                            headerColor: "#93949A"
                         }
                     }
                 }

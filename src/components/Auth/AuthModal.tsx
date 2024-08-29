@@ -14,21 +14,9 @@ import PendingScreen from './PendingScreen';
 const AuthModal = ({ isOpen, screen, openControl, screenControl }: AuthModalProps) => {
   return ( 
     <DialogModal isOpen={isOpen} isDismissable onOpenChange={openControl}>
-        <Dialog className='auth'>
+        <Dialog className='auth' aria-label='Auth Dialog'>
             {screen === Screens.LOGIN &&
-                <LoginScreen screenControl={screenControl} />
-            }
-            {screen === Screens.SIGNUP &&
-                <SignUpScreen screenControl={screenControl} />
-            }
-            {screen === Screens.LOGIN_EMAIL &&
-                <LoginEmailScreen screenControl={screenControl} />
-            }
-            {screen === Screens.SIGNUP_EMAIL &&
-                <SignUpEmailScreen screenControl={screenControl} />
-            }
-            {screen === Screens.PENDING &&
-                <PendingScreen screenControl={screenControl} />
+                <LoginScreen screenControl={screenControl} openControl={openControl} />
             }
         </Dialog>
     </DialogModal>

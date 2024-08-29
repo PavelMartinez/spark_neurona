@@ -1,5 +1,5 @@
 import AccountTable from '@/components/AccountTable/AccountTable';
-import { BigDiamondIcon, DialogIcon, DiamondIcon, EmojiRocket, Group2Icon, SendIcon, StarIcon, WalletMoneyIcon } from '@/components/svg'
+import { BigDiamondIcon, DialogIcon, DiamondIcon, EmojiRocket, EmojiRocket2, Group2Icon, SendIcon, StarIcon, WalletMoneyIcon } from '@/components/svg'
 import { Flex, FlexItem, Section } from '@/components/ui/layout'
 import Link from 'next/link'
 import React from 'react'
@@ -12,6 +12,7 @@ import AppleLogo from '../../../../../public/AppleLogo.png'
 import AndroidLogo from '../../../../../public/AndroidLogo.png'
 import { Breadcrumb } from 'antd';
 import ReferalInput from '@/components/ReferalInput/ReferalInput';
+import { IconArrowUpRight } from '@/components/ui/icons/IconArrowUpRight';
 
 const ReferalPage = async () => {
     return (
@@ -22,7 +23,12 @@ const ReferalPage = async () => {
                         <Breadcrumb items={[{ title: 'Dashboard', href: "/account" }, { title: 'Referal program'}]} className='breadcrump__component'/>
                     </div>
                     <div className="referal__heading">
-                        <h3 className='referal__heading-h3'>REFERAL PROGRAM</h3>
+                        <h3 className='referal__heading-h3'>
+                            REFERAL PROGRAM
+                            <Link className="account__back" href="/account">
+                                <IconArrowUpRight size='20'/>
+                            </Link>
+                        </h3>
                         <div className="referal__heading-description">
                             Invite your friends and earn money
                         </div>
@@ -43,7 +49,7 @@ const ReferalPage = async () => {
                                     How it works
                                 </span>
                                 <span className="referal-how__heading-icon">
-                                    <EmojiRocket />
+                                    <EmojiRocket2 />
                                 </span>
                             </h4>
                             <ol className="referal-how__list">

@@ -3,4 +3,5 @@ import { Dispatch, SetStateAction } from "react";
 
 export default interface ScreenProps {
     screenControl: Dispatch<SetStateAction<Screens>>;
+    openControl?: Dispatch<SetStateAction<boolean>>;
 }

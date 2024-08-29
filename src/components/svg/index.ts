@@ -41,10 +41,14 @@ export { default as BobbleHeadIcon } from './bobble_head.svg'
 export { default as RoundIcon } from './round_16179374.svg'
 export { default as RgbIcon } from './rgb_7213068.svg'
 
+// Auth
+
 export { default as GoogleLogo } from './google.svg'
 export { default as FacebookLogo } from './facebook.svg'
 export { default as AppleLogo } from './apple.svg'
 export { default as LeftArrowIcon } from './LeftArrow.svg'
+export { default as PlaneIcon } from './Plane.svg'
+export { default as EmailIcon } from './Email.svg'
 
 // Popover Header
 export { default as DollarIcon } from './Dollar.svg'
@@ -65,6 +69,7 @@ export { default as Group2Icon } from './Group2.svg'
 export { default as WalletMoneyIcon } from './WalletMoney.svg'
 
 export { default as EmojiRocket } from './EmojiRocket.svg'
+export { default as EmojiRocket2 } from './EmojiRocket2.svg'
 export { default as EmojiThumb } from './EmojiThumb.svg'
 export { default as EmojiFire } from './EmojiFire.svg'
 export { default as CheckSquareIcon } from './CheckSquare.svg'

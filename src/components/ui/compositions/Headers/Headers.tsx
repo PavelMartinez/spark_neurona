@@ -50,8 +50,9 @@ export function HeaderAuth() {
   const userButtons = (
     <>
       <Button
-        variant="neutral"
-        size="small"
+        variant="primary"
+        size="medium"
+        className={"header__button"}
         onPress={() =>
           {
             setAuthScreen(Screens.LOGIN);
@@ -61,7 +62,7 @@ export function HeaderAuth() {
       >
         Login
       </Button>
-      <Button
+      {/* <Button
         variant="primary"
         size="small"
         onPress={() =>
@@ -72,7 +73,7 @@ export function HeaderAuth() {
         }
       >
         Sign Up
-      </Button>
+      </Button> */}
     </>
   );
 

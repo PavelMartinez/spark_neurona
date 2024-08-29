@@ -1,6 +1,6 @@
 import React, { FormEvent } from 'react'
 import { useRouter } from 'next/navigation'
-import { useClerk, useSignUp } from '@clerk/nextjs'
+import { useSignUp, useSignIn } from '@clerk/nextjs'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
 import { Flex, FlexItem } from '../ui/layout'
 import { Button, Input, Link } from '../ui/primitives'
@@ -18,14 +18,14 @@ function SignUpEmailScreen({ screenControl }: ScreenProps) {
   const [submitted, setSubmitted] = React.useState(false)
   const router = useRouter()
   const { signUp, isLoaded, setActive } = useSignUp()
+  const { signIn } = useSignIn()
 
   if (!isLoaded) {
     return null
   }
 
-  const { startEmailLinkFlow, cancelEmailLinkFlow } = signUp.createEmailLinkFlow()
 
-  async function submit(e: FormEvent) {
+  	async function submit(e: FormEvent) {
     e.preventDefault()
     setExpired(false)
     setVerified(false)
@@ -33,52 +33,68 @@ function SignUpEmailScreen({ screenControl }: ScreenProps) {
 
     // Start the sign up flow, by collecting
     // the user's email address.
-    await signUp?.create({ emailAddress })
+    try {
+      await signUp?.create({ emailAddress })
 
-    setEmailAddress("")
+      const { startEmailLinkFlow } = signUp!.createEmailLinkFlow()
 
-    // Start the email link flow.
-    // Pass your app URL that users will be navigated
-    // when they click the email link from their
-    // email inbox.
-    // su will hold the updated sign up object.
-    const su = await startEmailLinkFlow({
-      redirectUrl: 'http://localhost:3000/verification',
-    })
-
-    // Check the verification result.
-    const verification = su.verifications.emailAddress
-    if (verification.verifiedFromTheSameClient()) {
-      setVerified(true)
-      // If you're handling the verification result from
-      // another route/component, you should return here.
-      // See the <EmailLinkVerification/> component as an
-      // example below.
-      // If you want to complete the flow on this tab,
-      // don't return. Check the sign up status instead.
-      return
-    } else if (verification.status === 'expired') {
-      setExpired(true)
-    }
-
-    if (su.status === 'complete' && setActive) {
-      // Sign up is complete, we have a session.
-      // Navigate to the after sign up URL.
-      setActive({
-        session: su.createdSessionId,
-        beforeEmit: () => router.push('/after-sign-up-path'),
+      const su = await startEmailLinkFlow({
+        redirectUrl: '/verification',
       })
-      return
+
+      // Check the verification result.
+      const verification = su.verifications.emailAddress
+      if (verification.verifiedFromTheSameClient()) {
+        setVerified(true)
+      } else if (verification.status === 'expired') {
+        setExpired(true)
+      }
+  
+      if (su.status === 'complete' && setActive) {
+        setActive({
+          session: su.createdSessionId,
+          beforeEmit: () => router.push('/account'),
+        })
+        return
+      }
+    } catch(e: any) {
+		if(e.errors.find((err: any) => err.code === "form_identifier_exists"))
+		{
+			const si = await signIn?.create({ identifier: emailAddress })
+			const supportedFirstFactors = si?.supportedFirstFactors?.find(
+				(ff) => ff.strategy === 'email_link' && ff.safeIdentifier === emailAddress,
+			);
+			// @ts-ignore
+			const { startEmailLinkFlow } = signIn?.createEmailLinkFlow()
+
+			try {
+				const res = await startEmailLinkFlow({
+					emailAddressId: (supportedFirstFactors as any)?.emailAddressId,
+					redirectUrl: 'http://localhost:3000/verification',
+				})
+				// Check the verification result.
+				const verification = res.firstFactorVerification
+				if (verification.verifiedFromTheSameClient()) {
+					setVerified(true)
+				} else if (verification.status === 'expired') {
+					setExpired(true)
+				}
+				if (res.status === 'complete' && setActive) {
+					setActive({
+						session: res.createdSessionId,
+						beforeEmit: () => router.push('/account'),
+					})
+					return
+				}
+			}
+			catch(e) {
+				console.error(e)
+			}
+		}
     }
-  }
 
-  if (expired) {
-    return <div>Email link has expired</div>
-  }
-
-  if (verified) {
-    return <div>Signed in on other tab</div>
-  }
+    // setEmailAddress("")
+  	}
 
     return (
         <Flex alignPrimary='center' alignSecondary='center' className='auth__inner' direction='column'>

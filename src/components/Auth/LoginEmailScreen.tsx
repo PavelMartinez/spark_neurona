@@ -33,41 +33,47 @@ function LoginEmailScreen({ screenControl }: ScreenProps) {
         setVerified(false)
         setSubmitted(true)
 
-        // Start the sign in flow, by collecting
-        // the user's email address.
-        const si = await signIn?.create({ identifier: emailAddress })
-        const supportedFirstFactors = si?.supportedFirstFactors?.find(
-            (ff) => ff.strategy === 'email_link' && ff.safeIdentifier === emailAddress,
-        );
+        try {
+            // Start the sign in flow, by collecting
+            // the user's email address.
+            const si = await signIn?.create({ identifier: emailAddress })
+            const supportedFirstFactors = si?.supportedFirstFactors?.find(
+                (ff) => ff.strategy === 'email_link' && ff.safeIdentifier === emailAddress,
+            );
 
-        setEmailAddress("")
+            setEmailAddress("")
 
-        // Start the email link flow.
-        // Pass your app URL that users will be navigated
-        // res will hold the updated sign in object.
-        const res = await startEmailLinkFlow({
-            emailAddressId: (supportedFirstFactors as any)?.emailAddressId,
-            redirectUrl: 'http://localhost:3000/verification',
-        })
+            // Start the email link flow.
+            // Pass your app URL that users will be navigated
+            // res will hold the updated sign in object.
+            const res = await startEmailLinkFlow({
+                emailAddressId: (supportedFirstFactors as any)?.emailAddressId,
+                redirectUrl: 'http://localhost:3000/verification',
+            })
 
-        // Check the verification result.
-        const verification = res.firstFactorVerification
-        if (verification.verifiedFromTheSameClient()) {
-            setVerified(true)
-            // If you're handling the verification result from
-            // another route/component, you should return here.
-            // See the <Verification/> component as an
-            // example below.
-            // If you want to complete the flow on this tab,
-            // don't return. Simply check the sign in status.
-        } else if (verification.status === 'expired') {
-            setExpired(true)
-        }
-        if (res.status === 'complete' && setActive) {
-            setActive({ session: res.createdSessionId })
-            
-            router.push("/account")
-            return
+            // Check the verification result.
+            const verification = res.firstFactorVerification
+            if (verification.verifiedFromTheSameClient()) {
+                setVerified(true)
+                // If you're handling the verification result from
+                // another route/component, you should return here.
+                // See the <Verification/> component as an
+                // example below.
+                // If you want to complete the flow on this tab,
+                // don't return. Simply check the sign in status.
+            } else if (verification.status === 'expired') {
+                setExpired(true)
+            }
+            if (res.status === 'complete' && setActive) {
+                setActive({
+                    session: res.createdSessionId,
+                    beforeEmit: () => router.push('/account'),
+                })
+                
+                return
+            }
+        } catch(e) {
+            console.error(e)
         }
     }
 

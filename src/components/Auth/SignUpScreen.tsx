@@ -14,12 +14,12 @@ const SignUpScreen = ({ screenControl }: ScreenProps) => {
 
     if (!signUp) return null
   
-    const signUpWith = (strategy: OAuthStrategy) => {
-      return signUp.authenticateWithRedirect({
+    const signUpWith = async (strategy: OAuthStrategy) => {
+      return console.log(await signUp.authenticateWithRedirect({
         strategy,
         redirectUrl: '/pending',
         redirectUrlComplete: '/account',
-      })
+      }))
     }
     return (
         <Flex alignPrimary='center' alignSecondary='center' className='auth__inner' direction='column'>

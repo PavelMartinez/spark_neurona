@@ -138,7 +138,7 @@ const AccountPage = async () => {
 								Apple
 							</div>
 						</Link>
-						<Link href="/" className='account-mobiles__link'>
+						{/* <Link href="/" className='account-mobiles__link'>
 							<Image alt="appleLogo"
 							className="account-mobiles__link-logo"
 							src={AndroidLogo}
@@ -148,7 +148,7 @@ const AccountPage = async () => {
 							<div className="account-mobiles__link-text">
 								Android
 							</div>
-						</Link>
+						</Link> */}
 					</div>
 				</FlexItem>
 			</Flex>

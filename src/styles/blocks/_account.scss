@@ -95,7 +95,16 @@
         }
     }
 
-
+    &__back {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        @include flex-center;
+        top: 5px;
+        transform: rotate(-135deg);
+        left: -58px;
+        z-index: 99999;
+    }
 }
 
 .account-balance {
@@ -105,7 +114,8 @@
 
     border-radius: 20px;
     opacity: var(--sds-size-stroke-border);
-    background: white;
+    background: var(--back-login, #131313);
+    color: var(--text, #FCFCFC);
     overflow: hidden;
 
     display: flex;
@@ -124,7 +134,6 @@
     }
 
     &__left {
-        color: #212121;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -171,7 +180,11 @@
         // background-image: url('../../../public/bg1.png'), url('../../../public/bg2.png'), linear-gradient(180deg, #F47EFF 0%, #8331DA 100%);
         // background-position: top 0 right 0, bottom 0 left 0, top 0 left 0;
         // background-repeat: no-repeat, no-repeat, no-repeat;
-        background: linear-gradient(180deg, #F47EFF 0%, #8331DA 100%);
+
+        background-image: url('../../../public/vectBalance1.png'), url('../../../public/vectBalance2.png'), linear-gradient(180deg, #F47EFF 0%, #8331DA 100%);
+        background-position: top 0 left 0, top 0 right 0, top 0 right 0;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+
         width: 585px;
         display: flex;
         align-items: center;
@@ -258,7 +271,8 @@
 }
 
 .account-table {
-    background-color: white;
+    background: var(--back-login, #131313);
+    color: #FCFCFC;
     font-family: var(--font-inter) !important;
     border-radius: 20px;
     padding: 33px 30px;
@@ -273,14 +287,21 @@
     }
 
     .ant-table-row { 
-        background: #F8F8F8;
+        background: var(--stroke-3, #232323);
         height: 50px !important;
         border-radius: 5px;
     }
 
     .ant-table-cell {
         border: none !important;
-        border-radius: 5px;
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
     }
 
     &__pagination {
@@ -291,7 +312,7 @@
             border-radius: 50%;
             width: 51px;
             height: 51px;
-            background: #212121;
+            background: var(--stroke-3, #232323);
             
             @include flex-center;
             color: #FCFCFC;
@@ -302,7 +323,7 @@
             font-style: normal;
             font-weight: 600;
             line-height: 150%; /* 24px */
-            color: #28241F;
+            color: var(--grey, #93949A);
         }
 
         .ant-pagination-item {
@@ -318,6 +339,7 @@
     }
 
     &__render {
+        color: #FCFCFC;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -327,23 +349,21 @@
             font-weight: 600;
 
             &--disabled {
-                color: #B6B8BD;
+                color: #5B5C62;
             }
         }
 
         &-coins {
             padding: 2px 15px;
-            color: #128C25;
+            color: var(--Green, #128C25);
             border-radius: 150px;
-            background: #F0F5F1;
-            border: var(--sds-size-stroke-border) solid #128C25;
+            border: var(--sds-size-stroke-border) solid var(--Green, #128C25);;
             font-weight: 600;
             text-align: center;
 
             &--disabled {
-                color: #B6B8BD;
-                background: #F6F4F2;
-                border-color: #B6B8BD;
+                color: #5B5C62;
+                border-color: #5B5C62;
             }
         }
 
@@ -355,11 +375,11 @@
         }
 
         &-comment {
-            color: #0F5296;
+            color: #3789DC;
             font-size: 14px;
             padding: 2px 11px;
             border-radius: 150px;
-            background: #E0EBF2;
+            background: #213644;
             text-align: center;
         }
 
@@ -374,17 +394,18 @@
 
             font-size: 14px;
             font-weight: 500;
+            cursor: pointer;
         }
     }
 }
 
 .account-convert {
-    background: #FFF;
+    background: var(--back-login, #131313);
+    color: var(--grey, #93949A);
     padding: 50px;
     border-radius: 20px;
 
     &__heading {
-        color: var(--Brown, #6F644D);
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -399,7 +420,7 @@
         margin-bottom: 23px;
 
         &-text {
-            color: var(--Gray9, #28241F);
+            color: #FCFCFC;
 
             font-size: 60px;
             font-style: normal;
@@ -428,7 +449,6 @@
             border-radius: 150px;
 
             border: var(--sds-size-stroke-border) solid var(--Red, #FF2E00); 
-            background: var(--red-5, #FFFAF2);
         }
     }
 
@@ -436,9 +456,8 @@
         svg *[fill] {
             fill: revert-layer !important;
         }
-        color: black;
         border-radius: 10px;
-        background: var(--Gray1, #F8F8F8);
+        background: var(--stroke-3, #232323);
 
         display: flex;
         flex-direction: row;
@@ -468,8 +487,6 @@
         &-balance {
 
             &__key {
-                color: var(--Brown, #6F644D);
-                
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
@@ -477,7 +494,7 @@
             }
 
             &__value {
-                color: var(--Gray9, #28241F);
+                color: #FCFCFC;
 
                 font-size: 32px;
                 font-style: normal;
@@ -497,11 +514,11 @@
             width: 51px;
             height: 51px;
             opacity: 0.7;
+            cursor: pointer;
         }
     }
 
     &__course {
-        color: var(--Gray6, #B6B8BD);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -543,10 +560,10 @@
         --border-radius: 20px !important;
         width: 100%;
         text-transform: uppercase;
+        cursor: pointer;
     }
 
     &__withdraw {
-        color: var(--Brown, #6F644D);
 
         &-wrapper {
             margin: auto;
@@ -558,12 +575,12 @@
         font-weight: 400;
         line-height: 150%; /* 21px */
         padding-bottom: 10px;
-        border-bottom: var(--sds-size-stroke-border) dashed var(--Brown, #6F644D);
+        border-bottom: var(--sds-size-stroke-border) dashed var(--grey, #93949A);;
     }
 }
 
 .account-referal {
-
+    color: var(--text, #FCFCFC);
     &__wallet {
         position: absolute;
         width: 129px;
@@ -575,9 +592,7 @@
         top: 0;
         right: -12px;
 
-        svg *[fill] {
-            fill: revert-layer !important;
-        }
+        color: rgba(33, 33, 33, 1);
 
         z-index: 0;
     }
@@ -589,7 +604,7 @@
         &:first-child {
             border-radius: 20px 20px 0px 0px;
             
-            background: #964DEF;
+            background: var(--back-login, #131313);
 
             padding: 33px 30px 34px;
             flex-direction: column;
@@ -602,7 +617,7 @@
             border-radius: 0px 0px 20px 20px;
             border-top: var(--sds-size-stroke-border) dashed var(--White, #FFF);
             opacity: var(--sds-size-stroke-border);
-            background: #7526E4;
+            background: #212121;
 
             padding: 21px 30px 17px 23px;
         }
@@ -615,7 +630,7 @@
         gap: var(--sds-size-space-300);
 
         border-radius: 150px; 
-        background: #7526E4;
+        background: var(--button-1);
         width: max-content;
         padding: 7px 20px;
 
@@ -627,8 +642,6 @@
     }
 
     &__text {
-        color: var(--White, #FFF);
-
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -640,9 +653,6 @@
         display: flex;
         flex-direction: column;
         &-value {
-            color: var(--White, #FFF);
-
-
             font-size: 32px;
             font-style: normal;
             font-weight: 700;
@@ -650,8 +660,6 @@
         }
 
         &-description {
-            color: var(--Gray1, #F8F8F8);
-
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -664,9 +672,8 @@
         padding: 24px 60px;
 
         border-radius: 20px;
-        background: white;
-
-        color: #7526E4;
+        background: var(--button-1);
+        cursor: pointer;
 
         font-size: 16px;
         font-style: normal;
@@ -682,11 +689,14 @@
     flex-direction: row;
     align-items: center;
     margin-top: 12px;
+    width: 232px;
+
+    color: var(--text, #FCFCFC);
 
     &__link {
         border-radius: 10px;
-        border: var(--sds-size-stroke-border) solid var(--Gray3, #EAEAEB);
-        background: white;
+        border: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
+        background: var(--back-login, #131313);
 
         height: 80px;
 
@@ -699,7 +709,6 @@
         width: 100%;
 
         &-text {
-            color: #070707;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
@@ -711,6 +720,7 @@
 
 .buy {
     margin-top: 111px;
+    position: relative;
 
     @include mobile {
         margin-top: 50px;
@@ -718,6 +728,7 @@
     
     &__heading {
         margin-bottom: 20px;
+        position: relative;
 
         &-h3 {
             overflow: hidden;
@@ -745,9 +756,13 @@
     &-discount {
         height: 80px;
         border-radius: 10px;
-        background: #8A36DC;
+        background-color: #8A36DC;
         width: 100%;
         margin-bottom: 48px;
+
+        background-image: url('../../../public/vectDiscount1.png');
+        background-position: top 0 right 0;
+        background-repeat: no-repeat;
 
         display: flex;
         flex-direction: row;
@@ -815,13 +830,14 @@
         }
 
         &__button {
-            color: var(--Brown-Dark, #502C00);
+            color: #FFF;
 
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
             line-height: 150%; /* 21px */
             text-transform: uppercase;
+            cursor: pointer;
 
             display: inline-flex;
             padding: var(--sds-size-space-400) 60px;
@@ -830,7 +846,12 @@
             gap: 10px;
 
             border-radius: 10px;
-            background: white;
+            
+            background: rgba(255, 255, 255, 0.10);
+
+            box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(14.899999618530273px);
+            border: var(--sds-size-stroke-border) solid var(--text, #FCFCFC);
 
             @include mobile {
                 width: 100%;
@@ -839,12 +860,12 @@
     }
 
     &-cards {
-        --background: white;
+        --background: var(--back-login, #131313);;
         --background-button: var(--button-1);
-        --color-info: var(--Gray9, #28241F);
-        --color-list: var(--Gray8, #3B3A3A);
-        --color-button: #FFF;
-        --border-diamonds: var(--sds-size-stroke-border) solid rgba(66, 66, 66, 0.15);
+        --color-info: var(--text, #FCFCFC);
+        --color-list: var(--text, #FCFCFC);
+        --color-button: var(--button-1);
+        --border-diamonds: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
 
 
         width: 100%;
@@ -912,6 +933,7 @@
             border-radius: 30px;
             background: var(--background);
             position: relative;
+            box-sizing: border-box;
 
             padding: 40px;
 
@@ -922,8 +944,7 @@
             &:last-child {
                 .buy-cards__info-emoji {
                     border-radius: 16px;
-                    opacity: var(--sds-size-stroke-border);
-                    background: var(--Gray2, #F6F4F2);
+                    background: var(--stroke-3, #232323);
                 }
             }
 
@@ -996,6 +1017,7 @@
             padding: 24px 60px;
             @include flex-center;
             width: 100%;
+            cursor: pointer;
 
             color: var(--color-button);
             border-radius: 20px;
@@ -1019,9 +1041,6 @@
 
             border-radius: 10px;
             border: var(--border-diamonds);
-            background: white;
-
-            color: var(--Gray8, #3B3A3A);
 
             font-size: 16px;
             font-style: normal;
@@ -1057,9 +1076,8 @@
 
     &-conditions {
         border-radius: 20px;
-        opacity: var(--sds-size-stroke-border);
-        background: white;
-        color: #070707;
+        background: var(--back-login, #131313);
+        color: var(--text, #FCFCFC);
         width: 100%;
         padding: 60px 79px 81px 56px;
         position: relative;
@@ -1077,7 +1095,7 @@
         }
 
         &__heading {
-            @include fluid-text(44px, 30px);
+            @include fluid-text(44, 30);
             font-style: normal;
             font-weight: 700;
             line-height: 120%; /* 52.8px */
@@ -1091,7 +1109,7 @@
         }
 
         &__question {
-            color: var(--Brown, #6F644D);
+            color: var(--grey, #93949A);
             width: max-content;
 
             font-size: 20px;
@@ -1102,7 +1120,7 @@
 
             padding: 4px 15px;
             border-radius: 150px;
-            border: var(--sds-size-stroke-border) solid var(--Gray6, #B6B8BD);
+            border: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
         }
 
         &__list {
@@ -1112,7 +1130,7 @@
 
             &-item {
                 border-radius: 20px;
-                background: var(--Gray1, #F8F8F8);
+                background: var(--stroke-3, #232323);
                 padding: 30px 35px;
 
                 display: flex;
@@ -1129,8 +1147,6 @@
                 }
 
                 &__description {
-                    color: #070707;
-
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
@@ -1290,7 +1306,7 @@
         &__card {
             color: var(--White, #FFF);
             border-radius: 15px;
-            background: #6B27CB;
+            background: var(--back-login, #131313);
             padding: 23px 28px;
             height: 100%;
 
@@ -1344,11 +1360,11 @@
             padding: 24px 60px;
             @include flex-center;
             width: 100%;
+            cursor: pointer;
 
             color: var(--color-button);
             border-radius: 20px;
-            background: white;
-            color: var(--Brown-Dark, #502C00);
+            background: var(--button-1);
 
             font-size: 16px;
             font-style: normal;
@@ -1430,23 +1446,23 @@
     }
 
     &__input {
-        --input-background-color: #F8F8F8 !important;
+        --input-background-color: var(--stroke-3, #232323) !important;
         --input-placeholder-color: #2E2E2E !important;
-        --input-text-color: var(--Brown, #6F644D) !important;
+        --input-text-color: var(--text, #FCFCFC) !important;
         --input-border-color: #F8F8F8 !important;
         height: 60px;
+        border: none !important;
+        box-shadow: none !important;
 
         padding-inline: 31px !important;
         &-wrapper {
             width: 100%;
-            background-color: #fff;
             border-radius: 10px;
-            
             display: inline-flex;
         }
         &-group {
             display: inline-flex;
-            background: #F8F8F8;
+            background: var(--stroke-3, #232323);
             width: 100%;
             border-radius: 10px;
         }
@@ -1454,6 +1470,7 @@
             @include reset-button;
             @include flex-center;
 
+            cursor: pointer;
             height: 66px;
             width: 66px;
 
@@ -1474,9 +1491,11 @@
 
         &__main {
             border-radius: 10px;
-            opacity: var(--sds-size-stroke-border);
             
-            background: #8A36DC;
+            background-image: url('../../../public/vectStats1.png'), var(--button-1);
+            background-position: top 0 right 0, top 0 right 0;
+            background-repeat: no-repeat, no-repeat;
+            
             height: 200px;
             padding-inline: 50px;
 
@@ -1513,7 +1532,7 @@
 
             &-item {
                 padding: 10px 20px;
-                background: white;
+                background: var(--back-login, #131313);
                 border-radius: 5px;
 
                 display: flex;
@@ -1521,7 +1540,7 @@
                 justify-content: space-between;
                 align-items: center;
 
-                color: var(--Brown, #6F644D);
+                color: var(--grey, #93949A);
 
                 font-size: 16px;
                 font-style: normal;
@@ -1537,9 +1556,9 @@
     }
 
     &-how {
-        color: #070707;
+        color: var(--text, #FCFCFC);
         border-radius: 20px;
-        background: white;
+        background: var(--back-login, #131313);
         padding: 50px 60px;
 
         &__heading {
@@ -1611,7 +1630,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
-            color: var(--Brown, #6F644D);
+            color: var(--grey, #93949A);
 
             &-subheading {
                 font-family: Inter;
