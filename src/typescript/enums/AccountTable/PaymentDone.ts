@@ -1,4 +1,4 @@
 export enum PaymentDone {
-	NOT_PAYED = "Not Payed",
-	CONFIRMED = "Confirmed"
+	NOT_PAYED = "not_payed",
+	CONFIRMED = "confirmed"
 }

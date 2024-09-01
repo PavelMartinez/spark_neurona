@@ -27,7 +27,7 @@ const AccountConvert = ({ balance = 150 } : AccountConvertProps) => {
             </div>
             <div className="account-convert__balance">
                 <div className="account-convert__balance-text">
-                    $150
+                    ${balance}
                 </div>
                 <div className="account-convert__balance-badge">
                     -38$
@@ -80,7 +80,7 @@ const AccountConvert = ({ balance = 150 } : AccountConvertProps) => {
                 </span>
             </div>
             <div className="account-convert__button-wrapper">
-                <Button className="account-convert__button">
+                <Button className="account-convert__button" isDisabled={coins === 0}>
                     Convert to coins
                 </Button>
             </div>

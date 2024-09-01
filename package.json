@@ -19,16 +19,19 @@
     "@types/globalthis": "^1.0.4",
     "antd": "^5.20.0",
     "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
     "globalthis": "^1.0.4",
     "hooks": "^0.3.2",
     "icons": "^1.0.0",
+    "mongoose": "^8.6.0",
     "next": "14.2.5",
     "next-video": "^1.1.4",
     "react": "^18",
     "react-aria-components": "^1.3.1",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "svix": "^1.31.0"
   },
   "devDependencies": {
     "@types/node": "^20",

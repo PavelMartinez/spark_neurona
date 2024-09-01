@@ -1,11 +1,9 @@
-'use client';
+import { AuthenticateWithRedirectCallback } from "@clerk/nextjs";
 
-import { AuthenticateWithRedirectCallback, useClerk } from "@clerk/nextjs";
+export default function Pending() {
 
-export default async function Pending() {
-
-    return <AuthenticateWithRedirectCallback 
+    return (<AuthenticateWithRedirectCallback 
                 signInForceRedirectUrl={"/account"}
                 signUpForceRedirectUrl={"/account"}
-            />
+            />)
 }

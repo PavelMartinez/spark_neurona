@@ -2,16 +2,17 @@ import { PaymentDone } from "@/typescript/enums/AccountTable/PaymentDone";
 import IPayment from "@/typescript/interfaces/AccountTable/IPayment";
 import { IconArrowRight } from "../ui/icons";
 import Link from "next/link";
+import { format } from 'date-fns';
 import { PaymentComment } from "@/typescript/enums/AccountTable/PaymentComment";
 
 const paymentColumns = [
     {
       title: 'Payment',
       align: 'center' as const,
-      dataIndex: 'payment',
-      key: 'payment',
-      render: (_: any, { payment, done }: IPayment) => (
-        <div className={`account-table__render-payment ${done === PaymentDone.NOT_PAYED ? "account-table__render-payment--disabled" : ""}`}>{payment}$</div>
+      dataIndex: 'value',
+      key: 'value',
+      render: (_: any, { value, status }: IPayment) => (
+        <div className={`account-table__render-payment ${status === PaymentDone.NOT_PAYED ? "account-table__render-payment--disabled" : ""}`}>{value}$</div>
       )
     },
     {
@@ -19,26 +20,28 @@ const paymentColumns = [
       align: 'center' as const,
       dataIndex: 'coins',
       key: 'coins',
-      render: (_: any, { coins, done }: IPayment) => (
-        <div className={`account-table__render-coins ${done === PaymentDone.NOT_PAYED ? "account-table__render-coins--disabled" : ""}`}>{coins > 0 ? "+" + coins : coins}</div>
+      render: (_: any, { coins, status }: IPayment) => (
+        <div className={`account-table__render-coins ${status === PaymentDone.NOT_PAYED ? "account-table__render-coins--disabled" : ""}`}>{coins > 0 ? "+" + coins : coins}</div>
       )
     },
     {
       title: 'Done',
       align: 'center' as const,
-      dataIndex: 'done',
-      key: 'done',
-      render: (_: any, { done }: IPayment) => (
-        <div className={`account-table__render-done ${done === PaymentDone.NOT_PAYED ? "account-table__render-done--danger" : ""}`}>{done}</div>
+      dataIndex: 'status',
+      key: 'status',
+      render: (_: any, { status }: IPayment) => (
+        <div className={`account-table__render-done ${status === PaymentDone.NOT_PAYED ? "account-table__render-done--danger" : ""}`}>
+          {status === PaymentDone.NOT_PAYED ? "Not payed" : "Confirmed"}
+        </div>
       )
     },
     {
       title: 'Comment',
       dataIndex: 'comment',
       key: 'comment',
-      render: (_: any, { comment, done }: IPayment) => (
+      render: (_: any, { comment, status }: IPayment) => (
         <>
-            {done === PaymentDone.NOT_PAYED ? 
+            {status === PaymentDone.NOT_PAYED ? 
                 <Link href="/account/pay/aasd">
                     <button className="account-table__render-button">
                         <div className="account-table__render-button__text">
@@ -59,8 +62,10 @@ const paymentColumns = [
     {
       title: 'Date',
       align: 'center' as const,
-      dataIndex: 'date',
-      key: 'date'
+      key: 'createdAt',
+      render: (_: any, { createdAt }: IPayment) => (
+        <time>{format(createdAt, 'dd.MM.yyyy')}</time>
+      )
     },
 ];
 

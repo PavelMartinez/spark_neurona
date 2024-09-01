@@ -5,16 +5,26 @@ import { Button } from '@/components/ui/primitives'
 import Link from 'next/link'
 import React from 'react'
 
-import PaymentData from '@/data/AccountTable/paymentsData'
 import AccountConvert from '@/components/AccountConvert/AccountConvert';
 import Image from 'next/image';
 
 import AppleLogo from '../../../../public/AppleLogo.png'
 import AndroidLogo from '../../../../public/AndroidLogo.png'
 import { currentUser } from '@clerk/nextjs/server';
+import { dbConnect } from '@/database/db';
+import User from '@/database/models/User';
+import IPayment from '@/typescript/interfaces/AccountTable/IPayment';
 
 const AccountPage = async () => {
 	const user = await currentUser()
+	await dbConnect();
+	const dbUser = await User.findOne({ externalId: user?.id });
+	const payments = JSON.parse(JSON.stringify(dbUser.payments)).map((item: IPayment, index: number) => {
+		return {
+			...item,
+			key: String(index)
+		}
+	});
     return (
 		<Section className='account'>
 			<Flex
@@ -40,7 +50,7 @@ const AccountPage = async () => {
 									</div>
 									<div className="account-balance__counter">
 										<div className="account-balance__counter-text">
-											640
+											{user?.publicMetadata.coins as number}
 										</div>
 										<div className="account-balance__counter-icon">
 											<DiamondIcon />
@@ -81,7 +91,7 @@ const AccountPage = async () => {
 							Payment History
 						</div>
 						<div className="account__section-content">
-							<AccountTable type='payment' data={PaymentData}/>
+							<AccountTable type='payment' data={payments}/>
 						</div>
 					</div>
 				</FlexItem>
@@ -96,7 +106,7 @@ const AccountPage = async () => {
 							</div>
 						</Button>
 					</Link>
-					<AccountConvert />
+					<AccountConvert balance={user?.publicMetadata.dollars as number}/>
 					<div className="account-referal">
 						<div className="account-referal__part">
 							<div className="account-referal__badge">
