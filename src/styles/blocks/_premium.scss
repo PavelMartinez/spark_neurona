@@ -1,0 +1,39 @@
+.premium {
+    margin-top: 52px;
+
+    &__heading {
+        background: var(--button-1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-align: center;
+        font-family: var(--sds-typography-title-hero-font-family);
+        font-size: var(--sds-typography-title-hero-size);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 86.4px */
+        letter-spacing: -2.16px;
+
+        padding-block: 26px;
+        margin-bottom: 11px;
+    }
+
+    &__description {
+        color: #FFF;
+        text-align: center;
+        font-family: var(--sds-typography-body-font-family);
+        font-size: var(--sds-typography-body-size-medium);
+        font-style: normal;
+        font-weight: var(--sds-typography-body-font-weight-regular);
+        line-height: 100%; /* 16px */
+
+        margin-bottom: 124px;
+    }
+
+    &__cards, &__banner {
+        width: 100%;
+        margin-bottom: 138px;
+    }
+
+}

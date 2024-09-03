@@ -25,6 +25,9 @@ import ImageBlocks2 from '../../public/blocks2.png'
 import ImageBlocks3 from '../../public/blocks3.png'
 import ImageBlocks4 from '../../public/blocks4.png'
 import Link from "next/link";
+import { Accordion } from "@/components/Accordion/Accordion";
+import questions from "@/components/Accordion/data";
+import BannerSection from "@/components/BannerSection/BannerSection";
 
 
 export default function Home() {
@@ -279,6 +282,19 @@ export default function Home() {
 					</span>
 					<Image src={ImageBlocks4} alt="IMAGE GENERATION" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 				</Link>
+			</Flex>
+		</Section>
+		<BannerSection />
+		<Section className="main-faq" padding="1200">
+			<Flex
+			wrap
+			container
+			className="main-faq__inner"
+			alignPrimary="center"
+			alignSecondary="center"
+			direction="column">
+				<h2 className="main-faq__heading">FREQUENTLY ASKED QUESTIONS</h2>
+				<Accordion data={questions} />
 			</Flex>
 		</Section>
     </main>

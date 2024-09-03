@@ -5,9 +5,9 @@ import { Table } from 'antd';
 import React from 'react'
 import { IconArrowLeft, IconArrowRight } from '../ui/icons';
 import paymentColumns from './paymentColumns';
-import IPayment from '@/typescript/interfaces/AccountTable/IPayment';
 import referalsColumns from './referalsColumns';
-import IReferal from '@/typescript/interfaces/AccountTable/IReferal';
+import IPayment from '@/typescript/interfaces/Models/IPayment';
+import IReferal from '@/typescript/interfaces/Models/IReferal';
 
 
 const AccountTable = ({ data, type }: AccountTableProps ) => {
@@ -18,6 +18,7 @@ const AccountTable = ({ data, type }: AccountTableProps ) => {
                 rowClassName={"account-table__render"}
                 columns={paymentColumns}
                 dataSource={data as IPayment[]}
+                locale={{ emptyText: <div className='account-table__empty'>Table is empty</div> }}
                 pagination={
                     {
                         pageSize: 7,
@@ -25,7 +26,6 @@ const AccountTable = ({ data, type }: AccountTableProps ) => {
                         position: ["bottomCenter"],
                         size: "default",
                         itemRender: (page, type, originalElement) => {
-                            console.log(type)
                             if (type === "prev") {
                                 return <span className='account-table__pagination-arrow'>
                                     <IconArrowLeft size='20'/>
@@ -53,6 +53,7 @@ const AccountTable = ({ data, type }: AccountTableProps ) => {
                 rowClassName={"account-table__render"}
                 columns={referalsColumns}
                 dataSource={data as IReferal[]}
+                locale={{ emptyText: <div className='account-table__empty'>Table is empty</div> }}
                 pagination={
                     {
                         pageSize: 7,
@@ -60,7 +61,6 @@ const AccountTable = ({ data, type }: AccountTableProps ) => {
                         position: ["bottomCenter"],
                         size: "default",
                         itemRender: (page, type, originalElement) => {
-                            console.log(type)
                             if (type === "prev") {
                                 return <span className='account-table__pagination-arrow'>
                                     <IconArrowLeft size='20'/>

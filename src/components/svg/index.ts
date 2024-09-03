@@ -73,6 +73,7 @@ export { default as EmojiRocket2 } from './EmojiRocket2.svg'
 export { default as EmojiThumb } from './EmojiThumb.svg'
 export { default as EmojiFire } from './EmojiFire.svg'
 export { default as CheckSquareIcon } from './CheckSquare.svg'
+export { default as LogoStripe } from './Stripe_Logo.svg'
 
 export { default as ShieldStarIcon } from './ShieldStar.svg'
 export { default as IncognitoIcon } from './Incognito.svg'
@@ -80,3 +81,13 @@ export { default as CloseSquareIcon } from './CloseSquare.svg'
 export { default as SaleIcon } from './Sale.svg'
 export { default as ClockCircleIcon } from './Clock Circle.svg'
 export { default as PromoArrow } from './PromoArrow.svg'
+
+
+// Referal Input
+export { default as LogoInstagramFilled } from './Instagram_Filled_Logo.svg'
+export { default as LogoPinterest } from './Pinterest_Logo.svg'
+export { default as LogoTelegram } from './Telegram_Logo.svg'
+
+// Accordion
+export { default as CloseCircleIcon } from './Close Circle.svg'
+export { default as CloseCircleGradientIcon } from './Close Circle Gradient.svg'

@@ -10,8 +10,27 @@
         display: flex;
         flex-direction: row;
         border-radius: 10px;
-
         margin-bottom: 11.45px;
+        position: relative;
+
+        &--disabled {
+            &::before {
+                content: 'Coming Soon';
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(10px);
+                position: absolute;
+                border-radius: 10px;
+                @include flex-center;
+                background: rgba(1, 1, 1, 0.4);
+
+
+                font-size: var(--sds-typography-body-size-medium);
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 16px */
+            }
+        }
 
         &-item {
             width: auto;

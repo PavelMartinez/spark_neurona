@@ -1,8 +1,10 @@
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
 import { clerkClient, WebhookEvent } from '@clerk/nextjs/server'
-import User from '@/database/models/User'
+import { User, UserSchema } from '@/database/models/User'
 import { dbConnect } from '@/database/db'
+import createRandomString from '@/utils/createRandomString'
+import updateClerkUser from '@/utils/updateClerkUser'
 
 export async function POST(req: Request) {
     await dbConnect();
@@ -62,25 +64,28 @@ export async function POST(req: Request) {
     {
         const newUser = new User;
         newUser.externalId = userId;
-        newUser.referalString = "asdasdasdaokoko"
+        newUser.referalString = createRandomString(12);
+        
+        if(payload.data?.unsafeMetadata?.referal)
+        {
+            const referalUser = await User.findOne({
+                referalString: payload.data?.unsafeMetadata?.referal
+            })
+            if(referalUser)
+            {
+                referalUser.referals.create({
+                    email: payload.data.email_addresses[0].emailAddress,
+                    value: 15
+                })
+                referalUser.dollars += 15
+                await referalUser.save()
+            }
+        }
         await newUser.save();
-        const user = await clerkClient().users.updateUser(userId, {
-            publicMetadata: {
-                coins: newUser.coins,
-                dollars: newUser.dollars,
-                referalString: newUser.referalString
-            }
-        })
     }
-    else if(eventType === "session.created") {
-        const user = await clerkClient().users.updateUser(userId, {
-            publicMetadata: {
-                coins: findUser.coins,
-                dollars: findUser.dollars,
-                referalString: findUser.referalString
-            }
-        })
-    }
+    // else if(eventType === "session.created") {
+    //     await updateClerkUser(findUser);
+    // }
 
     return new Response('', { status: 200 })
 }

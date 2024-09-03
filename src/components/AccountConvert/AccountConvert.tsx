@@ -6,9 +6,10 @@ import { Button } from '../ui/primitives';
 
 interface AccountConvertProps {
     balance?: number;
+    lose?: number;
 }
 
-const AccountConvert = ({ balance = 150 } : AccountConvertProps) => {
+const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
     const [coins, setCoins] = useState<number>(balance);
 
     const handleUpdateCoins = (value: 1 | -1) => {
@@ -29,9 +30,11 @@ const AccountConvert = ({ balance = 150 } : AccountConvertProps) => {
                 <div className="account-convert__balance-text">
                     ${balance}
                 </div>
-                <div className="account-convert__balance-badge">
-                    -38$
-                </div>
+                {lose && 
+                    <div className="account-convert__balance-badge">
+                        -{Math.abs(lose)}$
+                    </div>
+                }
             </div>
             <div className="account-convert__counter">
                 <div className="account-convert__counter-content">

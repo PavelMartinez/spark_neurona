@@ -327,3 +327,19 @@
         }
     }
 }
+
+.main-faq {
+    &__inner {
+        --flex-gap: 24px !important;
+    }
+    &__heading {
+        color: var(--text, #FCFCFC);
+        text-align: center;
+
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%; /* 72px */
+        text-transform: uppercase;
+    }
+}

@@ -7,7 +7,7 @@ import { OAuthStrategy } from '@clerk/types'
 import { useSignIn, useSignUp } from '@clerk/nextjs'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
 import { Screens } from '@/typescript/enums/Auth/Screens'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const LoginScreen = ({ openControl }: ScreenProps) => {
     const { signIn } = useSignIn()
@@ -18,13 +18,14 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
     const [verified, setVerified] = React.useState(false)
     const [submitted, setSubmitted] = React.useState(false)
     const router = useRouter()
+    const searchParams = useSearchParams()
   
     if (!signIn || !signUp || !isLoaded) return null
   
     const signInWith = (strategy: OAuthStrategy) => {
       return signIn.authenticateWithRedirect({
         strategy,
-        redirectUrl: '/pending',
+        redirectUrl: `/sso-callback${searchParams.has("referal") ? "?referal=" + searchParams.get("referal") : ""}`,
         redirectUrlComplete: '/account',
       })
     }
@@ -40,7 +41,10 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
         signUp.verifications.externalAccount.error?.code === 'external_account_exists'
   
       if (userExistsButNeedsToSignIn) {
-        const res = await signIn.create({ transfer: true })
+        const res = await signIn.create({ 
+            transfer: true
+
+         })
         console.log(res)
   
         if (res.status === 'complete') {
@@ -61,6 +65,9 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
         if (userNeedsToBeCreated) {
             const res = await signUp.create({
               transfer: true,
+              unsafeMetadata: {
+                referal: searchParams.has("referal") ? searchParams.get("referal") : ""
+              }
             })
       
             if (res.status === 'complete') {
@@ -90,30 +97,35 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
         // Start the sign up flow, by collecting
         // the user's email address.
         try {
-        await signUp?.create({ emailAddress })
-
-        const { startEmailLinkFlow } = signUp!.createEmailLinkFlow()
-
-        const su = await startEmailLinkFlow({
-            redirectUrl: '/verification',
-        })
-
-        // Check the verification result.
-        const verification = su.verifications.emailAddress
-        if (verification.verifiedFromTheSameClient()) {
-            setVerified(true)
-        } else if (verification.status === 'expired') {
-            setExpired(true)
-        }
-    
-        if (su.status === 'complete' && setActive) {
-            setActive({
-                session: su.createdSessionId,
-                beforeEmit: () => router.push('/account'),
+            await signUp?.create({
+                emailAddress,
+                unsafeMetadata: {
+                    referal: searchParams.has("referal") ? searchParams.get("referal") : ""
+                }
             })
-            openControl!(false)
-            return
-        }
+
+            const { startEmailLinkFlow } = signUp!.createEmailLinkFlow()
+
+            const su = await startEmailLinkFlow({
+                redirectUrl: process.env.NEXT_PUBLIC_URL + '/verification',
+            })
+
+            // Check the verification result.
+            const verification = su.verifications.emailAddress
+            if (verification.verifiedFromTheSameClient()) {
+                setVerified(true)
+            } else if (verification.status === 'expired') {
+                setExpired(true)
+            }
+        
+            if (su.status === 'complete' && setActive) {
+                setActive({
+                    session: su.createdSessionId,
+                    beforeEmit: () => router.push('/account'),
+                })
+                openControl!(false)
+                return
+            }
         } catch(e: any) {
             if(e.errors.find((err: any) => err.code === "form_identifier_exists"))
             {
@@ -127,7 +139,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                 try {
                     const res = await startEmailLinkFlow({
                         emailAddressId: (supportedFirstFactors as any)?.emailAddressId,
-                        redirectUrl: 'http://localhost:3000/verification',
+                        redirectUrl: process.env.NEXT_PUBLIC_URL + '/verification',
                     })
                     // Check the verification result.
                     const verification = res.firstFactorVerification
@@ -176,12 +188,13 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                             value={emailAddress}
                             type='email'
                             disabled={submitted}
+                            required
                         />
                         <div className="auth__form-input__icon">
                             <EmailIcon />
                         </div>
                     </div>
-                    <Button type="submit" variant='primary' className="auth__form-button" isDisabled={submitted}>
+                    <Button type="submit" variant='primary' className="auth__form-button" isDisabled={submitted || !emailAddress}>
                         <div className="auth__buttons-icon">
                             <PlaneIcon />
                         </div>

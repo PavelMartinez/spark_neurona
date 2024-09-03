@@ -11,82 +11,11 @@ import EmojiStarsImage from '../../../../../public/EmojiStars.png'
 import BigStarsImage from '../../../../../public/BigStars.png'
 import Link from 'next/link'
 import { IconArrowUpRight } from '@/components/ui/icons'
+import BuyCardsItemProps from '@/typescript/interfaces/AccountBuy/BuyCardsItemProps'
+import tariffsData from '@/data/accountBuy/data'
+import BuyCardsItem from '@/components/BuyCards/BuyCardsItem'
+import BuyCards from '@/components/BuyCards/BuyCards'
 
-
-interface CardsItemProps {
-    emoji: any;
-    title: string;
-    priceCurrent: number;
-    priceOld: number;
-    diamonds?: number;
-    benefits?: string[];
-    isPopular?: boolean;
-}
-
-const CardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopular = false, diamonds = 15 }: CardsItemProps) => (
-    <FlexItem className={`buy-cards__item ${isPopular ? "buy-cards--popular buy-cards__item--border" : ""}`}>
-        <div className="buy-cards__info">
-            <div className="buy-cards__info-emoji">
-                {emoji}
-            </div>
-            <div className="buy-cards__info-content">
-                <div className="buy-cards__title">
-                    {title}
-                </div>
-                <div className="buy-cards__price">
-                    <div className="buy-cards__price-current">
-                        <div className="buy-cards__price-current__value">
-                            {String(priceCurrent).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ")}
-                        </div>
-                        <div className="buy-cards__price-current__currency">
-                            <span>
-                                $
-                            </span>
-                            <span>
-                                CAD
-                            </span>
-                        </div>
-                    </div>
-                    <div className="buy-cards__price-old">
-                        {String(priceOld).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ")}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="buy-cards__list-wrapper">
-            <ul className="buy-cards__list">
-                {benefits?.map((s, index) => (
-                    <li className="buy-cards__list-item" key={`benefits_${index}`}>
-                        <span className="buy-cards__list-item__icon">
-                            <CheckSquareIcon />
-                        </span>
-                        <span className="buy-cards__list-item__text">
-                            {s}
-                        </span>
-                    </li>
-                ))}
-            </ul>
-        </div>
-        <div className="buy-cards__button-wrapper">
-            <button className="buy-cards__button">
-                CHOOSE PLAN
-            </button>
-        </div>
-        <div className="buy-cards__diamonds">
-            <div className="buy-cards__diamonds-icon">
-                <DiamondGoldIcon />
-            </div>
-            <div className="buy-cards__diamonds-counter">
-                {diamonds}
-            </div>
-        </div>
-        {isPopular &&
-            <div className="buy-cards__popular">
-                MOST POPULAR
-            </div>
-        }
-    </FlexItem>
-)
 
 const BuyPage = () => {
     return (
@@ -128,50 +57,7 @@ const BuyPage = () => {
 
                     <Image src={EmojiSurpriseImage} width={103} height={103} alt="" sizes='100vw' className="buy-discount__image buy-discount__image-surprise" />
                 </section>
-                <Flex className="buy-cards"
-                direction='row' wrap>
-                    <CardsItem
-                        emoji={<EmojiThumb />}
-                        title={'Basic'}
-                        priceCurrent={500000}
-                        priceOld={600000}
-                        benefits={[
-                            "$1/image",
-                            "4 Requests",
-                            "Full results",
-                            "No queue"
-                        ]}
-                        diamonds={8}
-                    />
-
-                    <CardsItem
-                        emoji={<EmojiRocket />}
-                        title={'Basic'}
-                        priceCurrent={500000}
-                        priceOld={600000}
-                        benefits={[
-                            "$1/image",
-                            "4 Requests",
-                            "Full results",
-                            "No queue"
-                        ]} 
-                        isPopular
-                    />
-
-                    <CardsItem
-                        emoji={<EmojiFire />}
-                        title={'Basic'}
-                        priceCurrent={500000}
-                        priceOld={600000}
-                        benefits={[
-                            "$1/image",
-                            "4 Requests",
-                            "Full results",
-                            "No queue"
-                        ]}
-                        diamonds={30}
-                    />
-                </Flex>
+                <BuyCards />
                 <Flex className="buy-conditions"
                 direction='row' wrap>
                     <FlexItem size='half' className='buy-conditions__part'>

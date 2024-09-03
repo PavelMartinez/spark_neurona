@@ -2,7 +2,7 @@ import { PaymentComment } from "@/typescript/enums/AccountTable/PaymentComment";
 import { PaymentDone } from "@/typescript/enums/AccountTable/PaymentDone";
 import IPayment from "@/typescript/interfaces/AccountTable/IPayment";
 
-const paymentHistory: IPayment[] = [
+const paymentHistory = [
     {
         key: '1',
         payment: 150,

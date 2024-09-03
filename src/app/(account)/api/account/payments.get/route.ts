@@ -1,5 +1,5 @@
 import { dbConnect } from "@/database/db";
-import User from "@/database/models/User";
+import { User } from "@/database/models/User";
 import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 

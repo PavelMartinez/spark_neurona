@@ -1,20 +1,27 @@
 import AccountTable from '@/components/AccountTable/AccountTable';
-import { BigDiamondIcon, DialogIcon, DiamondIcon, EmojiRocket, EmojiRocket2, Group2Icon, SendIcon, StarIcon, WalletMoneyIcon } from '@/components/svg'
+import { EmojiRocket2 } from '@/components/svg'
 import { Flex, FlexItem, Section } from '@/components/ui/layout'
 import Link from 'next/link'
 import React from 'react'
 
-import ReferalsData from '@/data/AccountTable/referalsData'
 import AccountConvert from '@/components/AccountConvert/AccountConvert';
-import Image from 'next/image';
 
-import AppleLogo from '../../../../../public/AppleLogo.png'
-import AndroidLogo from '../../../../../public/AndroidLogo.png'
 import { Breadcrumb } from 'antd';
 import ReferalInput from '@/components/ReferalInput/ReferalInput';
 import { IconArrowUpRight } from '@/components/ui/icons/IconArrowUpRight';
+import { currentUser } from '@clerk/nextjs/server';
+import { User } from '@/database/models/User';
+import IReferal from '@/typescript/interfaces/Models/IReferal';
 
 const ReferalPage = async () => {
+    const user = await currentUser()
+    const dbUser = await User.findOne({ externalId: user?.id });
+    const referalsData = dbUser.referals.length > 0 ? JSON.parse(JSON.stringify(dbUser.referals)).map((item: IReferal, index: number) => {
+		return {
+			...item,
+			key: String(index)
+		}
+	}) : [];
     return (
 		<Section className='referal'>
             <Flex container>
@@ -71,7 +78,7 @@ const ReferalPage = async () => {
                             <div className="referal-how__link-subheading">
                                 Your invitation link:
                             </div>
-                            <ReferalInput id="adsadasdsadsadassd" />
+                            <ReferalInput id={dbUser.referalString} />
                         </div>
 					</div>
 					<div className="referal__section">
@@ -79,12 +86,12 @@ const ReferalPage = async () => {
 							YOUR REFERALS
 						</div>
 						<div className="referal__section-content">
-							<AccountTable type='referal' data={ReferalsData}/>
+							<AccountTable type='referal' data={referalsData}/>
 						</div>
 					</div>
 				</FlexItem>
 				<FlexItem className='referal__column'>
-					<AccountConvert />
+					<AccountConvert balance={dbUser.dollars || 0}/>
 					<div className="referal-stats">
                         <div className="referal-stats__main">
                             <div className="referal-stats__content">
@@ -102,7 +109,7 @@ const ReferalPage = async () => {
                                     Referals count:
                                 </div>
                                 <div className="referal-stats__dict-value">
-                                    2 pers.
+                                    {dbUser.referals.length} pers.
                                 </div>
                             </div>
                             <div className="referal-stats__dict-item">

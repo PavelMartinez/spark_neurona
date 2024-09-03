@@ -9,22 +9,19 @@ import AccountConvert from '@/components/AccountConvert/AccountConvert';
 import Image from 'next/image';
 
 import AppleLogo from '../../../../public/AppleLogo.png'
-import AndroidLogo from '../../../../public/AndroidLogo.png'
 import { currentUser } from '@clerk/nextjs/server';
-import { dbConnect } from '@/database/db';
-import User from '@/database/models/User';
-import IPayment from '@/typescript/interfaces/AccountTable/IPayment';
+import { User } from '@/database/models/User';
+import IPayment from '@/typescript/interfaces/Models/IPayment';
 
 const AccountPage = async () => {
 	const user = await currentUser()
-	await dbConnect();
 	const dbUser = await User.findOne({ externalId: user?.id });
-	const payments = JSON.parse(JSON.stringify(dbUser.payments)).map((item: IPayment, index: number) => {
+	const payments = dbUser.payments.length > 0 ? JSON.parse(JSON.stringify(dbUser.payments)).map((item: IPayment, index: number) => {
 		return {
 			...item,
 			key: String(index)
 		}
-	});
+	}) : [];
     return (
 		<Section className='account'>
 			<Flex
@@ -50,7 +47,7 @@ const AccountPage = async () => {
 									</div>
 									<div className="account-balance__counter">
 										<div className="account-balance__counter-text">
-											{user?.publicMetadata.coins as number}
+											{dbUser?.dollars || 0}
 										</div>
 										<div className="account-balance__counter-icon">
 											<DiamondIcon />
@@ -106,7 +103,7 @@ const AccountPage = async () => {
 							</div>
 						</Button>
 					</Link>
-					<AccountConvert balance={user?.publicMetadata.dollars as number}/>
+					<AccountConvert balance={dbUser?.dollars || 0}/>
 					<div className="account-referal">
 						<div className="account-referal__part">
 							<div className="account-referal__badge">
@@ -137,7 +134,7 @@ const AccountPage = async () => {
 						</div>
 					</div>
 					<div className="account-mobiles">
-						<Link href="/" className='account-mobiles__link'>
+						<Link href="/ios" className='account-mobiles__link'>
 							<Image alt="appleLogo"
 							className="account-mobiles__link-logo"
 							src={AppleLogo}

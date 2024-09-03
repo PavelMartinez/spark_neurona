@@ -90,12 +90,7 @@ export function HeaderAuth() {
     }
     else if(searchParams.has("sign-up"))
     {
-      setAuthScreen(Screens.SIGNUP);
-      setAuthOpen(true);
-    }
-    else if(searchParams.has("pending"))
-    {
-      setAuthScreen(Screens.PENDING);
+      setAuthScreen(Screens.LOGIN);
       setAuthOpen(true);
     }
   }, [searchParams])
@@ -119,7 +114,7 @@ export function HeaderAuth() {
         <Link href="/">Contact</Link>
       </NavigationPill>
       <NavigationPill className="navigation-pill--border">
-        <Link href="/">Premium</Link>
+        <Link href="/premium">Premium</Link>
       </NavigationPill>
     </Navigation>
   );

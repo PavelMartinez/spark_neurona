@@ -1,15 +1,19 @@
+import { dbConnect } from "@/database/db";
 import { auth } from "@clerk/nextjs/server"
 import { ConfigProvider } from "antd"
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
     auth().protect()
+    await dbConnect();
 
     return (
         <ConfigProvider
             theme={{
                     token: {
                         fontFamily: "var(--font-inter)",
-                        colorBgContainer: "#131313"
+                        colorBgContainer: "#131313",
+                        colorText: "#FCFCFC",
+                        colorBgElevated: "#131313"
                     },
                     components: {
                         Table: {
@@ -18,7 +22,10 @@ export default async function Layout({ children }: { children: React.ReactNode }
                             cellPaddingInline: 24,
                             cellPaddingBlock: 0,
                             headerColor: "#93949A"
-                        }
+                        },
+                        Message: {
+                            contentBg: "#131313"
+                        },
                     }
                 }
             }

@@ -41,7 +41,7 @@
         }
 
         @include mobile {
-            display: none;
+            @include visually-hidden;
         }
     }
 }

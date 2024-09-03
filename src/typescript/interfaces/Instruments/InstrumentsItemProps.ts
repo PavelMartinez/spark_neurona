@@ -5,4 +5,5 @@ export default interface InstrumentsItemProps {
     headingText: string;
     description: string;
     href: string;
+    disabled?: boolean;
 }

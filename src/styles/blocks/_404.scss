@@ -96,7 +96,7 @@
         bottom: -15%;
 
         @include tablet {
-            display: none;
+            @include visually-hidden;
         }
     }
 

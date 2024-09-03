@@ -1,9 +1,9 @@
 import { PaymentDone } from "@/typescript/enums/AccountTable/PaymentDone";
-import IPayment from "@/typescript/interfaces/AccountTable/IPayment";
 import { IconArrowRight } from "../ui/icons";
 import Link from "next/link";
 import { format } from 'date-fns';
 import { PaymentComment } from "@/typescript/enums/AccountTable/PaymentComment";
+import IPayment from "@/typescript/interfaces/Models/IPayment";
 
 const paymentColumns = [
     {
