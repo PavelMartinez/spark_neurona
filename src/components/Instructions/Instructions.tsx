@@ -23,6 +23,7 @@ const Instructions = () => {
                     <li 
                         className={`instructions__list-item ${currentStep === index ? "instructions__list-item--current" : ""}`}
                         onClick={() => { setCurrentStep(index) }}
+                        key={`instructionsListItem${index}`}
                     >
                         <div className="instructions__list-number">
                             {index + 1}
