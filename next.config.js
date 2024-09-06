@@ -12,6 +12,10 @@ const nextConfig = {
 	}
 };
 
-module.exports = withNextVideo(nextConfig, {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  	enabled: process.env.ANALYZE === 'true',
+})
+
+module.exports = withBundleAnalyzer(withNextVideo(nextConfig, {
 	provider: "vercel-blob"
-});
+}));

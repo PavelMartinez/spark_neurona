@@ -6,11 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "npx cross-env ANALYZE=true npm run buildy"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.1",
     "@clerk/nextjs": "^5.3.1",
+    "@next/bundle-analyzer": "^14.2.8",
     "@react-aria/accordion": "^3.0.0-alpha.31",
     "@react-aria/focus": "^3.18.1",
     "@react-aria/interactions": "^3.22.1",
@@ -20,6 +22,7 @@
     "antd": "^5.20.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "framer-motion": "^11.5.1",
     "globalthis": "^1.0.4",
     "hooks": "^0.3.2",
     "icons": "^1.0.0",

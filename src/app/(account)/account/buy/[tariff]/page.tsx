@@ -1,11 +1,13 @@
-import { CheckSquareIcon, ClockCircleIcon, CloseSquareIcon, DiamondGoldIcon, EmojiFire, EmojiRocket, EmojiThumb, IncognitoIcon, LogoStripe, PromoArrow, SaleIcon, ShieldStarIcon } from '@/components/svg'
-import { Flex, FlexItem, Section } from '@/components/ui/layout'
+import { EmojiFire } from '@/components/svg'
+import { Flex, Section } from '@/components/ui/layout'
 import { Breadcrumb } from 'antd'
 import React from 'react'
 import tariffsData from '@/data/accountBuy/data'
 
 import Link from 'next/link'
 import { IconArrowUpRight } from '@/components/ui/icons'
+import StripeLogo from '../../../../../../public/StripeLogo.png'
+import Image from 'next/image'
 
 interface BuyProvidersItemProps {
     image: any;
@@ -18,9 +20,7 @@ interface BuyProvidersItemProps {
 const BuyProvidersItem = ({ image, discount = 0, url, title, titleColor = "#FCFCFC" }: BuyProvidersItemProps) => {
     return (
         <Link className="buy-providers__item" href={url}>
-            <div className="buy-providers__image">
-                {image}
-            </div>
+            {image}
             <div className="buy-providers__title" style={{ color: titleColor }}>
                 {title}
             </div>
@@ -72,7 +72,7 @@ const BuyProvidersPage = ({ params }: { params: { tariff: number; provider: stri
                     </div>
                     <div className="buy-providers">
                         <BuyProvidersItem
-                            image={<LogoStripe />}
+                            image={<Image src={StripeLogo} alt="Stripe" sizes='100vw' width={0} height={0} className="buy-providers__image"/>}
                             title={'Stripe'}
                             titleColor={'#6772E5'}
                             discount={40}

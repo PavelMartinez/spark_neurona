@@ -1,6 +1,6 @@
 .main-hero {
     padding: 100px;
-
+    margin-top: 95px;
     border-radius: 20px;
 
     &__content {
@@ -39,7 +39,7 @@
 }
 
 .main-panel {
-
+    margin-top: 55px !important;
     &__button {
         &-wrapper {
             padding: 15px;
@@ -107,6 +107,7 @@
             margin-left: auto;
             flex-direction: column;
             width: max-content;
+            display: flex;
     
             @include mobile {
                 width: 100%;
@@ -122,12 +123,6 @@
             z-index: 3;
 
             margin-bottom: -29px;
-
-                
-            @include hover {
-                margin-bottom: 0;
-                border-bottom: 0;
-            }
     
             @include mobile {
                 width: 100%;
@@ -213,21 +208,26 @@
             width: 100%;
         }
 
+        &--frame {
+            justify-self: flex-end;
+            margin-left: auto;
+        }
+
     }
     &__frame {
         display: flex;
         flex-direction: row;
         gap: 70px;
+        flex-wrap: wrap;
 
         &-list {
-            width: 556px;
             flex-direction: column;
             margin-bottom: 51px;
             flex: 0 1 auto;
+            display: flex;
+            gap: 40px;
 
-            @include mobile {
-                width: 100%;
-            }
+            width: 100%;
         }
 
         align-items: center;
@@ -241,6 +241,11 @@
             display: flex;
             flex-direction: column;
             gap: var(--sds-size-space-200);
+            width: 384px;
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         &-text {
@@ -283,6 +288,7 @@
 }
 
 .blocks {
+    margin-bottom: 182px;
     &__wrapper {
         --flex-gap: 100px !important;
 
@@ -296,7 +302,23 @@
         height: 450px;
         color: #000;
         position: relative;
-        border-radius: 24.311px;
+        border-radius: 24px;
+        box-shadow: 0px 0px 40px 0px rgba(240, 144, 255, 0.30);
+
+        &-subblock {
+            display: flex;
+            gap: 90px;
+            flex-direction: column;
+        }
+
+        $orders: 1, 2, 3, 4;
+
+        @each $order in $orders {
+          &--order-#{$order} {
+            order: $order;
+          }
+        }
+        
 
         @include mobile {
             width: 100%;
@@ -304,7 +326,7 @@
 
         &-image {
             object-fit: cover;
-            border-radius: 24.311px;
+            border-radius: 24px;
         }
 
         &-text {
@@ -329,6 +351,12 @@
 }
 
 .main-faq {
+    margin-block: 283px 313px;
+
+    @include mobile {
+        margin-block: 100px;
+    }
+
     &__inner {
         --flex-gap: 24px !important;
     }

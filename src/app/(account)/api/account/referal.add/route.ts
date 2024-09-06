@@ -9,7 +9,9 @@ export async function GET(req: NextRequest) {
     const user = await currentUser()
 
     if (!user) {
-      return new Response('Unauthorized', { status: 402 })
+      return NextResponse.json({ error: {
+        message: "Unauthorized"
+      } }, { status: 401 })
     }
     const referalString = req.nextUrl.searchParams.get("referal");
     const referalOwner = await User.findOne({ referalString: referalString });

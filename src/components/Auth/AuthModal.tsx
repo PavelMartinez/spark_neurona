@@ -1,15 +1,10 @@
 'use client';
 
 import { Screens } from '@/typescript/enums/Auth/Screens';
-import React, { Dispatch, SetStateAction } from 'react'
+import React from 'react'
 import { DialogModal, Dialog } from '../ui/primitives';
-import { useOverlayTrigger } from 'react-aria';
 import LoginScreen from './LoginScreen';
-import SignUpScreen from './SignUpScreen';
 import AuthModalProps from '@/typescript/interfaces/Auth/AuthModalProps';
-import LoginEmailScreen from './LoginEmailScreen';
-import SignUpEmailScreen from './SignUpEmailScreen';
-import PendingScreen from './PendingScreen';
 
 const AuthModal = ({ isOpen, screen, openControl, screenControl }: AuthModalProps) => {
   return ( 

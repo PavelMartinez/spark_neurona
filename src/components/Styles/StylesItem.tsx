@@ -7,15 +7,21 @@ import StylesItemProps from '@/typescript/interfaces/Styles/StylesItemProps';
 
 
 
-const StylesItem = ({ image, heading, href }: StylesItemProps) => {
+const StylesItem = ({ image, heading, href, nowrap = false, className = "" }: StylesItemProps) => {
     return (
-        <Link className='styles-item' href={href}>
-            <div className="styles-item__image-wrapper">
+        <Link className={`styles-item ${className}`} href={href}>
+            {!nowrap ? 
+                <div className="styles-item__image-wrapper">
+                    <Image className="styles-item__image" src={image} width={0} height={0} sizes="100vw" alt=""/>
+                </div> :
                 <Image className="styles-item__image" src={image} width={0} height={0} sizes="100vw" alt=""/>
-            </div>
-            <div className="styles-item__title">
-                {heading}
-            </div>
+            }
+
+            {heading && !nowrap &&
+                <div className="styles-item__title">
+                    {heading}
+                </div>
+            }
         </Link>
     )
 }

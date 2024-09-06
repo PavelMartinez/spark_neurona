@@ -1,23 +1,45 @@
 
 "use client";
 
-import StylesDataFantasy from '@/data/styles/data_fantasy'
-import StylesDataRealism from '@/data/styles/data_realism'
-import React, { useState } from 'react'
+import { SparkData } from '@/data/styles/data_spark';
+import React, { useEffect, useState } from 'react'
 import StylesItem from './StylesItem'
 import StylesItemProps from '@/typescript/interfaces/Styles/StylesItemProps';
+import ISparkData from '@/typescript/interfaces/Styles/ISparkData';
+import { SelectorState } from '@/typescript/enums/Styles/SelectorState';
 
 interface StylesGridProps {
     limit?: number;
 }
 
-enum SelectorState {
-    FANTASY = "fantasy",
-    REALISM = "realism"
-}
+
+
+type GroupedCategories = [string, ISparkData[] | undefined][];
+
+type CategoriesType = {
+    [SelectorState.FANTASY]: GroupedCategories;
+    [SelectorState.REALISM]: GroupedCategories;
+};
 
 const StylesGrid = ({ limit = 1000 }: StylesGridProps) => {
-    const [selector, setSelector] = useState<SelectorState>(SelectorState.FANTASY)
+    const [selector, setSelector] = useState<SelectorState>(SelectorState.FANTASY);
+    const [categories, setCategories] = useState<CategoriesType>()
+
+    useEffect(() => {
+        function setData() {
+            const BigCategories = {
+                [SelectorState.FANTASY]: Object.groupBy(SparkData, ({ BigCategory }) => BigCategory)[SelectorState.FANTASY]!,
+                [SelectorState.REALISM]: Object.groupBy(SparkData, ({ BigCategory }) => BigCategory)[SelectorState.REALISM]!
+            }
+            const Categories = {
+                [SelectorState.FANTASY]: Object.entries(Object.groupBy(BigCategories[SelectorState.FANTASY], ({ CategoryName }) => CategoryName)),
+                [SelectorState.REALISM]: Object.entries(Object.groupBy(BigCategories[SelectorState.REALISM], ({ CategoryName }) => CategoryName))
+            }
+            setCategories(Categories)
+            console.log(Categories)
+        }
+        setData()
+    }, [])
     return (
         <>
             <div className="styles__selector">
@@ -30,38 +52,48 @@ const StylesGrid = ({ limit = 1000 }: StylesGridProps) => {
             </div>
             <div className="styles__list">
                 {selector === SelectorState.FANTASY ? 
-                    StylesDataFantasy.map((item, index) => (
-                        <div className="styles__item" key={index}>
-                            <h3 className="styles__item-heading">
-                                {item.category}
-                            </h3>
-                            <div className="styles__item-grid">
-                                {item.items.map((value: StylesItemProps, index: number) => (
-                                    <StylesItem
-                                    image={value.image}
-                                    heading={value.heading}
-                                    href={value.href}
-                                    key={`stylesItem${index}`}/>
-                                ))}
-                            </div>   
-                        </div>
-                    )) :
-                    StylesDataRealism.map((item, index) => (
-                        <div className="styles__item" key={index}>
-                            <h3 className="styles__item-heading">
-                                {item.category}
-                            </h3>
-                            <div className="styles__item-grid">
-                                {item.items.map((value: StylesItemProps, index: number) => (
-                                    <StylesItem
-                                    image={value.image}
-                                    heading={value.heading}
-                                    href={value.href}
-                                    key={`stylesItem${index}`}/>
-                                ))}
-                            </div>   
-                        </div>
-                    ))
+                    <>
+                        {categories && categories[SelectorState.FANTASY].map(([key, value]) => (
+                            <div className="styles__item" key={key}>
+                                <h3 className="styles__item-heading">
+                                    {key}
+                                </h3>
+                                <div className="styles__item-grid">
+                                    {value && value.map((item, index) => {
+                                        return (
+                                            <StylesItem
+                                                image={`/styles_spark/${item.FileName}`}
+                                                heading={item.StyleName}
+                                                href={`/generator/${item.CategoryName}/${item.StyleName}`}
+                                                key={`stylesItem${index}`}
+                                            />
+                                        )
+                                    })}
+                                </div>   
+                            </div>
+                        ))}
+                    </> :
+                    <>
+                        {categories && categories[SelectorState.REALISM].map(([key, value]) => (
+                            <div className="styles__item" key={key}>
+                                <h3 className="styles__item-heading">
+                                    {key}
+                                </h3>
+                                <div className="styles__item-grid">
+                                    {value && value.map((item, index) => {
+                                        return (
+                                            <StylesItem
+                                                image={`/styles_spark/${item.FileName}`}
+                                                heading={item.StyleName}
+                                                href={`/generator/${item.CategoryName}/${item.StyleName}`}
+                                                key={`stylesItem${index}`}
+                                            />
+                                        )
+                                    })}
+                                </div>   
+                            </div>
+                        ))}
+                    </>
                 }
             </div>    
         </>

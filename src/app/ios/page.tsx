@@ -1,5 +1,3 @@
-import BannerSection from '@/components/BannerSection/BannerSection'
-import BuyCards from '@/components/BuyCards/BuyCards'
 import Instructions from '@/components/Instructions/Instructions'
 import { Flex, Section } from '@/components/ui/layout'
 import React from 'react'

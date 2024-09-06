@@ -26,7 +26,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
       return signIn.authenticateWithRedirect({
         strategy,
         redirectUrl: `/sso-callback${searchParams.has("referal") ? "?referal=" + searchParams.get("referal") : ""}`,
-        redirectUrlComplete: '/account',
+        redirectUrlComplete: searchParams.get("redirect") || '/account'
       })
     }
   
@@ -43,14 +43,13 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
       if (userExistsButNeedsToSignIn) {
         const res = await signIn.create({ 
             transfer: true
-
          })
         console.log(res)
   
         if (res.status === 'complete') {
           setActive({
             session: res.createdSessionId,
-            beforeEmit: () => router.push('/account'),
+            beforeEmit: () => router.push(searchParams.get("redirect") || '/account'),
           })
           openControl!(false)
         }
@@ -73,7 +72,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
             if (res.status === 'complete') {
               setActive({
                 session: res.createdSessionId,
-                beforeEmit: () => router.push('/account'),
+                beforeEmit: () => router.push(searchParams.get("redirect") || '/account'),
               })
               openControl!(false)
             }
@@ -121,7 +120,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
             if (su.status === 'complete' && setActive) {
                 setActive({
                     session: su.createdSessionId,
-                    beforeEmit: () => router.push('/account'),
+                    beforeEmit: () => router.push(searchParams.get("redirect") || '/account'),
                 })
                 openControl!(false)
                 return
@@ -151,7 +150,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                     if (res.status === 'complete' && setActive) {
                         setActive({
                             session: res.createdSessionId,
-                            beforeEmit: () => router.push('/account'),
+                            beforeEmit: () => router.push(searchParams.get("redirect") || '/account'),
                         })
                         openControl!(false)
                         return

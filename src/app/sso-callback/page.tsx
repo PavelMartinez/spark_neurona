@@ -6,7 +6,7 @@ export default function Pending({
     searchParams?:{ [key: string]: string | undefined };
 }) {
     return (<AuthenticateWithRedirectCallback 
-                signInForceRedirectUrl={"/account"}
-                signUpForceRedirectUrl={searchParams?.referal ? "/api/account/referal.add?referal=" + searchParams?.referal : "/account"}
+                signInForceRedirectUrl={searchParams?.redirect || '/account'}
+                signUpForceRedirectUrl={searchParams?.referal ? "/api/account/referal.add?referal=" + searchParams?.referal + `${searchParams?.redirect ? "&redirect=" + searchParams?.redirect : ""}` : (searchParams?.redirect || '/account')}
             />)
 }
