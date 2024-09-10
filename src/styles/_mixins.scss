@@ -52,3 +52,29 @@
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
 }
+
+@mixin border-gradient($b: 1, $r: 20, $background: var(--button-1)) {
+  --b: #{$b}px;  /* border width*/
+  
+  position: relative;
+  z-index:0;
+  // box-shadow: 0px 0px 20px 0px rgba(240, 144, 255, 0.5);
+
+  &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      padding: var(--b);
+      border-radius: #{$r}px;
+      background: $background; 
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+              mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+  }
+}

@@ -8,7 +8,7 @@
         font-family: var(--sds-typography-title-hero-font-family);
         font-size: var(--sds-typography-title-hero-size);
         font-style: normal;
-        font-weight: 700;
+        font-weight: var(--sds-typography-weight-bold);
         line-height: 120%; /* 86.4px */
         letter-spacing: -2.16px;
 
@@ -35,9 +35,11 @@
 
     &__main {
         background: var(--back-login, #131313);
-        padding: 74px 90px;
+        padding: 50px;
         border-radius: 20px;
-        height: 482px;
+
+        display: flex;
+        align-items: center;
 
         @include tablet {
             height: auto;
@@ -54,11 +56,13 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    width: 100%;
 
     &__list {
         --background-number: var(--grey, #93949A);
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         &-item {
             padding: 20px 18px;
             display: inline-flex;
@@ -99,7 +103,7 @@
             color: var(--stroke-3, #232323);
             font-size: 14px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 21px */
             text-align: center;
 
@@ -119,7 +123,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: 40px;
+        flex: 1;
     }
 
     &__main {
@@ -132,7 +138,7 @@
         &-title {
             font-size: 24px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 36px */
         }
 
@@ -142,7 +148,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: var(--sds-typography-weight-regular);
             line-height: 150%; /* 24px */
         }
 
@@ -160,7 +166,7 @@
 
             font-size: 12px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 18px */
             text-transform: uppercase;
         }

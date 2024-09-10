@@ -1,9 +1,11 @@
 'use client';
 
+import NavigationLink from "@/components/NavigationLink/NavigationLink";
 import { LogoInstagram, LogoLinkedIn, LogoX, LogoYoutube } from "@/components/svg";
 import { useMediaQuery } from "hooks";
 import { IconInstagram, IconLinkedin, IconTwitter, IconYoutube } from "icons";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   ButtonGroup,
@@ -18,6 +20,7 @@ import {
 export type FooterProps = Omit<SectionProps, "variant" | "padding" | "src">;
 export function Footer({ className, ...props }: FooterProps) {
   const { isTabletDown } = useMediaQuery();
+  const t = useTranslations("Footer")
   const listDensity = isTabletDown ? "tight" : "default";
   return (
     <Section
@@ -36,60 +39,60 @@ export function Footer({ className, ...props }: FooterProps) {
         </FlexItem>
         <TextLinkList
           density={listDensity}
-          title={<TextStrong>Use cases</TextStrong>}
+          title={<TextStrong>{t('titles.use-cases')}</TextStrong>}
         >
           <TextListItem>
-            <TextLink href="#">Photo generating</TextLink>
+            <NavigationLink href="/generator">{t('links.photo-generating')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Video generating</TextLink>
+            <NavigationLink href="/404">{t('links.video-generating')}</NavigationLink>
           </TextListItem>
         </TextLinkList>
         <TextLinkList
           density={listDensity}
           title={
             <Link href="/privacy" className="footer__link">
-              <TextStrong>Privacy policy</TextStrong>
+              <TextStrong>{t('titles.privacy-policy')}</TextStrong>
             </Link>
           }
         >
           <TextListItem>
-            <TextLink href="#">Contact us</TextLink>
+            <NavigationLink href="/contact">{t('links.contact-us')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Report a problem</TextLink>
+            <NavigationLink href="#">{t('links.report-a-problem')}</NavigationLink>
           </TextListItem>
         </TextLinkList>
         <TextLinkList
           density={listDensity}
-          title={<TextStrong>About us</TextStrong>}
+          title={<TextStrong>{t('titles.about-us')}</TextStrong>}
         >
           <TextListItem>
-            <TextLink href="#">Blog</TextLink>
+            <NavigationLink href="/blog">{t('links.blog')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">User guide</TextLink>
+            <NavigationLink href="#">{t('links.user-guide')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Support</TextLink>
+            <NavigationLink href="/account/support">{t('links.support')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Business Contacts</TextLink>
+            <NavigationLink href="/contact">{t('links.business-contacts')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Careers</TextLink>
+            <NavigationLink href="/careers">{t('links.careers')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">News</TextLink>
+            <NavigationLink href="/news">{t('links.news')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <TextLink href="#">Terms</TextLink>
+            <NavigationLink href="/privacy">{t('links.terms')}</NavigationLink>
           </TextListItem>
 		  <TextListItem>
-            <TextLink href="/privacy">Privacy</TextLink>
+            <NavigationLink href="/privacy">{t('links.privacy')}</NavigationLink>
           </TextListItem>
 		  <TextListItem>
-            <TextLink href="#">Community</TextLink>
+            <TextLink href="/community">{t('links.community')}</TextLink>
           </TextListItem>
         </TextLinkList>
       </Flex>

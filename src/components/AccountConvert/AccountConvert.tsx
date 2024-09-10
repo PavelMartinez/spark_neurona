@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { DiamondGreyIcon, DiamondIcon, DollarGreyIcon, DollarIcon, MinusIcon, PlusIcon } from '../svg';
 import { Button } from '../ui/primitives';
+import { useTranslations } from 'next-intl';
 
 interface AccountConvertProps {
     balance?: number;
@@ -11,6 +12,7 @@ interface AccountConvertProps {
 
 const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
     const [coins, setCoins] = useState<number>(balance);
+    const t = useTranslations("AccountConvert");
 
     const handleUpdateCoins = (value: 1 | -1) => {
         let newCoins = coins + value;
@@ -24,7 +26,7 @@ const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
     return (
         <div className="account-convert">
             <div className="account-convert__heading">
-                Convert your referal earnings
+                {t('heading')}
             </div>
             <div className="account-convert__balance">
                 <div className="account-convert__balance-text">
@@ -43,7 +45,7 @@ const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
                     </div>
                     <div className="account-convert__counter-balance">
                         <div className="account-convert__counter-balance__key">
-                            Coins
+                            {t('counter.balance')}
                         </div>
                         <div className="account-convert__counter-balance__value">
                             {coins}
@@ -62,7 +64,7 @@ const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
             </div>
             <div className="account-convert__course">
                 <span className="account-convert__course-text">
-                    Course exchange:
+                    {t('course-exchange.text')}
                 </span>
                 <span className="account-convert__course-equation">
                     <span className="account-convert__course-number">
@@ -84,12 +86,12 @@ const AccountConvert = ({ balance = 150, lose } : AccountConvertProps) => {
             </div>
             <div className="account-convert__button-wrapper">
                 <Button className="account-convert__button" isDisabled={coins === 0}>
-                    Convert to coins
+                    {t('convert.button')}
                 </Button>
             </div>
             <div className="account-convert__withdraw-wrapper">
                 <button className="account-convert__withdraw">
-                    OR WITHDRAW FUNDS TO THE ACCOUNT
+                    {t('withdraw.button')}
                 </button>
             </div>
         </div>

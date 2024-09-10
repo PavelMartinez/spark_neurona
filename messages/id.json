@@ -1,0 +1,276 @@
+{
+  "community": "Masyarakat",
+  "buy-coins-button": "BELI KOIN",
+  "AccountConvert": {
+    "convert": {
+      "button": "Konversikan menjadi koin"
+    },
+    "counter": {
+      "balance": "Koin"
+    },
+    "course-exchange": {
+      "text": "Pertukaran kursus:"
+    },
+    "heading": "Konversikan penghasilan referensi Anda",
+    "withdraw": {
+      "button": "ATAU MENARIK DANA KE REKENING"
+    }
+  },
+  "AccountPage": {
+    "buy-coins-button": "BELI KOIN",
+    "coins-balance": "Saldo koin",
+    "greeting": "Hai, { name }",
+    "here-your-balance": "Ini saldo Anda",
+    "payment-history-heading": "Riwayat Pembayaran",
+    "referal": {
+      "badge": "PROGRAM REFERAL",
+      "count": "Anda memiliki referensi",
+      "details": "Lebih Detail",
+      "text": "UNDANG TEMAN ANDA DAN DAPATKAN UANG KE AKUN ANDA"
+    },
+    "support": {
+      "button": "DUKUNGAN PELANGGAN"
+    },
+    "top-up-your-balance-right-now": "Isi saldo Anda sekarang juga"
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "MEMBAYAR"
+      },
+      "coins": "Koin",
+      "comment": "Komentar",
+      "date": "Tanggal",
+      "done": "Selesai",
+      "payment": "Pembayaran"
+    }
+  },
+  "BannerSection": {
+    "button": "coba secara gratis",
+    "description": "AI terbaik untuk menghasilkan foto secara online",
+    "heading": "Gambar yang Dihasilkan Ai"
+  },
+  "ChatBox": {
+    "history-button": "Sejarah",
+    "input": {
+      "placeholder": "Ajukan pertanyaan"
+    },
+    "prompts": {
+      "list": {
+        "1": "Buatlah permainan pemrograman",
+        "2": "Tulis anak-anak",
+        "3": "Kenali Paris seperti penduduk lokal",
+        "4": "Rutinitas pagi untuk produktivitas"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AI Chat adalah chatbot AI yang menulis teks. \nAnda dapat menggunakannya untuk menulis cerita, pesan, atau kode pemrograman. \nAnda dapat menggunakan chatbot AI sebagai tutor virtual di hampir semua mata pelajaran.",
+    "heading": "Obrolan AI"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "title": "Bagaimana cara mendapatkan hasil yang sukses?"
+      },
+      "2": {
+        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "title": "Bagaimana cara mengubah warna latar belakang?"
+      },
+      "3": {
+        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "title": "Bagaimana cara menggunakan Neurona Gratis?"
+      },
+      "4": {
+        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "title": "Bagaimana cara menghasilkan gambar?"
+      },
+      "5": {
+        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "title": "Bagaimana cara mengeja promt dengan benar?"
+      }
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "blog",
+      "business-contacts": "Kontak Bisnis",
+      "careers": "Karier",
+      "community": "Masyarakat",
+      "contact-us": "Hubungi kami",
+      "news": "Berita",
+      "photo-generating": "Menghasilkan foto",
+      "privacy": "Pribadi",
+      "report-a-problem": "Laporkan masalah",
+      "support": "Mendukung",
+      "terms": "Ketentuan",
+      "user-guide": "Panduan pengguna",
+      "video-generating": "Pembuatan video"
+    },
+    "titles": {
+      "about-us": "Tentang kami",
+      "privacy-policy": "Kebijakan privasi",
+      "use-cases": "Kasus penggunaan"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "Jenius",
+        "hd": "HD",
+        "standart": "Standar"
+      },
+      "preference": {
+        "quality": "Kualitas",
+        "speed": "Kecepatan"
+      }
+    },
+    "generate-button": "Menghasilkan",
+    "model": {
+      "enum": {
+        "standart": "Model.STANDART"
+      },
+      "title": "Pilih model"
+    },
+    "prompt": {
+      "placeholder": "Permintaan Anda di sini",
+      "title": "Buat gambar dari prompt teks"
+    },
+    "selector": {
+      "heading": "Pilih bentuk"
+    },
+    "styles": {
+      "button": "Lihat semua 100 gaya",
+      "title": "Pilih gaya"
+    },
+    "preference": {
+      "title": "Preferensi"
+    },
+    "image": {
+      "default": {
+        "alt": "Default Generasi"
+      },
+      "result": {
+        "alt": "Hasil Generasi"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "Obrolan AI",
+    "ai-insturments": "instrumen AI",
+    "contact": "Kontak",
+    "image-generation": "Pembuatan gambar",
+    "instruction": "Petunjuk",
+    "login-button": "Login",
+    "logout-button": "Keluar",
+    "popover": {
+      "buy-coins": "Beli koin",
+      "customer-support": "Dukungan Pelanggan",
+      "profile-settings": "Pengaturan profil",
+      "referal-program": "Program Referensi"
+    },
+    "premium": "Premi",
+    "style-gallery": "Galeri gaya"
+  },
+  "HomePage": {
+    "advantages": {
+      "heading": "Keunggulan kami",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "membantu Anda mengedit dan mewujudkan ide yang paling rumit",
+          "heading": "Sejumlah besar alat dan fungsi"
+        },
+        "many-styles": {
+          "content": "membantu Anda melihat diri Anda dengan cara yang berbeda dan akan mendiversifikasi media sosial",
+          "heading": "Banyak gaya"
+        },
+        "speed-and-quality": {
+          "heading": "Kecepatan dan kualitas",
+          "title": "menggunakan layanan kami Anda akan mendapatkan hasil terbaik dari peningkatan foto dengan AI"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "OBROLAN AI",
+        "ai-photo-editor": "EDITOR FOTO AI",
+        "image-generation": "GENERASI GAMBAR",
+        "style-gallery": "GALERI GAYA"
+      }
+    },
+    "functions-heading": "Fungsi",
+    "functions-list": {
+      "ai-chat": {
+        "content": "gunakan obrolan untuk menyelesaikan masalah apa pun",
+        "heading": "Obrolan AI"
+      },
+      "ai-photo-editor": {
+        "content": "Ubah dan hapus latar belakang, gunakan riasan, cocokkan gaya rambut dengan satu ketukan",
+        "heading": "Editor Foto AI"
+      },
+      "image-generation": {
+        "content": "buat foto luar biasa dengan prompt teks",
+        "heading": "Pembuatan gambar"
+      },
+      "style-gallery": {
+        "content": "Pilih gaya berbeda di galeri kami, lebih dari 1000 efek",
+        "heading": "Galeri gaya"
+      }
+    },
+    "functions-subheading": "cobalah sekarang",
+    "main-faq": {
+      "heading": "PERTANYAAN YANG SERING DITANYAKAN"
+    },
+    "main-hero-button": "Hasilkan sekarang",
+    "main-hero-button-create": "Buat Gambar",
+    "main-hero-subtitle": "layanan terbaik untuk membuat gambar AI",
+    "main-panel-button-edit": "Sunting Foto"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "Buka situs web Neurona.com di browser Safari",
+        "title": "Buka situs"
+      },
+      "2": {
+        "description": "Klik ikon «Bagikan» (terletak di toolbar bawah dan berbentuk persegi panjang dengan panah mengarah ke atas)",
+        "title": "Klik pada ikon «Bagikan»"
+      },
+      "3": {
+        "description": "Dari menu gulir yang muncul, pilih «Tambahkan ke Layar Beranda»",
+        "title": "Tambahkan ke Layar Utama"
+      },
+      "4": {
+        "description": "Masukkan nama untuk pintasan tersebut, lalu klik «Tambahkan»",
+        "title": "Masukkan nama"
+      },
+      "5": {
+        "description": "Setelah ditambahkan, neurona.com akan berjalan sebagai aplikasi web di layar beranda Anda, menawarkan pengalaman layar penuh yang mulus tanpa bilah alamat browser",
+        "title": "Selesai!"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "Ciptakan gambar menakjubkan dengan teknologi bertenaga AI <br />dalam hitungan detik.",
+    "heading": "instrumen AI"
+  },
+  "IosPage": {
+    "description": "Petunjuk terperinci tentang cara menginstal aplikasi di iOS",
+    "heading": "Aplikasi Neurona untuk iOS"
+  },
+  "PremiumPage": {
+    "description": "Pilih tarif yang disesuaikan dengan kebutuhan Anda",
+    "heading": "Premi"
+  },
+  "StylesPage": {
+    "description": "Jelajahi galeri kami dan pilih dari lebih dari 100 model bergaya berbeda untuk dibuat.",
+    "heading": "Galeri Gaya",
+    "link": "Hasilkan Seni Anda sendiri dengan satu klik!"
+  },
+  "main-hero-button": "Hasilkan sekarang",
+  "GeneratorPage": {
+    "heading": "Pembuat Gambar AI",
+    "description": "Ini adalah Generator Gambar AI. \nIni membuat gambar dari awal dari deskripsi teks."
+  }
+}

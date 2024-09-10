@@ -24,7 +24,7 @@
     &__title {
         font-size: 18px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: var(--sds-typography-weight-semibold);
         line-height: 120%; /* 21.6px */
     }
 
@@ -39,7 +39,7 @@
 
             font-size: 14px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 21px */
             text-decoration-line: line-through;
             text-transform: uppercase;
@@ -48,7 +48,7 @@
         &-current {
             font-size: 28px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 100%; /* 28px */
             
             display: flex;
@@ -57,7 +57,7 @@
 
             &__currency {
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: var(--sds-typography-weight-semibold);
                 line-height: 100%;
 
                 display: inline-flex;
@@ -162,7 +162,7 @@
 
         font-size: 16px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: var(--sds-typography-weight-medium);
         line-height: 150%; /* 24px */
         text-transform: uppercase;
     }
@@ -181,7 +181,7 @@
 
         font-size: 16px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 24px */
 
         &-icon {
@@ -194,7 +194,7 @@
 
         font-size: 12.8px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 19.2px */
 
         border-radius: var(--sds-size-icon-large);

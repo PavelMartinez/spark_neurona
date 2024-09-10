@@ -1,0 +1,276 @@
+{
+  "main-hero-button": "Generate now",
+  "HomePage": {
+    "main-hero-button": "Generate now",
+    "main-hero-subtitle": "the best service for creating AI images",
+    "main-panel-button-edit": "Edit Photo",
+    "main-hero-button-create": "Create Image",
+    "functions-heading": "Functions",
+    "functions-subheading": "try it right now",
+    "functions-list": {
+      "ai-chat": {
+        "heading": "AI Chat",
+        "content": "use chat to resolve any issue"
+      },
+      "ai-photo-editor": {
+        "heading": "AI Photo Editor",
+        "content": "Change and remove backgrounds, use makeup, match hairstyles with a single tap"
+      },
+      "style-gallery": {
+        "heading": "Style gallery",
+        "content": "Choose different styles in our gallery, over 1000+ effects"
+      },
+      "image-generation": {
+        "heading": "Image generation",
+        "content": "create awesome photos with text prompt"
+      }
+    },
+    "advantages": {
+      "heading": "Our advantages",
+      "list": {
+        "speed-and-quality": {
+          "heading": "Speed and quality",
+          "title": "using our service you will get the best result of photo enhancement with AI"
+        },
+        "extensive-number-of-tools-and-functions": {
+          "heading": "Extensive number of tools and functions",
+          "content": "help you edit and realize the most complex ideas"
+        },
+        "many-styles": {
+          "heading": "Many styles",
+          "content": "help you see yourself in different ways and will diversify social media"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "AI CHAT",
+        "style-gallery": "STYLE GALLERY",
+        "ai-photo-editor": "AI PHOTO EDITOR",
+        "image-generation": "IMAGE GENERATION"
+      }
+    },
+    "main-faq": {
+      "heading": "FREQUENTLY ASKED QUESTIONS"
+    }
+  },
+  "BannerSection": {
+    "heading": "Ai Generated Image",
+    "description": "The best AI for generating photos online",
+    "button": "try for free"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "title": "How to get a successful result?",
+        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+      },
+      "2": {
+        "title": "How do I change the background color?",
+        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+      },
+      "3": {
+        "title": "How to use Neurona for Free?",
+        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+      },
+      "4": {
+        "title": "How do you generate a picture?",
+        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+      },
+      "5": {
+        "title": "How to spell promt correctly?",
+        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+      }
+    }
+  },
+  "Header": {
+    "image-generation": "Image generation",
+    "ai-insturments": "AI insturments",
+    "style-gallery": "Style gallery",
+    "ai-chat": "AI Chat",
+    "contact": "Contact",
+    "premium": "Premium",
+    "login-button": "Login",
+    "instruction": "Instruction",
+    "logout-button": "Log out",
+    "popover": {
+      "buy-coins": "Buy coins",
+      "referal-program": "Referal Program",
+      "profile-settings": "Profile settings",
+      "customer-support": "Customer Support"
+    }
+  },
+  "Footer": {
+    "titles": {
+      "use-cases": "Use cases",
+      "privacy-policy": "Privacy policy",
+      "about-us": "About us"
+    },
+    "links": {
+      "photo-generating": "Photo generating",
+      "video-generating": "Video generating",
+      "contact-us": "Contact us",
+      "report-a-problem": "Report a problem",
+      "blog": "Blog",
+      "user-guide": "User guide",
+      "support": "Support",
+      "business-contacts": "Business Contacts",
+      "careers": "Careers",
+      "news": "News",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "community": "Community"
+    }
+  },
+  "community": "Community",
+  "ChatBox": {
+    "history-button": "History",
+    "prompts": {
+      "list": {
+        "1": "Create a programming game",
+        "2": "Write a children&apos;s story",
+        "3": "Get to know Paris like a local",
+        "4": "Morning routine for productivity"
+      }
+    },
+    "input": {
+      "placeholder": "Ask a question"
+    }
+  },
+  "ChatPage": {
+    "heading": "AI Chat",
+    "description": "AI Chat is an AI chatbot that writes text. You can use it to write stories, messages, or programming code. You can use the AI chatbot as a virtual tutor in almost any subject."
+  },
+  "PremiumPage": {
+    "heading": "Premium",
+    "description": "Choose a tariff tailored to your needs"
+  },
+  "StylesPage": {
+    "heading": "Style Gallery",
+    "description": "Explore through our gallery and choose from over 100+ different stylized models to generate.",
+    "link": "Generate your own Art with one click!"
+  },
+  "AccountPage": {
+    "greeting": "Hi, { name }",
+    "here-your-balance": "Here your balance",
+    "coins-balance": "Coins balance",
+    "top-up-your-balance-right-now": "Top up your balance right now",
+    "buy-coins-button": "BUY COINS",
+    "payment-history-heading": "Payment History",
+    "support": {
+      "button": "CUSTOMER SUPPORT"
+    },
+    "referal": {
+      "badge": "REFERAL PROGRAM",
+      "text": "INVITE YOUR FRIENDS AND EARN MONEY INTO YOUR ACCOUNT",
+      "count": "Your have referals",
+      "details": "More Details"
+    }
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "payment": "Payment",
+      "coins": "Coins",
+      "done": "Done",
+      "comment": "Comment",
+      "buttons": {
+        "pay": "PAY"
+      },
+      "date": "Date"
+    }
+  },
+  "Generator": {
+    "prompt": {
+      "title": "Create an image from text prompt",
+      "placeholder": "Your prompt here"
+    },
+    "model": {
+      "title": "Choose a model",
+      "enum": {
+        "standart": "Model.STANDART"
+      }
+    },
+    "enum": {
+      "model": {
+        "standart": "Standart",
+        "hd": "HD",
+        "genius": "Genius"
+      },
+      "preference": {
+        "speed": "Speed",
+        "quality": "Quality"
+      }
+    },
+    "styles": {
+      "button": "View all +100 styles",
+      "title": "Choose a style"
+    },
+    "selector": {
+      "heading": "Choose shape"
+    },
+    "generate-button": "Generate",
+    "preference": {
+      "title": "Preference"
+    },
+    "image": {
+      "default": {
+        "alt": "Generation Default"
+      },
+      "result": {
+        "alt": "Generation Result"
+      }
+    }
+  },
+  "AccountConvert": {
+    "heading": "Convert your referal earnings",
+    "counter": {
+      "balance": "Coins"
+    },
+    "course-exchange": {
+      "text": "Course exchange:"
+    },
+    "convert": {
+      "button": "Convert to coins"
+    },
+    "withdraw": {
+      "button": "OR WITHDRAW FUNDS TO THE ACCOUNT"
+    }
+  },
+  "buy-coins-button": "BUY COINS",
+  "InstrumentsPage": {
+    "heading": "AI instruments",
+    "description": "Create stunning images with AI-powered technology <br />in seconds."
+  },
+  "IosPage": {
+    "heading": "Neurona App for IOS",
+    "description": "Detailed instructions on how to install the app on IOS"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "title": "Open site",
+        "description": "Open the Neurona.com website in the Safari browser"
+      },
+      "2": {
+        "title": "Click on the «Share» icon",
+        "description": "Click on the «Share» icon (located on the bottom toolbar and is a rectangle with an upward pointing arrow)"
+      },
+      "3": {
+        "title": "Add to Home Screen",
+        "description": "From the scrolling menu that appears, select «Add to Home Screen»"
+      },
+      "4": {
+        "title": "Enter a name",
+        "description": "Enter a name for the shortcut, and then click «Add»"
+      },
+      "5": {
+        "title": "Done!",
+        "description": "Once added, neurona.com will run as a web application on your home screen, offering a seamless full-screen experience without a browser address bar"
+      }
+    }
+  },
+  "GeneratorPage": {
+    "heading": "AI Image Generator",
+    "description": "This is an AI Image Generator. It creates an image from scratch from a text description."
+  }
+}

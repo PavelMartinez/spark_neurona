@@ -1,0 +1,276 @@
+{
+  "community": "社区",
+  "buy-coins-button": "购买金币",
+  "AccountConvert": {
+    "convert": {
+      "button": "兑换成硬币"
+    },
+    "counter": {
+      "balance": "硬币"
+    },
+    "course-exchange": {
+      "text": "课程交流："
+    },
+    "heading": "转换您的推荐收入",
+    "withdraw": {
+      "button": "或将资金提取到账户"
+    }
+  },
+  "AccountPage": {
+    "buy-coins-button": "购买金币",
+    "coins-balance": "硬币余额",
+    "greeting": "嗨，{ name }",
+    "here-your-balance": "这是您的余额",
+    "payment-history-heading": "付款记录",
+    "referal": {
+      "badge": "推荐计划",
+      "count": "您有推荐人",
+      "details": "更多详情",
+      "text": "邀请您的朋友并为您的帐户赚取金钱"
+    },
+    "support": {
+      "button": "客户支持"
+    },
+    "top-up-your-balance-right-now": "立即充值您的余额"
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "支付"
+      },
+      "coins": "硬币",
+      "comment": "评论",
+      "date": "日期",
+      "done": "完毕",
+      "payment": "支付"
+    }
+  },
+  "BannerSection": {
+    "button": "免费试用",
+    "description": "在线生成照片的最佳人工智能",
+    "heading": "人工智能生成的图像"
+  },
+  "ChatBox": {
+    "history-button": "历史",
+    "input": {
+      "placeholder": "问一个问题"
+    },
+    "prompts": {
+      "list": {
+        "1": "创建一个编程游戏",
+        "2": "写一个孩子",
+        "3": "像当地人一样了解巴黎",
+        "4": "提高生产力的早晨例行公事"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AI Chat 是一个可以编写文本的 AI 聊天机器人。\n您可以使用它来编写故事、消息或编程代码。\n您可以使用人工智能聊天机器人作为几乎任何学科的虚拟导师。",
+    "heading": "人工智能聊天"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "只需上传图像，然后让应用程序为您完成所有工作！ \nNeurona 使用 AI 自动删除照片中的背景，让您可以轻松免费定制和编辑图像。",
+        "title": "如何获得成功的结果？"
+      },
+      "2": {
+        "info": "只需上传图像，然后让应用程序为您完成所有工作！ \nNeurona 使用 AI 自动删除照片中的背景，让您可以轻松免费定制和编辑图像。",
+        "title": "如何更改背景颜色？"
+      },
+      "3": {
+        "info": "只需上传图像，然后让应用程序为您完成所有工作！ \nNeurona 使用 AI 自动删除照片中的背景，让您可以轻松免费定制和编辑图像。",
+        "title": "如何免费使用 Neurona？"
+      },
+      "4": {
+        "info": "只需上传图像，然后让应用程序为您完成所有工作！ \nNeurona 使用 AI 自动删除照片中的背景，让您可以轻松免费定制和编辑图像。",
+        "title": "如何生成图片？"
+      },
+      "5": {
+        "info": "只需上传图像，然后让应用程序为您完成所有工作！ \nNeurona 使用 AI 自动删除照片中的背景，让您可以轻松免费定制和编辑图像。",
+        "title": "如何正确拼写 promt?"
+      }
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "博客",
+      "business-contacts": "业务联系",
+      "careers": "职业机会",
+      "community": "社区",
+      "contact-us": "联系我们",
+      "news": "消息",
+      "photo-generating": "照片生成",
+      "privacy": "隐私",
+      "report-a-problem": "报告问题",
+      "support": "支持",
+      "terms": "条款",
+      "user-guide": "用户指南",
+      "video-generating": "视频生成"
+    },
+    "titles": {
+      "about-us": "关于我们",
+      "privacy-policy": "隐私政策",
+      "use-cases": "使用案例"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "天才",
+        "hd": "高清",
+        "standart": "标准"
+      },
+      "preference": {
+        "quality": "质量",
+        "speed": "速度"
+      }
+    },
+    "generate-button": "产生",
+    "model": {
+      "enum": {
+        "standart": "型号.STANDART"
+      },
+      "title": "选择型号"
+    },
+    "prompt": {
+      "placeholder": "您的提示在这里",
+      "title": "根据文本提示创建图像"
+    },
+    "selector": {
+      "heading": "选择形状"
+    },
+    "styles": {
+      "button": "查看全部 100 种款式",
+      "title": "选择风格"
+    },
+    "preference": {
+      "title": "偏爱"
+    },
+    "image": {
+      "default": {
+        "alt": "默认生成"
+      },
+      "result": {
+        "alt": "生成结果"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "人工智能聊天",
+    "ai-insturments": "人工智能仪器",
+    "contact": "接触",
+    "image-generation": "图像生成",
+    "instruction": "操作说明",
+    "login-button": "登录",
+    "logout-button": "退出",
+    "popover": {
+      "buy-coins": "购买金币",
+      "customer-support": "客户支持",
+      "profile-settings": "个人资料设置",
+      "referal-program": "推荐计划"
+    },
+    "premium": "优质的",
+    "style-gallery": "风格画廊"
+  },
+  "HomePage": {
+    "advantages": {
+      "heading": "我们的优势",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "帮助您编辑和实现最复杂的想法",
+          "heading": "大量的工具和功能"
+        },
+        "many-styles": {
+          "content": "帮助您以不同的方式看待自己并使社交媒体多样化",
+          "heading": "款式很多"
+        },
+        "speed-and-quality": {
+          "heading": "速度和质量",
+          "title": "使用我们的服务，您将获得人工智能照片增强的最佳效果"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "人工智能聊天",
+        "ai-photo-editor": "人工智能照片编辑器",
+        "image-generation": "图像生成",
+        "style-gallery": "风格画廊"
+      }
+    },
+    "functions-heading": "功能",
+    "functions-list": {
+      "ai-chat": {
+        "content": "使用聊天来解决任何问题",
+        "heading": "人工智能聊天"
+      },
+      "ai-photo-editor": {
+        "content": "只需轻按一下即可更改和删除背景、使用化妆品、搭配发型",
+        "heading": "人工智能照片编辑器"
+      },
+      "image-generation": {
+        "content": "使用文字提示创建精彩照片",
+        "heading": "图像生成"
+      },
+      "style-gallery": {
+        "content": "在我们的画廊中选择不同的风格，超过 1000 种效果",
+        "heading": "风格画廊"
+      }
+    },
+    "functions-subheading": "立即尝试",
+    "main-faq": {
+      "heading": "常见问题解答"
+    },
+    "main-hero-button": "立即生成",
+    "main-hero-button-create": "创建图像",
+    "main-hero-subtitle": "创建AI图像的最佳服务",
+    "main-panel-button-edit": "编辑照片"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "在 Safari 浏览器中打开 Neurona.com 网站",
+        "title": "打开站点"
+      },
+      "2": {
+        "description": "单击“共享”图标（位于底部工具栏上，是一个带有向上箭头的矩形）",
+        "title": "单击“共享”图标"
+      },
+      "3": {
+        "description": "从出现的滚动菜单中，选择“添加到主屏幕”",
+        "title": "添加到主屏幕"
+      },
+      "4": {
+        "description": "输入快捷方式的名称，然后单击“添加”",
+        "title": "输入姓名"
+      },
+      "5": {
+        "description": "添加后，neurona.com 将作为 Web 应用程序在您的主屏幕上运行，提供无缝的全屏体验，无需浏览器地址栏",
+        "title": "完毕！"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "利用人工智能技术<br />在几秒钟内创建令人惊叹的图像。",
+    "heading": "人工智能仪器"
+  },
+  "IosPage": {
+    "description": "有关如何在 IOS 上安装该应用程序的详细说明",
+    "heading": "适用于 IOS 的 Neurona 应用程序"
+  },
+  "PremiumPage": {
+    "description": "选择适合您需求的资费",
+    "heading": "优质的"
+  },
+  "StylesPage": {
+    "description": "浏览我们的图库并从 100 多种不同的风格化模型中进行选择来生成。",
+    "heading": "风格画廊",
+    "link": "一键生成您自己的艺术！"
+  },
+  "main-hero-button": "立即生成",
+  "GeneratorPage": {
+    "heading": "人工智能图像生成器",
+    "description": "这是一个人工智能图像生成器。\n它根据文本描述从头开始创建图像。"
+  }
+}

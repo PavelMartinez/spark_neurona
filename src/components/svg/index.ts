@@ -94,3 +94,21 @@ export { default as CloseCircleGradientIcon } from './Close Circle Gradient.svg'
 // Generator
 export { default as LockIcon } from './Lock.svg'
 export { default as DownArrowIcon } from './down_arrow.svg'
+
+// Language Selector
+export { default as ArFlagIcon } from './ArFlag.svg'
+export { default as DeFlagIcon } from './DeFlag.svg'
+export { default as EnFlagIcon } from './EnFlag.svg'
+export { default as EsFlagIcon } from './EsFlag.svg'
+export { default as FrFlagIcon } from './FrFlag.svg'
+export { default as HiFlagIcon } from './HiFlag.svg'
+export { default as IdFlagIcon } from './IdFlag.svg'
+export { default as ItFlagIcon } from './ItFlag.svg'
+export { default as JaFlagIcon } from './JaFlag.svg'
+export { default as KrFlagIcon } from './KrFlag.svg'
+export { default as PtFlagIcon } from './PtFlag.svg'
+export { default as RuFlagIcon } from './RuFlag.svg'
+export { default as TrFlagIcon } from './TrFlag.svg'
+export { default as ZhFlagIcon } from './ZhFlag.svg'
+
+export { default as CheckSquare2Icon } from './CheckSquare2.svg'

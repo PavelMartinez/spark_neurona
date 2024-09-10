@@ -1,5 +1,5 @@
 export default interface QuestionProps {
-    id: number;
+    id: string;
     title: string;
     info: string;
 }

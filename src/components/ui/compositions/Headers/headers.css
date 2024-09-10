@@ -15,7 +15,7 @@
   gap: var(--sds-size-space-400);
   padding: var(--sds-size-space-200) var(--sds-size-space-300);
   position: relative;
-  font-weight: 700;
+  font-weight: var(--sds-typography-weight-bold);
 
   &[data-hovered] {
     background-color: var(--sds-color-background-default-default-hover);

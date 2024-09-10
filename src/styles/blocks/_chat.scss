@@ -133,6 +133,8 @@
 
         text-align: center;
         margin-bottom: 64px;
+
+        max-width: 986px;
     }
 }
 
@@ -231,7 +233,7 @@
         h5 {
             font-size: var(--sds-typography-body-size-medium);
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 100%; /* 16px */
 
         }

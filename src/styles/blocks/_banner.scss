@@ -15,7 +15,7 @@
 
         font-size: 20px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: var(--sds-typography-weight-medium);
         line-height: 150%; /* 30px */
     }
 
@@ -40,9 +40,10 @@
         color: var(--White, #FFF);
         font-size: 16px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: var(--sds-typography-weight-semibold);
         line-height: 150%; /* 24px */
         text-transform: uppercase;
+        white-space: nowrap;
 
         @include flex-center;
         width: 210px;

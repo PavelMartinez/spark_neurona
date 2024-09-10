@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 
 const { withNextVideo } = require('next-video/process');
+const createNextIntlPlugin = require('next-intl/plugin');
+ 
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
   	webpack: (config, options) => {
@@ -16,6 +19,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   	enabled: process.env.ANALYZE === 'true',
 })
 
-module.exports = withBundleAnalyzer(withNextVideo(nextConfig, {
+module.exports = withNextIntl(withBundleAnalyzer(withNextVideo(nextConfig, {
 	provider: "vercel-blob"
-}));
+})));

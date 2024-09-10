@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Flex, FlexItem } from '../ui/layout'
 import { ButtonGroup } from '../ui/primitives'
 import { AppleLogo, FacebookLogo, GoogleLogo } from '../svg'
-import Link from 'next/link'
+import {Link} from '@/i18n/routing';
 import { OAuthStrategy } from '@clerk/types'
 import { useSignIn, useSignUp } from '@clerk/nextjs'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'

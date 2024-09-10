@@ -1,0 +1,276 @@
+{
+  "HomePage": {
+    "advantages": {
+      "heading": "Unsere Vorteile",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "helfen Ihnen, die komplexesten Ideen zu bearbeiten und umzusetzen",
+          "heading": "Umfangreiche Tools und Funktionen"
+        },
+        "many-styles": {
+          "content": "hilft Ihnen, sich selbst auf unterschiedliche Weise zu sehen und wird die sozialen Medien diversifizieren",
+          "heading": "Viele Stile"
+        },
+        "speed-and-quality": {
+          "heading": "Geschwindigkeit und Qualität",
+          "title": "Mit unserem Service erzielen Sie das beste Ergebnis der Fotoverbesserung mit KI"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "KI-CHAT",
+        "ai-photo-editor": "KI-FOTO-EDITOR",
+        "image-generation": "BILDERZEUGUNG",
+        "style-gallery": "STILGALERIE"
+      }
+    },
+    "functions-heading": "Funktionen",
+    "functions-list": {
+      "ai-chat": {
+        "content": "Verwenden Sie den Chat, um Probleme zu lösen",
+        "heading": "KI-Chat"
+      },
+      "ai-photo-editor": {
+        "content": "Ändern und entfernen Sie Hintergründe, verwenden Sie Make-up und passen Sie Frisuren mit einem einzigen Tastendruck an",
+        "heading": "AI-Fotoeditor"
+      },
+      "image-generation": {
+        "content": "Erstellen Sie tolle Fotos mit Textaufforderung",
+        "heading": "Bilderzeugung"
+      },
+      "style-gallery": {
+        "content": "Wählen Sie in unserer Galerie verschiedene Stile und über 1000 Effekte",
+        "heading": "Stilgalerie"
+      }
+    },
+    "functions-subheading": "Probieren Sie es gleich aus",
+    "main-faq": {
+      "heading": "HÄUFIG GESTELLTE FRAGEN"
+    },
+    "main-hero-button": "Jetzt generieren",
+    "main-hero-button-create": "Bild erstellen",
+    "main-hero-subtitle": "der beste Service zum Erstellen von KI-Bildern",
+    "main-panel-button-edit": "Foto bearbeiten"
+  },
+  "main-hero-button": "Jetzt generieren",
+  "BannerSection": {
+    "button": "kostenlos ausprobieren",
+    "description": "Die beste KI zum Online-Generieren von Fotos",
+    "heading": "Ai-generiertes Bild"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "title": "Wie erzielt man ein erfolgreiches Ergebnis?"
+      },
+      "2": {
+        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "title": "Wie ändere ich die Hintergrundfarbe?"
+      },
+      "3": {
+        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "title": "Wie kann ich Neurona kostenlos nutzen?"
+      },
+      "4": {
+        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "title": "Wie generiert man ein Bild?"
+      },
+      "5": {
+        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "title": "Wie schreibt man prompt richtig?"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "KI-Chat",
+    "ai-insturments": "KI-Instrumente",
+    "contact": "Kontakt",
+    "image-generation": "Bilderzeugung",
+    "premium": "Prämie",
+    "style-gallery": "Stilgalerie",
+    "login-button": "Login",
+    "instruction": "Anweisung",
+    "logout-button": "Abmelden",
+    "popover": {
+      "buy-coins": "Kaufen Sie Münzen",
+      "customer-support": "Kundensupport",
+      "profile-settings": "Profileinstellungen",
+      "referal-program": "Empfehlungsprogramm"
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "Blog",
+      "business-contacts": "Geschäftskontakte",
+      "careers": "Karrieren",
+      "community": "Gemeinschaft",
+      "contact-us": "Kontaktieren Sie uns",
+      "news": "Nachricht",
+      "photo-generating": "Fotogenerierung",
+      "privacy": "Privatsphäre",
+      "report-a-problem": "Melden Sie ein Problem",
+      "support": "Unterstützung",
+      "terms": "Bedingungen",
+      "user-guide": "Benutzerhandbuch",
+      "video-generating": "Videogenerierung"
+    },
+    "titles": {
+      "about-us": "Über uns",
+      "privacy-policy": "Datenschutzrichtlinie",
+      "use-cases": "Anwendungsfälle"
+    }
+  },
+  "community": "Gemeinschaft",
+  "ChatBox": {
+    "history-button": "Geschichte",
+    "input": {
+      "placeholder": "Eine Frage stellen"
+    },
+    "prompts": {
+      "list": {
+        "1": "Erstellen Sie ein Programmierspiel",
+        "2": "Schreiben Sie ein Kind",
+        "3": "Lernen Sie Paris wie ein Einheimischer kennen",
+        "4": "Morgenroutine für Produktivität"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AI Chat ist ein KI-Chatbot, der Texte schreibt. \nSie können damit Geschichten, Nachrichten oder Programmiercode schreiben. \nSie können den KI-Chatbot als virtuellen Nachhilfelehrer in fast jedem Fach einsetzen.",
+    "heading": "KI-Chat"
+  },
+  "PremiumPage": {
+    "description": "Wählen Sie einen auf Ihre Bedürfnisse zugeschnittenen Tarif",
+    "heading": "Prämie"
+  },
+  "StylesPage": {
+    "description": "Stöbern Sie in unserer Galerie und wählen Sie aus über 100 verschiedenen stilisierten Modellen zum Erstellen aus.",
+    "heading": "Stilgalerie",
+    "link": "Generieren Sie Ihre eigene Kunst mit einem Klick!"
+  },
+  "AccountPage": {
+    "buy-coins-button": "MÜNZEN KAUFEN",
+    "coins-balance": "Münzguthaben",
+    "greeting": "Hallo, { name }",
+    "here-your-balance": "Hier Ihr Guthaben",
+    "payment-history-heading": "Zahlungshistorie",
+    "top-up-your-balance-right-now": "Laden Sie gleich Ihr Guthaben auf",
+    "referal": {
+      "badge": "ÜBERWEISUNGSPROGRAMM",
+      "count": "Sie haben Empfehlungen",
+      "details": "Weitere Details",
+      "text": "Laden Sie Ihre Freunde ein und verdienen Sie Geld auf Ihr Konto"
+    },
+    "support": {
+      "button": "KUNDENUNTERSTÜTZUNG"
+    }
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "ZAHLEN"
+      },
+      "coins": "Münzen",
+      "comment": "Kommentar",
+      "date": "Datum",
+      "done": "Erledigt",
+      "payment": "Zahlung"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "Genius",
+        "hd": "HD",
+        "standart": "Standard"
+      },
+      "preference": {
+        "quality": "Qualität",
+        "speed": "Geschwindigkeit"
+      }
+    },
+    "generate-button": "Erzeugen",
+    "model": {
+      "enum": {
+        "standart": "Modell.STANDART"
+      },
+      "title": "Wählen Sie ein Modell"
+    },
+    "prompt": {
+      "placeholder": "Ihre Eingabeaufforderung hier",
+      "title": "Erstellen Sie ein Bild aus einer Textaufforderung"
+    },
+    "selector": {
+      "heading": "Form wählen"
+    },
+    "styles": {
+      "button": "Alle 100 Stile anzeigen",
+      "title": "Wählen Sie einen Stil"
+    },
+    "preference": {
+      "title": "Präferenz"
+    },
+    "image": {
+      "default": {
+        "alt": "Generationsstandard"
+      },
+      "result": {
+        "alt": "Generierungsergebnis"
+      }
+    }
+  },
+  "AccountConvert": {
+    "convert": {
+      "button": "In Münzen umrechnen"
+    },
+    "counter": {
+      "balance": "Münzen"
+    },
+    "course-exchange": {
+      "text": "Kursaustausch:"
+    },
+    "heading": "Wandeln Sie Ihre Empfehlungseinnahmen um",
+    "withdraw": {
+      "button": "ODER Geld auf das Konto abheben"
+    }
+  },
+  "buy-coins-button": "MÜNZEN KAUFEN",
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "Öffnen Sie die Website Neurona.com im Safari-Browser",
+        "title": "Website öffnen"
+      },
+      "2": {
+        "description": "Klicken Sie auf das Symbol „Teilen“ (befindet sich in der unteren Symbolleiste und ist ein Rechteck mit einem nach oben zeigenden Pfeil).",
+        "title": "Klicken Sie auf das Symbol „Teilen“."
+      },
+      "3": {
+        "description": "Wählen Sie im angezeigten Scrollmenü „Zum Startbildschirm hinzufügen“ aus.",
+        "title": "Zum Startbildschirm hinzufügen"
+      },
+      "4": {
+        "description": "Geben Sie einen Namen für die Verknüpfung ein und klicken Sie dann auf „Hinzufügen“.",
+        "title": "Geben Sie einen Namen ein"
+      },
+      "5": {
+        "description": "Nach dem Hinzufügen wird neurona.com als Webanwendung auf Ihrem Startbildschirm ausgeführt und bietet ein nahtloses Vollbilderlebnis ohne Browser-Adressleiste",
+        "title": "Erledigt!"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "Erstellen Sie mit KI-gestützter Technologie <br />in Sekundenschnelle atemberaubende Bilder.",
+    "heading": "KI-Instrumente"
+  },
+  "IosPage": {
+    "description": "Detaillierte Anleitung zur Installation der App unter IOS",
+    "heading": "Neurona-App für IOS"
+  },
+  "GeneratorPage": {
+    "heading": "KI-Bildgenerator",
+    "description": "Dies ist ein KI-Bildgenerator. \nEs erstellt aus einer Textbeschreibung ein Bild von Grund auf."
+  }
+}

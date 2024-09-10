@@ -7,7 +7,7 @@
         color: #FCFCFC;
         font-size: 32px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: var(--sds-typography-weight-bold);
         line-height: 120%; /* 38.4px */
         letter-spacing: 0.64px;
 
@@ -88,7 +88,7 @@
             &--big {
                 font-size: 24px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: var(--sds-typography-weight-semibold);
                 line-height: 150%; /* 36px */
                 text-transform: capitalize;
             }
@@ -147,7 +147,7 @@
         &-text {
             font-size: 20px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: var(--sds-typography-weight-regular);
             line-height: 150%; /* 30px */
         }
 
@@ -163,7 +163,7 @@
 
         font-size: 60px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: var(--sds-typography-weight-bold);
         line-height: 150%; /* 90px */
         text-transform: uppercase;
 
@@ -212,7 +212,7 @@
             text-align: center;
             font-size: 20px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 150%; /* 30px */
             text-transform: uppercase;
         }
@@ -262,7 +262,7 @@
         padding: 19px var(--sds-size-icon-large) !important;
         border-radius: 20px !important;
         width: 100%;
-        font-weight: 500;
+        font-weight: var(--sds-typography-weight-medium);
 
         &-icon {
             width: 21px;
@@ -327,7 +327,7 @@
         &-page {
             font-size: 16px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 24px */
             color: var(--grey, #93949A);
         }
@@ -348,11 +348,11 @@
         color: #FCFCFC;
         font-size: 16px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 21px */
 
         &-payment {
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
 
             &--disabled {
                 color: #5B5C62;
@@ -364,7 +364,7 @@
             color: var(--Green, #128C25);
             border-radius: 150px;
             border: var(--sds-size-stroke-border) solid var(--Green, #128C25);;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             text-align: center;
 
             &--disabled {
@@ -399,7 +399,7 @@
             color: white;
 
             font-size: 14px;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             cursor: pointer;
         }
     }
@@ -414,7 +414,7 @@
     &__heading {
         font-size: 20px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 30px */
 
         margin-bottom: 30px;
@@ -430,7 +430,7 @@
 
             font-size: 60px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 100%; /* 72px */
             text-transform: uppercase;
         }
@@ -440,7 +440,7 @@
 
             font-size: 14px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 21px */
             text-transform: uppercase;
 
@@ -495,7 +495,7 @@
             &__key {
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: var(--sds-typography-weight-regular);
                 line-height: 150%; /* 21px */
             }
 
@@ -504,7 +504,7 @@
 
                 font-size: 32px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: var(--sds-typography-weight-bold);
                 line-height: 150%; /* 48px */
             }
         }
@@ -534,7 +534,7 @@
 
         font-size: 14px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 21px */
 
         &-icon {
@@ -578,7 +578,7 @@
 
         font-size: 14px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: var(--sds-typography-weight-regular);
         line-height: 150%; /* 21px */
         padding-bottom: 10px;
         border-bottom: var(--sds-size-stroke-border) dashed var(--grey, #93949A);;
@@ -650,7 +650,7 @@
     &__text {
         font-size: 24px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: var(--sds-typography-weight-semibold);
         line-height: 150%; /* 36px */
         z-index: 1;
     }
@@ -661,14 +661,14 @@
         &-value {
             font-size: 32px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 150%; /* 48px */
         }
 
         &-description {
             font-size: 14px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 21px */
         }
     }
@@ -683,7 +683,7 @@
 
         font-size: 16px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: var(--sds-typography-weight-medium);
         line-height: 150%; /* 24px */
         text-transform: uppercase;
     }
@@ -717,7 +717,7 @@
         &-text {
             font-size: 24px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 36px */
             text-align: center;
         }
@@ -745,7 +745,7 @@
     
             font-size: 32px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 150%; /* 48px */
             letter-spacing: 0.64px;
         }
@@ -755,7 +755,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: var(--sds-typography-weight-regular);
             line-height: 150%; /* 24px */
         }
     }
@@ -819,7 +819,7 @@
 
             font-size: 24px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 150%; /* 30px */
 
             &-heading {
@@ -841,7 +841,7 @@
 
             font-size: 14px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 21px */
             text-transform: uppercase;
             cursor: pointer;
@@ -889,7 +889,7 @@
         &__heading {
             @include fluid-text(44, 30);
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 120%; /* 52.8px */
             text-transform: uppercase;
 
@@ -906,7 +906,7 @@
 
             font-size: 20px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 30px */
             opacity: 0.5;
 
@@ -934,14 +934,14 @@
                 &__heading {
                     font-size: 24px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: var(--sds-typography-weight-semibold);
                     line-height: 150%; /* 36px */
                 }
 
                 &__description {
                     font-size: 16px;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: var(--sds-typography-weight-regular);
                     line-height: 150%; /* 24px */
 
                     width: 440px;
@@ -1058,7 +1058,7 @@
             color: #FFF;
             font-size: 20px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 30px */
 
             padding: 4px 15px;
@@ -1077,7 +1077,7 @@
                 color: #FFF;
                 font-size: 60px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: var(--sds-typography-weight-bold);
                 line-height: 120%; /* 72px */
                 text-transform: uppercase;
                 display: inline-block;
@@ -1114,7 +1114,7 @@
 
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: var(--sds-typography-weight-regular);
                 line-height: 150%; /* 21px */
             }
 
@@ -1123,7 +1123,7 @@
                 &__old {
                     font-size: 20px;
                     font-style: normal;
-                    font-weight: 400;
+                    font-weight: var(--sds-typography-weight-regular);
                     line-height: 150%; /* 30px */
                     text-decoration-line: line-through;
                     opacity: 0.5;
@@ -1132,7 +1132,7 @@
                 &__current {
                     font-size: 40px;
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: var(--sds-typography-weight-semibold);
                     line-height: 150%; /* 60px */
                     
                     display: flex;
@@ -1160,7 +1160,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 24px */
             text-transform: uppercase;
         }
@@ -1223,7 +1223,7 @@
 
                 font-size: 20px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: var(--sds-typography-weight-bold);
                 line-height: 150%; /* 30px */
                 text-transform: uppercase;
             }
@@ -1260,7 +1260,7 @@
             text-align: center;
             font-size: 24px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 150%; /* 36px */
         }
     }
@@ -1371,7 +1371,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 500;
+            font-weight: var(--sds-typography-weight-medium);
             line-height: 150%; /* 24px */
         }
 
@@ -1420,14 +1420,14 @@
         &__heading {
             font-size: 20px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: var(--sds-typography-weight-regular);
             line-height: 150%; /* 30px */
         }
 
         &__value {
             font-size: 60px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: var(--sds-typography-weight-bold);
             line-height: 120%; /* 72px */
             text-transform: uppercase;
         }
@@ -1452,7 +1452,7 @@
 
                 font-size: 16px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: var(--sds-typography-weight-regular);
                 line-height: 150%; /* 24px */
             }
 
@@ -1477,7 +1477,7 @@
             &-text {
                 font-size: 32px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: var(--sds-typography-weight-bold);
                 line-height: 150%; /* 48px */
             }
 
@@ -1509,7 +1509,7 @@
 
                 font-size: 20px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: var(--sds-typography-weight-regular);
                 line-height: 150%; /* 30px */
                 
                 &:before {
@@ -1526,7 +1526,7 @@
                     text-align: center;
                     font-size: 15px;
                     font-style: normal;
-                    font-weight: 700;
+                    font-weight: var(--sds-typography-weight-bold);
                     line-height: 150%; /* 22.5px */
                     text-transform: uppercase;
                     border-radius: 50%;
@@ -1544,7 +1544,7 @@
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: var(--sds-typography-weight-semibold);
                 line-height: 150%; /* 30px */
             }
         }

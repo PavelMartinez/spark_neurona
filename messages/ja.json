@@ -1,0 +1,276 @@
+{
+  "community": "コミュニティ",
+  "buy-coins-button": "コインを購入する",
+  "AccountConvert": {
+    "convert": {
+      "button": "コインに変換"
+    },
+    "counter": {
+      "balance": "コイン"
+    },
+    "course-exchange": {
+      "text": "コース交換："
+    },
+    "heading": "紹介収入を換算する",
+    "withdraw": {
+      "button": "またはアカウントに資金を引き出します"
+    }
+  },
+  "AccountPage": {
+    "buy-coins-button": "コインを購入する",
+    "coins-balance": "コイン残高",
+    "greeting": "こんにちは、{ name }",
+    "here-your-balance": "残高はこちら",
+    "payment-history-heading": "支払い履歴",
+    "referal": {
+      "badge": "紹介プログラム",
+      "count": "紹介があります",
+      "details": "さらに詳しく",
+      "text": "友達を招待してアカウントにお金を稼ぎましょう"
+    },
+    "support": {
+      "button": "カスタマーサポート"
+    },
+    "top-up-your-balance-right-now": "今すぐ残高を補充してください"
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "支払う"
+      },
+      "coins": "コイン",
+      "comment": "コメント",
+      "date": "日付",
+      "done": "終わり",
+      "payment": "支払い"
+    }
+  },
+  "BannerSection": {
+    "button": "無料で試してみる",
+    "description": "オンラインで写真を生成するための最高の AI",
+    "heading": "Ai生成画像"
+  },
+  "ChatBox": {
+    "history-button": "歴史",
+    "input": {
+      "placeholder": "質問する"
+    },
+    "prompts": {
+      "list": {
+        "1": "プログラミングゲームを作成する",
+        "2": "子どもたちを書く",
+        "3": "地元の人のようにパリを知る",
+        "4": "生産性を高める朝のルーティン"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AIチャットはテキストを書くAIチャットボットです。\nこれを使用して、ストーリー、メッセージ、またはプログラミング コードを作成できます。 \nAI チャットボットは、ほぼすべての科目で仮想家庭教師として使用できます。",
+    "heading": "AIチャット"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "画像をアップロードするだけで、すべての作業をアプリに任せることができます。 \nNeurona は AI を使用して写真から背景を自動的に削除し、無料で画像を簡単にカスタマイズおよび編集できるようにします。",
+        "title": "成功した結果を得るにはどうすればよいでしょうか?"
+      },
+      "2": {
+        "info": "画像をアップロードするだけで、すべての作業をアプリに任せることができます。 \nNeurona は AI を使用して写真から背景を自動的に削除し、無料で画像を簡単にカスタマイズおよび編集できるようにします。",
+        "title": "背景色を変更するにはどうすればよいですか?"
+      },
+      "3": {
+        "info": "画像をアップロードするだけで、すべての作業をアプリに任せることができます。 \nNeurona は AI を使用して写真から背景を自動的に削除し、無料で画像を簡単にカスタマイズおよび編集できるようにします。",
+        "title": "Neuronaを無料で使用するにはどうすればよいですか?"
+      },
+      "4": {
+        "info": "画像をアップロードするだけで、すべての作業をアプリに任せることができます。 \nNeurona は AI を使用して写真から背景を自動的に削除し、無料で画像を簡単にカスタマイズおよび編集できるようにします。",
+        "title": "どのように画像を生成しますか?"
+      },
+      "5": {
+        "info": "画像をアップロードするだけで、すべての作業をアプリに任せることができます。 \nNeurona は AI を使用して写真から背景を自動的に削除し、無料で画像を簡単にカスタマイズおよび編集できるようにします。",
+        "title": "プロンプトの正しい綴りは?"
+      }
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "ブログ",
+      "business-contacts": "業務連絡先",
+      "careers": "キャリア",
+      "community": "コミュニティ",
+      "contact-us": "お問い合わせ",
+      "news": "ニュース",
+      "photo-generating": "写真生成",
+      "privacy": "プライバシー",
+      "report-a-problem": "問題を報告する",
+      "support": "サポート",
+      "terms": "条項",
+      "user-guide": "ユーザーガイド",
+      "video-generating": "ビデオ生成"
+    },
+    "titles": {
+      "about-us": "私たちについて",
+      "privacy-policy": "プライバシーポリシー",
+      "use-cases": "ユースケース"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "天才",
+        "hd": "HD",
+        "standart": "スタンダード"
+      },
+      "preference": {
+        "quality": "品質",
+        "speed": "スピード"
+      }
+    },
+    "generate-button": "生成する",
+    "model": {
+      "enum": {
+        "standart": "モデル.STANDART"
+      },
+      "title": "モデルを選択してください"
+    },
+    "prompt": {
+      "placeholder": "ここでのプロンプト",
+      "title": "テキストプロンプトから画像を作成する"
+    },
+    "selector": {
+      "heading": "形状を選択してください"
+    },
+    "styles": {
+      "button": "100 のスタイルをすべて表示",
+      "title": "スタイルを選択してください"
+    },
+    "preference": {
+      "title": "好み"
+    },
+    "image": {
+      "default": {
+        "alt": "世代のデフォルト"
+      },
+      "result": {
+        "alt": "生成結果"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "AIチャット",
+    "ai-insturments": "AI機器",
+    "contact": "接触",
+    "image-generation": "画像生成",
+    "instruction": "命令",
+    "login-button": "ログイン",
+    "logout-button": "ログアウト",
+    "popover": {
+      "buy-coins": "コインを購入する",
+      "customer-support": "カスタマーサポート",
+      "profile-settings": "プロファイル設定",
+      "referal-program": "紹介プログラム"
+    },
+    "premium": "プレミアム",
+    "style-gallery": "スタイルギャラリー"
+  },
+  "HomePage": {
+    "advantages": {
+      "heading": "私たちの利点",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "最も複雑なアイデアを編集して実現するのに役立ちます",
+          "heading": "豊富なツールと機能"
+        },
+        "many-styles": {
+          "content": "自分自身をさまざまな方法で見ることができ、ソーシャル メディアも多様化します。",
+          "heading": "多くのスタイル"
+        },
+        "speed-and-quality": {
+          "heading": "スピードと品質",
+          "title": "当社のサービスを使用すると、AI による写真補正で最高の結果が得られます。"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "AIチャット",
+        "ai-photo-editor": "AIフォトエディター",
+        "image-generation": "画像生成",
+        "style-gallery": "スタイルギャラリー"
+      }
+    },
+    "functions-heading": "機能",
+    "functions-list": {
+      "ai-chat": {
+        "content": "チャットを使用して問題を解決する",
+        "heading": "AIチャット"
+      },
+      "ai-photo-editor": {
+        "content": "ワンタップで背景の変更と削除、メイクの使用、ヘアスタイルの一致が可能",
+        "heading": "AIフォトエディター"
+      },
+      "image-generation": {
+        "content": "テキストプロンプトを使用して素晴らしい写真を作成します",
+        "heading": "画像生成"
+      },
+      "style-gallery": {
+        "content": "ギャラリーからさまざまなスタイル、1000 を超えるエフェクトを選択してください",
+        "heading": "スタイルギャラリー"
+      }
+    },
+    "functions-subheading": "今すぐ試してください",
+    "main-faq": {
+      "heading": "よくある質問"
+    },
+    "main-hero-button": "今すぐ生成",
+    "main-hero-button-create": "画像の作成",
+    "main-hero-subtitle": "AI画像作成に最適なサービス",
+    "main-panel-button-edit": "写真を編集する"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "Safari ブラウザで Neurona.com Web サイトを開きます",
+        "title": "サイトを開く"
+      },
+      "2": {
+        "description": "「共有」アイコンをクリックします（下部ツールバーにあり、上向きの矢印が付いた長方形です）",
+        "title": "「共有」アイコンをクリックします"
+      },
+      "3": {
+        "description": "表示されるスクロールメニューから「ホーム画面に追加」を選択します。",
+        "title": "ホーム画面に追加"
+      },
+      "4": {
+        "description": "ショートカットの名前を入力し、「追加」をクリックします。",
+        "title": "名前を入力してください"
+      },
+      "5": {
+        "description": "追加すると、neurona.com はホーム画面で Web アプリケーションとして実行され、ブラウザのアドレス バーなしでシームレスな全画面エクスペリエンスを提供します。",
+        "title": "終わり！"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "AI を活用したテクノロジーで美しい画像を<br />数秒で作成します。",
+    "heading": "AI機器"
+  },
+  "IosPage": {
+    "description": "IOS にアプリをインストールする方法の詳細な手順",
+    "heading": "iOS用ニューロナアプリ"
+  },
+  "PremiumPage": {
+    "description": "ニーズに合わせた料金プランをお選びください",
+    "heading": "プレミアム"
+  },
+  "StylesPage": {
+    "description": "私たちのギャラリーを探索し、100 を超える異なる様式化されたモデルから選択して生成します。",
+    "heading": "スタイルギャラリー",
+    "link": "ワンクリックで独自のアートを生成します!"
+  },
+  "main-hero-button": "今すぐ生成",
+  "GeneratorPage": {
+    "heading": "AI画像生成器",
+    "description": "これはAI画像ジェネレーターです。\nテキストの説明から画像を一から作成します。"
+  }
+}

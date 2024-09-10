@@ -27,7 +27,7 @@
         text-align: center;
         font-size: 26px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: var(--sds-typography-weight-bold);
         line-height: 40px;
     }
 
@@ -91,13 +91,13 @@
         &--status {
             margin-bottom: 34px;
             color: green;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
         }
 
         &-link {
             margin-inline: 10px;
             color: #5C4FF9;
-            font-weight: 400;
+            font-weight: var(--sds-typography-weight-regular);
         }
     }
 
@@ -131,7 +131,7 @@
 
             &--service {
                 border: none;
-                font-weight: 400;
+                font-weight: var(--sds-typography-weight-regular);
             }
         }
 
@@ -140,7 +140,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 21px;
             justify-self: center;
             margin: auto;
@@ -158,5 +158,5 @@
 .verification {
     height: 40vh;
     font-size: 36px;
-    font-weight: 700;
+    font-weight: var(--sds-typography-weight-bold);
 }

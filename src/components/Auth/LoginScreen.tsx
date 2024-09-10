@@ -2,7 +2,7 @@ import React, { FormEvent, useState } from 'react'
 import { Flex, FlexItem } from '../ui/layout'
 import { Button, ButtonGroup, Input } from '../ui/primitives'
 import { AppleLogo, EmailIcon, FacebookLogo, GoogleLogo, PlaneIcon } from '../svg'
-import Link from 'next/link'
+import {Link} from '@/i18n/routing';
 import { OAuthStrategy } from '@clerk/types'
 import { useSignIn, useSignUp } from '@clerk/nextjs'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'

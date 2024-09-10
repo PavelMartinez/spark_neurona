@@ -6,11 +6,13 @@ import { Motion } from '../Motion/Motion';
 import { SparkData } from '@/data/styles/data_spark';
 import ISparkData from '@/typescript/interfaces/Styles/ISparkData';
 import StylesItem from '../Styles/StylesItem';
-import Link from 'next/link';
+import {Link} from '@/i18n/routing';;
 import { DownArrowIcon, LockIcon } from '../svg';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from "@/i18n/routing";
+import { useRouter } from 'next/navigation';
 import { SelectorState } from '@/typescript/enums/Styles/SelectorState';
+import { useTranslations } from 'next-intl';
 
 enum Model {
     STANDART = "Standart",
@@ -46,14 +48,15 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
     const router = useRouter()
     const pathname = usePathname()
     const imageRef = useRef<HTMLImageElement>(null)
+    const t = useTranslations("Generator")
 
     const handleTextareaChange = (value: string) => {
         setPromt(value)
     }
 
     const qualityCoeff = {
-        [Model.STANDART]: 1,
-        [Model.HD]: 1,
+        [Model.STANDART]: 0.6,
+        [Model.HD]: 0.8,
         [Model.GENIUS]: 1
     }
 
@@ -129,26 +132,26 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
         <div className='generator'>
             <div className="generator-settings">
                 <div className="generator-settings__part">
-                    <Setting title='Create an image from text prompt'>
-                        <TextareaField onChange={handleTextareaChange} placeholder="Your prompt here" value={promt} className={"generator-settings__textarea"}/>
+                    <Setting title={t('prompt.title')}>
+                        <TextareaField onChange={handleTextareaChange} placeholder={t('prompt.placeholder')} value={promt} className={"generator-settings__textarea"}/>
                     </Setting>
                 </div>
                 <div className="generator-settings__part">
-                    <Setting title='Choose a model'>
+                    <Setting title={t('model.title')}>
                         <Motion type='ul' className="generator-settings__slider">
                             <Motion
                                 type="li"
                                 className={`generator-settings__slider-item ${model === Model.STANDART ? "generator-settings__slider-item--active" : ""}`}
                                 onClick={() => { setModel(Model.STANDART) }}
                             >
-                                {Model.STANDART}
+                                {t("enum.model.standart")}
                             </Motion>
                             <Motion
                                 type="li"
                                 className={`generator-settings__slider-item ${model === Model.HD ? "generator-settings__slider-item--active" : ""}`}
                                 onClick={() => { setModel(Model.HD) }}
                             >
-                                {Model.HD}
+                                {t('enum.model.hd')}
                             </Motion>
                             <Motion
                                 type="li"
@@ -156,31 +159,31 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                                 onClick={() => { }}
                             >
                                 <LockIcon />
-                                {Model.GENIUS}
+                                {t('enum.model.genius')}
                             </Motion>
                         </Motion>
                     </Setting>
-                    <Setting title='Preference'>
+                    <Setting title={t('preference.title')}>
                         <Motion type='ul' className="generator-settings__slider">
                             <Motion
                                 type="li"
                                 className={`generator-settings__slider-item ${preference === Preference.SPEED ? "generator-settings__slider-item--active" : ""}`}
                                 onClick={() => { setPreference(Preference.SPEED) }}
                             >
-                                {Preference.SPEED}
+                                {t('enum.preference.speed')}
                             </Motion>
                             <Motion
                                 type="li"
                                 className={`generator-settings__slider-item ${preference === Preference.QUALITY ? "generator-settings__slider-item--active" : ""}`}
                                 onClick={() => { setPreference(Preference.QUALITY) }}
                             >
-                                {Preference.QUALITY}
+                                {t('enum.preference.quality')}
                             </Motion>
                         </Motion>
                     </Setting>
                 </div>
                 <div className="generator-settings__part" style={{ gap: 41 }}>
-                    <Setting title='Choose a style'>
+                    <Setting title={t('styles.title')}>
                         <ul className="generator-settings__styles">
                             <StylesItem
                                 image={`/${style.StyleName != "Default" ? "styles_spark/" : ""}${style.FileName}`}
@@ -203,13 +206,13 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                         </ul>
                     </Setting>
                     <Link href={"/styles"} className="generator-settings__button">
-                        View all +100 styles
+                        {t('styles.button')}
                     </Link>
                 </div>
                 <div className="generator-settings__selector">
                     <div className="generator-settings__selector-heading" onClick={() => setSelectorExpanded(!selectorExpanded)}>
                         <div className="generator-settings__selector-heading__text">
-                            Choose shape
+                            {t('selector.heading')}
                         </div>
                         <div className={`generator-settings__selector-heading__icon ${selectorExpanded ? "generator-settings__selector-heading__icon--rotated" : ""}`}>
                             <DownArrowIcon />
@@ -246,17 +249,17 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                     }
                 </div>
                 <button onClick={handleGenerateClick} className="generator-settings__button generator-settings__button--gradient">
-                    Generate
+                    {t('generate-button')}
                 </button>
             </div>
             <div className="generator-result">
                 {style.StyleName === "Default" && !image && 
-                    <Image src={"/Logo.png"} alt="Generation Default" className="generator-result__image generator-result__image--default" sizes='100vw' width={0} height={0} />
+                    <Image src={"/Logo.png"} alt={t('image.default.alt')} className="generator-result__image generator-result__image--default" sizes='100vw' width={0} height={0} />
                 }
                 {style.StyleName != "Default" && !image && 
-                    <Image src={"/styles_spark/" + style.FileName} alt="Generation Result" className="generator-result__image generator-result__image--example" width={0} sizes='100vw' height={0} />
+                    <Image src={"/styles_spark/" + style.FileName} alt={t('image.result.alt')} className="generator-result__image generator-result__image--example" width={0} sizes='100vw' height={0} />
                 }
-                <Image ref={imageRef} src={decodeURIComponent(image)} alt="Generation Result" className={`generator-result__image ${!image ? "visually-hidden" : ""}`} width={0} sizes='100vw' height={0} />
+                <Image ref={imageRef} src={decodeURIComponent(image)} alt={t('image.result.alt')} className={`generator-result__image ${!image ? "visually-hidden" : ""}`} width={0} sizes='100vw' height={0} />
             </div>
         </div>
     )

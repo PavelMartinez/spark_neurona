@@ -5,34 +5,37 @@ import Step2 from '../../../public/instructions/Step2.png'
 import Step3 from '../../../public/instructions/Step3.png'
 import Step4 from '../../../public/instructions/Step4.png'
 import Step5 from '../../../public/instructions/Step5.png'
+import { AbstractIntlMessages, createTranslator } from "next-intl";
 
-
-const InstructionsData: InstructionsStep[] = [
+const InstructionsData = (locale: string, messages: AbstractIntlMessages): InstructionsStep[] => {
+    const t = createTranslator({locale: locale, messages});
+    console.log(locale)
+    return [
     {
-        title: "Open site",
-        description: "Open the Neurona.com website in the Safari browser",
+        title: t('Instructions.steps.1.title'),
+        description: t('Instructions.steps.1.description'),
         image: Step1
     },
     {
-        title: "Click on the «Share» icon",
-        description: "Click on the «Share» icon (located on the bottom toolbar and is a rectangle with an upward pointing arrow)",
+        title: t('Instructions.steps.2.title'),
+        description: t('Instructions.steps.2.description'),
         image: Step2
     },
     {
-        title: "Add to Home Screen",
-        description: "From the scrolling menu that appears, select «Add to Home Screen»",
+        title: t('Instructions.steps.3.title'),
+        description: t('Instructions.steps.3.description'),
         image: Step3
     },
     {
-        title: "Enter a name",
-        description: "Enter a name for the shortcut, and then click «Add»",
+        title: t('Instructions.steps.4.title'),
+        description: t('Instructions.steps.4.description'),
         image: Step4
     },
     {
-        title: "Done!",
-        description: "Once added, neurona.com will run as a web application on your home screen, offering a seamless full-screen experience without a browser address bar",
+        title: t('Instructions.steps.5.title'),
+        description: t('Instructions.steps.5.description'),
         image: Step5
     },
-]
+]}
 
 export default InstructionsData;

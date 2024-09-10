@@ -7,6 +7,7 @@ import MessagesItemProps from '@/typescript/interfaces/Chat/MessagesItemProps';
 import { Sender } from '@/typescript/enums/Chat/Sender';
 import MessagesItem from './MessagesItem';
 import Image from 'next/image'
+import { useTranslations } from 'next-intl';
 
 const ChatBox = () => {
     const [history, setHistory] = useState<MessagesItemProps[]>([]);
@@ -15,6 +16,7 @@ const ChatBox = () => {
     const [isBottomButtonVisible, setIsBottomButtonVisible] = useState<boolean>(false);
     const chatbox = useRef<null | HTMLDivElement>(null);
     const chatboxWrapper = useRef<null | HTMLDivElement>(null);
+    const t = useTranslations("ChatBox");
 
     const scrollToBottom = () => {
         chatbox.current?.scrollIntoView(false);
@@ -49,7 +51,7 @@ const ChatBox = () => {
             },
             {
                 sender: Sender.AI,
-                text: `## It is a test for your prompt\nAI answer for prompt:\n\n${prompt}`
+                text: `## It is a test for your prompt\\nAI answer for prompt:\\n\\n${prompt}`
             }
         ])
     }
@@ -71,32 +73,32 @@ const ChatBox = () => {
             {history.length === 0 ? 
             <>
                 <button className='messages__history-button'>
-                    History
+                    {t('history-button')} 
                 </button>
                 <div className="chat-box__logo-wrapper">
-                    <Image alt="Logo" src="/Logo.png" className='chat-box__logo' width={57} height={57}/>
+                    <Image alt="" src="/Logo.png" className='chat-box__logo' width={57} height={57}/>
                 </div>
                 <div className="chat-box__prompts">
                     <button className="chat-box__prompts-item" onClick={handlePromptsClick}>
-                        Create a programming game 
+                        {t('prompts.list.1')}
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
-                        Write a children&apos;s story
+                        {t('prompts.list.2')}
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
-                        Get to know Paris like a local
+                        {t('prompts.list.3')}
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
-                        Morning routine for productivity
+                        {t('prompts.list.4')}
                     </button>
                 </div>
             </> :
             <div className='messages' onScroll={onScroll} ref={chatboxWrapper}>
                 <button className='messages__history-button'>
-                    History
+                    {t('history-button')}
                 </button>
                 <div className='messages__inner' ref={chatbox}>
                     {history.map((value, index) => (
@@ -112,7 +114,7 @@ const ChatBox = () => {
             }
             <div className="chat-box__input-wrapper">
                 <Form onSubmit={handleSubmitInput} className='chat-box__form'>
-                    <Input className="chat-box__input" placeholder="Ask a question" onChange={handleInputChange} value={search}/>
+                    <Input className="chat-box__input" placeholder={t('input.placeholder')} onChange={handleInputChange} value={search}/>
                 </Form>
                 <button className="chat-box__input-button" onClick={handleSubmitInput}>
                     <SendIcon />

@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
-import { IconChevronDown, IconDollarSign, IconMenu, IconX } from "icons";
+import { IconCheckSquare, IconChevronDown, IconDollarSign, IconMenu, IconX } from "icons";
 import { placeholder } from "images";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
 import {
@@ -22,21 +22,24 @@ import {
   Navigation,
   NavigationPill,
 } from "primitives";
-import { AuthenticationContext } from "providers";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnchorOrButton } from "utils";
 import "./headers.css";
-import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { Link } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import { Screens } from "@/typescript/enums/Auth/Screens";
 import AuthModal from "@/components/Auth/AuthModal";
 import { useClerk, useUser } from "@clerk/nextjs";
-import { Spin } from "antd";
-import { DialogIcon, DollarIcon, ExitIcon, GroupIcon, SettingIcon } from "@/components/svg";
+import { ConfigProvider, Dropdown, MenuProps, Spin } from "antd";
+import { ArFlagIcon, CheckSquare2Icon, CheckSquareIcon, DeFlagIcon, DialogIcon, DollarIcon, EnFlagIcon, EsFlagIcon, ExitIcon, FrFlagIcon, GroupIcon, HiFlagIcon, IdFlagIcon, ItFlagIcon, JaFlagIcon, KrFlagIcon, PtFlagIcon, RuFlagIcon, SettingIcon } from "@/components/svg";
 import { useRouter } from "next/navigation";
+import NavigationLink from "@/components/NavigationLink/NavigationLink";
+import { useLocale, useTranslations } from "next-intl";
+import LanguageListProps from "@/typescript/interfaces/Language/LanguageListProps";
 
 export function HeaderAuth() {
-  const { currentUser, login, logout } = useContext(AuthenticationContext);
+  const t = useTranslations('Header')
   const { isSignedIn, user, isLoaded } = useUser()
   const { signOut } = useClerk()
   const [open, setOpen] = useState(false);
@@ -60,7 +63,7 @@ export function HeaderAuth() {
           }
         }
       >
-        Login
+        {t('login-button')}
       </Button>
       {/* <Button
         variant="primary"
@@ -81,6 +84,7 @@ export function HeaderAuth() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const router = useRouter();
+  const locale = useLocale();
 
   useEffect(() => {
     if(searchParams.has("sign-in"))
@@ -95,26 +99,145 @@ export function HeaderAuth() {
     }
   }, [searchParams])
 
+  const locales: LanguageListProps[] = [
+    {
+      locale: "en",
+      title: "English",
+      icon: <EnFlagIcon />
+    },
+    {
+      locale: "es",
+      title: "Spanish",
+      icon: <EsFlagIcon />
+    },
+    {
+      locale: "ja",
+      title: "日本語",
+      icon: <JaFlagIcon />
+    },
+    {
+      locale: "tr",
+      title: "Türkçe",
+      icon: <EnFlagIcon />
+    },
+    {
+      locale: "hi",
+      title: "भारतीय",
+      icon: <HiFlagIcon />
+    },
+    {
+      locale: "zh",
+      title: "中文",
+      icon: <EnFlagIcon />
+    },
+    {
+      locale: "pt",
+      title: "Português",
+      icon: <PtFlagIcon />
+    },
+    {
+      locale: "it",
+      title: "Italiano",
+      icon: <ItFlagIcon />
+    },
+    {
+      locale: "ar",
+      title: "اللغة العربية",
+      icon: <ArFlagIcon />
+    },
+    {
+      locale: "de",
+      title: "Deutsch",
+      icon: <DeFlagIcon />
+    },
+    {
+      locale: "fr",
+      title: "Français",
+      icon: <FrFlagIcon />
+    },
+    {
+      locale: "id",
+      title: "Bahasa",
+      icon: <IdFlagIcon />
+    },
+    {
+      locale: "ko",
+      title: "한국어",
+      icon: <KrFlagIcon />
+    },
+    {
+      locale: "ru",
+      title: "Russian",
+      icon: <RuFlagIcon />
+    },
+  ]
+
+  const Language = () => {
+    const items: MenuProps['items'] = locales.map((item, index) => {
+      return {
+        key: `${index}`,
+        label: (
+            <Link href={pathname} locale={item.locale} className={`language__link ${item.locale === locale ? "language__link--active": ""}`}>
+                <span className="language__link-icon">
+                    {item.icon}
+                </span>
+                <span className="language__link-title">
+                    {item.title}
+                </span>
+                {item.locale === locale && 
+                  <span className="language__link-icon">
+                      <CheckSquare2Icon />
+                  </span>
+                }
+            </Link>
+        ),
+      }
+    })
+    
+    const currentLocale = locales.find((value) => value.locale === locale);
+    return (
+      <ConfigProvider theme={{
+        token: {
+          fontFamily: "var(--font-inter)",
+          colorBgContainer: "#131313",
+          colorText: "#FCFCFC",
+          colorBgElevated: "#131313"
+        },
+      }}>
+        <Dropdown trigger={["click"]} menu={{ items }} placement="bottom" overlayClassName='language__dropdown'>
+          <button className="language">
+            <div className="language__icon">
+              {currentLocale?.icon}
+            </div>
+            <div className="language__text">
+              {currentLocale?.locale?.toUpperCase()}
+            </div>
+            <IconChevronDown />
+          </button>
+        </Dropdown>
+      </ConfigProvider>
+    )
+  }
 
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
       <NavigationPill>
-        <Link href="/">Image generation</Link>
+        <NavigationLink href="/">{t('image-generation')}</NavigationLink>
       </NavigationPill>
       <NavigationPill isSelected={pathname === "/instruments"}>
-        <Link href="/instruments">AI insturments</Link>
+        <NavigationLink href="/instruments">{t('ai-insturments')}</NavigationLink>
       </NavigationPill>
       <NavigationPill isSelected={pathname === "/styles"}>
-        <Link href="/styles">Style gallery</Link>
+        <NavigationLink href="/styles">{t('style-gallery')}</NavigationLink>
       </NavigationPill>
       <NavigationPill isSelected={pathname === "/chat"}>
-        <Link href="/chat">AI Chat</Link>
+        <NavigationLink href="/chat">{t('ai-chat')}</NavigationLink>
       </NavigationPill>
       <NavigationPill>
-        <Link href="/">Contact</Link>
+        <NavigationLink href="/instruction">{t('instruction')}</NavigationLink>
       </NavigationPill>
       <NavigationPill className="navigation-pill--border">
-        <Link href="/premium">Premium</Link>
+        <NavigationLink href="/premium">{t('premium')}</NavigationLink>
       </NavigationPill>
     </Navigation>
   );
@@ -179,7 +302,7 @@ export function HeaderAuth() {
                               signOut({redirectUrl: "/"})
                             }}
                           >
-                            Log out
+                            {t('logout-button')}
                           </Button>
                         </Flex>
                       </FlexItem>
@@ -194,6 +317,7 @@ export function HeaderAuth() {
         ) : (
           <Flex alignSecondary="center" direction="row" alignPrimary="space-between" style={{ justifyContent: "space-between" }}>
             {navigation}
+            <Language />
             {isSignedIn && isLoaded ? (
               <MenuTrigger>
                 <AnchorOrButton className={clsx("header-auth-avatar-button")}>
@@ -213,7 +337,7 @@ export function HeaderAuth() {
                         <DollarIcon />
                       </div>
                       <div className="header__popover-item__text">
-                        Buy coins
+                        {t('popover.buy-coins')}
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {
@@ -223,7 +347,7 @@ export function HeaderAuth() {
                         <GroupIcon />
                       </div>
                       <div className="header__popover-item__text">
-                        Referal Program
+                        {t('popover.referal-program')}
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {
@@ -233,7 +357,7 @@ export function HeaderAuth() {
                         <SettingIcon />
                       </div>
                       <div className="header__popover-item__text">
-                        Profile settings
+                        {t('popover.profile-settings')}
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {
@@ -243,7 +367,7 @@ export function HeaderAuth() {
                         <DialogIcon />
                       </div>
                       <div className="header__popover-item__text">
-                        Customer Support
+                        {t('popover.customer-support')}
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {
@@ -253,7 +377,7 @@ export function HeaderAuth() {
                         <ExitIcon />
                       </div>
                       <div className="header__popover-item__text">
-                        Log out
+                        {t('logout-button')}
                       </div>
                     </MenuItem>
                   </Menu>

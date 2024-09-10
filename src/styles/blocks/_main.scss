@@ -150,7 +150,7 @@
     .card-content {
         font-size: var(--sds-typography-body-size-medium);
         font-style: normal;
-        font-weight: 250;
+        font-weight: var(--sds-typography-weight-light);
         line-height: 140%; /* 22.4px */
     }
 }
@@ -264,7 +264,7 @@
             @include fluid-text(150, 65);
 
             font-style: italic;
-            font-weight: 700;
+            font-weight: 550;
             line-height: 100%; /* 150px */
             -webkit-text-stroke: 2px transparent;
 
@@ -366,7 +366,7 @@
 
         font-size: 48px;
         font-style: normal;
-        font-weight: 800;
+        font-weight: 550;
         line-height: 150%; /* 72px */
         text-transform: uppercase;
     }

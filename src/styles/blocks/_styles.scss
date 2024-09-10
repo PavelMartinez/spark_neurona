@@ -72,7 +72,7 @@
             color: #FCFCFC;
             font-size: 28.669px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 130%; /* 37.27px */
 
             &--selected {
@@ -98,7 +98,7 @@
             color: #FCFCFC;
             font-size: 36px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: var(--sds-typography-weight-semibold);
             line-height: 120%; /* 43.2px */
         }
 

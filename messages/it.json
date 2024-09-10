@@ -1,0 +1,276 @@
+{
+  "community": "Comunità",
+  "buy-coins-button": "ACQUISTA MONETE",
+  "AccountConvert": {
+    "convert": {
+      "button": "Converti in monete"
+    },
+    "counter": {
+      "balance": "Monete"
+    },
+    "course-exchange": {
+      "text": "Scambio di corsi:"
+    },
+    "heading": "Converti i tuoi guadagni dai referral",
+    "withdraw": {
+      "button": "O PRELEVARE FONDI SUL CONTO"
+    }
+  },
+  "AccountPage": {
+    "buy-coins-button": "ACQUISTA MONETE",
+    "coins-balance": "Saldo delle monete",
+    "greeting": "Ciao, { name }",
+    "here-your-balance": "Ecco il tuo saldo",
+    "payment-history-heading": "Cronologia dei pagamenti",
+    "referal": {
+      "badge": "PROGRAMMA DI RIFERIMENTO",
+      "count": "Hai dei referral",
+      "details": "Maggiori dettagli",
+      "text": "INVITA I TUOI AMICI E GUADAGNA DENARO NEL TUO CONTO"
+    },
+    "support": {
+      "button": "ASSISTENZA CLIENTI"
+    },
+    "top-up-your-balance-right-now": "Ricarica il tuo saldo adesso"
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "PAGA"
+      },
+      "coins": "Monete",
+      "comment": "Commento",
+      "date": "Data",
+      "done": "Fatto",
+      "payment": "Pagamento"
+    }
+  },
+  "BannerSection": {
+    "button": "provare gratuitamente",
+    "description": "La migliore intelligenza artificiale per generare foto online",
+    "heading": "Immagine generata dall'Ai"
+  },
+  "ChatBox": {
+    "history-button": "Storia",
+    "input": {
+      "placeholder": "Fai una domanda"
+    },
+    "prompts": {
+      "list": {
+        "1": "Crea un gioco di programmazione",
+        "2": "Scrivi un bambino",
+        "3": "Conosci Parigi come una persona del posto",
+        "4": "Routine mattutina per la produttività"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AI Chat è un chatbot AI che scrive testo. \nPuoi usarlo per scrivere storie, messaggi o codice di programmazione. \nPuoi utilizzare il chatbot AI come tutor virtuale in quasi tutte le materie.",
+    "heading": "Chatta sull'intelligenza artificiale"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "title": "Come ottenere un risultato positivo?"
+      },
+      "2": {
+        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "title": "Come posso cambiare il colore dello sfondo?"
+      },
+      "3": {
+        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "title": "Come utilizzare Neurona gratuitamente?"
+      },
+      "4": {
+        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "title": "Come si genera un'immagine?"
+      },
+      "5": {
+        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "title": "Come si scrive correttamente il messaggio?"
+      }
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "Blog",
+      "business-contacts": "Contatti commerciali",
+      "careers": "Carriere",
+      "community": "Comunità",
+      "contact-us": "Contattaci",
+      "news": "Notizia",
+      "photo-generating": "Generazione di foto",
+      "privacy": "Privacy",
+      "report-a-problem": "Segnala un problema",
+      "support": "Supporto",
+      "terms": "Termini",
+      "user-guide": "Guida per l'utente",
+      "video-generating": "Generazione di video"
+    },
+    "titles": {
+      "about-us": "Chi siamo",
+      "privacy-policy": "Politica sulla riservatezza",
+      "use-cases": "Casi d'uso"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "Genio",
+        "hd": "HD",
+        "standart": "Standard"
+      },
+      "preference": {
+        "quality": "Qualità",
+        "speed": "Velocità"
+      }
+    },
+    "generate-button": "Generare",
+    "model": {
+      "enum": {
+        "standart": "Modello.STANDART"
+      },
+      "title": "Scegli un modello"
+    },
+    "prompt": {
+      "placeholder": "Il tuo suggerimento qui",
+      "title": "Crea un'immagine dal prompt di testo"
+    },
+    "selector": {
+      "heading": "Scegli la forma"
+    },
+    "styles": {
+      "button": "Visualizza tutti i 100 stili",
+      "title": "Scegli uno stile"
+    },
+    "preference": {
+      "title": "Preferenza"
+    },
+    "image": {
+      "default": {
+        "alt": "Predefinito di generazione"
+      },
+      "result": {
+        "alt": "Risultato della generazione"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "Chatta sull'intelligenza artificiale",
+    "ai-insturments": "Strumenti di intelligenza artificiale",
+    "contact": "Contatto",
+    "image-generation": "Generazione di immagini",
+    "instruction": "Istruzioni",
+    "login-button": "Login",
+    "logout-button": "Esci",
+    "popover": {
+      "buy-coins": "Acquista monete",
+      "customer-support": "Assistenza clienti",
+      "profile-settings": "Impostazioni del profilo",
+      "referal-program": "Programma di riferimento"
+    },
+    "premium": "Premio",
+    "style-gallery": "Galleria di stili"
+  },
+  "HomePage": {
+    "advantages": {
+      "heading": "I nostri vantaggi",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "aiutarti a modificare e realizzare le idee più complesse",
+          "heading": "Ampio numero di strumenti e funzioni"
+        },
+        "many-styles": {
+          "content": "ti aiuterà a vedere te stesso in modi diversi e diversificherà i social media",
+          "heading": "Molti stili"
+        },
+        "speed-and-quality": {
+          "heading": "Velocità e qualità",
+          "title": "utilizzando il nostro servizio otterrai il miglior risultato di miglioramento delle foto con l'intelligenza artificiale"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "CHAT AI",
+        "ai-photo-editor": "EDITORE DI FOTO AI",
+        "image-generation": "GENERAZIONE DI IMMAGINI",
+        "style-gallery": "GALLERIA DI STILE"
+      }
+    },
+    "functions-heading": "Funzioni",
+    "functions-list": {
+      "ai-chat": {
+        "content": "usa la chat per risolvere qualsiasi problema",
+        "heading": "Chatta sull'intelligenza artificiale"
+      },
+      "ai-photo-editor": {
+        "content": "Cambia e rimuovi sfondi, usa il trucco, abbina le acconciature con un solo tocco",
+        "heading": "Editor di foto AI"
+      },
+      "image-generation": {
+        "content": "crea foto fantastiche con un messaggio di testo",
+        "heading": "Generazione di immagini"
+      },
+      "style-gallery": {
+        "content": "Scegli stili diversi nella nostra galleria, oltre 1000 effetti",
+        "heading": "Galleria di stili"
+      }
+    },
+    "functions-subheading": "provalo adesso",
+    "main-faq": {
+      "heading": "DOMANDE FREQUENTI"
+    },
+    "main-hero-button": "Genera ora",
+    "main-hero-button-create": "Crea immagine",
+    "main-hero-subtitle": "il miglior servizio per creare immagini AI",
+    "main-panel-button-edit": "Modifica foto"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "Aprire il sito Web Neurona.com nel browser Safari",
+        "title": "Sito aperto"
+      },
+      "2": {
+        "description": "Fai clic sull'icona «Condividi» (situata nella barra degli strumenti in basso ed è un rettangolo con una freccia rivolta verso l'alto)",
+        "title": "Fare clic sull'icona «Condividi»."
+      },
+      "3": {
+        "description": "Dal menu a scorrimento che appare, seleziona «Aggiungi alla schermata iniziale»",
+        "title": "Aggiungi alla schermata principale"
+      },
+      "4": {
+        "description": "Inserisci un nome per il collegamento, quindi fai clic su «Aggiungi»",
+        "title": "Inserisci un nome"
+      },
+      "5": {
+        "description": "Una volta aggiunto, neurona.com verrà eseguito come applicazione Web sulla schermata iniziale, offrendo un'esperienza a schermo intero senza interruzioni e senza barra degli indirizzi del browser",
+        "title": "Fatto!"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "Crea immagini straordinarie con la tecnologia basata sull'intelligenza artificiale <br />in pochi secondi.",
+    "heading": "Strumenti di intelligenza artificiale"
+  },
+  "IosPage": {
+    "description": "Istruzioni dettagliate su come installare l'app su IOS",
+    "heading": "Applicazione Neurona per IOS"
+  },
+  "PremiumPage": {
+    "description": "Scegli una tariffa su misura per le tue esigenze",
+    "heading": "Premio"
+  },
+  "StylesPage": {
+    "description": "Esplora la nostra galleria e scegli tra oltre 100 diversi modelli stilizzati da generare.",
+    "heading": "Galleria di stile",
+    "link": "Genera la tua arte con un clic!"
+  },
+  "main-hero-button": "Genera ora",
+  "GeneratorPage": {
+    "heading": "Generatore di immagini AI",
+    "description": "Questo è un generatore di immagini AI. \nCrea un'immagine da zero da una descrizione testuale."
+  }
+}

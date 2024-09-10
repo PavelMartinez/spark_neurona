@@ -1,0 +1,276 @@
+{
+  "community": "Toplum",
+  "buy-coins-button": "PARA SATIN ALIN",
+  "AccountConvert": {
+    "convert": {
+      "button": "Madeni paralara dönüştür"
+    },
+    "counter": {
+      "balance": "Paralar"
+    },
+    "course-exchange": {
+      "text": "Kurs değişimi:"
+    },
+    "heading": "Referans kazançlarınızı dönüştürün",
+    "withdraw": {
+      "button": "VEYA HESABA PARA ÇEKİN"
+    }
+  },
+  "AccountPage": {
+    "buy-coins-button": "PARA SATIN ALIN",
+    "coins-balance": "Para bakiyesi",
+    "greeting": "Merhaba { name }",
+    "here-your-balance": "İşte bakiyeniz",
+    "payment-history-heading": "Ödeme Geçmişi",
+    "referal": {
+      "badge": "REFERANS PROGRAMI",
+      "count": "Referanslarınız var",
+      "details": "Daha Fazla Detay",
+      "text": "ARKADAŞLARINIZI DAVET EDİN VE HESABINIZA PARA KAZANIN"
+    },
+    "support": {
+      "button": "MÜŞTERİ DESTEĞİ"
+    },
+    "top-up-your-balance-right-now": "Bakiyenizi hemen doldurun"
+  },
+  "AccountTable": {
+    "PaymentColumns": {
+      "buttons": {
+        "pay": "ÖDEMEK"
+      },
+      "coins": "Paralar",
+      "comment": "Yorum",
+      "date": "Tarih",
+      "done": "Tamamlamak",
+      "payment": "Ödeme"
+    }
+  },
+  "BannerSection": {
+    "button": "ücretsiz dene",
+    "description": "Çevrimiçi fotoğraf oluşturmak için en iyi yapay zeka",
+    "heading": "Yapay Zekayla Oluşturulan Görüntü"
+  },
+  "ChatBox": {
+    "history-button": "Tarih",
+    "input": {
+      "placeholder": "Bir soru sor"
+    },
+    "prompts": {
+      "list": {
+        "1": "Bir programlama oyunu oluşturun",
+        "2": "Bir çocuk yaz",
+        "3": "Paris'i yerel biri gibi tanıyın",
+        "4": "Verimlilik için sabah rutini"
+      }
+    }
+  },
+  "ChatPage": {
+    "description": "AI Chat, metin yazan bir AI sohbet robotudur. \nHikayeler, mesajlar veya programlama kodu yazmak için kullanabilirsiniz. \nAI chatbot'u neredeyse her konuda sanal öğretmen olarak kullanabilirsiniz.",
+    "heading": "Yapay Zeka Sohbeti"
+  },
+  "FAQ": {
+    "main": {
+      "1": {
+        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "title": "Başarılı bir sonuç nasıl alınır?"
+      },
+      "2": {
+        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "title": "Arka plan rengini nasıl değiştiririm?"
+      },
+      "3": {
+        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "title": "Neurona'yı Ücretsiz olarak nasıl kullanabilirim?"
+      },
+      "4": {
+        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "title": "Bir resmi nasıl oluşturursunuz?"
+      },
+      "5": {
+        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "title": "Prompt nasıl doğru yazılır?"
+      }
+    }
+  },
+  "Footer": {
+    "links": {
+      "blog": "Blog",
+      "business-contacts": "İş Bağlantıları",
+      "careers": "Kariyer",
+      "community": "Toplum",
+      "contact-us": "Bize Ulaşın",
+      "news": "Haberler",
+      "photo-generating": "Fotoğraf oluşturma",
+      "privacy": "Mahremiyet",
+      "report-a-problem": "Sorun bildir",
+      "support": "Destek",
+      "terms": "Şartlar",
+      "user-guide": "Kullanım kılavuzu",
+      "video-generating": "Video oluşturma"
+    },
+    "titles": {
+      "about-us": "Hakkımızda",
+      "privacy-policy": "Gizlilik politikası",
+      "use-cases": "Kullanım örnekleri"
+    }
+  },
+  "Generator": {
+    "enum": {
+      "model": {
+        "genius": "Dahi",
+        "hd": "HD",
+        "standart": "Standart"
+      },
+      "preference": {
+        "quality": "Kalite",
+        "speed": "Hız"
+      }
+    },
+    "generate-button": "Oluştur",
+    "model": {
+      "enum": {
+        "standart": "Model.STANDART"
+      },
+      "title": "Bir model seçin"
+    },
+    "prompt": {
+      "placeholder": "İsteminiz burada",
+      "title": "Metin isteminden bir resim oluşturun"
+    },
+    "selector": {
+      "heading": "Şekli seçin"
+    },
+    "styles": {
+      "button": "100 stilin tümünü görüntüle",
+      "title": "Bir stil seçin"
+    },
+    "preference": {
+      "title": "Tercih"
+    },
+    "image": {
+      "default": {
+        "alt": "Nesil Varsayılanı"
+      },
+      "result": {
+        "alt": "Üretim Sonucu"
+      }
+    }
+  },
+  "Header": {
+    "ai-chat": "Yapay Zeka Sohbeti",
+    "ai-insturments": "Yapay zeka araçları",
+    "contact": "Temas etmek",
+    "image-generation": "Görüntü oluşturma",
+    "instruction": "Talimat",
+    "login-button": "Giriş yapmak",
+    "logout-button": "Oturumu kapat",
+    "popover": {
+      "buy-coins": "Madeni para satın al",
+      "customer-support": "Müşteri Desteği",
+      "profile-settings": "Profil ayarları",
+      "referal-program": "Tavsiye Programı"
+    },
+    "premium": "prim",
+    "style-gallery": "Stil galerisi"
+  },
+  "HomePage": {
+    "advantages": {
+      "heading": "Avantajlarımız",
+      "list": {
+        "extensive-number-of-tools-and-functions": {
+          "content": "en karmaşık fikirleri düzenlemenize ve gerçekleştirmenize yardımcı olur",
+          "heading": "Kapsamlı sayıda araç ve fonksiyon"
+        },
+        "many-styles": {
+          "content": "Kendinizi farklı şekillerde görmenize yardımcı olacak ve sosyal medyayı çeşitlendirecek",
+          "heading": "Birçok stil"
+        },
+        "speed-and-quality": {
+          "heading": "Hız ve kalite",
+          "title": "Hizmetimizi kullanarak AI ile fotoğraf geliştirmenin en iyi sonucunu elde edeceksiniz"
+        }
+      }
+    },
+    "blocks": {
+      "list": {
+        "ai-chat": "AI SOHBET",
+        "ai-photo-editor": "AI FOTOĞRAF DÜZENLEYİCİSİ",
+        "image-generation": "GÖRÜNTÜ ÜRETİMİ",
+        "style-gallery": "STİL GALERİSİ"
+      }
+    },
+    "functions-heading": "Fonksiyonlar",
+    "functions-list": {
+      "ai-chat": {
+        "content": "herhangi bir sorunu çözmek için sohbeti kullanın",
+        "heading": "Yapay Zeka Sohbeti"
+      },
+      "ai-photo-editor": {
+        "content": "Tek bir dokunuşla arka planları değiştirin ve kaldırın, makyaj kullanın, saç stillerini eşleştirin",
+        "heading": "Yapay Zeka Fotoğraf Düzenleyici"
+      },
+      "image-generation": {
+        "content": "metin istemiyle harika fotoğraflar oluşturun",
+        "heading": "Görüntü oluşturma"
+      },
+      "style-gallery": {
+        "content": "1000'den fazla efekt içeren galerimizden farklı stiller seçin",
+        "heading": "Stil galerisi"
+      }
+    },
+    "functions-subheading": "hemen dene",
+    "main-faq": {
+      "heading": "SIKÇA SORULAN SORULAR"
+    },
+    "main-hero-button": "Şimdi oluştur",
+    "main-hero-button-create": "Resim Oluştur",
+    "main-hero-subtitle": "AI görüntüleri oluşturmak için en iyi hizmet",
+    "main-panel-button-edit": "Fotoğrafı Düzenle"
+  },
+  "Instructions": {
+    "steps": {
+      "1": {
+        "description": "Neurona.com web sitesini Safari tarayıcısında açın",
+        "title": "Siteyi aç"
+      },
+      "2": {
+        "description": "«Paylaş» simgesine tıklayın (alt araç çubuğunda bulunur ve yukarıyı gösteren bir ok içeren bir dikdörtgendir)",
+        "title": "«Paylaş» simgesine tıklayın"
+      },
+      "3": {
+        "description": "Görünen kayan menüden «Ana Ekrana Ekle» seçeneğini seçin",
+        "title": "Ana Ekrana Ekle"
+      },
+      "4": {
+        "description": "Kısayol için bir ad girin ve ardından «Ekle»ye tıklayın",
+        "title": "Bir ad girin"
+      },
+      "5": {
+        "description": "Neurona.com eklendiğinde ana ekranınızda bir web uygulaması olarak çalışacak ve tarayıcı adres çubuğu olmadan kusursuz bir tam ekran deneyimi sunacak",
+        "title": "Tamamlamak!"
+      }
+    }
+  },
+  "InstrumentsPage": {
+    "description": "Yapay zeka destekli teknolojiyle <br />saniyeler içinde çarpıcı görüntüler oluşturun.",
+    "heading": "Yapay zeka araçları"
+  },
+  "IosPage": {
+    "description": "Uygulamanın IOS'a nasıl kurulacağına ilişkin ayrıntılı talimatlar",
+    "heading": "IOS için Neurona Uygulaması"
+  },
+  "PremiumPage": {
+    "description": "İhtiyaçlarınıza uygun tarifeyi seçin",
+    "heading": "prim"
+  },
+  "StylesPage": {
+    "description": "Galerimizi keşfedin ve oluşturmak için 100'den fazla farklı stilize model arasından seçim yapın.",
+    "heading": "Stil Galerisi",
+    "link": "Tek tıklamayla kendi Sanatınızı yaratın!"
+  },
+  "main-hero-button": "Şimdi oluştur",
+  "GeneratorPage": {
+    "heading": "Yapay Zeka Görüntü Oluşturucu",
+    "description": "Bu bir Yapay Zeka Görüntü Oluşturucudur. \nBir metin açıklamasından sıfırdan bir görüntü oluşturur."
+  }
+}

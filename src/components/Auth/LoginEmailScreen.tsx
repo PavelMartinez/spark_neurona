@@ -5,7 +5,7 @@ import { EmailLinkErrorCode, isEmailLinkError } from '@clerk/nextjs/errors'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
 import { Button, Input } from '../ui/primitives'
 import { Flex, FlexItem } from '../ui/layout'
-import Link from 'next/link'
+import {Link} from '@/i18n/routing';
 import { LeftArrowIcon } from '../svg'
 import { Screens } from '@/typescript/enums/Auth/Screens'
 

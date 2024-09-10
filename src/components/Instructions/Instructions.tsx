@@ -1,12 +1,16 @@
 'use client';
 
 import React, { useState } from 'react'
-import InstructionsData from './data';
+import InstructionsRawData from './data';
 import Image from 'next/image';
 import { Button } from '../ui/primitives';
+import { useLocale, useMessages } from 'next-intl';
 
 const Instructions = () => {
     const [currentStep, setCurrentStep] = useState<number>(0);
+    const locale = useLocale()
+    const messages = useMessages()
+    const InstructionsData = InstructionsRawData(locale, messages);
 
     const handleNext = () => {
         const newStep = currentStep + 1;
