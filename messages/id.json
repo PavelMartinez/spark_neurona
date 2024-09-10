@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "Pembuat Gambar AI",
     "description": "Ini adalah Generator Gambar AI. \nIni membuat gambar dari awal dari deskripsi teks."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "Lanjutkan dengan {provider}",
+      "continue-with-email": "Lanjutkan dengan email"
+    },
+    "heading": "Masuk ke {appName}",
+    "messages": {
+      "expired": "Tautan email telah kedaluwarsa",
+      "submitted": "Periksa email Anda."
+    },
+    "legal": {
+      "by-signing-in": "Dengan masuk, Anda menyetujui kami",
+      "terms-of-service": "Ketentuan Layanan",
+      "privacy-policy": "Kebijakan Privasi"
+    }
+  },
+  "Verification": {
+    "loading": "Memuat...",
+    "failed": "Verifikasi tautan email gagal",
+    "expired": "Tautan email sudah tidak berlaku lagi",
+    "success": "Berhasil masuk. Kembali ke tab awal untuk melanjutkan."
   }
 }

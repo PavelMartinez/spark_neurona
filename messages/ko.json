@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "AI 이미지 생성기",
     "description": "이것은 AI 이미지 생성기입니다. \n텍스트 설명을 바탕으로 처음부터 이미지를 생성합니다."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "{provider}로 계속하기",
+      "continue-with-email": "이메일로 계속하기"
+    },
+    "heading": "{appName}에 로그인",
+    "messages": {
+      "expired": "이메일 링크가 만료되었습니다",
+      "submitted": "이메일을 확인하세요."
+    },
+    "legal": {
+      "by-signing-in": "로그인하면 다음 내용에 동의하게 됩니다.",
+      "terms-of-service": "서비스 약관",
+      "privacy-policy": "개인 정보 보호 정책"
+    }
+  },
+  "Verification": {
+    "loading": "로드 중...",
+    "failed": "이메일 링크 확인 실패",
+    "expired": "이메일 링크가 만료되었습니다",
+    "success": "로그인되었습니다. 계속하려면 원래 탭으로 돌아가세요."
   }
 }

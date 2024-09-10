@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "Gerador de imagens de IA",
     "description": "Este é um gerador de imagens AI. \nEle cria uma imagem do zero a partir de uma descrição de texto."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "Continuar com {provedor}",
+      "continue-with-email": "Continuar com e-mail"
+    },
+    "heading": "Faça login em {appName}",
+    "messages": {
+      "expired": "O link do e-mail expirou",
+      "submitted": "Verifique seu e-mail."
+    },
+    "legal": {
+      "by-signing-in": "Ao fazer login, você concorda com nossos",
+      "terms-of-service": "Termos de Serviço",
+      "privacy-policy": "política de Privacidade"
+    }
+  },
+  "Verification": {
+    "loading": "Carregando...",
+    "failed": "Falha na verificação do link de e-mail",
+    "expired": "O link do e-mail expirou",
+    "success": "Login realizado com sucesso. Retorne à guia original para continuar."
   }
 }

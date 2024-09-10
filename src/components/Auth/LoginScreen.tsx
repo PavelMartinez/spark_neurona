@@ -8,6 +8,7 @@ import { useSignIn, useSignUp } from '@clerk/nextjs'
 import ScreenProps from '@/typescript/interfaces/Auth/ScreenProps'
 import { Screens } from '@/typescript/enums/Auth/Screens'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useTranslations } from 'next-intl';
 
 const LoginScreen = ({ openControl }: ScreenProps) => {
     const { signIn } = useSignIn()
@@ -19,6 +20,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
     const [submitted, setSubmitted] = React.useState(false)
     const router = useRouter()
     const searchParams = useSearchParams()
+    const t = useTranslations("LoginScreen");
   
     if (!signIn || !signUp || !isLoaded) return null
   
@@ -165,16 +167,16 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
     return (
         <Flex alignPrimary='center' alignSecondary='center' className='auth__inner' direction='column'>
             <FlexItem size='fill' className='auth__heading'>
-                <h3>Sign In to Neurona</h3>
+                <h3>{t('heading', { appName: process.env.NEXT_PUBLIC_APP_NAME })}</h3>
             </FlexItem>
             {expired && 
                 <FlexItem size='fill' className='auth__text auth__text--status'>
-                    Email link has expired
+                    {t('messages.expired')}
                 </FlexItem>
             }
             {submitted && 
                 <FlexItem size='fill' className='auth__text auth__text--status'>
-                    Check your e-mail.
+                    {t('messages.submitted')}
                 </FlexItem>
             }
             <FlexItem size='fill' className='auth__form'>
@@ -198,7 +200,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                             <PlaneIcon />
                         </div>
                         <div className="auth__buttons-text">
-                            Continue with email
+                            {t('buttons.continue-with-email')}
                         </div>
                     </Button>
                 </form>
@@ -213,7 +215,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                                 <GoogleLogo />
                             </div>
                             <div className="auth__buttons-text">
-                                Continue with Google
+                                {t('buttons.continue-with', { provider: "Google" })}
                             </div>
                         </button>
                         <button className="auth__buttons-item auth__buttons-item--service" onClick={() => setExtended(true)}>
@@ -230,7 +232,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                                 <GoogleLogo />
                             </div>
                             <div className="auth__buttons-text">
-                                Continue with Google
+                                {t('buttons.continue-with', { provider: "Google" })}
                             </div>
                         </button>
                         <button className="auth__buttons-item" onClick={() => {
@@ -240,7 +242,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                                 <FacebookLogo />
                             </div>
                             <div className="auth__buttons-text">
-                                Continue with Facebook
+                                {t('buttons.continue-with', { provider: "Facebook" })}
                             </div>
                         </button>
                         <button className="auth__buttons-item" onClick={() => {
@@ -250,7 +252,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                                 <AppleLogo />
                             </div>
                             <div className="auth__buttons-text">
-                                Continue with Apple
+                                {t('buttons.continue-with', { provider: "Apple" })}
                             </div>
                         </button>
                     </>
@@ -258,13 +260,13 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
             </FlexItem>
             <FlexItem size='fill' className='auth__text'>
                 <p>
-                    By signing in, you agree to our
-                    <Link className="auth__text-link" href={"/privacy"}>
-                        Terms of Service 
+                    {t('legal.by-signing-in')}
+                    <Link className="auth__text-link" href={"/terms"}>
+                        {t('legal.terms-of-service')} 
                     </Link>
                     and 
                     <Link className="auth__text-link" href={"/privacy"}>
-                        Privacy Policy
+                        {t('legal.privacy-policy')}
                     </Link>
                 </p>
             </FlexItem>

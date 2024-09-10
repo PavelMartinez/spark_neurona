@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "KI-Bildgenerator",
     "description": "Dies ist ein KI-Bildgenerator. \nEs erstellt aus einer Textbeschreibung ein Bild von Grund auf."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "Weiter mit {provider}",
+      "continue-with-email": "Weiter mit E-Mail"
+    },
+    "heading": "Bei {appName} anmelden",
+    "messages": {
+      "expired": "Der E-Mail-Link ist abgelaufen",
+      "submitted": "Überprüfen Sie Ihre E-Mails."
+    },
+    "legal": {
+      "by-signing-in": "Mit Ihrer Anmeldung stimmen Sie unserem zu",
+      "terms-of-service": "Nutzungsbedingungen",
+      "privacy-policy": "Datenschutzrichtlinie"
+    }
+  },
+  "Verification": {
+    "loading": "Laden...",
+    "failed": "Die Überprüfung des E-Mail-Links ist fehlgeschlagen",
+    "expired": "E-Mail-Link abgelaufen",
+    "success": "Erfolgreich angemeldet. Kehren Sie zur ursprünglichen Registerkarte zurück, um fortzufahren."
   }
 }

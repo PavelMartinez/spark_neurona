@@ -6,12 +6,13 @@ import { Flex } from "@/components/ui/layout";
 
 import { useClerk } from "@clerk/nextjs"
 import { EmailLinkErrorCode, isEmailLinkError } from "@clerk/nextjs/errors"
+import { useTranslations } from "next-intl";
 import React from "react"
 
 // the final step in the email link flow.
 function Verification() {
   const [verificationStatus, setVerificationStatus] = React.useState('loading')
-
+  const t = useTranslations("Verification");
   const { handleEmailLinkVerification } = useClerk()
 
   React.useEffect(() => {
@@ -34,18 +35,18 @@ function Verification() {
   }, [])
 
   if (verificationStatus === 'loading') {
-    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">Loading...</Flex>
+    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">{t('loading')}</Flex>
   }
 
   if (verificationStatus === 'failed') {
-    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">Email link verification failed</Flex>
+    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">{t('failed')}</Flex>
   }
 
   if (verificationStatus === 'expired') {
-    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">Email link expired</Flex>
+    return <Flex container alignPrimary="center" alignSecondary="center" className="verification">{t('expired')}</Flex>
   }
 
-  return <Flex container alignPrimary="center" alignSecondary="center" className="verification">Successfully signed in. Return to the original tab to continue.</Flex>
+  return <Flex container alignPrimary="center" alignSecondary="center" className="verification">{t('success')}</Flex>
 }
 
 export default Verification;

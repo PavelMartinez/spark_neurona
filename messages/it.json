@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "Generatore di immagini AI",
     "description": "Questo è un generatore di immagini AI. \nCrea un'immagine da zero da una descrizione testuale."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "Continua con {provider}",
+      "continue-with-email": "Continua con l'e-mail"
+    },
+    "heading": "Accedi a {appName}",
+    "messages": {
+      "expired": "Il collegamento e-mail è scaduto",
+      "submitted": "Controlla la tua posta elettronica."
+    },
+    "legal": {
+      "by-signing-in": "Effettuando l'accesso accetti i ns",
+      "terms-of-service": "Termini di servizio",
+      "privacy-policy": "politica sulla riservatezza"
+    }
+  },
+  "Verification": {
+    "loading": "Caricamento...",
+    "failed": "La verifica del collegamento e-mail non è riuscita",
+    "expired": "Il collegamento e-mail è scaduto",
+    "success": "Accesso riuscito. Torna alla scheda originale per continuare."
   }
 }

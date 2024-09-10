@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "人工智能图像生成器",
     "description": "这是一个人工智能图像生成器。\n它根据文本描述从头开始创建图像。"
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "继续使用{provider}",
+      "continue-with-email": "继续使用电子邮件"
+    },
+    "heading": "登录到 {appName}",
+    "messages": {
+      "expired": "电子邮件链接已过期",
+      "submitted": "检查您的电子邮件。"
+    },
+    "legal": {
+      "by-signing-in": "登录即表示您同意我们的",
+      "terms-of-service": "服务条款",
+      "privacy-policy": "隐私政策"
+    }
+  },
+  "Verification": {
+    "loading": "加载中...",
+    "failed": "电子邮件链接验证失败",
+    "expired": "电子邮件链接已过期",
+    "success": "登录成功。返回原始选项卡继续。"
   }
 }

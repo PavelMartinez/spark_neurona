@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "Yapay Zeka Görüntü Oluşturucu",
     "description": "Bu bir Yapay Zeka Görüntü Oluşturucudur. \nBir metin açıklamasından sıfırdan bir görüntü oluşturur."
+  },
+  "LoginScreen": {
+    "buttons": {
+      "continue-with": "{provider} ile devam et",
+      "continue-with-email": "E-postayla devam et"
+    },
+    "heading": "{appName}'da Oturum Açın",
+    "messages": {
+      "expired": "E-posta bağlantısının süresi doldu",
+      "submitted": "E-postanızı kontrol edin."
+    },
+    "legal": {
+      "by-signing-in": "Oturum açarak şunları kabul etmiş olursunuz:",
+      "terms-of-service": "Hizmet Şartları",
+      "privacy-policy": "Gizlilik Politikası"
+    }
+  },
+  "Verification": {
+    "loading": "Yükleniyor...",
+    "failed": "E-posta bağlantısı doğrulaması başarısız oldu",
+    "expired": "E-posta bağlantısının süresi doldu",
+    "success": "Başarıyla oturum açıldı. Devam etmek için orijinal sekmeye dönün."
   }
 }

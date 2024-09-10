@@ -272,5 +272,27 @@
   "GeneratorPage": {
     "heading": "AI Image Generator",
     "description": "This is an AI Image Generator. It creates an image from scratch from a text description."
+  },
+  "LoginScreen": {
+    "heading": "Sign In to {appName}",
+    "messages": {
+      "expired": "Email link has expired",
+      "submitted": "Check your e-mail."
+    },
+    "buttons": {
+      "continue-with-email": "Continue with email",
+      "continue-with": "Continue with {provider}"
+    },
+    "legal": {
+      "by-signing-in": "By signing in, you agree to our",
+      "terms-of-service": "Terms of Service",
+      "privacy-policy": "Privacy Policy"
+    }
+  },
+  "Verification": {
+    "loading": "Loading...",
+    "failed": "Email link verification failed",
+    "expired": "Email link expired",
+    "success": "Successfully signed in. Return to the original tab to continue."
   }
 }

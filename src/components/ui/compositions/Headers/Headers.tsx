@@ -167,7 +167,7 @@ export function HeaderAuth() {
     },
     {
       locale: "ru",
-      title: "Russian",
+      title: "Русский",
       icon: <RuFlagIcon />
     },
   ]
