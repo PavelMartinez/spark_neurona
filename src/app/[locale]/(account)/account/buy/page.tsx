@@ -1,19 +1,16 @@
-import { CheckSquareIcon, ClockCircleIcon, CloseSquareIcon, DiamondGoldIcon, EmojiFire, EmojiRocket, EmojiThumb, IncognitoIcon, PromoArrow, SaleIcon, ShieldStarIcon } from '@/components/svg'
+import { ClockCircleIcon, CloseSquareIcon, IncognitoIcon, PromoArrow, SaleIcon, ShieldStarIcon } from '@/components/svg'
 import { Flex, FlexItem, Section } from '@/components/ui/layout'
 import { Breadcrumb } from 'antd'
 import Image from 'next/image'
 import React from 'react'
 
-import CalendarImage from '../../../../../public/Calendar.png'
-import EmojiSurpriseImage from '../../../../../public/EmojiSurprise.png'
-import EmojiStarsEyesImage from '../../../../../public/EmojiStarsEyes.png'
-import EmojiStarsImage from '../../../../../public/EmojiStars.png'
-import BigStarsImage from '../../../../../public/BigStars.png'
+import CalendarImage from '../../../../../../public/Calendar.png'
+import EmojiSurpriseImage from '../../../../../../public/EmojiSurprise.png'
+import EmojiStarsEyesImage from '../../../../../../public/EmojiStarsEyes.png'
+import EmojiStarsImage from '../../../../../../public/EmojiStars.png'
+import BigStarsImage from '../../../../../../public/BigStars.png'
 import {Link} from '@/i18n/routing';
 import { IconArrowUpRight } from '@/components/ui/icons'
-import BuyCardsItemProps from '@/typescript/interfaces/AccountBuy/BuyCardsItemProps'
-import tariffsData from '@/data/accountBuy/data'
-import BuyCardsItem from '@/components/BuyCards/BuyCardsItem'
 import BuyCards from '@/components/BuyCards/BuyCards'
 
 

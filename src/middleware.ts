@@ -1,4 +1,4 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import {clerkMiddleware} from '@clerk/nextjs/server'
 import createMiddleware from "next-intl/middleware";
 import { NextRequest } from "next/server";
 import { routing } from "./i18n/routing";

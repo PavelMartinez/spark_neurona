@@ -2,12 +2,10 @@
 
 import clsx from "clsx";
 import { useMediaQuery } from "hooks";
-import { IconCheckSquare, IconChevronDown, IconDollarSign, IconMenu, IconX } from "icons";
-import { placeholder } from "images";
+import { IconChevronDown, IconMenu, IconX } from "icons";
 import { Flex, FlexItem, Section, type SectionProps } from "layout";
 import {
   Avatar,
-  AvatarBlock,
   Button,
   ButtonGroup,
   Dialog,
@@ -32,7 +30,7 @@ import { Screens } from "@/typescript/enums/Auth/Screens";
 import AuthModal from "@/components/Auth/AuthModal";
 import { useClerk, useUser } from "@clerk/nextjs";
 import { ConfigProvider, Dropdown, MenuProps, Spin } from "antd";
-import { ArFlagIcon, CheckSquare2Icon, CheckSquareIcon, DeFlagIcon, DialogIcon, DollarIcon, EnFlagIcon, EsFlagIcon, ExitIcon, FrFlagIcon, GroupIcon, HiFlagIcon, IdFlagIcon, ItFlagIcon, JaFlagIcon, KrFlagIcon, PtFlagIcon, RuFlagIcon, SettingIcon } from "@/components/svg";
+import { ArFlagIcon, CheckSquare2Icon, DeFlagIcon, DialogIcon, DollarIcon, EnFlagIcon, EsFlagIcon, ExitIcon, FrFlagIcon, GroupIcon, HiFlagIcon, IdFlagIcon, ItFlagIcon, JaFlagIcon, KrFlagIcon, PtFlagIcon, RuFlagIcon, SettingIcon } from "@/components/svg";
 import { useRouter } from "next/navigation";
 import NavigationLink from "@/components/NavigationLink/NavigationLink";
 import { useLocale, useTranslations } from "next-intl";
@@ -255,6 +253,7 @@ export function HeaderAuth() {
       <FlexItem size="fill">
         {isTabletDown ? (
           <Flex alignPrimary="end">
+            <Language />
             <IconButton
               variant="subtle"
               aria-label="Toggle navigation menu"
