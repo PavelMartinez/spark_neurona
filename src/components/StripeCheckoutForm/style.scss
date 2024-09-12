@@ -1,0 +1,11 @@
+.payment-form {
+    background: var(--back-login, #131313);
+    border-radius: 20px;
+    border: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
+    
+    padding: 50px 44px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

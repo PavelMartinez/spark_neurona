@@ -219,7 +219,9 @@
       "result": {
         "alt": "Generation Result"
       }
-    }
+    },
+    "save-button": "Save",
+    "share-button": "Share"
   },
   "AccountConvert": {
     "heading": "Convert your referal earnings",
@@ -294,5 +296,10 @@
     "failed": "Email link verification failed",
     "expired": "Email link expired",
     "success": "Successfully signed in. Return to the original tab to continue."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Pay for coins"
+    }
   }
 }

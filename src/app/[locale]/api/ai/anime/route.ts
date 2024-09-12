@@ -5,10 +5,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
     await dbConnect();
+    console.log(req)
     const user = await currentUser()
 
     const body = await req.json();
-    console.log(body)
+
     if (!user) {
         return NextResponse.json({ error: {
             message: "Unauthorized"

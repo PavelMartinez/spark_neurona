@@ -219,7 +219,9 @@
       "result": {
         "alt": "Generierungsergebnis"
       }
-    }
+    },
+    "save-button": "Speichern",
+    "share-button": "Aktie"
   },
   "AccountConvert": {
     "convert": {
@@ -294,5 +296,10 @@
     "failed": "Die Überprüfung des E-Mail-Links ist fehlgeschlagen",
     "expired": "E-Mail-Link abgelaufen",
     "success": "Erfolgreich angemeldet. Kehren Sie zur ursprünglichen Registerkarte zurück, um fortzufahren."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Bezahlen Sie für Münzen"
+    }
   }
 }

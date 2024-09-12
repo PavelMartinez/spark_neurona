@@ -63,6 +63,7 @@
 
 .navigation-pill {
     padding: var(--sds-size-space-100) var(--sds-size-space-200) !important;
+    text-align: center;
 
     &--border {
         @include border-gradient(1, 8, var(--button-2));
@@ -76,7 +77,6 @@
     align-items: center;
     cursor: pointer;
 
-    margin-inline: 10px;
     &__icon {
         padding: 11px;
         border-radius: 50px;

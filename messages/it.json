@@ -154,7 +154,9 @@
       "result": {
         "alt": "Risultato della generazione"
       }
-    }
+    },
+    "save-button": "Salva",
+    "share-button": "Condividere"
   },
   "Header": {
     "ai-chat": "Chatta sull'intelligenza artificiale",
@@ -294,5 +296,10 @@
     "failed": "La verifica del collegamento e-mail non è riuscita",
     "expired": "Il collegamento e-mail è scaduto",
     "success": "Accesso riuscito. Torna alla scheda originale per continuare."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Paga con le monete"
+    }
   }
 }

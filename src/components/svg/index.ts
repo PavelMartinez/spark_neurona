@@ -94,6 +94,7 @@ export { default as CloseCircleGradientIcon } from './Close Circle Gradient.svg'
 // Generator
 export { default as LockIcon } from './Lock.svg'
 export { default as DownArrowIcon } from './down_arrow.svg'
+export { default as DownloadIcon } from './download.svg'
 
 // Language Selector
 export { default as ArFlagIcon } from './ArFlag.svg'

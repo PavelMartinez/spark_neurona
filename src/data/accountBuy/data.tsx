@@ -1,7 +1,7 @@
 import { EmojiFire, EmojiRocket, EmojiThumb } from "@/components/svg";
 import BuyCardsItemProps from "@/typescript/interfaces/AccountBuy/BuyCardsItemProps";
 
-const data: BuyCardsItemProps[] = [
+const TariffData: BuyCardsItemProps[] = [
     {
         emoji: <EmojiThumb />,
         title: "Basic",
@@ -47,4 +47,4 @@ const data: BuyCardsItemProps[] = [
     }
 ]
 
-export default data;
+export default TariffData;

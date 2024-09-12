@@ -154,7 +154,9 @@
       "result": {
         "alt": "Résultat de la génération"
       }
-    }
+    },
+    "save-button": "Sauvegarder",
+    "share-button": "Partager"
   },
   "Header": {
     "ai-chat": "Chat IA",
@@ -294,5 +296,10 @@
     "failed": "La vérification du lien e-mail a échoué",
     "expired": "Lien email expiré",
     "success": "Connexion réussie. Revenez à l'onglet d'origine pour continuer."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Payer des pièces"
+    }
   }
 }

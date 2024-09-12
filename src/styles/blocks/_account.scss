@@ -1266,6 +1266,40 @@
         }
     }
 
+    &-layout {
+        display: flex;
+        gap: 50px;
+        flex-direction: row;
+        width: 100%;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            
+            width: 445px;
+            height: 305px;
+            flex-shrink: 0;
+
+            border-radius: 20px;
+            background: var(--button-1);
+            padding: 50px 44px;
+
+            color: var(--White, #FFF);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 30px */
+
+            &-amount {
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 72px */
+            }
+        }
+    }
+
     .breadcrump {
         margin-bottom: 34px;
     }

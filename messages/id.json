@@ -154,7 +154,9 @@
       "result": {
         "alt": "Hasil Generasi"
       }
-    }
+    },
+    "save-button": "Menyimpan",
+    "share-button": "Membagikan"
   },
   "Header": {
     "ai-chat": "Obrolan AI",
@@ -294,5 +296,10 @@
     "failed": "Verifikasi tautan email gagal",
     "expired": "Tautan email sudah tidak berlaku lagi",
     "success": "Berhasil masuk. Kembali ke tab awal untuk melanjutkan."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Bayar koin"
+    }
   }
 }

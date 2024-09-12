@@ -154,7 +154,9 @@
       "result": {
         "alt": "Resultado de Geração"
       }
-    }
+    },
+    "save-button": "Salvar",
+    "share-button": "Compartilhar"
   },
   "Header": {
     "ai-chat": "Bate-papo com IA",
@@ -294,5 +296,10 @@
     "failed": "Falha na verificação do link de e-mail",
     "expired": "O link do e-mail expirou",
     "success": "Login realizado com sucesso. Retorne à guia original para continuar."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Pague por moedas"
+    }
   }
 }

@@ -153,7 +153,9 @@
       "result": {
         "alt": "Resultado de generación"
       }
-    }
+    },
+    "save-button": "Ahorrar",
+    "share-button": "Compartir"
   },
   "Header": {
     "ai-chat": "Chat de IA",
@@ -294,5 +296,10 @@
     "failed": "Falló la verificación del enlace de correo electrónico",
     "expired": "Enlace de correo electrónico caducado",
     "success": "Iniciaste sesión exitosamente. Regresa a la pestaña original para continuar."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "pagar por monedas"
+    }
   }
 }

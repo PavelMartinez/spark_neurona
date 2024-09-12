@@ -154,7 +154,9 @@
       "result": {
         "alt": "생성 결과"
       }
-    }
+    },
+    "save-button": "구하다",
+    "share-button": "공유하다"
   },
   "Header": {
     "ai-chat": "AI채팅",
@@ -294,5 +296,10 @@
     "failed": "이메일 링크 확인 실패",
     "expired": "이메일 링크가 만료되었습니다",
     "success": "로그인되었습니다. 계속하려면 원래 탭으로 돌아가세요."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "코인 결제"
+    }
   }
 }

@@ -154,7 +154,9 @@
       "result": {
         "alt": "Üretim Sonucu"
       }
-    }
+    },
+    "save-button": "Kaydetmek",
+    "share-button": "Paylaşmak"
   },
   "Header": {
     "ai-chat": "Yapay Zeka Sohbeti",
@@ -294,5 +296,10 @@
     "failed": "E-posta bağlantısı doğrulaması başarısız oldu",
     "expired": "E-posta bağlantısının süresi doldu",
     "success": "Başarıyla oturum açıldı. Devam etmek için orijinal sekmeye dönün."
+  },
+  "BuyLayout": {
+    "info": {
+      "text": "Madeni paralar için ödeme yapın"
+    }
   }
 }

@@ -13,6 +13,7 @@ import { usePathname } from "@/i18n/routing";
 import { useRouter } from 'next/navigation';
 import { SelectorState } from '@/typescript/enums/Styles/SelectorState';
 import { useTranslations } from 'next-intl';
+import { Progress } from 'antd';
 
 enum Model {
     STANDART = "Standart",
@@ -44,6 +45,8 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
     const [dimensions, setDimensions] = useState<{ width: number; height: number; type: 1 | 2 | 3 | 4 | 5 }>({ width: 1024, height: 576, type: 1 })
     const [model, setModel] = useState<Model>(Model.STANDART)
     const [selectorExpanded, setSelectorExpanded] = useState<boolean>(false)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [percent, setPercent] = useState<number>(0)
     const [preference, setPreference] = useState<Preference>(Preference.SPEED)
     const router = useRouter()
     const pathname = usePathname()
@@ -62,6 +65,7 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
 
     const handleGenerateClick = async () => {
         try {
+            setIsLoading(true)
             let data;
             if(imageRef.current)
             {
@@ -96,6 +100,7 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                     )
                 });
             }
+            setIsLoading(false)
             if(data.headers.get("Content-Type") === "text/plain")
             {
                 const encodedImage = await data.text();
@@ -128,12 +133,32 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
         }
     }, [])
 
+    useEffect(() => {
+        if (!isLoading) {
+            setPercent(0);
+            return;
+        }
+
+        const duration = 20 * 1000;
+        const interval = 100;
+        const increment = (100 * interval) / duration;
+
+        const timer = setInterval(() => {
+            setPercent(prev => {
+                const nextValue = Math.min(prev + increment, 100);
+                return nextValue;
+            });
+        }, interval);
+
+        return () => clearInterval(timer);
+    }, [isLoading]);
+
     return (
         <div className='generator'>
             <div className="generator-settings">
                 <div className="generator-settings__part">
                     <Setting title={t('prompt.title')}>
-                        <TextareaField onChange={handleTextareaChange} placeholder={t('prompt.placeholder')} value={promt} className={"generator-settings__textarea"}/>
+                        <TextareaField onChange={handleTextareaChange} placeholder={t('prompt.placeholder')} value={promt} className={"generator-settings__textarea"} aria-label='Prompt place'/>
                     </Setting>
                 </div>
                 <div className="generator-settings__part">
@@ -205,7 +230,7 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                             })}
                         </ul>
                     </Setting>
-                    <Link href={"/styles"} className="generator-settings__button">
+                    <Link href={"/styles"} className="generator-settings__button generator-settings__button--pink">
                         {t('styles.button')}
                     </Link>
                 </div>
@@ -248,18 +273,47 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                         </div>
                     }
                 </div>
-                <button onClick={handleGenerateClick} className="generator-settings__button generator-settings__button--gradient">
-                    {t('generate-button')}
-                </button>
+                <div className="generator-settings__buttons-wrapper">
+                    <button onClick={handleGenerateClick} disabled={isLoading} className={`generator-settings__button generator-settings__button--border ${!image ? "generator-settings__button--gradient" : ""}`}>
+                        {t('generate-button')}
+                    </button>
+                    {image &&
+                        <button onClick={handleGenerateClick} disabled={isLoading} className={`generator-settings__button generator-settings__button--black`}>
+                            {t('share-button')}
+                        </button>
+                    }
+                </div>
             </div>
             <div className="generator-result">
-                {style.StyleName === "Default" && !image && 
-                    <Image src={"/Logo.png"} alt={t('image.default.alt')} className="generator-result__image generator-result__image--default" sizes='100vw' width={0} height={0} />
+                <div className="generator-result__image-wrapper">
+                    {style.StyleName === "Default" && !image && !isLoading &&
+                        <Image src={"/Logo.png"} alt={t('image.default.alt')} className="generator-result__image generator-result__image--default" sizes='100vw' width={0} height={0} />
+                    }
+                    {style.StyleName != "Default" && !image && 
+                        <Image src={"/styles_spark/" + style.FileName} alt={t('image.result.alt')} className="generator-result__image generator-result__image--example" width={0} sizes='100vw' height={0} />
+                    }
+                    <Image ref={imageRef} src={decodeURIComponent(image) || ""} alt={t('image.result.alt')} className={`generator-result__image ${!image ? "visually-hidden" : ""}`} width={0} sizes='100vw' height={0} />
+                    {isLoading &&
+                        <div className="generator-result__loader-wrapper">
+                            <div className="generator-result__loader">
+                                <Image src={"/Logo.png"} alt="" className="generator-result__loader-image" sizes='100vw' width={82} height={82} />
+                                <div className="generator-result__loader-text">
+                                    Generate amazing results
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                {isLoading && 
+                    <div className="generator-result__progress-wrapper">
+                        <Progress percent={percent} showInfo={false} trailColor='#070707' strokeColor={"var(--button-1)"}/>
+                    </div>
                 }
-                {style.StyleName != "Default" && !image && 
-                    <Image src={"/styles_spark/" + style.FileName} alt={t('image.result.alt')} className="generator-result__image generator-result__image--example" width={0} sizes='100vw' height={0} />
+                {!isLoading && image &&
+                    <button onClick={handleGenerateClick} disabled={isLoading} className="generator-settings__button generator-settings__button--gradient generator-settings__button--border">
+                        {t('save-button')}
+                    </button>
                 }
-                <Image ref={imageRef} src={decodeURIComponent(image)} alt={t('image.result.alt')} className={`generator-result__image ${!image ? "visually-hidden" : ""}`} width={0} sizes='100vw' height={0} />
             </div>
         </div>
     )
