@@ -7,7 +7,7 @@ const TariffData: BuyCardsItemProps[] = [
         title: "Basic",
         priceCurrent: 500000,
         priceOld: 600000,
-        id: 0,
+        id: "0",
         benefits: [
             "$1/image",
             "4 Requests",
@@ -21,7 +21,7 @@ const TariffData: BuyCardsItemProps[] = [
         title: "Popular",
         priceCurrent: 500000,
         priceOld: 600000,
-        id: 1,
+        id: "1",
         benefits: [
             "$1/image",
             "4 Requests",
@@ -36,7 +36,7 @@ const TariffData: BuyCardsItemProps[] = [
         title: "Pro",
         priceCurrent: 500000,
         priceOld: 600000,
-        id: 2,
+        id: "2",
         benefits: [
             "$1/image",
             "4 Requests",
