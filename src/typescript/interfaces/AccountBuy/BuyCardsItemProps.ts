@@ -1,5 +1,5 @@
 export default interface BuyCardsItemProps {
-    id: number;
+    id: string;
     emoji: any;
     title: string;
     priceCurrent: number;
@@ -7,4 +7,5 @@ export default interface BuyCardsItemProps {
     diamonds?: number;
     benefits?: string[];
     isPopular?: boolean;
+    currency?: string;
 }

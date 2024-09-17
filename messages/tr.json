@@ -71,23 +71,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "info": "Yüksek kaliteli bir sonuç elde etmek için, nesne ile arka plan arasında net sınırları olan görüntüler kullanın ve ayrıca fotoğrafın kalitesini de unutmayın, ne kadar yüksek olursa, işlenen fotoğraf o kadar net ve daha iyi olur. \nHizmetimiz tamamen ücretsizdir, bu da yaratıcı görüntü düzenlemeyi arzulayan herkesin erişimine açık olmasını sağlar.",
         "title": "Başarılı bir sonuç nasıl alınır?"
       },
       "2": {
-        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "info": "Henüz yapmadıysanız siteye kaydolun. \nŞimdi oluştur'u tıklatarak resmi yükleyin. \nFotoğraf düzenleme için gerekli ve istenen tüm parametreleri ayarlayın. \nNeurona ileri teknolojilerle donatılmış bir yapay zeka olduğundan, fotoğrafınızdaki arka planı değiştirmek veya kaldırmak sorun olmayacaktır. \nManuel işleme için saatler harcamanıza gerek kalmaz, bu da yaratıcı sürece odaklanmanıza olanak tanır.",
         "title": "Arka plan rengini nasıl değiştiririm?"
       },
       "3": {
-        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "info": "Ücretsiz düzenleme için bir hesap oluşturmanız ve ardından oluşturulan fotoğrafı oluşturmak için talimatları uygulamanız yeterlidir. \nNeurons'un web sitesine gidin. \n\"Şimdi Oluştur\" düğmesini tıklayın ve düzenlemek istediğiniz resmi seçin. \nNeurons'un görselinizden arka planı kaldırmasını bekleyin. \nArka plan rengini değiştirmek de dahil olmak üzere görüntüde gerekli değişiklikleri yapın. \nDüzenlenen görüntüyü kaydedin.",
         "title": "Neurona'yı Ücretsiz olarak nasıl kullanabilirim?"
       },
       "4": {
-        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "info": "Siteyi web tarayıcınızda açın. \nSitenin ana sayfasında hemen \"Şimdi oluştur\" butonunu göreceksiniz, tıklayın. \nİhtiyacınız olan tüm gerekli parametreleri seçin ve yapılandırın. \nBir görüntü oluşturmak için düğmeye tıklayın. \nBiraz zamanınızı alacak. \nHer şey hazır!",
         "title": "Bir resmi nasıl oluşturursunuz?"
       },
       "5": {
-        "info": "Sadece bir resim yükleyin ve uygulamanın tüm işi sizin için yapmasına izin verin! \nNeurona, fotoğrafınızdaki arka planları otomatik olarak kaldırmak için yapay zekayı kullanır ve görüntüleri ücretsiz olarak özelleştirmenizi ve düzenlemenizi kolaylaştırır.",
+        "info": "Promt, sinir ağını doğru yönde \"açmanızı\" sağlayan bir anahtardır. \nBu, dikkati verilerin belirli yönlerine de yönlendiren, dikkatle tasarlanmış bir sorgudur. \nBu, sinir ağını belirli bir görevi yerine getirecek şekilde \"ayarlamanıza\" olanak tanır, gereksiz bilgileri göz ardı ederek onu gerekli olana odaklanmaya zorlar.",
         "title": "Prompt nasıl doğru yazılır?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Madeni paralar için ödeme yapın"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "EN POPÜLER",
+    "choose-plan": "PLANI SEÇİN"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Kontrol Paneli",
+      "buy-coins": "Madeni para satın al"
+    },
+    "description": "Ücretinizi seçin",
+    "heading": "para satın al"
+  },
+  "StripeCompletePage": {
+    "default": "Bir şeyler ters gitti, lütfen tekrar deneyin.",
+    "succeeded": "Ödeme başarılı oldu",
+    "processing": "Ödemeniz işleniyor.",
+    "requires_payment_method": "Ödemeniz başarılı olmadı, lütfen tekrar deneyin."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Rahat ödeme koşulları",
+      "question": "Neden bizi seçmelisiniz?",
+      "list": {
+        "1": {
+          "heading": "GÜVENLİ ÖDEMELER",
+          "description": "Kredi kartı veya kripto kullanarak güvenli bir şekilde ödeme yapın."
+        },
+        "2": {
+          "heading": "TAMAMEN ANONİM",
+          "description": "Oluşturduğunuz görüntüleri veya girdiğiniz istemleri takip etmiyoruz ve saklamıyoruz."
+        },
+        "3": {
+          "heading": "OTOMATİK YENİLEME YOK",
+          "description": "Yalnızca ürünümüz için ödeme yaptığınızdan emin olmak için"
+        }
+      }
+    },
+    "description": "Paketinizi seçin",
+    "discount": {
+      "heading": "%50'YE VARAN İNDİRİM",
+      "additional": "SADECE 50 noktayla sınırlıdır",
+      "button": "indirim al"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "ekstra al",
+          "2": "yıllık PRO planıyla!",
+          "accent": "≈ %60 indirim"
+        }
+      },
+      "badge": {
+        "text": "Büyük indirim"
+      },
+      "card": {
+        "title": "15 Aralık'a kadar kampanya"
+      },
+      "button": "ŞİMDİ AL"
     }
   }
 }

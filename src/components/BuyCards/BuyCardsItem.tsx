@@ -1,10 +1,16 @@
+"use client";
+
 import BuyCardsItemProps from "@/typescript/interfaces/AccountBuy/BuyCardsItemProps";
 import { CheckSquareIcon, DiamondGoldIcon } from "../svg";
 import { FlexItem } from "../ui/layout";
 import Link from "next/link";
+import { useFormatter, useTranslations } from "next-intl";
 
-const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopular = false, diamonds = 15, id }: BuyCardsItemProps) => (
-    <FlexItem className={`buy-cards__item ${isPopular ? "buy-cards--popular buy-cards__item--border" : ""}`}>
+const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopular = false, diamonds = 15, id, currency = "usd" }: BuyCardsItemProps) => {
+    const format = useFormatter()
+    const t = useTranslations("BuyCardsItem");
+    
+    return (<FlexItem className={`buy-cards__item ${isPopular ? "buy-cards--popular buy-cards__item--border" : ""}`}>
         <div className="buy-cards__info">
             <div className="buy-cards__info-emoji">
                 {emoji}
@@ -16,19 +22,16 @@ const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopula
                 <div className="buy-cards__price">
                     <div className="buy-cards__price-current">
                         <div className="buy-cards__price-current__value">
-                            {String(priceCurrent).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ")}
+                            {format.number(priceCurrent, {style: 'currency', currency: currency})}
                         </div>
                         <div className="buy-cards__price-current__currency">
                             <span>
-                                $
-                            </span>
-                            <span>
-                                CAD
+                                {currency.toLocaleUpperCase()}
                             </span>
                         </div>
                     </div>
                     <div className="buy-cards__price-old">
-                        {String(priceOld).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ")}
+                        {format.number(priceOld, {style: 'currency', currency: currency})}
                     </div>
                 </div>
             </div>
@@ -49,7 +52,7 @@ const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopula
         </div>
         <div className="buy-cards__button-wrapper">
             <Link className="buy-cards__button" href={`/account/buy/${id}`}>
-                CHOOSE PLAN
+                {t('choose-plan')}
             </Link>
         </div>
         <div className="buy-cards__diamonds">
@@ -62,10 +65,11 @@ const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopula
         </div>
         {isPopular &&
             <div className="buy-cards__popular">
-                MOST POPULAR
+                {t('most-popular')}
             </div>
         }
     </FlexItem>
-)
+    )
+}
 
 export default BuyCardsItem;

@@ -71,23 +71,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Basta fazer upload de uma imagem e deixar o aplicativo fazer todo o trabalho para você! \nNeurona usa IA para remover automaticamente fundos de sua foto, facilitando a personalização e edição de imagens gratuitamente.",
+        "info": "Para obter um resultado de alta qualidade, utilize imagens com limites claros entre o objeto e o fundo, e também não se esqueça da qualidade da foto em si, quanto maior ela for, mais nítida e melhor será a foto processada. \nNosso serviço é totalmente gratuito, o que o torna acessível a qualquer pessoa que aspire à edição criativa de imagens.",
         "title": "Como obter um resultado de sucesso?"
       },
       "2": {
-        "info": "Basta fazer upload de uma imagem e deixar o aplicativo fazer todo o trabalho para você! \nNeurona usa IA para remover automaticamente fundos de sua foto, facilitando a personalização e edição de imagens gratuitamente.",
+        "info": "Cadastre-se no site caso ainda não o tenha feito. \nFaça upload da imagem clicando em Gerar agora. \nConfigure todos os parâmetros necessários e desejados para edição de fotos. \nNeurona é uma inteligência artificial equipada com tecnologias avançadas, portanto alterar ou remover o fundo da sua foto não será problema. \nVocê não precisa gastar horas no processamento manual, permitindo que você se concentre no processo criativo.",
         "title": "Como mudo a cor de fundo?"
       },
       "3": {
-        "info": "Basta fazer upload de uma imagem e deixar o aplicativo fazer todo o trabalho para você! \nNeurona usa IA para remover automaticamente fundos de sua foto, facilitando a personalização e edição de imagens gratuitamente.",
+        "info": "Para edição gratuita, basta criar uma conta e seguir as instruções para criar a foto gerada. \nAcesse o site da Neurons. \nClique no botão “Gerar agora” e selecione a imagem que deseja editar. \nEspere que os Neurons removam o fundo da sua imagem. \nFaça as alterações necessárias na imagem, incluindo a alteração da cor de fundo. \nSalve a imagem editada.",
         "title": "Como usar o Neurona gratuitamente?"
       },
       "4": {
-        "info": "Basta fazer upload de uma imagem e deixar o aplicativo fazer todo o trabalho para você! \nNeurona usa IA para remover automaticamente fundos de sua foto, facilitando a personalização e edição de imagens gratuitamente.",
+        "info": "Abra o site em seu navegador. \nNa página principal do site você verá imediatamente o botão “Criar agora”, clique nele. \nSelecione e configure todos os parâmetros necessários. \nClique no botão para gerar uma imagem. \nIsso levará um pouco do seu tempo. \nEstá tudo pronto!",
         "title": "Como você gera uma imagem?"
       },
       "5": {
-        "info": "Basta fazer upload de uma imagem e deixar o aplicativo fazer todo o trabalho para você! \nNeurona usa IA para remover automaticamente fundos de sua foto, facilitando a personalização e edição de imagens gratuitamente.",
+        "info": "Promt é uma chave que permite “ligar” a rede neural na direção certa. \nEsta é uma consulta cuidadosamente projetada que também direciona a atenção para aspectos específicos dos dados. \nIsso permite “sintonizar” a rede neural para realizar uma tarefa específica, forçando-a a focar no que é necessário, ignorando informações desnecessárias.",
         "title": "Como escrever prompt corretamente?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Pague por moedas"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "MAIS POPULAR",
+    "choose-plan": "ESCOLHER PLANO"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Painel",
+      "buy-coins": "Compre moedas"
+    },
+    "description": "Selecione sua taxa",
+    "heading": "comprar moedas"
+  },
+  "StripeCompletePage": {
+    "default": "Algo deu errado, tente novamente.",
+    "succeeded": "Pagamento bem-sucedido",
+    "processing": "Seu pagamento está sendo processado.",
+    "requires_payment_method": "Seu pagamento não foi bem-sucedido, tente novamente."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Condições de pagamento confortáveis",
+      "question": "Por que nos escolher?",
+      "list": {
+        "1": {
+          "heading": "PAGAMENTOS SEGUROS",
+          "description": "Pague com segurança e confiança usando cartão de crédito ou criptografia."
+        },
+        "2": {
+          "heading": "TOTALMENTE ANÔNIMO",
+          "description": "Não rastreamos e não armazenamos as imagens que você gera ou as solicitações inseridas."
+        },
+        "3": {
+          "heading": "SEM RENOVAÇÃO AUTOMÁTICA",
+          "description": "Para garantir que você só pague pelo nosso produto quando"
+        }
+      }
+    },
+    "description": "Selecione seu pacote",
+    "discount": {
+      "heading": "ATÉ 50% DE DESCONTO",
+      "additional": "Limitado a apenas 50 vagas",
+      "button": "obter desconto"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "ganhe mais",
+          "2": "com plano PRO anual!",
+          "accent": "≈ 60% de desconto"
+        }
+      },
+      "badge": {
+        "text": "Grande venda"
+      },
+      "card": {
+        "title": "Promoção até 15 de dezembro"
+      },
+      "button": "COMPRAR AGORA"
     }
   }
 }

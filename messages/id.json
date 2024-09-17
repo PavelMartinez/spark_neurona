@@ -71,23 +71,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "info": "Untuk mendapatkan hasil yang berkualitas, gunakanlah gambar dengan batas yang jelas antara objek dan background, dan juga jangan lupakan kualitas foto itu sendiri, semakin tinggi maka foto yang diproses akan semakin jernih dan bagus. \nLayanan kami sepenuhnya gratis, sehingga dapat diakses oleh siapa saja yang ingin mengedit gambar secara kreatif.",
         "title": "Bagaimana cara mendapatkan hasil yang sukses?"
       },
       "2": {
-        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "info": "Daftar di situs jika Anda belum melakukannya. \nUnggah gambar dengan mengklik Hasilkan sekarang. \nSiapkan semua parameter yang diperlukan dan diinginkan untuk mengedit foto. \nNeurona merupakan kecerdasan buatan yang dilengkapi dengan teknologi canggih, sehingga mengubah atau menghapus latar belakang foto Anda tidak akan menjadi masalah. \nAnda tidak perlu menghabiskan waktu berjam-jam untuk pemrosesan manual, sehingga Anda dapat fokus pada proses kreatif.",
         "title": "Bagaimana cara mengubah warna latar belakang?"
       },
       "3": {
-        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "info": "Untuk pengeditan gratis, Anda hanya perlu membuat akun lalu ikuti petunjuk untuk membuat foto yang dihasilkan. \nKunjungi situs web Neuron. \nKlik tombol \"Hasilkan Sekarang\" dan pilih gambar yang ingin Anda edit. \nTunggu hingga Neuron menghapus latar belakang gambar Anda. \nLakukan perubahan yang diperlukan pada gambar, termasuk mengubah warna latar belakang. \nSimpan gambar yang telah diedit.",
         "title": "Bagaimana cara menggunakan Neurona Gratis?"
       },
       "4": {
-        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "info": "Buka situs di browser web Anda. \nDi halaman utama situs, Anda akan langsung melihat tombol \"Buat sekarang\", klik di atasnya. \nPilih dan konfigurasikan semua parameter penting yang Anda perlukan. \nKlik pada tombol untuk menghasilkan gambar. \nIni akan memakan sedikit waktu Anda. \nSemuanya sudah siap!",
         "title": "Bagaimana cara menghasilkan gambar?"
       },
       "5": {
-        "info": "Cukup unggah gambar dan biarkan aplikasi melakukan semuanya untuk Anda! \nNeurona menggunakan AI untuk secara otomatis menghapus latar belakang dari foto Anda, sehingga memudahkan penyesuaian dan pengeditan gambar secara gratis.",
+        "info": "Promt adalah kunci yang memungkinkan Anda “menghidupkan” jaringan saraf ke arah yang benar. \nIni adalah kueri yang dirancang dengan cermat yang juga mengarahkan perhatian pada aspek data tertentu. \nHal ini memungkinkan Anda untuk \"menyesuaikan\" jaringan saraf untuk melakukan tugas tertentu, memaksanya untuk fokus pada apa yang diperlukan, mengabaikan informasi yang tidak perlu.",
         "title": "Bagaimana cara mengeja promt dengan benar?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Bayar koin"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "PALING POPULER",
+    "choose-plan": "PILIH RENCANA"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Dasbor",
+      "buy-coins": "Beli koin"
+    },
+    "description": "Pilih tarif Anda",
+    "heading": "membeli koin"
+  },
+  "StripeCompletePage": {
+    "default": "Ada yang tidak beres, silakan coba lagi.",
+    "succeeded": "Pembayaran berhasil",
+    "processing": "Pembayaran Anda sedang diproses.",
+    "requires_payment_method": "Pembayaran Anda tidak berhasil, silakan coba lagi."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Kondisi pembayaran yang nyaman",
+      "question": "Mengapa memilih kami?",
+      "list": {
+        "1": {
+          "heading": "PEMBAYARAN AMAN",
+          "description": "Bayar dengan aman dan percaya diri menggunakan kartu kredit atau kripto."
+        },
+        "2": {
+          "heading": "SEPENUHNYA ANONIM",
+          "description": "Kami tidak melacak dan tidak menyimpan gambar yang Anda hasilkan atau perintah yang Anda masukkan."
+        },
+        "3": {
+          "heading": "TIDAK ADA PERPANJANGAN OTOMATIS",
+          "description": "Untuk memastikan Anda hanya membayar produk kami saat Anda"
+        }
+      }
+    },
+    "description": "Pilih paket Anda",
+    "discount": {
+      "heading": "DISKON HINGGA 50%.",
+      "additional": "Terbatas hanya untuk 50 tempat saja",
+      "button": "dapatkan diskon"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "mendapatkan tambahan",
+          "2": "dengan paket PRO tahunan!",
+          "accent": "≈ Diskon 60%."
+        }
+      },
+      "badge": {
+        "text": "Cuci gudang"
+      },
+      "card": {
+        "title": "Promo hingga 15 Desember"
+      },
+      "button": "BELI SEKARANG"
     }
   }
 }

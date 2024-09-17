@@ -1,5 +1,3 @@
-'use client';
-
 import { Card, Panel } from "@/components/ui/compositions"
 import { Button, ButtonGroup, TextContentHeading, TextContentTitle, TextHeading } from "@/components/ui/primitives"
 import { Flex, FlexItem, Section } from "@/components/ui/layout";
@@ -65,6 +63,30 @@ export default function Home() {
     <main>
 		<Section padding="600" className="section section-main main-hero">
 			<Motion type="div" viewport={{ once: true }} initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
+				<div className="main-hero__inner flex-container">
+					<div className="main-hero__content">
+						<TextContentTitle
+							align="center"
+							title="Neurona"
+							subtitle={t('main-hero-subtitle')}
+						/>
+						<ButtonGroup align="center">
+							<Link href="">
+								<Button
+									variant="primary"
+									size="medium"
+									className="main-hero__button"
+								>
+									{t('main-hero-button')}
+								</Button>
+							</Link>
+						</ButtonGroup>
+					</div>
+				</div>
+			</Motion>
+		</Section>
+		{/* <Section padding="600" className="section section-main main-hero">
+			<Motion type="div" viewport={{ once: true }} initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
 				<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556} disablePictureInPicture={true}>
 					<div className="main-hero__content">
 						<TextContentTitle
@@ -85,30 +107,32 @@ export default function Home() {
 					</div>
 				</BackgroundVideo>
 			</Motion>
-		</Section>
+		</Section> */}
 		<Section padding="1600">
 			<Motion type="div" viewport={{ once: true }} initial={{ y: 500 }} whileInView={{ y: 0 }} transition={{ duration: 1 }}>
 				<Panel gap="1200" type="half" className="main-panel">
 					<BackgroundVideo src={Video1} height={350}>
 						<div className="main-panel__button-wrapper">
-							<Button
-								onPress={() => {}}
-								variant="primary"
-								size="medium"
-							>
-								{t('main-panel-button-edit')}
-							</Button>
+							<Link href="">
+								<Button
+									variant="primary"
+									size="medium"
+								>
+									{t('main-panel-button-edit')}
+								</Button>
+							</Link>
 						</div>
 					</BackgroundVideo>
 					<BackgroundVideo src={Video2} height={350}>
 					<div className="main-panel__button-wrapper">
-						<Button
-							onPress={() => {}}
-							variant="primary"
-							size="medium"
-						>
-							{t('main-hero-button-create')}
-						</Button>
+						<Link href="">
+							<Button
+								variant="primary"
+								size="medium"
+							>
+								{t('main-hero-button-create')}
+							</Button>
+						</Link>
 					</div>
 					</BackgroundVideo>
 				</Panel>

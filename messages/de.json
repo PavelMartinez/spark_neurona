@@ -62,23 +62,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "info": "Um ein qualitativ hochwertiges Ergebnis zu erzielen, verwenden Sie Bilder mit klaren Grenzen zwischen Objekt und Hintergrund und vergessen Sie auch nicht die Qualität des Fotos selbst. Je höher diese ist, desto klarer und besser ist das verarbeitete Foto. \nUnser Service ist völlig kostenlos und somit für jeden zugänglich, der eine kreative Bildbearbeitung anstrebt.",
         "title": "Wie erzielt man ein erfolgreiches Ergebnis?"
       },
       "2": {
-        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "info": "Registrieren Sie sich auf der Website, falls Sie dies noch nicht getan haben. \nLaden Sie das Bild hoch, indem Sie auf Jetzt generieren klicken. \nRichten Sie alle notwendigen und gewünschten Parameter für die Fotobearbeitung ein. \nNeurona ist eine künstliche Intelligenz, die mit fortschrittlichen Technologien ausgestattet ist, sodass das Ändern oder Entfernen des Hintergrunds von Ihrem Foto kein Problem darstellt. \nSie müssen nicht stundenlang mit der manuellen Bearbeitung verbringen und können sich auf den kreativen Prozess konzentrieren.",
         "title": "Wie ändere ich die Hintergrundfarbe?"
       },
       "3": {
-        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "info": "Für die kostenlose Bearbeitung müssen Sie lediglich ein Konto erstellen und dann den Anweisungen zum Erstellen des generierten Fotos folgen. \nGehen Sie zur Neurons-Website. \nKlicken Sie auf die Schaltfläche „Jetzt generieren“ und wählen Sie das Bild aus, das Sie bearbeiten möchten. \nWarten Sie, bis Neurons den Hintergrund von Ihrem Bild entfernt hat. \nNehmen Sie die erforderlichen Änderungen am Bild vor, einschließlich der Änderung der Hintergrundfarbe. \nSpeichern Sie das bearbeitete Bild.",
         "title": "Wie kann ich Neurona kostenlos nutzen?"
       },
       "4": {
-        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "info": "Öffnen Sie die Website in Ihrem Webbrowser. \nAuf der Hauptseite der Website sehen Sie sofort die Schaltfläche „Jetzt erstellen“, klicken Sie darauf. \nWählen und konfigurieren Sie alle notwendigen Parameter, die Sie benötigen. \nKlicken Sie auf die Schaltfläche, um ein Bild zu erstellen. \nEs wird ein wenig Zeit in Anspruch nehmen. \nAlles ist fertig!",
         "title": "Wie generiert man ein Bild?"
       },
       "5": {
-        "info": "Laden Sie einfach ein Bild hoch und lassen Sie die App die ganze Arbeit für Sie erledigen! \nNeurona verwendet KI, um automatisch Hintergründe aus Ihrem Foto zu entfernen, sodass Sie Bilder einfach und kostenlos anpassen und bearbeiten können.",
+        "info": "Promt ist ein Schlüssel, mit dem Sie das neuronale Netzwerk in die richtige Richtung „einschalten“ können. \nHierbei handelt es sich um eine sorgfältig konzipierte Abfrage, die auch die Aufmerksamkeit auf bestimmte Aspekte der Daten lenkt. \nAuf diese Weise können Sie das neuronale Netzwerk „abstimmen“, um eine bestimmte Aufgabe auszuführen, indem Sie es zwingen, sich auf das Notwendige zu konzentrieren und unnötige Informationen zu ignorieren.",
         "title": "Wie schreibt man prompt richtig?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Bezahlen Sie für Münzen"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "AM BELIEBTESTEN",
+    "choose-plan": "WÄHLEN SIE PLAN"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Armaturenbrett",
+      "buy-coins": "Kaufen Sie Münzen"
+    },
+    "description": "Wählen Sie Ihren Tarif",
+    "heading": "Münzen kaufen"
+  },
+  "StripeCompletePage": {
+    "default": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "succeeded": "Die Zahlung war erfolgreich",
+    "processing": "Ihre Zahlung wird bearbeitet.",
+    "requires_payment_method": "Ihre Zahlung war nicht erfolgreich. Bitte versuchen Sie es erneut."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Bequeme Zahlungsbedingungen",
+      "question": "Warum uns wählen?",
+      "list": {
+        "1": {
+          "heading": "SICHERE ZAHLUNGEN",
+          "description": "Bezahlen Sie sicher und vertrauensvoll mit Kreditkarte oder Krypto."
+        },
+        "2": {
+          "heading": "VOLLSTÄNDIG ANONYM",
+          "description": "Wir verfolgen und speichern die von Ihnen generierten Bilder oder die von Ihnen eingegebenen Eingabeaufforderungen nicht."
+        },
+        "3": {
+          "heading": "KEINE AUTOMATISCHE ERNEUERUNG",
+          "description": "Um sicherzustellen, dass Sie für unser Produkt nur bezahlen, wenn Sie es kaufen"
+        }
+      }
+    },
+    "description": "Wählen Sie Ihr Paket aus",
+    "discount": {
+      "heading": "BIS ZU 50 % RABATT",
+      "additional": "Begrenzt auf NUR 50 Plätze",
+      "button": "Rabatt erhalten"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "extra bekommen",
+          "2": "mit jährlichem PRO-Plan!",
+          "accent": "≈ 60 % Rabatt"
+        }
+      },
+      "badge": {
+        "text": "Großer Ausverkauf"
+      },
+      "card": {
+        "title": "Aktion bis 15. Dezember"
+      },
+      "button": "JETZT KAUFEN"
     }
   }
 }

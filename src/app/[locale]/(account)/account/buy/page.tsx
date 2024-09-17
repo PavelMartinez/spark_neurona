@@ -12,9 +12,14 @@ import BigStarsImage from '../../../../../../public/BigStars.png'
 import {Link} from '@/i18n/routing';
 import { IconArrowUpRight } from '@/components/ui/icons'
 import BuyCards from '@/components/BuyCards/BuyCards'
+import { LocaleType } from '@/typescript/types/LocaleType'
+import { useTranslations } from 'next-intl'
+import BuyPromoCard from '@/components/BuyPromoCard/BuyPromoCard'
 
 
-const BuyPage = () => {
+const BuyPage = ({ params }: { params: { locale: LocaleType; } }) => {
+    const t = useTranslations();
+
     return (
         <>
         <Section className='buy'>
@@ -24,45 +29,49 @@ const BuyPage = () => {
             className='buy__inner'>
                 <div className="buy__text">
                     <div className="breadcrump">
-                        <Breadcrumb items={[{ title: 'Dashboard', href: "/account" }, { title: 'Buy coins'}]} className='breadcrump__component'/>
+                        <Breadcrumb items={[
+                            { title: t('BuyProvidersPage.breadcrump.dashboard'), href: "/account" },
+                            { title: t('BuyProvidersPage.breadcrump.buy-coins')}
+                        ]}
+                            className='breadcrump__component'/>
                     </div>
                     <div className="buy__heading">
                         <h3 className='buy__heading-h3'>
-                            buy coins
+                            {t('BuyProvidersPage.heading')}
                             <Link className="account__back" href="/account">
                                 <IconArrowUpRight size='20'/>
                             </Link>
                             </h3>
                         <div className="buy__heading-description">
-                            Select your packet
+                            {t('BuyPage.description')}
                         </div>
                     </div>
                 </div>
                 <section className="buy-discount">
                     <div className="buy-discount__content">
                         <div className="buy-discount__content-heading">
-                            UP TO 50% DISCOUNT
+                            {t('BuyPage.discount.heading')}
                         </div>
                         <div className="buy-discount__content-additional">
-                            Limited to 50 spots ONLY 
+                            {t('BuyPage.discount.additional')}
                         </div>
                     </div>
                     <button className="buy-discount__button">
-                        get discount
+                        {t('BuyPage.discount.button')}
                     </button>
                     <Image src={CalendarImage} width={121} height={121} alt="" sizes='100vw' className="buy-discount__image buy-discount__image-calendar" />
 
                     <Image src={EmojiSurpriseImage} width={103} height={103} alt="" sizes='100vw' className="buy-discount__image buy-discount__image-surprise" />
                 </section>
-                <BuyCards />
+                <BuyCards locale={params.locale} />
                 <Flex className="buy-conditions"
                 direction='row' wrap>
                     <FlexItem size='half' className='buy-conditions__part'>
                         <div className="buy-conditions__question">
-                            Why choose us?
+                            {t('BuyPage.conditions.question')}
                         </div>
                         <h2 className="buy-conditions__heading">
-                            Comfortable payment conditions
+                            {t('BuyPage.conditions.heading')}
                         </h2>
                     </FlexItem>
                     <FlexItem size='half' className='buy-conditions__part'>
@@ -74,11 +83,11 @@ const BuyPage = () => {
                             <FlexItem className="buy-conditions__list-item">
                                 <div className="buy-conditions__list-item__text">
                                     <h3 className="buy-conditions__list-item__heading">
-                                        SECURE PAYMENTS
+                                        {t('BuyPage.conditions.list.1.heading')}
                                     </h3>
                                     <div className="buy-conditions__list-item__description">
                                         <p>
-                                        Pay securely with confidence using credit card or crypto. Your bank statement will show &apos;JOYAI&apos;.
+                                            {t('BuyPage.conditions.list.1.description')}
                                         </p>
                                     </div>
                                 </div>
@@ -89,11 +98,11 @@ const BuyPage = () => {
                             <FlexItem className="buy-conditions__list-item">
                                 <div className="buy-conditions__list-item__text">
                                     <h3 className="buy-conditions__list-item__heading">
-                                        FULLY ANONYMOUS
+                                        {t('BuyPage.conditions.list.2.heading')}
                                     </h3>
                                     <div className="buy-conditions__list-item__description">
                                         <p>
-                                            We do not track and do not store the images you generate or the prompts you input.
+                                            {t('BuyPage.conditions.list.2.description')}
                                         </p>
                                     </div>
                                 </div>
@@ -104,11 +113,11 @@ const BuyPage = () => {
                             <FlexItem className="buy-conditions__list-item">
                                 <div className="buy-conditions__list-item__text">
                                     <h3 className="buy-conditions__list-item__heading">
-                                        NO AUTO-RENEWAL
+                                        {t('BuyPage.conditions.list.3.heading')}
                                     </h3>
                                     <div className="buy-conditions__list-item__description">
                                         <p>
-                                            To ensure you only pay for our product when you&apos;re actually using it, we will not charge you automatically.
+                                            {t('BuyPage.conditions.list.3.description')}
                                         </p>
                                     </div>
                                 </div>
@@ -144,51 +153,24 @@ const BuyPage = () => {
                                 <SaleIcon />
                             </div>
                             <div className="buy-promo__badge-text">
-                                Big sale
+                                {t('BuyPage.promo.badge.text')}
                             </div>
                         </div>
                             <h2 className="buy-promo__heading">
                                 <span className="buy-promo__heading-text">
-                                    get extra
+                                    {t('BuyPage.promo.heading.text.1')}
                                 </span>
                                 <span className="buy-promo__heading-text buy-promo__heading-text--accent">
-                                    <p>≈ 60% off</p>
+                                    <p>{t('BuyPage.promo.heading.text.accent')}</p>
                                 </span>
                                 <span className="buy-promo__heading-text">
-                                    with yearly PRO plan!
+                                    {t('BuyPage.promo.heading.text.2')}
                                 </span>
                             </h2>
                         </div>
                     </FlexItem>
                     <FlexItem className="buy-promo__part">
-                        <div className="buy-promo__card">
-                            <div className="buy-promo__card-title">
-                                <div className="buy-promo__card-title__logo">
-                                    <ClockCircleIcon />
-                                </div>
-                                <div className="buy-promo__card-title__text">
-                                    Promo until 31 May
-                                </div>
-                            </div>
-                            <div className="buy-promo__card-price">
-                                <div className="buy-promo__card-price__old">
-                                    800 000 $ CAD
-                                </div>
-                                <div className="buy-promo__card-price__current">
-                                    <div className="buy-promo__card-price__value">
-                                        600 000
-                                    </div>
-                                    <div className="buy-promo__card-price__currency">
-                                        $ CAD
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="buy-promo__button-wrapper">
-                                <button className="buy-promo__button">
-                                    BUY NOW
-                                </button>
-                            </div>
-                        </div>
+                        <BuyPromoCard locale={params.locale} />
                     </FlexItem>
                     <div className="buy-promo__arrow">
                         <PromoArrow />

@@ -8,6 +8,7 @@ import {Link} from '@/i18n/routing';
 import { IconArrowUpRight } from '@/components/ui/icons'
 import StripeLogo from '../../../../../../../public/StripeLogo.png'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 interface BuyProvidersItemProps {
     image: any;
@@ -38,11 +39,12 @@ const BuyProvidersItem = ({ image, discount = 0, url, title, titleColor = "#FCFC
     )
 }
 
-const BuyProvidersPage = ({ params }: { params: { tariff: number; provider: string; } }) => {
-    if(params && !tariffsData.find((value) => value.id == params.tariff))
+const BuyProvidersPage = ({ params }: { params: { tariff: string; provider: string; } }) => {
+    if(params && !params.tariff)
     {
         return (<>No such tariff</>)
     }
+    const t = useTranslations("BuyProvidersPage")
     return (
         <Section className='buy'>
             <Flex
@@ -52,22 +54,22 @@ const BuyProvidersPage = ({ params }: { params: { tariff: number; provider: stri
                 <div className="buy__text">
                     <div className="breadcrump">
                         <Breadcrumb items={[
-                                { title: 'Dashboard', href: "/account" },
-                                { title: 'Buy coins', href: "/account/buy" },
-                                { title: 'Tariff ' + params.tariff }
+                                { title: t('breadcrump.dashboard'), href: "/account" },
+                                { title: t('breadcrump.buy-coins'), href: "/account/buy" },
+                                { title: t('description') }
                             ]}
                             className='breadcrump__component'
                         />
                     </div>
                     <div className="buy__heading">
                         <h3 className='buy__heading-h3'>
-                            buy coins
+                            {t('heading')}
                             <Link className="account__back" href="/account/buy">
                                 <IconArrowUpRight size='20'/>
                             </Link>
                             </h3>
                         <div className="buy__heading-description">
-                            Select your rate
+                            {t('description')}
                         </div>
                     </div>
                     <div className="buy-providers">

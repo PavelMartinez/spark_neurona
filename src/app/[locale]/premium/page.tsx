@@ -1,10 +1,11 @@
 import BannerSection from '@/components/BannerSection/BannerSection'
 import BuyCards from '@/components/BuyCards/BuyCards'
 import { Flex, Section } from '@/components/ui/layout'
+import { LocaleType } from '@/typescript/types/LocaleType'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
-const PremiumPage = () => {
+const PremiumPage = ({ params }: { params: { locale: LocaleType } }) => {
     const t = useTranslations("PremiumPage")
     return (
         <Section 
@@ -23,7 +24,7 @@ const PremiumPage = () => {
                     {t('description')}
                 </div>
                 <div className="premium__cards">
-                    <BuyCards />
+                    <BuyCards locale={params.locale} />
                 </div>
                 <div className="premium__banner">
                     <BannerSection />

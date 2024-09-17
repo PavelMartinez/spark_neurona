@@ -54,7 +54,7 @@ const AccountPage = async () => {
 									</div>
 									<div className="account-balance__counter">
 										<div className="account-balance__counter-text">
-											{dbUser?.dollars || 0}
+											{dbUser?.coins || 0}
 										</div>
 										<div className="account-balance__counter-icon">
 											<DiamondIcon />
@@ -110,7 +110,7 @@ const AccountPage = async () => {
 							</div>
 						</Button>
 					</Link>
-					<AccountConvert balance={dbUser?.dollars || 0}/>
+					{/* <AccountConvert balance={dbUser?.dollars || 0}/> */}
 					<div className="account-referal">
 						<div className="account-referal__part">
 							<div className="account-referal__badge">

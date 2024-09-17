@@ -35,6 +35,7 @@ import { useRouter } from "next/navigation";
 import NavigationLink from "@/components/NavigationLink/NavigationLink";
 import { useLocale, useTranslations } from "next-intl";
 import LanguageListProps from "@/typescript/interfaces/Language/LanguageListProps";
+import { locales } from "@/data/i18n/locales";
 
 export function HeaderAuth() {
   const t = useTranslations('Header')
@@ -97,78 +98,6 @@ export function HeaderAuth() {
     }
   }, [searchParams])
 
-  const locales: LanguageListProps[] = [
-    {
-      locale: "en",
-      title: "English",
-      icon: <EnFlagIcon />
-    },
-    {
-      locale: "es",
-      title: "Spanish",
-      icon: <EsFlagIcon />
-    },
-    {
-      locale: "ja",
-      title: "日本語",
-      icon: <JaFlagIcon />
-    },
-    {
-      locale: "tr",
-      title: "Türkçe",
-      icon: <EnFlagIcon />
-    },
-    {
-      locale: "hi",
-      title: "भारतीय",
-      icon: <HiFlagIcon />
-    },
-    {
-      locale: "zh",
-      title: "中文",
-      icon: <EnFlagIcon />
-    },
-    {
-      locale: "pt",
-      title: "Português",
-      icon: <PtFlagIcon />
-    },
-    {
-      locale: "it",
-      title: "Italiano",
-      icon: <ItFlagIcon />
-    },
-    {
-      locale: "ar",
-      title: "اللغة العربية",
-      icon: <ArFlagIcon />
-    },
-    {
-      locale: "de",
-      title: "Deutsch",
-      icon: <DeFlagIcon />
-    },
-    {
-      locale: "fr",
-      title: "Français",
-      icon: <FrFlagIcon />
-    },
-    {
-      locale: "id",
-      title: "Bahasa",
-      icon: <IdFlagIcon />
-    },
-    {
-      locale: "ko",
-      title: "한국어",
-      icon: <KrFlagIcon />
-    },
-    {
-      locale: "ru",
-      title: "Русский",
-      icon: <RuFlagIcon />
-    },
-  ]
 
   const Language = () => {
     const items: MenuProps['items'] = locales.map((item, index) => {

@@ -71,23 +71,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Téléchargez simplement une image et laissez l'application faire tout le travail à votre place ! \nNeurona utilise l'IA pour supprimer automatiquement les arrière-plans de votre photo, ce qui facilite la personnalisation et la modification des images gratuitement.",
+        "info": "Pour obtenir un résultat de haute qualité, utilisez des images avec des limites claires entre l'objet et l'arrière-plan, et n'oubliez pas non plus la qualité de la photo elle-même, plus elle est élevée, plus la photo traitée est claire et de meilleure qualité. \nNotre service est entièrement gratuit, ce qui le rend accessible à tous ceux qui aspirent à l'édition d'images créatives.",
         "title": "Comment obtenir un résultat réussi ?"
       },
       "2": {
-        "info": "Téléchargez simplement une image et laissez l'application faire tout le travail à votre place ! \nNeurona utilise l'IA pour supprimer automatiquement les arrière-plans de votre photo, ce qui facilite la personnalisation et la modification des images gratuitement.",
+        "info": "Inscrivez-vous sur le site si ce n'est pas déjà fait. \nTéléchargez l'image en cliquant sur Générer maintenant. \nConfigurez tous les paramètres nécessaires et souhaités pour la retouche photo. \nNeurona est une intelligence artificielle dotée de technologies avancées, donc changer ou supprimer l'arrière-plan de votre photo ne sera pas un problème. \nVous n'avez pas besoin de passer des heures en traitement manuel, ce qui vous permet de vous concentrer sur le processus créatif.",
         "title": "Comment changer la couleur de fond ?"
       },
       "3": {
-        "info": "Téléchargez simplement une image et laissez l'application faire tout le travail à votre place ! \nNeurona utilise l'IA pour supprimer automatiquement les arrière-plans de votre photo, ce qui facilite la personnalisation et la modification des images gratuitement.",
+        "info": "Pour une édition gratuite, il vous suffit de créer un compte puis de suivre les instructions pour créer la photo générée. \nAccédez au site Web des Neurones. \nCliquez sur le bouton \"Générer maintenant\" et sélectionnez l'image que vous souhaitez modifier. \nAttendez que Neurons supprime l'arrière-plan de votre image. \nApportez les modifications nécessaires à l'image, notamment en changeant la couleur d'arrière-plan. \nEnregistrez l'image modifiée.",
         "title": "Comment utiliser Neurona gratuitement ?"
       },
       "4": {
-        "info": "Téléchargez simplement une image et laissez l'application faire tout le travail à votre place ! \nNeurona utilise l'IA pour supprimer automatiquement les arrière-plans de votre photo, ce qui facilite la personnalisation et la modification des images gratuitement.",
+        "info": "Ouvrez le site dans votre navigateur Web. \nSur la page principale du site, vous verrez immédiatement le bouton \"Créer maintenant\", cliquez dessus. \nSélectionnez et configurez tous les paramètres nécessaires dont vous avez besoin. \nCliquez sur le bouton pour générer une image. \nCela prendra un peu de votre temps. \nTout est prêt !",
         "title": "Comment générer une image ?"
       },
       "5": {
-        "info": "Téléchargez simplement une image et laissez l'application faire tout le travail à votre place ! \nNeurona utilise l'IA pour supprimer automatiquement les arrière-plans de votre photo, ce qui facilite la personnalisation et la modification des images gratuitement.",
+        "info": "Promt est une clé qui vous permet « d'allumer » le réseau neuronal dans la bonne direction. \nIl s’agit d’une requête soigneusement conçue qui attire également l’attention sur des aspects spécifiques des données. \nCela vous permet de « régler » le réseau neuronal pour effectuer une tâche spécifique, l'obligeant à se concentrer sur ce qui est nécessaire, en ignorant les informations inutiles.",
         "title": "Comment épeler correctement l'invite ?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Payer des pièces"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "LE PLUS POPULAIRE",
+    "choose-plan": "CHOISISSEZ LE FORFAIT"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Tableau de bord",
+      "buy-coins": "Acheter des pièces"
+    },
+    "description": "Sélectionnez votre tarif",
+    "heading": "acheter des pièces"
+  },
+  "StripeCompletePage": {
+    "default": "Quelque chose s'est mal passé, veuillez réessayer.",
+    "succeeded": "Paiement réussi",
+    "processing": "Votre paiement est en cours de traitement.",
+    "requires_payment_method": "Votre paiement n'a pas abouti, veuillez réessayer."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Conditions de paiement confortables",
+      "question": "Pourquoi nous choisir ?",
+      "list": {
+        "1": {
+          "heading": "PAIEMENTS SÉCURISÉS",
+          "description": "Payez en toute sécurité et en toute confiance par carte de crédit ou crypto."
+        },
+        "2": {
+          "heading": "ENTIÈREMENT ANONYME",
+          "description": "Nous ne suivons pas et ne stockons pas les images que vous générez ou les invites que vous saisissez."
+        },
+        "3": {
+          "heading": "PAS DE RENOUVELLEMENT AUTOMATIQUE",
+          "description": "Pour vous assurer que vous ne payez notre produit que lorsque vous"
+        }
+      }
+    },
+    "description": "Sélectionnez votre paquet",
+    "discount": {
+      "heading": "JUSQU'À 50% DE RÉDUCTION",
+      "additional": "Limité à 50 places SEULEMENT",
+      "button": "obtenir une réduction"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "obtenir un supplément",
+          "2": "avec plan PRO annuel !",
+          "accent": "≈ 60% de réduction"
+        }
+      },
+      "badge": {
+        "text": "Grande vente"
+      },
+      "card": {
+        "title": "Promo jusqu'au 15 décembre"
+      },
+      "button": "ACHETER MAINTENANT"
     }
   }
 }

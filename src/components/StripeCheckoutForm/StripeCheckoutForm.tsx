@@ -8,11 +8,12 @@ import { StripePaymentElementOptions } from "@stripe/stripe-js";
 import { Button } from "../ui/primitives";
 import "./style.scss"
 import { IconLoader } from "../ui/icons";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 
 export default function CheckoutForm({ dpmCheckerLink }: { dpmCheckerLink: string }) {
   const stripe = useStripe();
   const elements = useElements();
+  const pathname = usePathname();
 
 
   const [message, setMessage] = React.useState<string>("");
@@ -33,7 +34,7 @@ export default function CheckoutForm({ dpmCheckerLink }: { dpmCheckerLink: strin
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000",
+        return_url: `${process.env.NEXT_PUBLIC_URL}${pathname}`,
       },
     });
 
@@ -60,7 +61,7 @@ export default function CheckoutForm({ dpmCheckerLink }: { dpmCheckerLink: strin
     <>
       <form className="payment-form" onSubmit={handleSubmit}>
         <PaymentElement className="payment-form__element" options={paymentElementOptions} />
-        <Button isDisabled={isLoading || !stripe || !elements} className="payment-form__button">
+        <Button isDisabled={isLoading || !stripe || !elements} className="payment-form__button" type="submit">
           <span className="payment-form__button-text">
             {isLoading ? <IconLoader /> : "Pay now"}
           </span>

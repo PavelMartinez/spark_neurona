@@ -18,6 +18,7 @@ const StripePay = ({ params }: { params: { tariff: number; } }) => {
     const [clientSecret, setClientSecret] = useState("");
     const [dpmCheckerLink, setDpmCheckerLink] = useState("");
     const [confirmed, setConfirmed] = useState<string>("");
+    const [amount, setAmount] = useState<{ value: number; currency: string; }>();
     const locale = useLocale();
     const format = useFormatter();
     const t = useTranslations()
@@ -34,13 +35,15 @@ const StripePay = ({ params }: { params: { tariff: number; } }) => {
         body: JSON.stringify({ data: {
             tariff: params.tariff,
             locale
-        } }),
+            } }),
         })
         .then((res) => res.json())
         .then((data) => {
-          setClientSecret(data.client_secret);
-          // [DEV] For demo purposes only
-          setDpmCheckerLink(data.dpmCheckerLink);
+            setClientSecret(data.client_secret);
+            setAmount(data.amount);
+
+            // [DEV] For demo purposes only
+            setDpmCheckerLink(data.dpmCheckerLink);
         });
     }, []);
   
@@ -53,61 +56,60 @@ const StripePay = ({ params }: { params: { tariff: number; } }) => {
     };
     const options: StripeElementsOptions = {
         clientSecret: clientSecret,
-        // appearance,
         locale: locale as StripeElementLocale,
         appearance: appearance
     };
 
     return (
         <>
-                    <Section className='buy'>
-                        <Flex
-                            container
-                            direction='column'
-                            className='buy__inner'
-                        >
-                            <div className="buy__text">
-                                <div className="breadcrump">
-                                    <Breadcrumb items={[
-                                            { title: 'Dashboard', href: "/account" },
-                                            { title: 'Buy coins', href: "/account/buy" },
-                                            { title: 'Tariff ' + params.tariff, href: "/account/buy/" + params.tariff },
-                                            { title: 'Stripe' }
-                                        ]} 
-                                        className='breadcrump__component'/>
-                                </div>
-                                <div className="buy__heading">
-                                    <h3 className='buy__heading-h3'>
-                                        buy coins
-                                        <Link className="account__back" href={`/account/buy/${params.tariff}`}>
-                                            <IconArrowUpRight size='20'/>
-                                        </Link>
-                                        </h3>
-                                    <div className="buy__heading-description">
-                                        Enter your credentials
-                                    </div>
-                                </div>
+            <Section className='buy'>
+                <Flex
+                    container
+                    direction='column'
+                    className='buy__inner'
+                >
+                    <div className="buy__text">
+                        <div className="breadcrump">
+                            <Breadcrumb items={[
+                                    { title: 'Dashboard', href: "/account" },
+                                    { title: 'Buy coins', href: "/account/buy" },
+                                    { title: 'Tariff ' + params.tariff, href: "/account/buy/" + params.tariff },
+                                    { title: 'Stripe' }
+                                ]} 
+                                className='breadcrump__component'/>
+                        </div>
+                        <div className="buy__heading">
+                            <h3 className='buy__heading-h3'>
+                                buy coins
+                                <Link className="account__back" href={`/account/buy/${params.tariff}`}>
+                                    <IconArrowUpRight size='20'/>
+                                </Link>
+                                </h3>
+                            <div className="buy__heading-description">
+                                Enter your credentials
                             </div>
-                            <div className="buy-layout">
-                                <div className="buy-layout__info">
-                                    <div className="buy-layout__info-text">
-                                        {t('BuyLayout.info.text')}
-                                    </div>
-                                    <div className="buy-layout__info-amount">
-                                        {format.number(499.9, {style: 'currency', currency: 'RUB'})}
-                                    </div>
-                                </div>
-                                <div className="stripe-payment">
-                                {clientSecret ?
-                                    <Elements stripe={stripePromise} options={options}>
-                                        {confirmed ? <StripeCompletePage /> : <StripeCheckoutForm dpmCheckerLink={dpmCheckerLink} />}
-                                    </Elements> :
-                                    <Skeleton active />
-                                }
-                                </div>
+                        </div>
+                    </div>
+                    <div className="buy-layout">
+                        <div className="buy-layout__info">
+                            <div className="buy-layout__info-text">
+                                {t('BuyLayout.info.text')}
                             </div>
-                        </Flex>
-                    </Section>
+                            <div className="buy-layout__info-amount">
+                                {amount ? format.number(amount.value, {style: 'currency', currency: amount.currency}) : <Skeleton active />}
+                            </div>
+                        </div>
+                        <div className="stripe-payment">
+                        {clientSecret ?
+                            <Elements stripe={stripePromise} options={options}>
+                                {confirmed ? <StripeCompletePage /> : <StripeCheckoutForm dpmCheckerLink={dpmCheckerLink} />}
+                            </Elements> :
+                            <Skeleton active />
+                        }
+                        </div>
+                    </div>
+                </Flex>
+            </Section>
         </>
     )
 }

@@ -63,23 +63,23 @@
     "main": {
       "1": {
         "title": "How to get a successful result?",
-        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+        "info": "To get a high-quality result, use images with clear boundaries between the object and the background, and also do not forget about the quality of the photo itself, the higher it is, the clearer and better the processed photo. Our service is completely free, which makes it accessible to anyone who aspires to creative image editing."
       },
       "2": {
         "title": "How do I change the background color?",
-        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+        "info": "Register on the site if you haven't already done so. Upload the image by clicking Generate now. Set up all the necessary and desired parameters for photo editing. Neurona is an artificial intelligence equipped with advanced technologies, so changing or removing the background from your photo will not be a problem. You don't have to spend hours on manual processing, allowing you to focus on the creative process."
       },
       "3": {
         "title": "How to use Neurona for Free?",
-        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+        "info": "For free editing, you just need to create an account and then follow the instructions to create the generated photo. Go to the Neurons website. Click the \"Generate Now\" button and select the image you want to edit. Wait for Neurons to remove the background from your image. Make the necessary changes to the image, including changing the background color. Save the edited image."
       },
       "4": {
         "title": "How do you generate a picture?",
-        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+        "info": "Open the site in your web browser. On the main page of the site, you will immediately see the \"Create now\" button, click on it. Select and configure all the necessary parameters that you need. Click on the button to generate an image. It will take a little of your time. Everything is ready!"
       },
       "5": {
         "title": "How to spell promt correctly?",
-        "info": "Just upload an image and let the app do all the work for you! Neurona uses AI to automatically remove backgrounds from your photo, making it easy to customize and edit images for free."
+        "info": "Promt is a key that allows you to “turn on” the neural network in the right direction. This is a carefully designed query that also directs attention to specific aspects of the data. This allows you to “tune” the neural network to perform a specific task, forcing it to focus on what is necessary, ignoring unnecessary information."
       }
     }
   },
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Pay for coins"
+    }
+  },
+  "BuyCardsItem": {
+    "choose-plan": "CHOOSE PLAN",
+    "most-popular": "MOST POPULAR"
+  },
+  "BuyProvidersPage": {
+    "heading": "buy coins",
+    "description": "Select your rate",
+    "breadcrump": {
+      "dashboard": "Dashboard",
+      "buy-coins": "Buy coins"
+    }
+  },
+  "StripeCompletePage": {
+    "succeeded": "Payment succeeded",
+    "processing": "Your payment is processing.",
+    "requires_payment_method": "Your payment was not successful, please try again.",
+    "default": "Something went wrong, please try again."
+  },
+  "BuyPage": {
+    "description": "Select your packet",
+    "discount": {
+      "heading": "UP TO 50% DISCOUNT",
+      "additional": "Limited to 50 spots ONLY",
+      "button": "get discount"
+    },
+    "conditions": {
+      "question": "Why choose us?",
+      "heading": "Comfortable payment conditions",
+      "list": {
+        "1": {
+          "heading": "SECURE PAYMENTS",
+          "description": "Pay securely with confidence using credit card or crypto."
+        },
+        "2": {
+          "heading": "FULLY ANONYMOUS",
+          "description": "We do not track and do not store the images you generate or the prompts you input."
+        },
+        "3": {
+          "heading": "NO AUTO-RENEWAL",
+          "description": "To ensure you only pay for our product when you&apos;re actually using it, we will not charge you automatically."
+        }
+      }
+    },
+    "promo": {
+      "badge": {
+        "text": "Big sale"
+      },
+      "heading": {
+        "text": {
+          "1": "get extra",
+          "2": "with yearly PRO plan!",
+          "accent": "≈ 60% off"
+        }
+      },
+      "card": {
+        "title": "Promo until 15 December"
+      },
+      "button": "BUY NOW"
     }
   }
 }

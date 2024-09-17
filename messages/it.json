@@ -71,23 +71,23 @@
   "FAQ": {
     "main": {
       "1": {
-        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "info": "Per ottenere un risultato di alta qualità, utilizzare immagini con confini chiari tra l'oggetto e lo sfondo e non dimenticare la qualità della foto stessa, più è alta, più chiara e migliore è la foto elaborata. \nIl nostro servizio è completamente gratuito, il che lo rende accessibile a chiunque aspiri all'editing creativo delle immagini.",
         "title": "Come ottenere un risultato positivo?"
       },
       "2": {
-        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "info": "Registrati al sito se non l'hai già fatto. \nCarica l'immagine facendo clic su Genera ora. \nImposta tutti i parametri necessari e desiderati per il fotoritocco. \nNeurona è un'intelligenza artificiale dotata di tecnologie avanzate, quindi cambiare o rimuovere lo sfondo dalla tua foto non sarà un problema. \nNon devi dedicare ore all'elaborazione manuale, permettendoti di concentrarti sul processo creativo.",
         "title": "Come posso cambiare il colore dello sfondo?"
       },
       "3": {
-        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "info": "Per la modifica gratuita, devi solo creare un account e poi seguire le istruzioni per creare la foto generata. \nVai al sito Neuroni. \nFai clic sul pulsante \"Genera ora\" e seleziona l'immagine che desideri modificare. \nAttendi che Neurons rimuova lo sfondo dalla tua immagine. \nApporta le modifiche necessarie all'immagine, inclusa la modifica del colore di sfondo. \nSalva l'immagine modificata.",
         "title": "Come utilizzare Neurona gratuitamente?"
       },
       "4": {
-        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "info": "Apri il sito nel tuo browser web. \nNella pagina principale del sito vedrai immediatamente il pulsante \"Crea ora\", fai clic su di esso. \nSeleziona e configura tutti i parametri necessari di cui hai bisogno. \nFare clic sul pulsante per generare un'immagine. \nCi vorrà un po' del tuo tempo. \nTutto è pronto!",
         "title": "Come si genera un'immagine?"
       },
       "5": {
-        "info": "Basta caricare un'immagine e lasciare che l'app faccia tutto il lavoro per te! \nNeurona utilizza l'intelligenza artificiale per rimuovere automaticamente gli sfondi dalle tue foto, semplificando la personalizzazione e la modifica delle immagini gratuitamente.",
+        "info": "Promt è una chiave che ti consente di \"accendere\" la rete neurale nella giusta direzione. \nSi tratta di una query progettata con cura che indirizza l'attenzione anche su aspetti specifici dei dati. \nCiò consente di “sintonizzare” la rete neurale per eseguire un compito specifico, costringendola a concentrarsi su ciò che è necessario, ignorando le informazioni non necessarie.",
         "title": "Come si scrive correttamente il messaggio?"
       }
     }
@@ -300,6 +300,66 @@
   "BuyLayout": {
     "info": {
       "text": "Paga con le monete"
+    }
+  },
+  "BuyCardsItem": {
+    "most-popular": "PIÙ POPOLARE",
+    "choose-plan": "SCEGLI IL PIANO"
+  },
+  "BuyProvidersPage": {
+    "breadcrump": {
+      "dashboard": "Pannello di controllo",
+      "buy-coins": "Acquista monete"
+    },
+    "description": "Seleziona la tua tariffa",
+    "heading": "comprare monete"
+  },
+  "StripeCompletePage": {
+    "default": "Qualcosa è andato storto, riprova.",
+    "succeeded": "Pagamento riuscito",
+    "processing": "Il tuo pagamento è in fase di elaborazione.",
+    "requires_payment_method": "Il tuo pagamento non è andato a buon fine, riprova."
+  },
+  "BuyPage": {
+    "conditions": {
+      "heading": "Condizioni di pagamento comode",
+      "question": "Perchè sceglierci?",
+      "list": {
+        "1": {
+          "heading": "PAGAMENTI SICURI",
+          "description": "Paga in tutta sicurezza utilizzando carta di credito o criptovaluta."
+        },
+        "2": {
+          "heading": "COMPLETAMENTE ANONIMO",
+          "description": "Non tracciamo e non memorizziamo le immagini generate o le richieste immesse."
+        },
+        "3": {
+          "heading": "NESSUN RINNOVO AUTOMATICO",
+          "description": "Per assicurarti di pagare il nostro prodotto solo quando lo fai"
+        }
+      }
+    },
+    "description": "Seleziona il tuo pacchetto",
+    "discount": {
+      "heading": "FINO AL 50% DI SCONTO",
+      "additional": "Limitato SOLO a 50 posti",
+      "button": "ottenere uno sconto"
+    },
+    "promo": {
+      "heading": {
+        "text": {
+          "1": "ottenere di più",
+          "2": "con piano PRO annuale!",
+          "accent": "≈ 60% di sconto"
+        }
+      },
+      "badge": {
+        "text": "Grande vendita"
+      },
+      "card": {
+        "title": "Promozione fino al 15 dicembre"
+      },
+      "button": "ACQUISTA ORA"
     }
   }
 }
