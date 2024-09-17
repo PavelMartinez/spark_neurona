@@ -40,11 +40,11 @@ const BuyProvidersItem = ({ image, discount = 0, url, title, titleColor = "#FCFC
 }
 
 const BuyProvidersPage = ({ params }: { params: { tariff: string; provider: string; } }) => {
+    const t = useTranslations("BuyProvidersPage")
     if(params && !params.tariff)
     {
         return (<>No such tariff</>)
     }
-    const t = useTranslations("BuyProvidersPage")
     return (
         <Section className='buy'>
             <Flex
