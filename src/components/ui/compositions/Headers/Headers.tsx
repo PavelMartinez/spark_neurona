@@ -44,17 +44,18 @@ export function HeaderAuth() {
   const [open, setOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState<boolean>(false)
   const [authScreen, setAuthScreen] = useState<Screens>(Screens.LOGIN)
-
-  useEffect(() => {
-    console.log(user)
-  }, [isLoaded])
+  const { isTabletDown } = useMediaQuery();
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const router = useRouter();
+  const locale = useLocale();
 
   const userButtons = (
     <>
       <Button
         variant="primary"
         size="medium"
-        className={"header__button"}
+        className={`header__button ${pathname === '/' ? "header__button--main" : ""}`}
         onPress={() =>
           {
             setAuthScreen(Screens.LOGIN);
@@ -78,12 +79,6 @@ export function HeaderAuth() {
       </Button> */}
     </>
   );
-
-  const { isTabletDown } = useMediaQuery();
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const router = useRouter();
-  const locale = useLocale();
 
   useEffect(() => {
     if(searchParams.has("sign-in"))
@@ -133,7 +128,7 @@ export function HeaderAuth() {
       }}>
         <Dropdown trigger={["click"]} menu={{ items }} placement="bottom" overlayClassName='language__dropdown'>
           <button className="language">
-            <div className="language__icon">
+            <div className={`language__icon ${pathname === '/' ? "language__icon--main" : ""}`}>
               {currentLocale?.icon}
             </div>
             <div className="language__text">
@@ -324,9 +319,10 @@ export function HeaderAuth() {
 
 export type HeaderProps = Omit<SectionProps, "variant" | "padding" | "src">;
 export function Header({ className, ...props }: HeaderProps) {
+  const pathname = usePathname()
   return (
     <Section
-      className="header"
+      className={`header ${pathname === "/" ? "header--main" : ""}`}
       elementType="header"
       variant="stroke"
       {...props}

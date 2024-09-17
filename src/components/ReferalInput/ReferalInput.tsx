@@ -12,7 +12,6 @@ interface ReferalInputProps {
     id: string;
 }
 
-
 const ReferalInput = ({ id }: ReferalInputProps) => {
     const referal: string = `${process.env.NEXT_PUBLIC_URL}/referal/${id}`;
     const [messageApi, contextHolder] = message.useMessage();

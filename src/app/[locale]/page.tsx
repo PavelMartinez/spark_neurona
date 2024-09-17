@@ -8,6 +8,12 @@ import Image from 'next/image'
 import MainVideo from '/videos/main-video.mp4'
 import Video1 from '/videos/video-1.mp4'
 import Video2 from '/videos/video-2.mp4'
+import MainImage from '../../../public/MainImage.png'
+
+import MainHeroImage1 from '../../../public/MainHero1.png'
+import MainHeroImage2 from '../../../public/MainHero2.png'
+import MainHeroImage3 from '../../../public/MainHero3.png'
+import MainHeroImage4 from '../../../public/MainHero4.png'
 
 import ImageFunctions1 from '../../../public/functions1.png'
 import ImageFunctions2 from '../../../public/functions2.png'
@@ -61,30 +67,47 @@ export default function Home() {
 	}
   return (
     <main>
-		<Section padding="600" className="section section-main main-hero">
+		<section className="main-hero">
+			<div className="main-hero__background"></div>
+			<Flex container className="main-hero__design-container">
+				<div className="main-hero__circle main-hero__circle--blue"></div>
+				<div className="main-hero__circle main-hero__circle--violet"></div>
+				<div className="main-hero__circle main-hero__circle--pink"></div>
+				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--1">
+					<Image src={MainHeroImage1} alt="" className="main-hero__smallimage" width={315} height={315} sizes="100vw" />
+				</div>
+				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--2">
+					<Image src={MainHeroImage2} alt="" className="main-hero__smallimage" width={260} height={260} sizes="100vw" />
+				</div>
+				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--3">
+					<Image src={MainHeroImage3} alt="" className="main-hero__smallimage" width={240} height={240} sizes="100vw" />
+				</div>
+				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--4">
+					<Image src={MainHeroImage4} alt="" className="main-hero__smallimage" width={240} height={240} sizes="100vw" />
+				</div>
+			</Flex>
 			<Motion type="div" viewport={{ once: true }} initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
-				<div className="main-hero__inner flex-container">
+				<div className="main-hero__inner">
 					<div className="main-hero__content">
-						<TextContentTitle
-							align="center"
-							title="Neurona"
-							subtitle={t('main-hero-subtitle')}
-						/>
-						<ButtonGroup align="center">
-							<Link href="">
-								<Button
-									variant="primary"
-									size="medium"
-									className="main-hero__button"
-								>
-									{t('main-hero-button')}
-								</Button>
-							</Link>
-						</ButtonGroup>
+						<h1 className="main-hero__content-title">
+							Neurona
+						</h1>
+						<div className="main-hero__content-subtitle">
+							<p>
+								{t('subtitle')}
+							</p>
+						</div>
+						<Link href="/generator" className="main-hero__button">
+							{t('main-hero-button')}
+						</Link>
+					</div>
+					<div className="main-hero__image-wrapper">
+						<Image src={MainImage} alt="Neurona Interface" className="main-hero__image" width={0} height={0} sizes="100vw"/>
+						<div className="main-hero__image-gradient"></div>
 					</div>
 				</div>
 			</Motion>
-		</Section>
+		</section>
 		{/* <Section padding="600" className="section section-main main-hero">
 			<Motion type="div" viewport={{ once: true }} initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
 				<BackgroundVideo src={MainVideo} className="main-hero__inner flex-container" height={556} disablePictureInPicture={true}>

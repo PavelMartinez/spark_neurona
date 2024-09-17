@@ -1,9 +1,14 @@
 .header {
     position: unset;
     padding-bottom: 0 !important;
+    background: unset !important;
 
     .navigation-direction-row {
         gap: 62px;
+    }
+
+    &--main {
+        position: absolute !important;
     }
 
     &__logo {
@@ -58,6 +63,13 @@
         width: 190px;
         height: 47px;
         border-radius: 10px !important;
+
+        &--main {
+            background: rgba(255, 255, 255, 0.20) !important;
+
+            box-shadow: 0px 0px 17.4px 4.329px rgba(144, 55, 255, 0.80) !important;
+            backdrop-filter: blur(25px) !important;
+        }
     }
 }
 
@@ -84,6 +96,10 @@
         border-radius: 50px;
         @include flex-center;
         background: var(--back-login, #131313);
+
+        &--main {
+            background: none !important;
+        }
     }
     &__dropdown {
         .ant-dropdown-menu {
