@@ -8,6 +8,7 @@ import { Sender } from '@/typescript/enums/Chat/Sender';
 import MessagesItem from './MessagesItem';
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
+import { useMessages } from '@/utils/useMessages';
 
 const ChatBox = () => {
     const [history, setHistory] = useState<MessagesItemProps[]>([]);
@@ -17,6 +18,7 @@ const ChatBox = () => {
     const chatbox = useRef<null | HTMLDivElement>(null);
     const chatboxWrapper = useRef<null | HTMLDivElement>(null);
     const t = useTranslations("ChatBox");
+    const { addMessage, messages, isLoadingAnswer } = useMessages();
 
     const scrollToBottom = () => {
         chatbox.current?.scrollIntoView(false);
@@ -39,21 +41,34 @@ const ChatBox = () => {
         scrollToBottom();
     }, [history])
 
+    useEffect(() => {
+        if(messages)
+        {
+            setHistory(messages.filter(message => message.role !== "system").map(message => {
+                return {
+                    sender: message.role === "assistant" ? Sender.AI : Sender.USER,
+                    text: message.content
+                }
+            }))
+        }
+    }, [messages])
+
     const handleInputChange = (event: React.FormEvent<HTMLInputElement>) => {
         setSearch(event.currentTarget.value);
     }
 
     const sendPrompt = (prompt: string) => {
-        setHistory([...history,
-            {
-                sender: Sender.USER,
-                text: prompt
-            },
-            {
-                sender: Sender.AI,
-                text: `## It is a test for your prompt\\nAI answer for prompt:\\n\\n${prompt}`
-            }
-        ])
+        addMessage(prompt)
+        // setHistory([...history,
+        //     {
+        //         sender: Sender.USER,
+        //         text: prompt
+        //     },
+        //     {
+        //         sender: Sender.AI,
+        //         text: `## It is a test for your prompt\\nAI answer for prompt:\\n\\n${prompt}`
+        //     }
+        // ])
     }
 
     const handleSubmitInput = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -102,7 +117,7 @@ const ChatBox = () => {
                 </button>
                 <div className='messages__inner' ref={chatbox}>
                     {history.map((value, index) => (
-                        <MessagesItem sender={value.sender} text={value.text} key={index}/>
+                        <MessagesItem sender={value.sender} text={value.text} key={index} />
                     ))}
                 </div>
             </div>
