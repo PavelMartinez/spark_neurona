@@ -6,6 +6,7 @@
     align-items: center;
     padding-top: 152px;
     position: relative;
+    overflow: hidden;
 
     height: 1275px;
 
@@ -23,8 +24,7 @@
         
         height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
+        @include abs-center;
     }
 
     &__smallimage {
