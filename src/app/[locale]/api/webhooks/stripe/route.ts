@@ -11,11 +11,10 @@
  * @url https://github.com/tego101/nextjs-14-stripe-webhooks
  */
 import Stripe from "stripe";
-import { NextApiRequest, NextApiResponse } from "next";
-import { StripeError } from "@stripe/stripe-js";
 import { dbConnect } from "@/database/db";
 import { User } from "@/database/models/User";
 import { PaymentDone } from "@/typescript/enums/AccountTable/PaymentDone";
+import { NextRequest, NextResponse } from "next/server";
  
 
 type EventName =
@@ -423,9 +422,9 @@ async function POST(request: Request) {
 	}
 }
 
-async function GET(request: NextApiRequest, response: NextApiResponse) {
+async function GET(request: NextRequest) {
 	// Bad Request or how ever you want to respond.
-	return response.status(400).json({ error: "Bad Request" });
+	return NextResponse.json({ error: "Bad Request" }, { status: 400 });
 }
 
 export { POST, GET };
