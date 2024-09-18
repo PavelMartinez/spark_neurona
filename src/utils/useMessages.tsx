@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
+import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useEffect, useState } from 'react'
 import { sendMessage } from './sendMessage'
 import { ChatCompletionRequestMessage } from '@/typescript/types/ChatCompletionRequestMessage'
 import { message } from 'antd'
@@ -8,7 +8,8 @@ import { message } from 'antd'
 interface ContextProps {
   messages: ChatCompletionRequestMessage[]
   addMessage: (content: string) => Promise<void>
-  isLoadingAnswer: boolean
+  isLoadingAnswer: boolean,
+  setMessages: Dispatch<SetStateAction<ChatCompletionRequestMessage[]>>
 }
 
 const ChatsContext = createContext<Partial<ContextProps>>({})
@@ -28,7 +29,7 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
         role: 'assistant',
         content: 'Hi, How can I help you today?'
       }
-      setMessages([systemMessage, welcomeMessage])
+      setMessages([])
     }
 
     // When no messages are present, we initialize the chat the system message and the welcome message
@@ -51,7 +52,7 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
       setMessages(newMessages)
 
       const { data } = await sendMessage(newMessages)
-      const reply = data.choices[0].message
+      const reply = data.message
 
       // Add the assistant message to the state
       setMessages([...newMessages, reply])
@@ -67,7 +68,7 @@ export function MessagesProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <ChatsContext.Provider value={{ messages, addMessage, isLoadingAnswer }}>
+    <ChatsContext.Provider value={{ messages, addMessage, isLoadingAnswer, setMessages }}>
       {children}
       {contextHolder}
     </ChatsContext.Provider>

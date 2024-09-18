@@ -155,8 +155,8 @@ export function HeaderAuth() {
       <NavigationPill isSelected={pathname === "/chat"}>
         <NavigationLink href="/chat">{t('ai-chat')}</NavigationLink>
       </NavigationPill>
-      <NavigationPill>
-        <NavigationLink href="/instruction">{t('instruction')}</NavigationLink>
+      <NavigationPill isSelected={pathname === "/ios"}>
+        <NavigationLink href="/ios">{t('instruction')}</NavigationLink>
       </NavigationPill>
       <NavigationPill className="navigation-pill--border">
         <NavigationLink href="/premium">{t('premium')}</NavigationLink>
@@ -168,11 +168,11 @@ export function HeaderAuth() {
     <>
     <AuthModal isOpen={authOpen} screen={authScreen} openControl={setAuthOpen} screenControl={setAuthScreen} />
     <Flex
-		direction="column"
-		gap="300"
-		alignPrimary="center"
-		alignSecondary="center"
-		style={{ width: "100%", flexBasis: "auto" }}
+      direction="column"
+      gap="300"
+      alignPrimary="center"
+      alignSecondary="center"
+      style={{ width: "100%", flexBasis: "auto" }}
     >
       <FlexItem size="fill">
         {isTabletDown ? (

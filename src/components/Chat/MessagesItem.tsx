@@ -1,12 +1,26 @@
 import { Sender } from '@/typescript/enums/Chat/Sender'
 import MessagesItemProps from '@/typescript/interfaces/Chat/MessagesItemProps'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Markdown from 'react-markdown'
 import { CopyIcon, DislikeIcon, ExchangeIcon, IconAI, SparklesIcon, VolumeUpIcon } from '../svg'
 import { ButtonGroup, IconButton } from '../ui/primitives'
+import { useMessages } from '@/utils/useMessages'
 
 
 const MessagesItem = ({ sender, text }: MessagesItemProps) => {
+    const { addMessage, messages, setMessages } = useMessages();
+    const [speachText, setSpeachText] = useState<string>("")
+
+    useEffect(() => {
+        if(speachText)
+        {
+            speechSynthesis.cancel()
+            speechSynthesis.speak(new SpeechSynthesisUtterance(speachText));
+        }
+        else {
+            speechSynthesis.cancel()
+        }
+    }, [speachText])
     return (
         <>
             {sender === Sender.AI ? 
@@ -20,7 +34,8 @@ const MessagesItem = ({ sender, text }: MessagesItemProps) => {
                                 h1: 'h5',
                                 h2: 'h5',
                                 h3: 'h5',
-                                h4: 'h5' 
+                                h4: 'h5',
+                                code: 'code' 
                             }}
                             className="messages-item__text"
                         >
@@ -31,6 +46,7 @@ const MessagesItem = ({ sender, text }: MessagesItemProps) => {
                                 className="messages-item__icons-item"
                                 aria-label='sound'
                                 variant='subtle'
+                                onPress={() => { setSpeachText(speachText ? "" : text) }}
                             >
                                 <VolumeUpIcon />
                             </IconButton>
@@ -38,6 +54,7 @@ const MessagesItem = ({ sender, text }: MessagesItemProps) => {
                                 className="messages-item__icons-item"
                                 aria-label='copy'
                                 variant='subtle'
+                                onPress={() => {navigator.clipboard.writeText(text)}}
                             >
                                 <CopyIcon />
                             </IconButton>
@@ -45,6 +62,11 @@ const MessagesItem = ({ sender, text }: MessagesItemProps) => {
                                 className="messages-item__icons-item"
                                 aria-label='regenerate'
                                 variant='subtle'
+                                onPress={() => { 
+                                    const assistantMessage = messages.find((message) => message.content === text)
+                                    const userMessage = messages[messages.indexOf(assistantMessage!) - 1];
+                                    return addMessage(userMessage.content)
+                                }}
                             >
                                 <ExchangeIcon />
                             </IconButton>
@@ -55,21 +77,20 @@ const MessagesItem = ({ sender, text }: MessagesItemProps) => {
                             >
                                 <DislikeIcon />
                             </IconButton>
-                            <IconButton 
-                            className="messages-item__icons-item"
-                            aria-label='sparkles'
-                            variant='subtle'
+                            {/* <IconButton 
+                                className="messages-item__icons-item"
+                                aria-label='sparkles'
+                                variant='subtle'
                             >
-                                {/* // FIXME: поменять aria-lable  */}
                                 <SparklesIcon />
-                            </IconButton>
+                            </IconButton> */}
                         </ButtonGroup>
                     </div>
                 </article>
             :
             <>
                 <article className="messages-item messages-item--user">
-                    <Markdown components={{ h1: 'h5', h2: 'h5', h3: 'h5', h4: 'h5' }} className="messages-item__text">{text}</Markdown>
+                    <Markdown components={{ h1: 'h5', h2: 'h5', h3: 'h5', h4: 'h5', code: 'code' }} className="messages-item__text">{text}</Markdown>
                 </article>
             </>}
         </>

@@ -59,9 +59,9 @@ export function Footer({ className, ...props }: FooterProps) {
           <TextListItem>
             <NavigationLink href="/contact">{t('links.contact-us')}</NavigationLink>
           </TextListItem>
-          <TextListItem>
+          {/* <TextListItem>
             <NavigationLink href="#">{t('links.report-a-problem')}</NavigationLink>
-          </TextListItem>
+          </TextListItem> */}
         </TextLinkList>
         <TextLinkList
           density={listDensity}
@@ -69,9 +69,6 @@ export function Footer({ className, ...props }: FooterProps) {
         >
           <TextListItem>
             <NavigationLink href="/blog">{t('links.blog')}</NavigationLink>
-          </TextListItem>
-          <TextListItem>
-            <NavigationLink href="#">{t('links.user-guide')}</NavigationLink>
           </TextListItem>
           <TextListItem>
             <NavigationLink href="/account/support">{t('links.support')}</NavigationLink>
@@ -88,10 +85,10 @@ export function Footer({ className, ...props }: FooterProps) {
           <TextListItem>
             <NavigationLink href="/privacy">{t('links.terms')}</NavigationLink>
           </TextListItem>
-		  <TextListItem>
+		      <TextListItem>
             <NavigationLink href="/privacy">{t('links.privacy')}</NavigationLink>
           </TextListItem>
-		  <TextListItem>
+		      <TextListItem>
             <TextLink href="/community">{t('links.community')}</TextLink>
           </TextListItem>
         </TextLinkList>

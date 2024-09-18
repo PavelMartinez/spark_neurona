@@ -99,7 +99,7 @@ const ChatBox = () => {
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
-                        {t('prompts.list.2')}
+                        {t.raw('prompts.list.2')}
                     </button>
                     <button className="chat-box__prompts-item"
                     onClick={handlePromptsClick}>
@@ -119,6 +119,9 @@ const ChatBox = () => {
                     {history.map((value, index) => (
                         <MessagesItem sender={value.sender} text={value.text} key={index} />
                     ))}
+                    {isLoadingAnswer &&
+                        <MessagesItem sender={Sender.AI} text={"Loading..."} />
+                    }
                 </div>
             </div>
             }

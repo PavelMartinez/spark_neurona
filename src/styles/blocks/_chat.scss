@@ -237,5 +237,9 @@
             line-height: 100%; /* 16px */
 
         }
+
+        code {
+            white-space : pre-wrap !important;
+        }
     }
 }
