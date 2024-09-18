@@ -11,27 +11,15 @@ declare global {
 let cached = global.mongoose;
 
 if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+  cached = global.mongoose = { conn: null };
 }
 
-async function dbConnect() {
-  if (cached.conn) {
-    console.log("cached")
-    return cached.conn;
-  }
+export const dbConnect = async () => {
+  if (cached.conn) return cached.conn;
 
-  if (!cached.promise) {
-    const opts = {
-      bufferCommands: false,
-    };
+  cached.conn = await mongoose.connect(MONGODB_URI);
 
-    cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
-      return mongoose;
-    });
-    console.log("connected")
-  }
-  cached.conn = await cached.promise;
+  console.log("db connected")
+
   return cached.conn;
-}
-
-export { dbConnect };
+};

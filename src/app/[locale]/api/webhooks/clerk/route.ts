@@ -6,7 +6,6 @@ import { dbConnect } from '@/database/db'
 import createRandomString from '@/utils/createRandomString'
 
 export async function POST(req: Request) {
-    await dbConnect();
     const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET
 
     if (!WEBHOOK_SECRET) {
@@ -57,6 +56,7 @@ export async function POST(req: Request) {
     console.log('Webhook body:', payload)
 
     const userId = eventType.startsWith("session") ? payload.data.user_id : payload.data.id;
+    await dbConnect();
     const findUser = await User.findOne({ externalId: userId })
 
     if(!findUser)
