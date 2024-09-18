@@ -12,8 +12,10 @@ import { IconArrowUpRight } from '@/components/ui/icons/IconArrowUpRight';
 import { currentUser } from '@clerk/nextjs/server';
 import { User } from '@/database/models/User';
 import IReferal from '@/typescript/interfaces/Models/IReferal';
+import { dbConnect } from '@/database/db';
 
 const ReferalPage = async () => {
+    await dbConnect();
     const user = await currentUser()
     const dbUser = await User.findOne({ externalId: user?.id });
     const referalsData = dbUser.referals.length > 0 ? JSON.parse(JSON.stringify(dbUser.referals)).map((item: IReferal, index: number) => {

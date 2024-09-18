@@ -13,10 +13,12 @@ import { currentUser } from '@clerk/nextjs/server';
 import { User } from '@/database/models/User';
 import IPayment from '@/typescript/interfaces/Models/IPayment';
 import { getTranslations } from 'next-intl/server';
+import { dbConnect } from '@/database/db';
 
 const AccountPage = async () => {
 	const user = await currentUser()
 	const t = await getTranslations();
+	await dbConnect();
 	const dbUser = await User.findOne({ externalId: user?.id });
 
 	let payments;

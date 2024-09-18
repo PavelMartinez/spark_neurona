@@ -5,8 +5,17 @@ export default function Pending({
 }: {
     searchParams?:{ [key: string]: string | undefined };
 }) {
+    let signUpForceRedirectUrl;
+    if(searchParams?.referal)
+    {
+        signUpForceRedirectUrl = "/api/account/referal.add?referal=" + searchParams?.referal + `${searchParams?.redirect ? "&redirect=" + searchParams?.redirect : ""}`
+    }
+    else
+    {
+        signUpForceRedirectUrl = searchParams?.redirect || '/account'
+    }
     return (<AuthenticateWithRedirectCallback 
                 signInForceRedirectUrl={searchParams?.redirect || '/account'}
-                signUpForceRedirectUrl={searchParams?.referal ? "/api/account/referal.add?referal=" + searchParams?.referal + `${searchParams?.redirect ? "&redirect=" + searchParams?.redirect : ""}` : (searchParams?.redirect || '/account')}
+                signUpForceRedirectUrl={signUpForceRedirectUrl}
             />)
 }
