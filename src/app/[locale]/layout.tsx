@@ -8,7 +8,6 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ClerkProvider } from "@clerk/nextjs";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, unstable_setRequestLocale} from 'next-intl/server';
-import { routing } from "@/i18n/routing";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -39,10 +38,6 @@ const GothamPro = localFont({
   ],
 })
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
-}
-
 export default async function RootLayout({
   children,
   params: { locale }
@@ -50,7 +45,6 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: {locale: string};
 }>) {
-  // unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (
     <ClerkProvider>
