@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "../../styles/sds/index.scss";
+import "../styles/sds/index.scss";
 import { Inter } from "next/font/google";
 import localFont from 'next/font/local'
-import "../../styles/index.scss";
+import "../styles/index.scss";
 import { Footer, Header } from "@/components/ui/compositions";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -20,7 +20,7 @@ const Muller = localFont({
   variable: '--font-muller',
   src: [
     {
-      path: '../../fonts/MullerBoldItalic.woff2',
+      path: '../fonts/MullerBoldItalic.woff2',
       weight: '700',
       style: 'italic',
     }
@@ -31,7 +31,7 @@ const GothamPro = localFont({
   variable: '--font-gotham',
   src: [
     {
-      path: '../../fonts/GothamPro-BoldItalic.woff2',
+      path: '../fonts/GothamPro-BoldItalic.woff2',
       weight: '700',
       style: 'italic',
     }

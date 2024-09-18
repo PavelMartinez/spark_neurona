@@ -4,7 +4,7 @@ import { Flex, Section } from '@/components/ui/layout'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
-const GeneratorPage = ({ params }: { params: { slug: [string, string] } }) => {
+const GeneratorPage = ({ params }: { params: { slug?: [string, string] } }) => {
     const t = useTranslations("GeneratorPage");
     return (
         <Section 
@@ -23,7 +23,7 @@ const GeneratorPage = ({ params }: { params: { slug: [string, string] } }) => {
                     {t('description')}
                 </div>
                 <div className="generator-page__main">
-                    <Generator Category={params.slug[0]} StyleName={params.slug[1]} />
+                    <Generator Category={params.slug && params.slug[0]} StyleName={params.slug && params.slug[1]} />
                 </div>
             </Flex>
         </Section>

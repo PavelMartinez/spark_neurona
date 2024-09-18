@@ -277,11 +277,11 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                     <button onClick={handleGenerateClick} disabled={isLoading} className={`generator-settings__button generator-settings__button--border ${!image ? "generator-settings__button--gradient" : ""}`}>
                         {t('generate-button')}
                     </button>
-                    {image &&
+                    {/* {image &&
                         <button onClick={handleGenerateClick} disabled={isLoading} className={`generator-settings__button generator-settings__button--black`}>
                             {t('share-button')}
                         </button>
-                    }
+                    } */}
                 </div>
             </div>
             <div className="generator-result">
@@ -310,9 +310,9 @@ const Generator = ({ Category, StyleName }: GeneratorProps) => {
                     </div>
                 }
                 {!isLoading && image &&
-                    <button onClick={handleGenerateClick} disabled={isLoading} className="generator-settings__button generator-settings__button--gradient generator-settings__button--border">
+                    <a href={image} download={"neurona.png"} className="generator-settings__button generator-settings__button--gradient generator-settings__button--border">
                         {t('save-button')}
-                    </button>
+                    </a>
                 }
             </div>
         </div>

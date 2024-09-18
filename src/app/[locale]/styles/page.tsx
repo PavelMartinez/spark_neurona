@@ -1,6 +1,6 @@
 import { Flex, Section } from '@/components/ui/layout'
 import React from 'react'
-import {Link} from '@/i18n/routing';;
+import {Link} from '@/i18n/routing';
 import StylesGrid from '@/components/Styles/StylesGrid';
 import { useTranslations } from 'next-intl';
 
@@ -17,7 +17,7 @@ const StylesPage = () => {
                         {t('description')}
                     </p>
                 </div>
-                <Link className="styles__link" href="/">
+                <Link className="styles__link" href="/generator">
                     {t('link')}     
                 </Link>
                 <StylesGrid />
