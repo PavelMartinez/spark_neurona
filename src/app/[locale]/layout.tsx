@@ -45,12 +45,12 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params: {locale}
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
   params: {locale: string};
 }>) {
-  unstable_setRequestLocale(locale);
+  // unstable_setRequestLocale(locale);
   const messages = await getMessages();
   return (
     <ClerkProvider>
