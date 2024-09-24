@@ -374,7 +374,7 @@ export default function Home() {
 				alignPrimary="center"
 				alignSecondary="center"
 			>
-				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: -500, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: .7, ease: "linear" } }}>
+				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: -200, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 1.5, ease: "linear" } }}>
 					<Link className="blocks__item blocks__item--order-1" href="/chat">
 						<span className="blocks__item-text">
 							{t('blocks.list.ai-chat')}
@@ -388,7 +388,7 @@ export default function Home() {
 						<Image src={ImageBlocks3} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 					</Link>
 				</Motion>
-				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: 500, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: .7, ease: "linear" } }}>
+				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: 200, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 1.5, ease: "linear" } }}>
 					<Link className="blocks__item blocks__item--order-2" href="/instruments">
 						<span className="blocks__item-text">
 							{t('blocks.list.ai-photo-editor')}
