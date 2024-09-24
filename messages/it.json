@@ -362,5 +362,38 @@
       },
       "button": "ACQUISTA ORA"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Unisciti al nostro programma referral oggi stesso!",
+      "button": "Inizia a guadagnare monete"
+    },
+    "main": {
+      "description": "Racconta di noi ai tuoi amici e ricevi un bonus per ogni nuovo cliente che si registra tramite il tuo link",
+      "button": "INIZIO"
+    },
+    "steps": {
+      "1": {
+        "heading": "Ottieni soldi per i tuoi referral"
+      },
+      "2": {
+        "heading": "Acquista monete a un prezzo conveniente"
+      },
+      "3": {
+        "heading": "Ottieni il 25% delle ricariche dei referral"
+      }
+    },
+    "conditions": {
+      "heading": "Condizioni",
+      "item": {
+        "1": "Il programma referral è disponibile solo per gli <b>utenti registrati</b>",
+        "2": "I bonus vengono assegnati ai nuovi clienti che si registrano tramite il tuo link <b>e effettuano un acquisto</b>",
+        "3": "Puoi tenere traccia dei tuoi referral e bonus <b>nel tuo gabinetto personale</b>",
+        "4": "Non puoi prelevare denaro dal tuo <b>nel tuo conto personale</b>"
+      }
+    },
+    "card": {
+      "description": "Reddito da riferimento"
+    }
   }
 }

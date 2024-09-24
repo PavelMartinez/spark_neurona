@@ -209,8 +209,4 @@
         left: 50%;
         transform: translate(-50%, 0);
     }
-
-    svg *[fill] {
-        fill: revert-layer !important;
-    }
 }

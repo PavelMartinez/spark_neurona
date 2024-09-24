@@ -264,7 +264,7 @@ export function HeaderAuth() {
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {
-                      router.push("/account/referal")
+                      router.push("/referal-program")
                     }}>
                       <div className="header__popover-item__icon">
                         <GroupIcon />

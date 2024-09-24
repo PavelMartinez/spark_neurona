@@ -362,5 +362,38 @@
       },
       "button": "BELI SEKARANG"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Bergabunglah dengan program rujukan kami sekarang!",
+      "button": "Mulai dapatkan koin"
+    },
+    "main": {
+      "description": "Beritahu teman Anda tentang kami dan dapatkan bonus untuk setiap klien baru yang mendaftar melalui link Anda",
+      "button": "AWAL"
+    },
+    "steps": {
+      "1": {
+        "heading": "Anda mendapatkan uang untuk referensi Anda"
+      },
+      "2": {
+        "heading": "Beli koin dengan harga murah"
+      },
+      "3": {
+        "heading": "Dapatkan 25% isi ulang referensi"
+      }
+    },
+    "conditions": {
+      "heading": "Kondisi",
+      "item": {
+        "1": "Program rujukan hanya tersedia untuk <b>pengguna terdaftar</b>",
+        "2": "Bonus diberikan kepada pelanggan baru yang mendaftar melalui link Anda <b>dan melakukan pembelian</b>",
+        "3": "Anda dapat melacak referensi dan bonus Anda <b>di kabinet pribadi Anda</b>",
+        "4": "Anda tidak dapat menarik uang dari <b>di akun pribadi Anda</b>"
+      }
+    },
+    "card": {
+      "description": "Pendapatan referensi"
+    }
   }
 }

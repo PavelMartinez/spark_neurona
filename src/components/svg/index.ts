@@ -113,3 +113,11 @@ export { default as TrFlagIcon } from './TrFlag.svg'
 export { default as ZhFlagIcon } from './ZhFlag.svg'
 
 export { default as CheckSquare2Icon } from './CheckSquare2.svg'
+
+// Referal program
+export { default as CoinIcon } from './Coin.svg'
+export { default as CoinsSmallIcon } from './CoinSmall.svg'
+export { default as DiamondSmallIcon } from './DiamondSmall.svg'
+export { default as LongArrowPath } from './LongArrow.svg'
+export { default as DiamondBigIcon } from './DiamondBig.svg'
+export { default as DiamondBig2Icon } from './DiamondBig2.svg'

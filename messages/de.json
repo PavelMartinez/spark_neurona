@@ -362,5 +362,38 @@
       },
       "button": "JETZT KAUFEN"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Nehmen Sie noch heute an unserem Empfehlungsprogramm teil!",
+      "button": "Fangen Sie an, Münzen zu verdienen"
+    },
+    "main": {
+      "description": "Erzählen Sie Ihren Freunden von uns und erhalten Sie einen Bonus für jeden Neukunden, der sich über Ihren Link registriert",
+      "button": "START"
+    },
+    "steps": {
+      "1": {
+        "heading": "Sie erhalten Geld für Ihre Empfehlungen"
+      },
+      "2": {
+        "heading": "Kaufen Sie Münzen zum Schnäppchenpreis"
+      },
+      "3": {
+        "heading": "Erhalten Sie 25 % der Aufladungen durch Empfehlungen"
+      }
+    },
+    "conditions": {
+      "heading": "Bedingungen",
+      "item": {
+        "1": "Das Empfehlungsprogramm steht nur <b>registrierten Benutzern</b> zur Verfügung",
+        "2": "Prämien werden für Neukunden vergeben, die sich über Ihren Link registrieren <b>und einen Kauf tätigen</b>",
+        "3": "Sie können Ihre Empfehlungen und Boni <b>in Ihrem persönlichen Konto</b> verfolgen",
+        "4": "Sie können kein Geld von Ihrem <b>persönlichen Konto</b> abheben"
+      }
+    },
+    "card": {
+      "description": "Empfehlungseinkommen"
+    }
   }
 }

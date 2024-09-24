@@ -93,7 +93,7 @@ const ReferalPage = async () => {
 					</div>
 				</FlexItem>
 				<FlexItem className='referal__column'>
-					<AccountConvert balance={dbUser.dollars || 0}/>
+					{/* <AccountConvert balance={dbUser.dollars || 0}/> */}
 					<div className="referal-stats">
                         <div className="referal-stats__main">
                             <div className="referal-stats__content">
@@ -101,7 +101,7 @@ const ReferalPage = async () => {
                                     Your average referal income:
                                 </div>
                                 <div className="referal-stats__value">
-                                    $150
+                                    $0
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@ const ReferalPage = async () => {
                                     Total income:
                                 </div>
                                 <div className="referal-stats__dict-value">
-                                    150$
+                                    0$
                                 </div>
                             </div>
                             <div className="referal-stats__dict-item">
@@ -127,7 +127,7 @@ const ReferalPage = async () => {
                                     Monthly income
                                 </div>
                                 <div className="referal-stats__dict-value">
-                                    150$
+                                    0$
                                 </div>
                             </div>
                             <div className="referal-stats__dict-item">
@@ -135,7 +135,7 @@ const ReferalPage = async () => {
                                     Total income:
                                 </div>
                                 <div className="referal-stats__dict-value">
-                                    150$
+                                    0$
                                 </div>
                             </div>
                         </div>

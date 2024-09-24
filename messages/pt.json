@@ -362,5 +362,38 @@
       },
       "button": "COMPRAR AGORA"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Participe do nosso programa de indicações hoje mesmo!",
+      "button": "Comece a ganhar moedas"
+    },
+    "main": {
+      "description": "Conte sobre nós aos seus amigos e ganhe um bônus para cada novo cliente que se cadastrar através do seu link",
+      "button": "COMEÇAR"
+    },
+    "steps": {
+      "1": {
+        "heading": "Você ganha dinheiro por suas referências"
+      },
+      "2": {
+        "heading": "Compre moedas por uma pechincha"
+      },
+      "3": {
+        "heading": "Obtenha 25% das recargas de referências"
+      }
+    },
+    "conditions": {
+      "heading": "Condições",
+      "item": {
+        "1": "O programa de indicação está disponível apenas para <b>usuários registrados</b>",
+        "2": "Os bônus são concedidos para novos clientes que se cadastram através do seu link <b>e fazem uma compra</b>",
+        "3": "Você pode acompanhar suas indicações e bônus <b>em seu gabinete pessoal</b>",
+        "4": "Você não pode sacar dinheiro da sua <b>conta pessoal</b>"
+      }
+    },
+    "card": {
+      "description": "Renda de referência"
+    }
   }
 }

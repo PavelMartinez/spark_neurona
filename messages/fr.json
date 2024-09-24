@@ -362,5 +362,38 @@
       },
       "button": "ACHETER MAINTENANT"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Rejoignez notre programme de parrainage dès aujourd'hui !",
+      "button": "Commencez à gagner des pièces"
+    },
+    "main": {
+      "description": "Parlez de nous à vos amis et obtenez un bonus pour chaque nouveau client qui s'inscrit via votre lien",
+      "button": "COMMENCER"
+    },
+    "steps": {
+      "1": {
+        "heading": "Vous recevez de l'argent pour vos références"
+      },
+      "2": {
+        "heading": "Achetez des pièces à un prix avantageux"
+      },
+      "3": {
+        "heading": "Obtenez 25 % de recharges de références"
+      }
+    },
+    "conditions": {
+      "heading": "Conditions",
+      "item": {
+        "1": "Le programme de parrainage est uniquement disponible pour les <b>utilisateurs enregistrés</b>",
+        "2": "Des bonus sont attribués aux nouveaux clients qui s'inscrivent via votre lien <b>et effectuent un achat</b>",
+        "3": "Vous pouvez suivre vos parrainages et bonus <b>dans votre compte personnel</b>",
+        "4": "Vous ne pouvez pas retirer d'argent de votre <b>dans votre compte personnel</b>"
+      }
+    },
+    "card": {
+      "description": "Revenu de référence"
+    }
   }
 }

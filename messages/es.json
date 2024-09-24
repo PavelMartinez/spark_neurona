@@ -362,5 +362,38 @@
       },
       "button": "COMPRAR AHORA"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "¡Únase a nuestro programa de referencias hoy!",
+      "button": "Empieza a ganar monedas"
+    },
+    "main": {
+      "description": "Cuéntale a tus amigos sobre nosotros y obtén un bono por cada nuevo cliente que se registre a través de tu enlace",
+      "button": "COMENZAR"
+    },
+    "steps": {
+      "1": {
+        "heading": "Obtienes dinero por tus referidos"
+      },
+      "2": {
+        "heading": "Compra monedas a precio de ganga"
+      },
+      "3": {
+        "heading": "Obtén 25% de recargas de referidos"
+      }
+    },
+    "conditions": {
+      "heading": "Condiciones",
+      "item": {
+        "1": "El programa de referencias sólo está disponible para <b>usuarios registrados</b>",
+        "2": "Se otorgan bonificaciones para nuevos clientes que se registran a través de su enlace <b>y realizan una compra</b>",
+        "3": "Puedes realizar un seguimiento de tus referencias y bonificaciones <b>en tu gabinete personal</b>",
+        "4": "No puedes retirar dinero de tu <b>en tu cuenta personal</b>"
+      }
+    },
+    "card": {
+      "description": "Ingresos por referencia"
+    }
   }
 }

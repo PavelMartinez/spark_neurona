@@ -362,5 +362,38 @@
       },
       "button": "ŞİMDİ AL"
     }
+  },
+  "ReferalProgramPage": {
+    "join": {
+      "heading": "Bugün yönlendirme programımıza katılın!",
+      "button": "Para kazanmaya başlayın"
+    },
+    "main": {
+      "description": "Arkadaşlarınıza bizden bahsedin ve bağlantınız aracılığıyla kaydolan her yeni müşteri için bir bonus kazanın",
+      "button": "BAŞLANGIÇ"
+    },
+    "steps": {
+      "1": {
+        "heading": "Referanslarınız için para alıyorsunuz"
+      },
+      "2": {
+        "heading": "Uygun fiyata para satın alın"
+      },
+      "3": {
+        "heading": "Yönlendirme yüklemelerinin %25'ini alın"
+      }
+    },
+    "conditions": {
+      "heading": "Koşullar",
+      "item": {
+        "1": "Yönlendirme programı yalnızca <b>kayıtlı kullanıcılar</b> tarafından kullanılabilir",
+        "2": "Bağlantınız aracılığıyla kaydolan ve <b>satın alma işlemi gerçekleştiren</b> yeni müşterilere bonuslar verilir",
+        "3": "Yönlendirmelerinizi ve bonuslarınızı <b>kişisel dolabınızdan</b> takip edebilirsiniz.",
+        "4": "<b>Kişisel hesabınızdaki</b> paradan para çekemezsiniz"
+      }
+    },
+    "card": {
+      "description": "Referans geliri"
+    }
   }
 }

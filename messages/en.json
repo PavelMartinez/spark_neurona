@@ -362,5 +362,38 @@
       },
       "button": "BUY NOW"
     }
+  },
+  "ReferalProgramPage": {
+    "main": {
+      "description": "Tell your friends about us and get a bonus for every new client who registers through your link",
+      "button": "START"
+    },
+    "steps": {
+      "1": {
+        "heading": "You get money for your referals"
+      },
+      "2": {
+        "heading": "Buy coins at a bargain"
+      },
+      "3": {
+        "heading": "Get 25% of referals recharges"
+      }
+    },
+    "conditions": {
+      "heading": "Conditions",
+      "item": {
+        "1": "The referral programme is only available to <b>registered users</b>",
+        "2": "Bonuses are awarded for new customers who register through your link <b>and make a purchase</b>",
+        "3": "You can track your referrals and bonuses <b>in your personal cabinet</b>",
+        "4": "You cannot withdraw money from your <b>in your personal account</b>"
+      }
+    },
+    "card": {
+      "description": "Referal income"
+    },
+    "join": {
+      "heading": "Join our referral program today!",
+      "button": "Start earn coins"
+    }
   }
 }

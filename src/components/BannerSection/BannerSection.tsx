@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl'
 const BannerSection = () => {
     const t = useTranslations('BannerSection');
     return (
-        <Section className="banner" padding="1200">
+        <Section className="banner">
             <Flex
                 wrap
                 container

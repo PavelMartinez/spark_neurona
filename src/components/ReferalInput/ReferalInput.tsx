@@ -5,7 +5,7 @@ import { LogoInstagramFilled, LogoPinterest, LogoTelegram, LogoX, SendIcon } fro
 import { Input } from '../ui/primitives';
 import { IconCopy, IconShare, IconShare2 } from '../ui/icons';
 import { Dropdown, MenuProps, message } from 'antd';
-import {Link} from '@/i18n/routing';import { useTranslations } from 'next-intl';
+import {Link} from '@/i18n/routing';import { useLocale, useTranslations } from 'next-intl';
 ;
 
 interface ReferalInputProps {
@@ -13,7 +13,8 @@ interface ReferalInputProps {
 }
 
 const ReferalInput = ({ id }: ReferalInputProps) => {
-    const referal: string = `${process.env.NEXT_PUBLIC_URL}/referal/${id}`;
+    const locale = useLocale()
+    const referal: string = `${process.env.NEXT_PUBLIC_URL}/${locale}/referal/${id}`;
     const [messageApi, contextHolder] = message.useMessage();
     const t = useTranslations();
 

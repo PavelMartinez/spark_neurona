@@ -9,6 +9,7 @@ import MainVideo from '/videos/main-video.mp4'
 import Video1 from '/videos/video-1.mp4'
 import Video2 from '/videos/video-2.mp4'
 import MainImage from '../../../public/MainImage.png'
+import MainImageMobile from '../../../public/MainImageMobile.png'
 
 import MainHeroImage1 from '../../../public/MainHero1.png'
 import MainHeroImage2 from '../../../public/MainHero2.png'
@@ -102,7 +103,22 @@ export default function Home() {
 						</Link>
 					</div>
 					<div className="main-hero__image-wrapper">
-						<Image src={MainImage} alt="Neurona Interface" className="main-hero__image" width={0} height={0} sizes="100vw"/>
+						<Image
+							src={MainImage}
+							alt="Neurona Interface"
+							className="main-hero__image main-hero__image--desktop hidden-mobile"
+							width={0}
+							height={0}
+							sizes="100vw"
+						/>
+						<Image
+							src={MainImageMobile}
+							alt="Neurona Interface"
+							className="main-hero__image main-hero__image--mobile visible-mobile"
+							width={0}
+							height={0}
+							sizes="100vw"
+						/>
 						<div className="main-hero__image-gradient"></div>
 					</div>
 				</div>
@@ -136,7 +152,7 @@ export default function Home() {
 				<Panel gap="1200" type="half" className="main-panel">
 					<BackgroundVideo src={Video1} height={350}>
 						<div className="main-panel__button-wrapper">
-							<Link href="">
+							<Link href="/instruments">
 								<Button
 									variant="primary"
 									size="medium"
@@ -148,7 +164,7 @@ export default function Home() {
 					</BackgroundVideo>
 					<BackgroundVideo src={Video2} height={350}>
 					<div className="main-panel__button-wrapper">
-						<Link href="">
+						<Link href="/generator">
 							<Button
 								variant="primary"
 								size="medium"
@@ -373,13 +389,13 @@ export default function Home() {
 					</Link>
 				</Motion>
 				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: 500, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: .7, ease: "linear" } }}>
-					<Link className="blocks__item blocks__item--order-2" href="/">
+					<Link className="blocks__item blocks__item--order-2" href="/instruments">
 						<span className="blocks__item-text">
 							{t('blocks.list.ai-photo-editor')}
 						</span>
 						<Image src={ImageBlocks2} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
 					</Link>
-					<Link className="blocks__item blocks__item--order-4" href="/">
+					<Link className="blocks__item blocks__item--order-4" href="/generator">
 						<span className="blocks__item-text">
 							{t('blocks.list.image-generation')}
 						</span>
