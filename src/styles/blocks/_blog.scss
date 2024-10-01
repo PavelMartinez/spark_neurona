@@ -1,0 +1,13 @@
+.blog-page {
+
+    &__inner {
+        padding: 67px 80px;
+    }
+
+    &__heading {
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; /* 72px */
+    }
+}
