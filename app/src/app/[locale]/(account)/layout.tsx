@@ -1,7 +1,4 @@
-import { dbConnect } from "@/database/db";
 import { auth } from "@clerk/nextjs/server"
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
 import { ConfigProvider } from "antd"
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
