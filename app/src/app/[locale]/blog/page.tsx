@@ -1,12 +1,11 @@
-import { PlusIcon } from "@/components/svg";
+
 import { IconPlus } from "@/components/ui/icons";
 import { Flex, Section } from "@/components/ui/layout";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from "react";
 
 async function getStrapiData(url: string) {
-  const baseUrl = "http://localhost:1337";
+  const baseUrl = process.env.STRAPI_URL;
   try {
     const response = await fetch(baseUrl + url, { next: { revalidate: 3000 } });
     const data = await response.json();
@@ -50,7 +49,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`http://localhost:1337${data[0].cover.url}`}
+                            src={`${process.env.STRAPI_URL}${data[0].cover.url}`}
                             alt=""
                             width={391}
                             height={391}
@@ -75,7 +74,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`http://localhost:1337${data[1].cover.url}`}
+                            src={`${process.env.STRAPI_URL}${data[1].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -94,7 +93,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`http://localhost:1337${data[2].cover.url}`}
+                            src={`${process.env.STRAPI_URL}${data[2].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -113,7 +112,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`http://localhost:1337${data[3].cover.url}`}
+                            src={`${process.env.STRAPI_URL}${data[3].cover.url}`}
                             alt=""
                             width={218}
                             height={218}
@@ -137,7 +136,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`http://localhost:1337${data[4].cover.url}`}
+                            src={`${process.env.STRAPI_URL}${data[4].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -165,7 +164,7 @@ export default async function BlogPage() {
                                 alt=""
                                 width={100}
                                 height={100}
-                                src={`http://localhost:1337${props.avatar.url}`}
+                                src={`${process.env.STRAPI_URL}${props.avatar.url}`}
                             />
                             <div className="blog-page__authors-text">
                                 <div className="blog-page__authors-name">{props.name}</div>

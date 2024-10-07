@@ -2,7 +2,7 @@ import { Flex, Section } from "@/components/ui/layout";
 import { BlocksRenderer, type BlocksContent } from '@strapi/blocks-react-renderer';
 
 async function getStrapiData(url: string) {
-  const baseUrl = "http://localhost:1337";
+  const baseUrl = process.env.STRAPI_URL;
   try {
     const response = await fetch(baseUrl + url, { next: { revalidate: 3000 } });
     const data = await response.json();
