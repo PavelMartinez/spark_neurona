@@ -51,6 +51,17 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedParagraph extends Struct.ComponentSchema {
+  collectionName: 'components_shared_paragraphs';
+  info: {
+    displayName: 'paragraph';
+    icon: '';
+  };
+  attributes: {
+    Blocks: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -69,6 +80,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
+      'shared.paragraph': SharedParagraph;
       'shared.media': SharedMedia;
     }
   }

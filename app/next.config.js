@@ -12,7 +12,16 @@ const nextConfig = {
 			use: ['@svgr/webpack'],
 		})
 		return config
-	}
+	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'http',
+				hostname: 'localhost',
+				port: '1337',
+			},
+		],
+	},
 };
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({

@@ -34,7 +34,7 @@ export function Footer({ className, ...props }: FooterProps) {
       <Flex wrap type="quarter" gap="600" container>
         <FlexItem size="minor">
           <Flex direction="row" gap="600" alignSecondary="start" alignPrimary="center">
-			{SocialButtons()}
+			{/* {SocialButtons()} */}
           </Flex>
         </FlexItem>
         <TextLinkList
@@ -44,9 +44,9 @@ export function Footer({ className, ...props }: FooterProps) {
           <TextListItem>
             <NavigationLink href="/generator">{t('links.photo-generating')}</NavigationLink>
           </TextListItem>
-          <TextListItem>
+          {/* <TextListItem>
             <NavigationLink href="/404">{t('links.video-generating')}</NavigationLink>
-          </TextListItem>
+          </TextListItem> */}
         </TextLinkList>
         <TextLinkList
           density={listDensity}
@@ -57,7 +57,9 @@ export function Footer({ className, ...props }: FooterProps) {
           }
         >
           <TextListItem>
-            <NavigationLink href="/contact">{t('links.contact-us')}</NavigationLink>
+            <NavigationLink href="/terms">
+              Terms
+            </NavigationLink>
           </TextListItem>
           {/* <TextListItem>
             <NavigationLink href="#">{t('links.report-a-problem')}</NavigationLink>
@@ -71,25 +73,7 @@ export function Footer({ className, ...props }: FooterProps) {
             <NavigationLink href="/blog">{t('links.blog')}</NavigationLink>
           </TextListItem>
           <TextListItem>
-            <NavigationLink href="/account/support">{t('links.support')}</NavigationLink>
-          </TextListItem>
-          <TextListItem>
-            <NavigationLink href="/contact">{t('links.business-contacts')}</NavigationLink>
-          </TextListItem>
-          <TextListItem>
-            <NavigationLink href="/careers">{t('links.careers')}</NavigationLink>
-          </TextListItem>
-          <TextListItem>
-            <NavigationLink href="/news">{t('links.news')}</NavigationLink>
-          </TextListItem>
-          <TextListItem>
-            <NavigationLink href="/privacy">{t('links.terms')}</NavigationLink>
-          </TextListItem>
-		      <TextListItem>
-            <NavigationLink href="/privacy">{t('links.privacy')}</NavigationLink>
-          </TextListItem>
-		      <TextListItem>
-            <TextLink href="/community">{t('links.community')}</TextLink>
+            <NavigationLink href="/support">{t('links.contact-us')}</NavigationLink>
           </TextListItem>
         </TextLinkList>
       </Flex>
