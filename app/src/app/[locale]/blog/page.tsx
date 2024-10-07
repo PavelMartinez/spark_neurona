@@ -54,6 +54,7 @@ export default async function BlogPage() {
                             width={391}
                             height={391}
                             className="blog-page__block-image hidden-mobile"
+                            unoptimized
                             style={{
                                 bottom: 4,
                                 right: 72,
@@ -76,6 +77,7 @@ export default async function BlogPage() {
                         <Image
                             src={`${data[1].cover.url}`}
                             alt=""
+                            unoptimized
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
                         />
@@ -95,6 +97,7 @@ export default async function BlogPage() {
                         <Image
                             src={`${data[2].cover.url}`}
                             alt=""
+                            unoptimized
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
                         />
@@ -115,6 +118,7 @@ export default async function BlogPage() {
                             src={`${data[3].cover.url}`}
                             alt=""
                             width={218}
+                            unoptimized
                             height={218}
                             className="blog-page__block-image"
                             style={{
@@ -138,6 +142,7 @@ export default async function BlogPage() {
                         <Image
                             src={`${data[4].cover.url}`}
                             alt=""
+                            unoptimized
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
                             style={{ 
@@ -163,6 +168,7 @@ export default async function BlogPage() {
                                 className="blog-page__authors-avatar"
                                 alt=""
                                 width={100}
+                                unoptimized
                                 height={100}
                                 src={`${props.avatar.url}`}
                             />
