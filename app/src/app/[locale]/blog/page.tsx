@@ -21,7 +21,7 @@ export default async function BlogPage() {
     const strapiDataAuthors = await getStrapiData("/api/authors?populate=*");
     const { data: authors } = strapiDataAuthors;
 
-    console.log(authors)
+    console.log(data)
 
     return (
         <Section 
@@ -49,7 +49,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`${process.env.STRAPI_URL}${data[0].cover.url}`}
+                            src={`${data[0].cover.url}`}
                             alt=""
                             width={391}
                             height={391}
@@ -74,7 +74,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`${process.env.STRAPI_URL}${data[1].cover.url}`}
+                            src={`${data[1].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -93,7 +93,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`${process.env.STRAPI_URL}${data[2].cover.url}`}
+                            src={`${data[2].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -112,7 +112,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`${process.env.STRAPI_URL}${data[3].cover.url}`}
+                            src={`${data[3].cover.url}`}
                             alt=""
                             width={218}
                             height={218}
@@ -136,7 +136,7 @@ export default async function BlogPage() {
                             </button>
                         </div>
                         <Image
-                            src={`${process.env.STRAPI_URL}${data[4].cover.url}`}
+                            src={`${data[4].cover.url}`}
                             alt=""
                             fill
                             className="blog-page__block-image blog-page__block-image--relative"
@@ -164,7 +164,7 @@ export default async function BlogPage() {
                                 alt=""
                                 width={100}
                                 height={100}
-                                src={`${process.env.STRAPI_URL}${props.avatar.url}`}
+                                src={`${props.avatar.url}`}
                             />
                             <div className="blog-page__authors-text">
                                 <div className="blog-page__authors-name">{props.name}</div>
