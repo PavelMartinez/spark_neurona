@@ -568,6 +568,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -600,6 +606,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     email: Schema.Attribute.String;
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     description: Schema.Attribute.String;
+    order: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
