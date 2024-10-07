@@ -20,6 +20,11 @@ const nextConfig = {
 				hostname: 'localhost',
 				port: '1337',
 			},
+			{
+				protocol: 'https',
+				hostname: process.env.STRAPI_MEDIA_URL,
+				port: '',
+			},
 		],
 	},
 };
