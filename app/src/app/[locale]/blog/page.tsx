@@ -16,7 +16,7 @@ async function getStrapiData(url: string) {
 }
 
 export default async function BlogPage() {
-    const strapiDataPosts = await getStrapiData("/api/articles?populate=*");
+    const strapiDataPosts = await getStrapiData("/api/articles?sort[0]=order:asc&populate=*");
     const { data: data } = strapiDataPosts;
     const strapiDataAuthors = await getStrapiData("/api/authors?populate=*");
     const { data: authors } = strapiDataAuthors;
