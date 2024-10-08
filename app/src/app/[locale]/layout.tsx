@@ -9,7 +9,11 @@ import { ClerkProvider } from "@clerk/nextjs";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages, unstable_setRequestLocale} from 'next-intl/server';
 
-const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: '--font-inter',
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: "Neurona",
@@ -18,6 +22,7 @@ export const metadata: Metadata = {
 
 const Muller = localFont({
   variable: '--font-muller',
+  display: "swap",
   src: [
     {
       path: '../../fonts/MullerBoldItalic.woff2',
@@ -29,6 +34,7 @@ const Muller = localFont({
 
 const GothamPro = localFont({
   variable: '--font-gotham',
+  display: "swap",
   src: [
     {
       path: '../../fonts/GothamPro-BoldItalic.woff2',
