@@ -2,6 +2,7 @@
 import { IconPlus } from "@/components/ui/icons";
 import { Flex, Section } from "@/components/ui/layout";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export default async function BlogPage() {
     const { data: data } = strapiDataPosts;
     const strapiDataAuthors = await getStrapiData("/api/authors?populate=*");
     const { data: authors } = strapiDataAuthors;
-    const t = useTranslations()
+    const t = await getTranslations();
 
     return (
         <Section 
