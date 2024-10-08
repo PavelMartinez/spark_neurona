@@ -87,9 +87,9 @@ const ChatBox = () => {
         <div className='chat-box'>
             {history.length === 0 ? 
             <>
-                <button className='messages__history-button'>
+                {/* <button className='messages__history-button'>
                     {t('history-button')} 
-                </button>
+                </button> */}
                 <div className="chat-box__logo-wrapper">
                     <Image alt="" src="/Logo.png" className='chat-box__logo' width={57} height={57}/>
                 </div>
@@ -112,9 +112,9 @@ const ChatBox = () => {
                 </div>
             </> :
             <div className='messages' onScroll={onScroll} ref={chatboxWrapper}>
-                <button className='messages__history-button'>
+                {/* <button className='messages__history-button'>
                     {t('history-button')}
-                </button>
+                </button> */}
                 <div className='messages__inner' ref={chatbox}>
                     {history.map((value, index) => (
                         <MessagesItem sender={value.sender} text={value.text} key={index} />

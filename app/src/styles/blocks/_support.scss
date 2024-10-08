@@ -1,0 +1,99 @@
+.support  {
+    &__heading {
+        padding: 26px 0;
+    }
+
+    &__description {
+        font-size: var(--sds-typography-body-size-medium);
+        font-style: normal;
+        font-weight: var(--sds-typography-body-font-weight-regular);
+        line-height: 130%; /* 20.8px */
+
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        padding: 55px 92px;
+        border-radius: 20px;
+        border: 1px solid var(--stroke-3, #232323);
+        background: var(--back-login, #131313);
+        margin-bottom: 200px;
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 15px;
+        }
+
+        &__label {
+            color: var(--grey, #93949A);
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%; /* 24px */
+        }
+
+        &__input {
+            border-radius: 10px;
+            border: var(--sds-size-stroke-border) solid var(--grey, #93949A);
+            background: #212121;
+            min-height: 60px;
+            padding-left: 62px;
+            color: white;
+        }
+
+        &__textarea {
+            min-height: 100px;
+            padding-block: 18px;
+        }
+
+        &__button {
+            height: 72px;
+            flex: 1;
+            border-radius: 20px !important;
+        }
+
+        &__message {
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+            font-weight: var(--sds-typography-body-size-bold);
+
+            color: green;
+
+            &--error {
+                color: red;
+            }
+        }
+    }
+
+    &-faq {
+        margin-bottom: 230px !important;
+        &__heading {
+            color: #FCFCFC;
+            text-align: center;
+
+
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%; /* 66px */
+
+            text-transform: capitalize;
+            margin-bottom: 50px;
+        }
+    }
+}

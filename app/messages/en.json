@@ -82,6 +82,16 @@
         "title": "How to spell promt correctly?",
         "info": "Promt is a key that allows you to “turn on” the neural network in the right direction. This is a carefully designed query that also directs attention to specific aspects of the data. This allows you to “tune” the neural network to perform a specific task, forcing it to focus on what is necessary, ignoring unnecessary information."
       }
+    },
+    "support": {
+      "1": {
+        "title": "What cards can I pay with?",
+        "info": "In order to replenish your balance you can use the following replenishment methods: Stripe, Visa and various cryptocurrency options."
+      },
+      "2": {
+        "title": "What should I do if I get a bad result?",
+        "info": "Unfortunately, we cannot always guarantee you a good result. But it depends 90% on the photo you use. All instructions on how to upload a photo can be found on the corresponding page."
+      }
     }
   },
   "Header": {
@@ -98,7 +108,8 @@
       "buy-coins": "Buy coins",
       "referal-program": "Referal Program",
       "profile-settings": "Profile settings",
-      "customer-support": "Customer Support"
+      "customer-support": "Customer Support",
+      "dashboard": "Dashboard"
     }
   },
   "Footer": {
@@ -121,7 +132,8 @@
       "terms": "Terms",
       "privacy": "Privacy",
       "community": "Community"
-    }
+    },
+    "terms": "Terms"
   },
   "community": "Community",
   "ChatBox": {
@@ -394,6 +406,40 @@
     "join": {
       "heading": "Join our referral program today!",
       "button": "Start earn coins"
+    }
+  },
+  "SupportPage": {
+    "heading": "Support",
+    "description": "Fill out the form we will answer your questions as soon as possible.",
+    "form": {
+      "name": "Your name",
+      "email": "Your e-mail",
+      "text": "Your question",
+      "status": {
+        "success": "Message has been sent",
+        "error": "An error occured"
+      },
+      "button": "Sent"
+    }
+  },
+  "BlogPage": {
+    "heading": "Blog",
+    "block": {
+      "badge": "New"
+    },
+    "authors": {
+      "title": "OUR AUTHORS"
+    }
+  },
+  "StripePayment": {
+    "breadcrump": {
+      "tariff": "Tariff"
+    },
+    "heading": {
+      "description": "Enter your credentials"
+    },
+    "checkout": {
+      "button": "Pay now"
     }
   }
 }

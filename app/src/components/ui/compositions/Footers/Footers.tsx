@@ -29,6 +29,7 @@ export function Footer({ className, ...props }: FooterProps) {
       paddingTop="1600"
       paddingBottom="4000"
       style={{ marginTop: "auto" }}
+      className="footer"
       {...props}
     >
       <Flex wrap type="quarter" gap="600" container>
@@ -58,7 +59,7 @@ export function Footer({ className, ...props }: FooterProps) {
         >
           <TextListItem>
             <NavigationLink href="/terms">
-              Terms
+              {t('terms')}
             </NavigationLink>
           </TextListItem>
           {/* <TextListItem>

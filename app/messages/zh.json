@@ -90,6 +90,16 @@
         "info": "Promt 是一个关键，可以让你以正确的方向“打开”神经网络。\n这是一个精心设计的查询，也将注意力集中在数据的特定方面。\n这使您可以“调整”神经网络以执行特定任务，迫使其专注于必要的信息，忽略不必要的信息。",
         "title": "如何正确拼写 promt?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "我可以用什么卡支付？",
+        "info": "为了补充您的余额，您可以使用以下充值方法：Stripe、Visa 和各种加密货币选项。"
+      },
+      "2": {
+        "title": "如果结果不好我该怎么办？",
+        "info": "不幸的是，我们不能总保证您获得良好的结果。\n但这90%取决于你使用的照片。\n有关如何上传照片的所有说明都可以在相应页面上找到。"
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "关于我们",
       "privacy-policy": "隐私政策",
       "use-cases": "使用案例"
-    }
+    },
+    "terms": "条款"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "购买金币",
       "customer-support": "客户支持",
       "profile-settings": "个人资料设置",
-      "referal-program": "推荐计划"
+      "referal-program": "推荐计划",
+      "dashboard": "仪表板"
     },
     "premium": "优质的",
     "style-gallery": "风格画廊"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "推荐收入"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "你的问题",
+      "email": "您的电子邮件",
+      "name": "你的名字",
+      "button": "发送",
+      "status": {
+        "success": "消息已发送",
+        "error": "发生错误"
+      }
+    },
+    "heading": "支持",
+    "description": "填写表格我们将尽快回答您的问题。"
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "我们的作者"
+    },
+    "block": {
+      "badge": "新的"
+    },
+    "heading": "博客"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "输入您的凭据"
+    },
+    "breadcrump": {
+      "tariff": "关税"
+    },
+    "checkout": {
+      "button": "立即付款"
     }
   }
 }

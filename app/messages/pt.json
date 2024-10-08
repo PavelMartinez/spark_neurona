@@ -90,6 +90,16 @@
         "info": "Promt é uma chave que permite “ligar” a rede neural na direção certa. \nEsta é uma consulta cuidadosamente projetada que também direciona a atenção para aspectos específicos dos dados. \nIsso permite “sintonizar” a rede neural para realizar uma tarefa específica, forçando-a a focar no que é necessário, ignorando informações desnecessárias.",
         "title": "Como escrever prompt corretamente?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Com quais cartões posso pagar?",
+        "info": "Para repor o seu saldo você pode usar os seguintes métodos de reposição: Stripe, Visa e diversas opções de criptomoeda."
+      },
+      "2": {
+        "title": "O que devo fazer se obtiver um resultado ruim?",
+        "info": "Infelizmente, nem sempre podemos garantir um bom resultado. \nMas depende 90% da foto que você usa. \nTodas as instruções sobre como fazer upload de uma foto podem ser encontradas na página correspondente."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "Sobre nós",
       "privacy-policy": "Política de Privacidade",
       "use-cases": "Casos de uso"
-    }
+    },
+    "terms": "Termos"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "Compre moedas",
       "customer-support": "Suporte ao Cliente",
       "profile-settings": "Configurações de perfil",
-      "referal-program": "Programa de referência"
+      "referal-program": "Programa de referência",
+      "dashboard": "Painel"
     },
     "premium": "Prêmio",
     "style-gallery": "Galeria de estilo"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Renda de referência"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Sua pergunta",
+      "email": "Seu e-mail",
+      "name": "Seu nome",
+      "button": "Enviado",
+      "status": {
+        "success": "A mensagem foi enviada",
+        "error": "Ocorreu um erro"
+      }
+    },
+    "heading": "Apoiar",
+    "description": "Preencha o formulário que responderemos suas dúvidas o mais breve possível."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "NOSSOS AUTORES"
+    },
+    "block": {
+      "badge": "Novo"
+    },
+    "heading": "Blogue"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Insira suas credenciais"
+    },
+    "breadcrump": {
+      "tariff": "Tarifa"
+    },
+    "checkout": {
+      "button": "Pague agora"
     }
   }
 }

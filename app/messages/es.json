@@ -89,6 +89,16 @@
         "info": "Promt es una clave que le permite \"encender\" la red neuronal en la dirección correcta. \nSe trata de una consulta cuidadosamente diseñada que también dirige la atención a aspectos específicos de los datos. \nEsto le permite \"sintonizar\" la red neuronal para realizar una tarea específica, obligándola a concentrarse en lo que es necesario, ignorando información innecesaria.",
         "title": "¿Cómo se escribe correctamente prom?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "¿Con qué tarjetas puedo pagar?",
+        "info": "Para recargar su saldo, puede utilizar los siguientes métodos de recarga: Stripe, Visa y varias opciones de criptomonedas."
+      },
+      "2": {
+        "title": "¿Qué debo hacer si obtengo un mal resultado?",
+        "info": "Desafortunadamente, no siempre podemos garantizarle un buen resultado. \nPero depende en un 90% de la foto que uses. \nTodas las instrucciones sobre cómo cargar una foto se pueden encontrar en la página correspondiente."
+      }
     }
   },
   "Footer": {
@@ -111,7 +121,8 @@
       "about-us": "Sobre nosotros",
       "privacy-policy": "Política de privacidad",
       "use-cases": "Casos de uso"
-    }
+    },
+    "terms": "Términos"
   },
   "Generator": {
     "enum": {
@@ -169,7 +180,8 @@
       "buy-coins": "comprar monedas",
       "customer-support": "Atención al cliente",
       "profile-settings": "Configuración de perfil",
-      "referal-program": "Programa de referencia"
+      "referal-program": "Programa de referencia",
+      "dashboard": "Panel"
     },
     "premium": "De primera calidad",
     "style-gallery": "Galería de estilos"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Ingresos por referencia"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Tu pregunta",
+      "email": "Tu correo electrónico",
+      "name": "Su nombre",
+      "button": "Enviado",
+      "status": {
+        "success": "El mensaje ha sido enviado.",
+        "error": "Ocurrió un error"
+      }
+    },
+    "heading": "Apoyo",
+    "description": "Rellena el formulario y responderemos a tus dudas lo antes posible."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "NUESTROS AUTORES"
+    },
+    "block": {
+      "badge": "Nuevo"
+    },
+    "heading": "Blog"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Introduce tus credenciales"
+    },
+    "breadcrump": {
+      "tariff": "Arancel"
+    },
+    "checkout": {
+      "button": "Paga ahora"
     }
   }
 }

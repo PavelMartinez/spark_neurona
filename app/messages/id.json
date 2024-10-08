@@ -90,6 +90,16 @@
         "info": "Promt adalah kunci yang memungkinkan Anda “menghidupkan” jaringan saraf ke arah yang benar. \nIni adalah kueri yang dirancang dengan cermat yang juga mengarahkan perhatian pada aspek data tertentu. \nHal ini memungkinkan Anda untuk \"menyesuaikan\" jaringan saraf untuk melakukan tugas tertentu, memaksanya untuk fokus pada apa yang diperlukan, mengabaikan informasi yang tidak perlu.",
         "title": "Bagaimana cara mengeja promt dengan benar?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Dengan kartu apa saya bisa membayar?",
+        "info": "Untuk mengisi saldo Anda, Anda dapat menggunakan metode pengisian berikut: Stripe, Visa, dan berbagai opsi mata uang kripto."
+      },
+      "2": {
+        "title": "Apa yang harus saya lakukan jika saya mendapatkan hasil yang buruk?",
+        "info": "Sayangnya, kami tidak selalu dapat menjamin Anda mendapatkan hasil yang baik. \nTapi itu tergantung 90% pada foto yang Anda gunakan. \nSemua petunjuk tentang cara mengunggah foto dapat ditemukan di halaman terkait."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "Tentang kami",
       "privacy-policy": "Kebijakan privasi",
       "use-cases": "Kasus penggunaan"
-    }
+    },
+    "terms": "Ketentuan"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "Beli koin",
       "customer-support": "Dukungan Pelanggan",
       "profile-settings": "Pengaturan profil",
-      "referal-program": "Program Referensi"
+      "referal-program": "Program Referensi",
+      "dashboard": "Dasbor"
     },
     "premium": "Premi",
     "style-gallery": "Galeri gaya"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Pendapatan referensi"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Pertanyaan Anda",
+      "email": "Email Anda",
+      "name": "Namamu",
+      "button": "Terkirim",
+      "status": {
+        "success": "Pesan telah terkirim",
+        "error": "Terjadi kesalahan"
+      }
+    },
+    "heading": "Mendukung",
+    "description": "Isi formulir kami akan menjawab pertanyaan Anda sesegera mungkin."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "PENULIS KAMI"
+    },
+    "block": {
+      "badge": "Baru"
+    },
+    "heading": "blog"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Masukkan kredensial Anda"
+    },
+    "breadcrump": {
+      "tariff": "Tarif"
+    },
+    "checkout": {
+      "button": "Bayar sekarang"
     }
   }
 }

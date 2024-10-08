@@ -13,7 +13,7 @@ import { useTranslations } from 'next-intl';
 const LoginScreen = ({ openControl }: ScreenProps) => {
     const { signIn } = useSignIn()
     const { signUp, setActive, isLoaded } = useSignUp()
-    const [extended, setExtended] = useState<boolean>(false);
+    const [extended, setExtended] = useState<boolean>(true);
     const [emailAddress, setEmailAddress] = React.useState('')
     const [expired, setExpired] = React.useState(false)
     const [verified, setVerified] = React.useState(false)
@@ -235,7 +235,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                                 {t('buttons.continue-with', { provider: "Google" })}
                             </div>
                         </button>
-                        <button className="auth__buttons-item" onClick={() => {
+                        {/* <button className="auth__buttons-item" onClick={() => {
                             handleSignIn("oauth_facebook")
                         }}>
                             <div className="auth__buttons-icon">
@@ -254,7 +254,7 @@ const LoginScreen = ({ openControl }: ScreenProps) => {
                             <div className="auth__buttons-text">
                                 {t('buttons.continue-with', { provider: "Apple" })}
                             </div>
-                        </button>
+                        </button> */}
                     </>
                 }
             </FlexItem>

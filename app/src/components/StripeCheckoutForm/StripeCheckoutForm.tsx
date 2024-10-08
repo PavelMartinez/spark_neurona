@@ -9,11 +9,13 @@ import { Button } from "../ui/primitives";
 import "./style.scss"
 import { IconLoader } from "../ui/icons";
 import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function CheckoutForm({ dpmCheckerLink }: { dpmCheckerLink: string }) {
   const stripe = useStripe();
   const elements = useElements();
   const pathname = usePathname();
+  const t = useTranslations()
 
 
   const [message, setMessage] = React.useState<string>("");
@@ -63,19 +65,19 @@ export default function CheckoutForm({ dpmCheckerLink }: { dpmCheckerLink: strin
         <PaymentElement className="payment-form__element" options={paymentElementOptions} />
         <Button isDisabled={isLoading || !stripe || !elements} className="payment-form__button" type="submit">
           <span className="payment-form__button-text">
-            {isLoading ? <IconLoader /> : "Pay now"}
+            {isLoading ? <IconLoader /> : t('StripePayment.checkout.button')}
           </span>
         </Button>
         {/* Show any error or success messages */}
         {message && <div className="payment-form__message">{message}</div>}
       </form>
       {/* [DEV]: For demo purposes only, display dynamic payment methods annotation and integration checker */}
-      <div className="payment-form__annotation">
+      {/* <div className="payment-form__annotation">
         <p>
           Payment methods are dynamically displayed based on customer location, order amount, and currency.&nbsp;
           <Link href={dpmCheckerLink} target="_blank" rel="noopener noreferrer" id="dpm-integration-checker">Preview payment methods by transaction</Link>
         </p>
-      </div>
+      </div> */}
     </>
   );
 }

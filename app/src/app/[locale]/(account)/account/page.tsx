@@ -102,7 +102,7 @@ const AccountPage = async () => {
 					</div>
 				</FlexItem>
 				<FlexItem className='account__column'>
-					<Link href={"/account/support"} className='account__column-button__wrapper'>
+					<Link href={"/support"} className='account__column-button__wrapper'>
 						<Button variant='neutral' className="account__column-button">
 							<div className="account__column-button__icon">
 								<DialogIcon />

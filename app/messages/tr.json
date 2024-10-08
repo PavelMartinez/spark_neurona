@@ -90,6 +90,16 @@
         "info": "Promt, sinir ağını doğru yönde \"açmanızı\" sağlayan bir anahtardır. \nBu, dikkati verilerin belirli yönlerine de yönlendiren, dikkatle tasarlanmış bir sorgudur. \nBu, sinir ağını belirli bir görevi yerine getirecek şekilde \"ayarlamanıza\" olanak tanır, gereksiz bilgileri göz ardı ederek onu gerekli olana odaklanmaya zorlar.",
         "title": "Prompt nasıl doğru yazılır?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Hangi kartlarla ödeme yapabilirim?",
+        "info": "Bakiyenizi yenilemek için aşağıdaki yenileme yöntemlerini kullanabilirsiniz: Stripe, Visa ve çeşitli kripto para birimi seçenekleri."
+      },
+      "2": {
+        "title": "Kötü bir sonuç alırsam ne yapmalıyım?",
+        "info": "Ne yazık ki size her zaman iyi bir sonuç garanti edemeyiz. \nAncak bu %90 kullandığınız fotoğrafa bağlıdır. \nFotoğrafın nasıl yükleneceği ile ilgili tüm talimatlar ilgili sayfada bulunabilir."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "Hakkımızda",
       "privacy-policy": "Gizlilik politikası",
       "use-cases": "Kullanım örnekleri"
-    }
+    },
+    "terms": "Şartlar"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "Madeni para satın al",
       "customer-support": "Müşteri Desteği",
       "profile-settings": "Profil ayarları",
-      "referal-program": "Tavsiye Programı"
+      "referal-program": "Tavsiye Programı",
+      "dashboard": "Kontrol Paneli"
     },
     "premium": "prim",
     "style-gallery": "Stil galerisi"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Referans geliri"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Sorunuz",
+      "email": "E-postanız",
+      "name": "Adınız",
+      "button": "Gönderilmiş",
+      "status": {
+        "success": "Mesaj gönderildi",
+        "error": "Bir hata oluştu"
+      }
+    },
+    "heading": "Destek",
+    "description": "Formu doldurun, sorularınızı en kısa sürede yanıtlayalım."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "YAZARLARIMIZ"
+    },
+    "block": {
+      "badge": "Yeni"
+    },
+    "heading": "Blog"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Kimlik bilgilerinizi girin"
+    },
+    "breadcrump": {
+      "tariff": "Tarife"
+    },
+    "checkout": {
+      "button": "Şimdi öde"
     }
   }
 }

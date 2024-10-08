@@ -90,6 +90,16 @@
         "info": "Promt est une clé qui vous permet « d'allumer » le réseau neuronal dans la bonne direction. \nIl s’agit d’une requête soigneusement conçue qui attire également l’attention sur des aspects spécifiques des données. \nCela vous permet de « régler » le réseau neuronal pour effectuer une tâche spécifique, l'obligeant à se concentrer sur ce qui est nécessaire, en ignorant les informations inutiles.",
         "title": "Comment épeler correctement l'invite ?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Avec quelles cartes puis-je payer ?",
+        "info": "Afin de reconstituer votre solde, vous pouvez utiliser les méthodes de réapprovisionnement suivantes : Stripe, Visa et diverses options de crypto-monnaie."
+      },
+      "2": {
+        "title": "Que dois-je faire si j’obtiens un mauvais résultat ?",
+        "info": "Malheureusement, nous ne pouvons pas toujours vous garantir un bon résultat. \nMais cela dépend à 90 % de la photo que vous utilisez. \nToutes les instructions pour télécharger une photo se trouvent sur la page correspondante."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "À propos de nous",
       "privacy-policy": "Politique de confidentialité",
       "use-cases": "Cas d'utilisation"
-    }
+    },
+    "terms": "Termes"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "Acheter des pièces",
       "customer-support": "Service client",
       "profile-settings": "Paramètres du profil",
-      "referal-program": "Programme de référencement"
+      "referal-program": "Programme de référencement",
+      "dashboard": "Tableau de bord"
     },
     "premium": "Prime",
     "style-gallery": "Galerie de styles"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Revenu de référence"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Votre question",
+      "email": "Votre e-mail",
+      "name": "Votre nom",
+      "button": "Envoyé",
+      "status": {
+        "success": "Le message a été envoyé",
+        "error": "Une erreur s'est produite"
+      }
+    },
+    "heading": "Soutien",
+    "description": "Remplissez le formulaire, nous répondrons à vos questions dans les plus brefs délais."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "NOS AUTEURS"
+    },
+    "block": {
+      "badge": "Nouveau"
+    },
+    "heading": "Blogue"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Entrez vos identifiants"
+    },
+    "breadcrump": {
+      "tariff": "Tarif"
+    },
+    "checkout": {
+      "button": "Payez maintenant"
     }
   }
 }

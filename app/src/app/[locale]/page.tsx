@@ -5,30 +5,30 @@ import { IconChat, IconCrop, IconMagic, IconPhotos } from "@/components/svg";
 import BackgroundVideo from "next-video/background-video";
 import Image from 'next/image'
 
-import MainVideo from '/videos/main-video.mp4'
+// import MainVideo from '/videos/main-video.mp4'
 import Video1 from '/videos/video-1.mp4'
 import Video2 from '/videos/video-2.mp4'
-import MainImage from '../../../public/MainImage.png'
-import MainImageMobile from '../../../public/MainImageMobile.png'
+import MainImage from '../../../public/MainImage.webp'
+import MainImageMobile from '../../../public/MainImageMobile.webp'
 
-import MainHeroImage1 from '../../../public/MainHero1.png'
-import MainHeroImage2 from '../../../public/MainHero2.png'
-import MainHeroImage3 from '../../../public/MainHero3.png'
-import MainHeroImage4 from '../../../public/MainHero4.png'
+import MainHeroImage1 from '../../../public/MainHero1.webp'
+import MainHeroImage2 from '../../../public/MainHero2.webp'
+import MainHeroImage3 from '../../../public/MainHero3.webp'
+import MainHeroImage4 from '../../../public/MainHero4.webp'
 
-import ImageFunctions1 from '../../../public/functions1.png'
-import ImageFunctions2 from '../../../public/functions2.png'
-import ImageFunctions3 from '../../../public/functions3.png'
-import ImageFunctions4 from '../../../public/functions4.png'
+import ImageFunctions1 from '../../../public/functions1.webp'
+import ImageFunctions2 from '../../../public/functions2.webp'
+import ImageFunctions3 from '../../../public/functions3.webp'
+import ImageFunctions4 from '../../../public/functions4.webp'
 
-import ImageAdvantages1 from '../../../public/advantages1.png'
-import ImageAdvantages2 from '../../../public/advantages2.png'
-import ImageAdvantages3 from '../../../public/advantages3.png'
+import ImageAdvantages1 from '../../../public/advantages1.webp'
+import ImageAdvantages2 from '../../../public/advantages2.webp'
+import ImageAdvantages3 from '../../../public/advantages3.webp'
 
-import ImageBlocks1 from '../../../public/blocks1.png'
-import ImageBlocks2 from '../../../public/blocks2.png'
-import ImageBlocks3 from '../../../public/blocks3.png'
-import ImageBlocks4 from '../../../public/blocks4.png'
+import ImageBlocks1 from '../../../public/blocks1.webp'
+import ImageBlocks2 from '../../../public/blocks2.webp'
+import ImageBlocks3 from '../../../public/blocks3.webp'
+import ImageBlocks4 from '../../../public/blocks4.webp'
 import Link from "next/link";
 import { Accordion } from "@/components/Accordion/Accordion";
 import BannerSection from "@/components/BannerSection/BannerSection";
@@ -75,16 +75,16 @@ export default function Home() {
 				<div className="main-hero__circle main-hero__circle--violet"></div>
 				<div className="main-hero__circle main-hero__circle--pink"></div>
 				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--1">
-					<Image src={MainHeroImage1} alt="" className="main-hero__smallimage" width={315} height={315} sizes="100vw" />
+					<Image src={MainHeroImage1} alt="" className="main-hero__smallimage" width={315} height={315} />
 				</div>
 				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--2">
-					<Image src={MainHeroImage2} alt="" className="main-hero__smallimage" width={260} height={260} sizes="100vw" />
+					<Image src={MainHeroImage2} alt="" className="main-hero__smallimage" width={260} height={260} />
 				</div>
 				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--3">
-					<Image src={MainHeroImage3} alt="" className="main-hero__smallimage" width={240} height={240} sizes="100vw" />
+					<Image src={MainHeroImage3} alt="" className="main-hero__smallimage" width={240} height={240} />
 				</div>
 				<div className="main-hero__smallimage-wrapper main-hero__smallimage-wrapper--4">
-					<Image src={MainHeroImage4} alt="" className="main-hero__smallimage" width={240} height={240} sizes="100vw" />
+					<Image src={MainHeroImage4} alt="" className="main-hero__smallimage" width={240} height={240} />
 				</div>
 			</Flex>
 			<Motion type="div" viewport={{ once: true }} initial={{ y: 100 }} animate={{ y: 0 }} transition={{ duration: 2 }}>
@@ -110,6 +110,7 @@ export default function Home() {
 							width={0}
 							height={0}
 							sizes="100vw"
+							priority
 						/>
 						<Image
 							src={MainImageMobile}
@@ -118,6 +119,7 @@ export default function Home() {
 							width={0}
 							height={0}
 							sizes="100vw"
+							priority
 						/>
 						<div className="main-hero__image-gradient"></div>
 					</div>
@@ -194,6 +196,7 @@ export default function Home() {
 								heading={t('functions-heading')}
 								subheading={t('functions-subheading')}
 								className="functions__heading"
+								
 							/>
 						</Flex>
 					</Motion>
@@ -379,13 +382,13 @@ export default function Home() {
 						<span className="blocks__item-text">
 							{t('blocks.list.ai-chat')}
 						</span>
-						<Image src={ImageBlocks1} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
+						<Image src={ImageBlocks1} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
 					</Link>
 					<Link className="blocks__item blocks__item--order-3" href="/styles">
 						<span className="blocks__item-text">
 							{t('blocks.list.style-gallery')}
 						</span>
-						<Image src={ImageBlocks3} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
+						<Image src={ImageBlocks3} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
 					</Link>
 				</Motion>
 				<Motion className="blocks__item-subblock" viewport={{ once: true }} initial={{ x: 200, opacity: 0 }} whileInView={{ opacity: 1, x: 0, transition: { duration: 1.5, ease: "linear" } }}>
@@ -393,19 +396,19 @@ export default function Home() {
 						<span className="blocks__item-text">
 							{t('blocks.list.ai-photo-editor')}
 						</span>
-						<Image src={ImageBlocks2} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
+						<Image src={ImageBlocks2} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
 					</Link>
 					<Link className="blocks__item blocks__item--order-4" href="/generator">
 						<span className="blocks__item-text">
 							{t('blocks.list.image-generation')}
 						</span>
-						<Image src={ImageBlocks4} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur" sizes="100vw"/>
+						<Image src={ImageBlocks4} alt="" width={450} height={450} className="blocks__item-image" placeholder="blur"/>
 					</Link>
 				</Motion>
 			</Flex>
 		</Section>
 		<BannerSection />
-		<Section className="main-faq" padding="1200">
+		<Section className="main-faq">
 			<Flex
 			wrap
 			container

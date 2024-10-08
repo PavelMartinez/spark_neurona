@@ -1,6 +1,7 @@
 
 import { IconPlus } from "@/components/ui/icons";
 import { Flex, Section } from "@/components/ui/layout";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,8 +21,7 @@ export default async function BlogPage() {
     const { data: data } = strapiDataPosts;
     const strapiDataAuthors = await getStrapiData("/api/authors?populate=*");
     const { data: authors } = strapiDataAuthors;
-
-    console.log(data)
+    const t = useTranslations()
 
     return (
         <Section 
@@ -33,7 +33,7 @@ export default async function BlogPage() {
                 direction='column' 
             >
                 <h1 className="blog-page__heading">
-                    Neurona Blog
+                    Neurona {t('BlogPage.heading')}
                 </h1>
                 <ul className="blog-page__grid">
                     <Link href={"/blog/" + data[0].slug} className="blog-page__block blog-page__block--1">
@@ -42,7 +42,7 @@ export default async function BlogPage() {
                         </h4>
                         <div className="blog-page__block-bottom">
                             <div className="blog-page__block-badge">
-                                New
+                                {t('BlogPage.block.badge')}
                             </div>
                             <button className="blog-page__block-button">
                                 <IconPlus size="32" />
@@ -68,7 +68,7 @@ export default async function BlogPage() {
                         </h4>
                         <div className="blog-page__block-bottom">
                             <div className="blog-page__block-badge">
-                                New
+                                {t('BlogPage.block.badge')}
                             </div>
                             <button className="blog-page__block-button">
                                 <IconPlus size="32" />
@@ -88,7 +88,7 @@ export default async function BlogPage() {
                         </h4>
                         <div className="blog-page__block-bottom">
                             <div className="blog-page__block-badge">
-                                New
+                                {t('BlogPage.block.badge')}
                             </div>
                             <button className="blog-page__block-button">
                                 <IconPlus size="32" />
@@ -108,7 +108,7 @@ export default async function BlogPage() {
                         </h4>
                         <div className="blog-page__block-bottom">
                             <div className="blog-page__block-badge">
-                                New
+                                {t('BlogPage.block.badge')}
                             </div>
                             <button className="blog-page__block-button">
                                 <IconPlus size="32" />
@@ -133,7 +133,7 @@ export default async function BlogPage() {
                         </h4>
                         <div className="blog-page__block-bottom">
                             <div className="blog-page__block-badge">
-                                New
+                                {t('BlogPage.block.badge')}
                             </div>
                             <button className="blog-page__block-button">
                                 <IconPlus size="32" />
@@ -159,7 +159,7 @@ export default async function BlogPage() {
                 alignSecondary="center"
             >
                 <h2 className="blog-page__authors-title">
-                    OUR AUTHORS
+                    {t('BlogPage.authors.title')}
                 </h2>
                 <ul className="blog-page__authors-list">
                     {authors.map((props: { avatar: { url: string; }; name: string | null | undefined; description: string | null | undefined }, index: number) => (

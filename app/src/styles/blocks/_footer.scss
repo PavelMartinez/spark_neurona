@@ -2,4 +2,9 @@
     &__link {
         cursor: pointer;
     }
+    .text-list-item {
+        a {
+            cursor: pointer !important;
+        }
+    }
 }

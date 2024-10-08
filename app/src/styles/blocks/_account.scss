@@ -1156,7 +1156,7 @@
         &__button {
             padding: 24px 60px;
             @include flex-center;
-            width: 100%;
+            flex: 1;
             cursor: pointer;
 
             color: var(--color-button);
@@ -1275,6 +1275,7 @@
         gap: 50px;
         flex-direction: row;
         width: 100%;
+        margin-bottom: 120px;
 
         &--center {
             @include flex-center;

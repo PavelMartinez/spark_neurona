@@ -1,8 +1,10 @@
 .auth {
     padding: 44.22px;
-    border-radius: 22px;
-    border: none !important;
+    border-radius: 22px !important;
+    border: 1.106px solid var(--stroke-3, #232323) !important;
     margin-inline: 10px;
+    background: var(--back-login, #131313) !important;
+    box-shadow: 0px 8.844px 22.641px 0px rgba(0, 0, 0, 0.11), 0px 17.689px 45.283px 0px rgba(0, 0, 0, 0.05), 0px 35.377px 90.566px 0px rgba(0, 0, 0, 0.03) !important;
 
     &__inner {
         padding: 18px 36px;

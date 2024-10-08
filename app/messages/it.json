@@ -90,6 +90,16 @@
         "info": "Promt è una chiave che ti consente di \"accendere\" la rete neurale nella giusta direzione. \nSi tratta di una query progettata con cura che indirizza l'attenzione anche su aspetti specifici dei dati. \nCiò consente di “sintonizzare” la rete neurale per eseguire un compito specifico, costringendola a concentrarsi su ciò che è necessario, ignorando le informazioni non necessarie.",
         "title": "Come si scrive correttamente il messaggio?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Con quali carte posso pagare?",
+        "info": "Per ricostituire il tuo saldo puoi utilizzare i seguenti metodi di rifornimento: Stripe, Visa e varie opzioni di criptovaluta."
+      },
+      "2": {
+        "title": "Cosa devo fare se ottengo un risultato negativo?",
+        "info": "Purtroppo non possiamo sempre garantirvi un buon risultato. \nMa dipende al 90% dalla foto che usi. \nTutte le istruzioni su come caricare una foto le trovi nella pagina corrispondente."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "Chi siamo",
       "privacy-policy": "Politica sulla riservatezza",
       "use-cases": "Casi d'uso"
-    }
+    },
+    "terms": "Termini"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "Acquista monete",
       "customer-support": "Assistenza clienti",
       "profile-settings": "Impostazioni del profilo",
-      "referal-program": "Programma di riferimento"
+      "referal-program": "Programma di riferimento",
+      "dashboard": "Pannello di controllo"
     },
     "premium": "Premio",
     "style-gallery": "Galleria di stili"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Reddito da riferimento"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "La tua domanda",
+      "email": "La tua email",
+      "name": "Il tuo nome",
+      "button": "Inviato",
+      "status": {
+        "success": "Il messaggio è stato inviato",
+        "error": "Si è verificato un errore"
+      }
+    },
+    "heading": "Supporto",
+    "description": "Compila il modulo, risponderemo alle tue domande nel più breve tempo possibile."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "I NOSTRI AUTORI"
+    },
+    "block": {
+      "badge": "Nuovo"
+    },
+    "heading": "Blog"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Inserisci le tue credenziali"
+    },
+    "breadcrump": {
+      "tariff": "Tariffa"
+    },
+    "checkout": {
+      "button": "Paga adesso"
     }
   }
 }

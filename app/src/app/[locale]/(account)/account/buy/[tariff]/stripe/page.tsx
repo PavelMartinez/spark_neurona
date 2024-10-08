@@ -71,22 +71,22 @@ const StripePay = ({ params }: { params: { tariff: number; } }) => {
                     <div className="buy__text">
                         <div className="breadcrump">
                             <Breadcrumb items={[
-                                    { title: 'Dashboard', href: "/account" },
-                                    { title: 'Buy coins', href: "/account/buy" },
-                                    { title: 'Tariff ' + params.tariff, href: "/account/buy/" + params.tariff },
+                                    { title: t('BuyProvidersPage.breadcrump.dashboard'), href: "/account" },
+                                    { title: t('BuyProvidersPage.breadcrump.buy-coins'), href: "/account/buy" },
+                                    { title: t('StripePayment.breadcrump.tariff'), href: "/account/buy/" + params.tariff },
                                     { title: 'Stripe' }
                                 ]} 
                                 className='breadcrump__component'/>
                         </div>
                         <div className="buy__heading">
                             <h3 className='buy__heading-h3'>
-                                buy coins
+                                {t('BuyProvidersPage.heading')}
                                 <Link className="account__back" href={`/account/buy/${params.tariff}`}>
                                     <IconArrowUpRight size='20'/>
                                 </Link>
                                 </h3>
                             <div className="buy__heading-description">
-                                Enter your credentials
+                                {t('StripePayment.heading.description')}
                             </div>
                         </div>
                     </div>

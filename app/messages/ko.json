@@ -90,6 +90,16 @@
         "info": "Promt는 신경망을 올바른 방향으로 \"켜는\" 열쇠입니다. \n이는 데이터의 특정 측면에도 주의를 기울이도록 신중하게 설계된 쿼리입니다. \n이를 통해 특정 작업을 수행하도록 신경망을 \"조정\"하여 불필요한 정보를 무시하고 필요한 것에 집중하도록 할 수 있습니다.",
         "title": "promt 철자를 올바르게 쓰는 방법은 무엇입니까?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "어떤 카드로 결제할 수 있나요?",
+        "info": "잔액을 보충하려면 Stripe, Visa 및 다양한 암호화폐 옵션과 같은 보충 방법을 사용할 수 있습니다."
+      },
+      "2": {
+        "title": "결과가 좋지 않으면 어떻게 해야 하나요?",
+        "info": "안타깝게도 항상 좋은 결과를 보장할 수는 없습니다. \n하지만 이는 사용하는 사진에 따라 90% 달라집니다. \n사진 업로드 방법에 대한 모든 지침은 해당 페이지에서 확인할 수 있습니다."
+      }
     }
   },
   "Footer": {
@@ -112,7 +122,8 @@
       "about-us": "회사 소개",
       "privacy-policy": "개인 정보 보호 정책",
       "use-cases": "사용 사례"
-    }
+    },
+    "terms": "자귀"
   },
   "Generator": {
     "enum": {
@@ -170,7 +181,8 @@
       "buy-coins": "코인 구매",
       "customer-support": "고객 지원",
       "profile-settings": "프로필 설정",
-      "referal-program": "추천 프로그램"
+      "referal-program": "추천 프로그램",
+      "dashboard": "계기반"
     },
     "premium": "프리미엄",
     "style-gallery": "스타일 갤러리"
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "추천소득"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "귀하의 질문",
+      "email": "귀하의 이메일",
+      "name": "당신의 이름",
+      "button": "전송된",
+      "status": {
+        "success": "메시지가 전송되었습니다",
+        "error": "오류가 발생했습니다."
+      }
+    },
+    "heading": "지원하다",
+    "description": "양식을 작성하시면 최대한 빨리 귀하의 질문에 답변해 드리겠습니다."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "우리의 저자"
+    },
+    "block": {
+      "badge": "새로운"
+    },
+    "heading": "블로그"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "자격 증명을 입력하세요"
+    },
+    "breadcrump": {
+      "tariff": "관세"
+    },
+    "checkout": {
+      "button": "지금 결제"
     }
   }
 }

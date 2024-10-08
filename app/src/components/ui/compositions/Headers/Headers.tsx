@@ -254,6 +254,16 @@ export function HeaderAuth() {
                 <MenuPopover placement="bottom right" className={"header__popover"}>
                   <Menu className="header__popover-menu">
                     <MenuItem className="header__popover-item" onAction={() => {
+                      router.push("/account")
+                    }}>
+                      <div className="header__popover-item__icon">
+                        <DialogIcon />
+                      </div>
+                      <div className="header__popover-item__text">
+                        {t('popover.dashboard')}
+                      </div>
+                    </MenuItem>
+                    <MenuItem className="header__popover-item" onAction={() => {
                       router.push("/account/buy")
                     }}>
                       <div className="header__popover-item__icon">
@@ -281,16 +291,6 @@ export function HeaderAuth() {
                       </div>
                       <div className="header__popover-item__text">
                         {t('popover.profile-settings')}
-                      </div>
-                    </MenuItem>
-                    <MenuItem className="header__popover-item" onAction={() => {
-                      router.push("/account/support")
-                    }}>
-                      <div className="header__popover-item__icon">
-                        <DialogIcon />
-                      </div>
-                      <div className="header__popover-item__text">
-                        {t('popover.customer-support')}
                       </div>
                     </MenuItem>
                     <MenuItem className="header__popover-item" onAction={() => {

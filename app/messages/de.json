@@ -82,6 +82,16 @@
         "info": "Promt ist ein Schlüssel, mit dem Sie das neuronale Netzwerk in die richtige Richtung „einschalten“ können. \nHierbei handelt es sich um eine sorgfältig konzipierte Abfrage, die auch die Aufmerksamkeit auf bestimmte Aspekte der Daten lenkt. \nAuf diese Weise können Sie das neuronale Netzwerk „abstimmen“, um eine bestimmte Aufgabe auszuführen, indem Sie es zwingen, sich auf das Notwendige zu konzentrieren und unnötige Informationen zu ignorieren.",
         "title": "Wie schreibt man prompt richtig?"
       }
+    },
+    "support": {
+      "1": {
+        "title": "Mit welchen Karten kann ich bezahlen?",
+        "info": "Um Ihr Guthaben aufzufüllen, können Sie die folgenden Auffüllmethoden nutzen: Stripe, Visa und verschiedene Kryptowährungsoptionen."
+      },
+      "2": {
+        "title": "Was soll ich tun, wenn ich ein schlechtes Ergebnis erhalte?",
+        "info": "Leider können wir Ihnen nicht immer ein gutes Ergebnis garantieren. \nAber es hängt zu 90 % vom verwendeten Foto ab. \nAlle Anweisungen zum Hochladen eines Fotos finden Sie auf der entsprechenden Seite."
+      }
     }
   },
   "Header": {
@@ -98,7 +108,8 @@
       "buy-coins": "Kaufen Sie Münzen",
       "customer-support": "Kundensupport",
       "profile-settings": "Profileinstellungen",
-      "referal-program": "Empfehlungsprogramm"
+      "referal-program": "Empfehlungsprogramm",
+      "dashboard": "Armaturenbrett"
     }
   },
   "Footer": {
@@ -121,7 +132,8 @@
       "about-us": "Über uns",
       "privacy-policy": "Datenschutzrichtlinie",
       "use-cases": "Anwendungsfälle"
-    }
+    },
+    "terms": "Bedingungen"
   },
   "community": "Gemeinschaft",
   "ChatBox": {
@@ -394,6 +406,40 @@
     },
     "card": {
       "description": "Empfehlungseinkommen"
+    }
+  },
+  "SupportPage": {
+    "form": {
+      "text": "Deine Frage",
+      "email": "Ihre E-Mail",
+      "name": "Ihr Name",
+      "button": "Gesendet",
+      "status": {
+        "success": "Nachricht wurde gesendet",
+        "error": "Es ist ein Fehler aufgetreten"
+      }
+    },
+    "heading": "Unterstützung",
+    "description": "Füllen Sie das Formular aus, wir werden Ihre Fragen so schnell wie möglich beantworten."
+  },
+  "BlogPage": {
+    "authors": {
+      "title": "UNSERE AUTOREN"
+    },
+    "block": {
+      "badge": "Neu"
+    },
+    "heading": "Blog"
+  },
+  "StripePayment": {
+    "heading": {
+      "description": "Geben Sie Ihre Anmeldedaten ein"
+    },
+    "breadcrump": {
+      "tariff": "Tarif"
+    },
+    "checkout": {
+      "button": "Bezahlen Sie jetzt"
     }
   }
 }

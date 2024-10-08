@@ -6,6 +6,9 @@
     --color-button: var(--button-1);
     --border-diamonds: var(--sds-size-stroke-border) solid var(--stroke-3, #232323);
 
+    svg *[fill] {
+        fill: revert-layer !important;
+    }
 
     width: 100%;
     --flex-gap: 40px !important;
