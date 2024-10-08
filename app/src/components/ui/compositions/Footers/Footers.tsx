@@ -35,7 +35,7 @@ export function Footer({ className, ...props }: FooterProps) {
       <Flex wrap type="quarter" gap="600" container>
         <FlexItem size="minor">
           <Flex direction="row" gap="600" alignSecondary="start" alignPrimary="center">
-			{/* {SocialButtons()} */}
+			{SocialButtons()}
           </Flex>
         </FlexItem>
         <TextLinkList

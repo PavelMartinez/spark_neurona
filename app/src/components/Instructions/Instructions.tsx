@@ -4,13 +4,14 @@ import React, { useState } from 'react'
 import InstructionsRawData from './data';
 import Image from 'next/image';
 import { Button } from '../ui/primitives';
-import { useLocale, useMessages } from 'next-intl';
+import { useLocale, useMessages, useTranslations } from 'next-intl';
 
 const Instructions = () => {
     const [currentStep, setCurrentStep] = useState<number>(0);
     const locale = useLocale()
     const messages = useMessages()
     const InstructionsData = InstructionsRawData(locale, messages);
+    const t = useTranslations("Instructions");
 
     const handleNext = () => {
         const newStep = currentStep + 1;
@@ -41,7 +42,7 @@ const Instructions = () => {
             <div className="instructions__content">
                 <div className="instructions__main">
                     <div className="instructions__main-step">
-                        {currentStep + 1} step
+                        {t('main.step', { step: currentStep + 1 })}
                     </div>
                     <div className="instructions__main-text">
                         <div className="instructions__main-title">
@@ -57,7 +58,7 @@ const Instructions = () => {
                         onPress={handleNext}
                         isDisabled={currentStep === InstructionsData.length - 1}
                     >
-                        Next
+                        {t('button.next')}
                     </Button>
                 </div>
                 <Image 

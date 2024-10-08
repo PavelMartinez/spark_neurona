@@ -264,10 +264,16 @@
         "description": "Une fois ajouté, neurona.com fonctionnera comme une application Web sur votre écran d'accueil, offrant une expérience plein écran transparente sans barre d'adresse du navigateur.",
         "title": "Fait!"
       }
+    },
+    "button": {
+      "next": "Suivant"
+    },
+    "main": {
+      "step": "{step} étape"
     }
   },
   "InstrumentsPage": {
-    "description": "Créez des images époustouflantes grâce à la technologie basée sur l'IA <br />en quelques secondes.",
+    "description": "Créez des images époustouflantes grâce à la technologie basée sur l'IA en quelques secondes.",
     "heading": "Instruments d'IA"
   },
   "IosPage": {

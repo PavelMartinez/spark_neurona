@@ -264,10 +264,16 @@
         "description": "添加后，neurona.com 将作为 Web 应用程序在您的主屏幕上运行，提供无缝的全屏体验，无需浏览器地址栏",
         "title": "完毕！"
       }
+    },
+    "button": {
+      "next": "下一个"
+    },
+    "main": {
+      "step": "{step} 步骤{step} 步骤"
     }
   },
   "InstrumentsPage": {
-    "description": "利用人工智能技术<br />在几秒钟内创建令人惊叹的图像。",
+    "description": "利用人工智能技术在几秒钟内创建令人惊叹的图像。",
     "heading": "人工智能仪器"
   },
   "IosPage": {

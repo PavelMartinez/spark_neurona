@@ -264,6 +264,12 @@
         "description": "Depois de adicionado, neurona.com será executado como um aplicativo da web na tela inicial, oferecendo uma experiência perfeita em tela cheia, sem a barra de endereço do navegador.",
         "title": "Feito!"
       }
+    },
+    "button": {
+      "next": "Próximo"
+    },
+    "main": {
+      "step": "{step} etapa"
     }
   },
   "InstrumentsPage": {

@@ -1,6 +1,5 @@
 .banner {
     margin: 0 !important;
-    padding: 0 !important;
     &__heading {
         color: #FFF;
 
@@ -45,6 +44,8 @@
         line-height: 150%; /* 24px */
         text-transform: uppercase;
         white-space: nowrap;
+
+        cursor: pointer;
 
         @include flex-center;
         width: 210px;

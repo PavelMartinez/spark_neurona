@@ -264,10 +264,16 @@
         "description": "Neurona.com eklendiğinde ana ekranınızda bir web uygulaması olarak çalışacak ve tarayıcı adres çubuğu olmadan kusursuz bir tam ekran deneyimi sunacak",
         "title": "Tamamlamak!"
       }
+    },
+    "button": {
+      "next": "Sonraki"
+    },
+    "main": {
+      "step": "{step} adım{adım} adım"
     }
   },
   "InstrumentsPage": {
-    "description": "Yapay zeka destekli teknolojiyle <br />saniyeler içinde çarpıcı görüntüler oluşturun.",
+    "description": "Yapay zeka destekli teknolojiyle saniyeler içinde çarpıcı görüntüler oluşturun.",
     "heading": "Yapay zeka araçları"
   },
   "IosPage": {

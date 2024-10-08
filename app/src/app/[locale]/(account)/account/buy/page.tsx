@@ -66,7 +66,7 @@ const BuyPage = ({ params }: { params: { locale: LocaleType; } }) => {
                 <BuyCards locale={params.locale} />
                 <Flex className="buy-conditions"
                 direction='row' wrap>
-                    <FlexItem size='half' className='buy-conditions__part'>
+                    <FlexItem size='major' className='buy-conditions__part'>
                         <div className="buy-conditions__question">
                             {t('BuyPage.conditions.question')}
                         </div>
@@ -74,7 +74,7 @@ const BuyPage = ({ params }: { params: { locale: LocaleType; } }) => {
                             {t('BuyPage.conditions.heading')}
                         </h2>
                     </FlexItem>
-                    <FlexItem size='half' className='buy-conditions__part'>
+                    <FlexItem size='major' className='buy-conditions__part'>
                         <Flex 
                         className="buy-conditions__list"
                         wrap
@@ -146,7 +146,7 @@ const BuyPage = ({ params }: { params: { locale: LocaleType; } }) => {
                 </Flex>
                 <Flex className="buy-promo"
                 direction='row' wrap alignPrimary='space-between'>
-                    <FlexItem className="buy-promo__part">
+                    <FlexItem size='major' className="buy-promo__part">
                         <div className="buy-promo__content">
                         <div className="buy-promo__badge">
                             <div className="buy-promo__badge-icon">
@@ -169,7 +169,7 @@ const BuyPage = ({ params }: { params: { locale: LocaleType; } }) => {
                             </h2>
                         </div>
                     </FlexItem>
-                    <FlexItem className="buy-promo__part">
+                    <FlexItem size='major' className="buy-promo__part">
                         <BuyPromoCard locale={params.locale} />
                     </FlexItem>
                     <div className="buy-promo__arrow">

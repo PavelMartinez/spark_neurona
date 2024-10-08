@@ -264,10 +264,16 @@
         "description": "추가되면 Neurona.com은 홈 화면에서 웹 애플리케이션으로 실행되어 브라우저 주소 표시줄 없이 원활한 전체 화면 환경을 제공합니다.",
         "title": "완료!"
       }
+    },
+    "button": {
+      "next": "다음"
+    },
+    "main": {
+      "step": "{step} 단계"
     }
   },
   "InstrumentsPage": {
-    "description": "AI 기반 기술로 <br />단 몇 초 만에 멋진 이미지를 만들어 보세요.",
+    "description": "AI 기반 기술로 몇 초 만에 멋진 이미지를 만들어보세요.",
     "heading": "AI 장비"
   },
   "IosPage": {

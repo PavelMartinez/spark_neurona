@@ -45,6 +45,10 @@ body {
     top 3109px left 0,
     top 2730px right -506px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+
+    @include mobile {
+        background-image: unset;
+    }
 }
 
 .dialog-backdrop {

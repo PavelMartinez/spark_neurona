@@ -264,10 +264,16 @@
         "description": "Setelah ditambahkan, neurona.com akan berjalan sebagai aplikasi web di layar beranda Anda, menawarkan pengalaman layar penuh yang mulus tanpa bilah alamat browser",
         "title": "Selesai!"
       }
+    },
+    "button": {
+      "next": "Berikutnya"
+    },
+    "main": {
+      "step": "{step} langkah"
     }
   },
   "InstrumentsPage": {
-    "description": "Ciptakan gambar menakjubkan dengan teknologi bertenaga AI <br />dalam hitungan detik.",
+    "description": "Buat gambar menakjubkan dengan teknologi bertenaga AI dalam hitungan detik.",
     "heading": "instrumen AI"
   },
   "IosPage": {

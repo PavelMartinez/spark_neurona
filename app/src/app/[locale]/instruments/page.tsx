@@ -13,7 +13,7 @@ const InstrumentsPage = () => {
             </h1>
             <div className="instruments__description">
                 <p>
-                    {t.raw('description')}
+                    {t('description')}
                 </p>
             </div>
             <InstrumentsGrid />

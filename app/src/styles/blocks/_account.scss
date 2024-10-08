@@ -877,13 +877,21 @@
         margin-bottom: 55px;
         margin-top: 55px;
 
+        @include tablet {
+            padding: 20px;
+        }
+
         &__part {
-            flex: 0 1 50% !important;
+            flex: 0 1 50%;
             display: flex;
             flex-direction: column;
 
             &:first-child {
                 gap: 20px;
+            }
+
+            @include tablet {
+                flex: 1;
             }
         }
 
@@ -894,10 +902,10 @@
             line-height: 120%; /* 52.8px */
             text-transform: uppercase;
 
-            width: 547px;
+            width: 100%;
 
             @include tablet {
-                width: 100%;
+                margin-bottom: 30px;
             }
         }
 
@@ -931,6 +939,11 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 44px;
+
+                @include tablet {
+                    gap: 10px;
+                    // width: 100%;
+                }
 
                 &__heading {
                     font-size: 24px;
@@ -1011,6 +1024,7 @@
 
     &-promo {
         width: 100%;
+        flex-wrap: wrap;
 
         @include tablet {
             height: auto;
@@ -1031,6 +1045,7 @@
 
                 @include tablet {
                     padding: 30px;
+                    width: 100%;
                 }
             }
 
@@ -1043,6 +1058,7 @@
                     padding: 30px;
 
                     flex: 1;
+                    width: 100%;
                 }
             }
         }

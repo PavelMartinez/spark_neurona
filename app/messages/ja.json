@@ -264,10 +264,16 @@
         "description": "追加すると、neurona.com はホーム画面で Web アプリケーションとして実行され、ブラウザのアドレス バーなしでシームレスな全画面エクスペリエンスを提供します。",
         "title": "終わり！"
       }
+    },
+    "button": {
+      "next": "次"
+    },
+    "main": {
+      "step": "{step} ステップ"
     }
   },
   "InstrumentsPage": {
-    "description": "AI を活用したテクノロジーで美しい画像を<br />数秒で作成します。",
+    "description": "AI を活用したテクノロジーを使用して、美しい画像を数秒で作成します。",
     "heading": "AI機器"
   },
   "IosPage": {

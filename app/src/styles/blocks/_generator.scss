@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: row;
     gap: 48px;
+    flex-wrap: wrap-reverse;
 
     color: #FCFCFC;
 
@@ -64,6 +65,10 @@
     &-settings {
         flex: 0 0 auto;
         width: 452px;
+
+        @include tablet {
+            width: 100%;
+        }
 
         &__underline {
             &::after {
@@ -139,6 +144,10 @@
             grid-template-rows: 1;
             grid-gap: 15px;
             height: 69px;
+
+            @include tablet {
+                height: auto;
+            }
 
             &-item {
                 border-radius: 12px;

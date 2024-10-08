@@ -274,10 +274,16 @@
         "description": "Una vez agregado, neurona.com se ejecutará como una aplicación web en su pantalla de inicio, ofreciendo una experiencia perfecta de pantalla completa sin una barra de direcciones del navegador.",
         "title": "¡Hecho!"
       }
+    },
+    "button": {
+      "next": "Próximo"
+    },
+    "main": {
+      "step": "{step} paso"
     }
   },
   "InstrumentsPage": {
-    "description": "Cree imágenes impresionantes con tecnología impulsada por IA <br />en segundos.",
+    "description": "Cree imágenes impresionantes con tecnología impulsada por IA en segundos.",
     "heading": "Instrumentos de IA"
   },
   "IosPage": {

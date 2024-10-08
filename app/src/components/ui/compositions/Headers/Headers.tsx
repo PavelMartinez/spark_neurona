@@ -144,7 +144,7 @@ export function HeaderAuth() {
   const navigation = (
     <Navigation direction={isTabletDown ? "column" : "row"}>
       <NavigationPill>
-        <NavigationLink href="/">{t('image-generation')}</NavigationLink>
+        <NavigationLink href="/generator">{t('image-generation')}</NavigationLink>
       </NavigationPill>
       <NavigationPill isSelected={pathname === "/instruments"}>
         <NavigationLink href="/instruments">{t('ai-insturments')}</NavigationLink>
@@ -185,7 +185,7 @@ export function HeaderAuth() {
             >
               <IconMenu />
             </IconButton>
-            <DialogModal isOpen={open}>
+            <DialogModal isOpen={open} isDismissable onOpenChange={setOpen}>
               <Dialog className={clsx("navigation-dialog")}>
                 <IconButton
                   className={clsx("navigation-dialog-close")}
@@ -214,6 +214,18 @@ export function HeaderAuth() {
                       <FlexItem>
                         <Flex alignPrimary="center">
                           <Label>{user.firstName}</Label>
+                        </Flex>
+                      </FlexItem>
+                      <FlexItem>
+                        <Flex alignPrimary="center">
+                          <Link href="/account">
+                            <Button
+                              variant="subtle"
+                              size="small"
+                            >
+                              {t('popover.dashboard')}
+                            </Button>
+                          </Link>
                         </Flex>
                       </FlexItem>
                       <FlexItem>
@@ -328,7 +340,7 @@ export function Header({ className, ...props }: HeaderProps) {
       {...props}
     >
       <Flex container alignPrimary="space-between" alignSecondary="center" className="header__inner">
-        <FlexItem size="fill">
+        <FlexItem>
           <Link href="/">
             <Logo />
           </Link>

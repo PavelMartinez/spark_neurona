@@ -264,10 +264,16 @@
         "description": "Una volta aggiunto, neurona.com verrà eseguito come applicazione Web sulla schermata iniziale, offrendo un'esperienza a schermo intero senza interruzioni e senza barra degli indirizzi del browser",
         "title": "Fatto!"
       }
+    },
+    "button": {
+      "next": "Prossimo"
+    },
+    "main": {
+      "step": "{step} passaggio"
     }
   },
   "InstrumentsPage": {
-    "description": "Crea immagini straordinarie con la tecnologia basata sull'intelligenza artificiale <br />in pochi secondi.",
+    "description": "Crea immagini straordinarie con la tecnologia basata sull'intelligenza artificiale in pochi secondi.",
     "heading": "Strumenti di intelligenza artificiale"
   },
   "IosPage": {

@@ -274,10 +274,16 @@
         "description": "Nach dem Hinzufügen wird neurona.com als Webanwendung auf Ihrem Startbildschirm ausgeführt und bietet ein nahtloses Vollbilderlebnis ohne Browser-Adressleiste",
         "title": "Erledigt!"
       }
+    },
+    "button": {
+      "next": "Nächste"
+    },
+    "main": {
+      "step": "{step} Schritt"
     }
   },
   "InstrumentsPage": {
-    "description": "Erstellen Sie mit KI-gestützter Technologie <br />in Sekundenschnelle atemberaubende Bilder.",
+    "description": "Erstellen Sie in Sekundenschnelle atemberaubende Bilder mit KI-gestützter Technologie.",
     "heading": "KI-Instrumente"
   },
   "IosPage": {

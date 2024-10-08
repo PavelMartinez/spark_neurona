@@ -51,7 +51,7 @@ const BuyCardsItem = ({ emoji, title, priceCurrent, priceOld, benefits, isPopula
             </ul>
         </div>
         <div className="buy-cards__button-wrapper">
-            <Link className="buy-cards__button" href={`/account/buy/${id}`}>
+            <Link className={`buy-cards__button ${isPopular ? "buy-cards__button--popular " : ""}`} href={`/account/buy/${id}`}>
                 {t('choose-plan')}
             </Link>
         </div>

@@ -254,7 +254,7 @@
   "buy-coins-button": "BUY COINS",
   "InstrumentsPage": {
     "heading": "AI instruments",
-    "description": "Create stunning images with AI-powered technology <br />in seconds."
+    "description": "Create stunning images with AI-powered technology in seconds."
   },
   "IosPage": {
     "heading": "Neurona App for IOS",
@@ -282,6 +282,12 @@
         "title": "Done!",
         "description": "Once added, neurona.com will run as a web application on your home screen, offering a seamless full-screen experience without a browser address bar"
       }
+    },
+    "button": {
+      "next": "Next"
+    },
+    "main": {
+      "step": "{step} step"
     }
   },
   "GeneratorPage": {
