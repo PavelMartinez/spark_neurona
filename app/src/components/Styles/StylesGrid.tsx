@@ -64,7 +64,7 @@ const StylesGrid = ({ limit = 1000 }: StylesGridProps) => {
                                             <StylesItem
                                                 image={`/styles_spark/${item.FileName}`}
                                                 heading={item.StyleName}
-                                                href={`/generator/${item.CategoryName}/${item.StyleName}`}
+                                                href={`/generator/${encodeURIComponent(item.CategoryName)}/${encodeURIComponent(item.StyleName)}`}
                                                 key={`stylesItem${index}`}
                                             />
                                         )
@@ -85,7 +85,7 @@ const StylesGrid = ({ limit = 1000 }: StylesGridProps) => {
                                             <StylesItem
                                                 image={`/styles_spark/${item.FileName}`}
                                                 heading={item.StyleName}
-                                                href={`/generator/${item.CategoryName}/${item.StyleName}`}
+                                                href={`/generator/${encodeURIComponent(item.CategoryName)}/${encodeURIComponent(item.StyleName)}`}
                                                 key={`stylesItem${index}`}
                                             />
                                         )
